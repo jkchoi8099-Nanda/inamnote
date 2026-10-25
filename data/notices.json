@@ -1,7 +1,232 @@
 {
- "updated_at": "2026-10-16T20:31+09:00",
+ "updated_at": "2026-10-26T03:23+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-23",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 처인성역사교육관 하반기 강좌 수강생 모집",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261023075758113"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-23",
+   "org": "용인특례시 자원순환과",
+   "no": "",
+   "title": "폐건전지 종이팩 분리배출 집중수거기간 운영 알림",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261023174728065"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-22",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시 곳곳 읍·동민의 날 개최 주민 화합의 장",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261022074506645"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-22",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시 장애인·보호시설아동 등 안전취약계층 위한 ‘찾아가는 안전교육’ 운영",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261022074358611"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-22",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 반도체 소부장기업 신입사원 대상 통합교육",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261022074257839"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-22",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 여성 청소년 생리용품 구입비 14만 2천 원 지원",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261022074240141"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-21",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, ‘별빛마당 야시장·김량장 페스티벌’에 17만 명 발길",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261021074941141"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-21",
+   "org": "용인특례시 건강증진과",
+   "no": "",
+   "title": "[보건소] 무료 혈압·혈당·콜레스테롤 검사받고 뇌졸중 예방해요! (10. 29.)",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=3&q_bbscttSn=20261021155745396&q_category=main"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-21",
+   "org": "용인특례시 기술지원과",
+   "no": "",
+   "title": "[농업기술] 스마트농업 전문교육(스마트농업 심화 및 현장적용) 과정 교육생 모집",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1018&q_clCode=2&q_bbscttSn=20261021090846917"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-21",
+   "org": "용인특례시 농촌테마과",
+   "no": "",
+   "title": "[농촌테마파크] -농촌테마파크 10월4째주 주말 상시체험 \"쉼\" 안내 입니다.",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261021081324227"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-21",
+   "org": "용인특례시 농촌테마과",
+   "no": "",
+   "title": "[농촌테마파크] 용인농촌테마파크 가을 축제 (10/24~25일)",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261021080516136"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-20",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, ‘제74주년 재향군인의 날’ 기념식 개최",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261020074916903"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-20",
+   "org": "용인특례시 교육청소년과",
+   "no": "",
+   "title": "2026년 용인시 여성청소년 생리용품 보편지원사업 하반기 신청 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261020155145312"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-20",
+   "org": "용인특례시 건강증진과",
+   "no": "",
+   "title": "[보건소] 2026년 11월 요양원(성인) 식단표",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261020143256586&q_category=main"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-20",
+   "org": "용인특례시 건강증진과",
+   "no": "",
+   "title": "[보건소] 2026년 11월 미취학 어린이 식단표",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261020143135140&q_category=main"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-19",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 외국인 계절근로자 고용 농가 하반기 교육",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261019081510766"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-19",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 건축허가·신고 안내문 간소화",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261019081453309"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-19",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, ‘처인구청 이전 이후 기존 부지 활용 아이디어 공모전’ 온라인 시민투표 진행",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261019081435891"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-19",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 24~25일 도농 어울림 가을 축제 개최",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261019081416091"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-19",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 처인구 남사읍 화훼유통복합센터 야외공간 조성에 시민 의견 접수",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261019080636888"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-19",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시 처인구, 하반기 어린이집 집단급식소 시설 대상 식중독 예방 점검",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261019080614138"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-19",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 지방세 환급금 편리하게 돌려받는 ‘환급계좌 사전등록’ 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261019080554912"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-19",
+   "org": "용인특례시 체육진흥과",
+   "no": "",
+   "title": "2026년 하반기 체육시설업 자율안전점검 등록 안내(~12.31.까지)",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261019165050544"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-19",
+   "org": "용인특례시 미래성장전략과",
+   "no": "",
+   "title": "경희 찾아가는 테크포럼 개최 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261019100027441"
+  },
+  {
+   "src": "처인구 소식",
+   "date": "2026-10-19",
+   "org": "처인구 도시미관과",
+   "no": "",
+   "title": "처인구 소식! 구석구석 개운하게 물청소 완료!",
+   "scope": "town",
+   "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=84973&brd_mgrno=366&menu_no=1683"
+  },
   {
    "src": "이동읍 소식",
    "date": "2026-10-16",
@@ -468,24 +693,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261002114440572"
   },
   {
-   "src": "처인구 소식",
-   "date": "2026-10-02",
-   "org": "처인구 이동읍",
-   "no": "",
-   "title": "이동읍 소식! '국제라이온스협회와 함께한 송전천 환경정화 활동'",
-   "scope": "town",
-   "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=84852&brd_mgrno=366&menu_no=1683"
-  },
-  {
-   "src": "처인구 소식",
-   "date": "2026-10-02",
-   "org": "처인구 도시미관과",
-   "no": "",
-   "title": "처인구 소식! 활기 넘치는 용인중앙시장이 더욱 쾌적한 공간으로 거듭납니다!",
-   "scope": "town",
-   "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=84851&brd_mgrno=366&menu_no=1683"
-  },
-  {
    "src": "용인시 보도자료",
    "date": "2026-10-01",
    "org": "용인특례시",
@@ -558,15 +765,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260930075132909"
   },
   {
-   "src": "용인시 공지",
-   "date": "2026-09-30",
-   "org": "용인특례시 징수과",
-   "no": "",
-   "title": "2026년 하반기 지방세 체납 특별징수 기간 운영",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20260930110523577"
-  },
-  {
    "src": "용인시 보도자료",
    "date": "2026-09-29",
    "org": "용인특례시",
@@ -592,15 +790,6 @@
    "title": "용인특례시, 제8회 북페스티벌 ‘일상의 빈칸을 채우는 독서 파티’ 개최",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260929074945878"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-09-29",
-   "org": "용인특례시 미래성장전략과",
-   "no": "",
-   "title": "취약계층 「동절기 도시가스 공급중단 유예제도」안내",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20260929090647756"
   },
   {
    "src": "용인시 보도자료",
@@ -630,96 +819,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260928074518026"
   },
   {
-   "src": "용인시 공지",
-   "date": "2026-09-28",
-   "org": "용인특례시 세정과",
-   "no": "",
-   "title": "2026년 6월 1일 기준 개별(공동)주택가격 열람 및 이의신청 방법 안내",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20260928171210457"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-09-28",
-   "org": "용인특례시 관광과",
-   "no": "",
-   "title": "용인 관광진흥 기본계획 수립을 위한 시민 설문조사",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20260928111545112"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-09-28",
-   "org": "용인특례시 미래성장전략과",
-   "no": "",
-   "title": "용인예술과학대학교 용인학플러스 평생학습 프로그램 참여자 모집",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20260928093239281"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-09-28",
-   "org": "용인특례시 보건행정과",
-   "no": "",
-   "title": "[보건소] 매년 10월 15일은 세계 손씻기의 날! 올바른 손씻기 습관으로 감염병을 예방하세요.",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=3&q_bbscttSn=20260928084313030&q_category=main"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-23",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 추석맞이 무연고 사망자 합동추모제 개최",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260923075409823"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-23",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 추석 연휴 생활폐기물 처리 대책 마련",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260923075324900"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-09-23",
-   "org": "용인특례시 환경정책과",
-   "no": "",
-   "title": "2026년 추석연휴 환경오염행위 특별감시 계획 및 신고상담창구(☏128) 알림",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20260923183748374"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-09-23",
-   "org": "용인특례시 기후대기과",
-   "no": "",
-   "title": "대한민국 기후행동 통합 플랫폼 개통 안내",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20260923161134027"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-09-23",
-   "org": "용인특례시 민생경제과",
-   "no": "",
-   "title": "제8회 용인중앙시장 별빛마당 야시장 개최",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20260923105356530"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-09-23",
-   "org": "용인특례시 노인복지과",
-   "no": "",
-   "title": "제30회 노인의 날 기념행사",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20260923103307532"
-  },
-  {
    "src": "남사읍 소식",
    "date": "2026-09-22",
    "org": "처인구 남사읍",
@@ -742,141 +841,6 @@
    "no": "",
    "title": "[보상계획] 용인반도체국가산단 분묘 개장 공고",
    "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=734079"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-21",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 처인구 중앙동 드마크데시앙아파트 경로당 개소",
-   "scope": "town",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260921083346001"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-21",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 청년의 날 맞아 맞춤형 체험 행사 풍성",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260921083231575"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-21",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 24~27일 나흘간 추석 연휴 종합상황실 운영",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260921083150286"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-21",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 21일부터 인플루엔자 무료 예방접종",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260921083122110"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-21",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 주민 화합 위한 ‘동민의 날’ 곳곳서 개최",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260921082334493"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-21",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시 남사도서관, 가을 맞아 다채로운 독서문화 행사 마련",
-   "scope": "town",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260921082043168"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-21",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시 보건소, 지역별 특색 살린 걷기 프로그램 운영",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260921082027562"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-18",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 2026년 개인택시운송사업 신규 면허증 수여식 개최",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260918075719068"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-18",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, ‘2026년 협치소통강연’ 개최",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260918075532370"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-18",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 용인외대부고와 함께 ‘임팩투스노바’ 멘토링 캠프 운영",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260918075304699"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-18",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 경희대 앵커사업단과 직원 대상 ‘AI 레벨업 교육’ 진행",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260918075203852"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-18",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시 처인구, 추석 맞아 전통시장 주변 도로 한시적 주차 허용",
-   "scope": "town",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260918075124656"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-18",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, ‘2026 대한민국 조아용 페스티벌’ 개최",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260918075012182"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-17",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, ‘무대 위에서 만나는 예술’ 수강생 모집",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260917075613216"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-17",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 골목상권 특성 반영한 행사로 지역경제 활성화",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260917075436584"
   },
   {
    "src": "남사읍 소식",
