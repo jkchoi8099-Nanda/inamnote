@@ -1,7 +1,25 @@
 {
- "updated_at": "2026-10-26T03:23+09:00",
+ "updated_at": "2026-10-26T08:11+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-26",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 플랫폼시티 컨벤션센터 성공 위한 정책포럼 개최",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261026075952428"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-26",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시 처인구, 냉난방 시설 갖춘 버스승강장 10곳 새 단장",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261026075407095"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-10-23",
