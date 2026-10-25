@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>이남노트 · 버스 지금 어디</title>
+<meta name="description" content="이동읍·남사읍을 지나는 버스가 지금 어느 정류소에 있는지 지도에서 봅니다. 경기도 버스정보 기준, 정류소 단위.">
+<meta name="theme-color" content="#F2F4F6">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="style.css">
+<!-- 2026-10-14 시제품(사용자 "지도에 버스가 다니는 걸 실시간으로"). 노선·정류소·경로는 data/bus.js(scripts/build_bus.py),
+     실시간 위치는 BUS_API가 25초마다. 위치는 GPS가 아니라 '몇 번째 정류소에 도착·출발·교차로 통과'다(경기도·TAGO 모두, 결정 로그 10-14). -->
+<style>
+  .bp { display: grid; grid-template-rows: auto auto 1fr; height: 100svh; overflow: hidden; }
+  .bp > * { min-width: 0; }
+  .bp-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; padding: 12px 0 4px; }
+  .bp-head a { color: var(--moss); font-weight: 700; text-decoration: none; font-size: 14px; }
+  .bp-head h1 { font-size: clamp(20px, 4.5vw, 30px); margin: 0; }
+  .bp-head p { color: var(--ink-3); font-size: 13px; margin: 0; flex-basis: 100%; }
+  .groups { display: grid; gap: 4px; padding: 6px 0 8px; }
+  .row { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; align-items: center; }
+  .row::-webkit-scrollbar { display: none; }
+  .row small { flex: none; color: var(--ink-3); font-size: 12px; font-weight: 700; width: 48px; }
+  .row.drag { cursor: grabbing; user-select: none; }
+  .chip { flex: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: 999px;
+          padding: 6px 12px; font: inherit; font-size: 14px; font-weight: 800; cursor: pointer; white-space: nowrap; min-height: 36px; }
+  .chip[aria-pressed="true"] { background: var(--moss-dark); border-color: var(--moss-dark); color: #fff; }
+  /* 똑버스 칩도 다른 칩과 같은 모양(10-15 사용자: 주황 테두리 때문에 똑버스를 누른 줄 착각) */
+  .body { display: grid; grid-template-rows: var(--map-h, 45%) auto minmax(0, 1fr); min-height: 0; }  /* 휴대폰 지도 높이는 손잡이(sheet.js) */
+  .mapbox { position: relative; min-height: 0; }
+  #map { width: 100%; height: 100%; border-radius: var(--r-md); border: 1px solid var(--line); overflow: hidden; }
+  .tick { position: absolute; top: 10px; right: 10px; z-index: 5; background: var(--surface); border-radius: 999px; box-shadow: var(--shadow);
+          font-size: 12px; font-weight: 700; color: var(--ink-3); padding: 6px 10px; }
+  .tick b { color: var(--moss-dark); }
+  .locmsg { position: absolute; left: 10px; right: 150px; bottom: 28px; z-index: 5; margin: 0; background: var(--surface); border-radius: var(--r-sm);
+            box-shadow: var(--shadow); font-size: 13px; color: var(--warn); padding: 8px 10px; }
+  .side { overflow-y: auto; padding: 0 2px 24px; overscroll-behavior: contain; min-height: 0; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-sm); padding: 12px 14px; margin-bottom: 8px; }
+  .card h2 { font-size: 18px; margin: 0 0 2px; }
+  .card .meta { color: var(--ink-3); font-size: 13px; }
+  .card dl { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; margin: 8px 0 0; font-size: 14px; }
+  .card dt { color: var(--ink-3); font-weight: 700; }
+  .card dd { margin: 0; }
+  .card a.tel { color: var(--moss); font-weight: 800; text-decoration: none; }
+  .buses { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .buses li { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-sm); padding: 10px 12px; cursor: pointer; font-size: 14px; }
+  .buses li b { font-size: 15px; }
+  .buses li span { color: var(--ink-3); font-size: 13px; display: block; }
+  .buses li.out { cursor: default; color: var(--ink-3); background: var(--bg-2); }
+  .warn { color: var(--warn); font-size: 13px; }
+  .note { color: var(--clay-ink); font-size: 12px; margin-top: 10px; line-height: 1.5; }
+  .ttak-box { border-color: #F3C4A9; background: #FFF6F0; }
+  /* 지도 위 표시 */
+  /* 정류소: 방향마다 색(10-15 사용자 "정류소 색깔을 상하행 구분"). 가는 쪽 = 회차 정류소 방면, 오는 쪽 = 기점 방면 */
+  :root { --dir-go: #1C7ED6; --dir-back: #F76707; --dir-end: #191F28; }  /* 노선 선이 초록이라 정류소는 초록을 피한다(선에 묻혔다) */
+  .stop { position: relative; width: 8px; height: 8px; border-radius: 50%; background: #fff; border: 2px solid var(--dir-go); box-sizing: border-box; }
+  .stop.back { border-color: var(--dir-back); }
+  .stop.both { border-color: var(--ink-3); }
+  .stop.end { width: 10px; height: 10px; border-width: 3px; border-color: var(--dir-end); }
+  .stop.via { display: none; }
+  /* 정류소 이름: 길 양쪽 같은 이름은 하나만, 확대 13부터 화면에서 겹치지 않는 것만(.on은 syncNames, 사용자 10-15).
+     자리는 오른쪽 → 왼쪽 → 위 → 아래 중 빈 곳(data-pos, 10-20 사용자 "5000번 정류장 표시가 일부 없어" — 오른쪽만 보고 숨겼다) */
+  .stop span { display: none; position: absolute; left: 10px; top: -6px; white-space: nowrap; font: 700 12px var(--font); color: var(--ink-2);
+               text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff; pointer-events: none; }
+  .stop span.on { display: block; }
+  .stop span[data-pos="l"] { left: auto; right: 10px; }
+  .stop span[data-pos="t"] { left: 50%; top: -21px; transform: translateX(-50%); }
+  .stop span[data-pos="b"] { left: 50%; top: 9px; transform: translateX(-50%); }
+  /* 버스: 실제 차체 색(경기도 G버스 — 직행좌석 빨강·좌석 파랑·일반 초록·마을 노랑, 10-15) + 번호 옆에 가는 방향 종점 */
+  .bus { --bc: #1F9D4C; --bt: #fff; display: inline-flex; align-items: center; gap: 4px; background: var(--bc); color: var(--bt); font: 800 12px var(--font);
+         padding: 3px 8px; border-radius: 10px; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.35); white-space: nowrap; transform: translate(-50%, -50%); }
+  .bus.k11, .bus.k14 { --bc: #D3262B; }
+  .bus.k12 { --bc: #1E64C8; }
+  .bus.k30 { --bc: #F5B800; --bt: #191F28; }
+  .bus.k50 { --bc: #D9480F; }
+  .bus.k40, .bus.k41, .bus.k42, .bus.k43 { --bc: #5B6670; }
+  .bus b { font-size: 13px; }
+  .bus small { font-size: 11px; font-weight: 700; opacity: .92; }
+  .bus i { font-style: normal; font-size: 10px; font-weight: 800; border-radius: 6px; padding: 0 4px; background: rgba(255,255,255,.25); }
+  .bus i.crowd { background: #fff; color: #C92A2A; }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 8px; font-size: 13px; color: var(--ink-2); }
+  .legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .legend .stop { display: inline-block; flex: none; }
+  .pop { background: var(--surface); border-radius: var(--r-sm); box-shadow: var(--shadow); padding: 12px 14px; max-width: 260px; font-family: var(--font); font-size: 14px; position: relative; }
+  .pop b { display: block; font-size: 15px; margin-bottom: 2px; padding-right: 18px; }
+  .pop .x { position: absolute; top: 4px; right: 6px; border: 0; background: none; font-size: 18px; color: var(--ink-3); cursor: pointer; }
+  .pop span { color: var(--ink-3); font-size: 13px; }
+  .pop .nx { display: block; margin-top: 6px; color: var(--ink); font-size: 14px; line-height: 1.5; }
+  .pop .nx em { font-style: normal; font-weight: 800; color: var(--clay-ink); }
+  .pop .all { display: block; width: 100%; margin-top: 10px; min-height: 36px; border: 0; border-radius: 10px; background: var(--moss-tint); color: var(--moss-dark); font: inherit; font-size: 13.5px; font-weight: 700; cursor: pointer; }
+  .stopall { position: relative; border-color: var(--moss); }
+  .stopall .x { position: absolute; top: 6px; right: 8px; border: 0; background: none; font-size: 20px; color: var(--ink-3); cursor: pointer; }
+  .stopall .re { border: 0; background: none; padding: 0; font: inherit; color: var(--moss); font-weight: 700; cursor: pointer; }
+  .stopall .arv { margin-top: 8px; }
+  @media (min-width: 900px) {
+    .body { grid-template-columns: 1fr 360px; grid-template-rows: none; gap: 18px; }
+    .side { padding: 0; }
+  }
+</style>
+<script src="count.js" async></script>
+</head>
+<body>
+<div class="bp wrap">
+  <header class="bp-head">
+    <a href="map.html">← 동네 지도</a>
+    <h1>버스 지금 어디</h1>
+    <p>이동·남사를 지나는 버스예요. 번호를 누르면 지금 어느 정류소에 있는지 나와요.</p>
+  </header>
+  <div class="groups" id="groups" aria-label="노선"></div>
+  <div class="body">
+    <div class="mapbox"><div id="map" role="region" aria-label="버스 지도"></div><div class="tick" id="tick"></div>
+      <button class="locate" id="locate" type="button" aria-pressed="false">◎ 내 위치</button>
+      <p class="locmsg" id="locmsg" role="status" hidden></p></div>
+    <button class="grip" id="grip" type="button" aria-label="목록 크게 보기"></button>
+    <aside class="side" id="side"></aside>
+  </div>
+</div>
+
+<script>window.navermap_authFailure = () => { document.getElementById("map").innerHTML = '<p style="padding:20px;color:#636C66">지도를 불러오지 못했어요(네이버 지도 인증 실패).</p>'; };</script>
+<script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=vhdkduuv0z"></script>
+<script src="data/bus.js"></script>
+<script src="arrive.js"></script>
+<script src="locate.js"></script>
+<script src="sheet.js"></script>
+<script>
+(() => {
+  // 실시간 위치를 묻는 곳. 미리보기: PC 미리보기 서버(scripts/serve_preview.py). 공개 뒤: 키를 숨기는 중계 서버 주소로 바꾼다.
+  const BUS_API = "/api/bus";
+  const EVERY = 25;  // 초. 중계도 25초 동안 같은 답을 준다
+  const B = window.BUS, ST = B.stations;
+  const N = naver.maps, LL = (a, b) => new N.LatLng(a, b);
+  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const routes = B.routes;
+  const isTtak = r => r.no.includes("똑버스");
+  // 방향(10-15): 경기도 노선 정류소 목록은 기점 → 회차 정류소(turn) → 기점 한 줄이다. turn이 없거나 끝이면 한쪽으로만 가는 노선
+  const oneWay = r => !r.turn || r.turn >= r.stops_total;
+  const dirOf = seq => oneWay(cur) ? "go" : seq < cur.turn ? "go" : seq > cur.turn ? "back" : "end";
+  const dest = seq => oneWay(cur) ? cur.to : seq < cur.turn ? (cur.turn_name || cur.to) : cur.from;  // 그 순번에서 가는 쪽 종점
+  // 종점 이름 줄이기: 괄호(승강장 등)를 빼고 '.' 앞만, 8자 넘으면 자른다 — 지도 위 버스 표시용
+  const short = n => { const t = String(n || "").replace(/\(.*?\)/g, "").split(".")[0].trim(); return t.length > 8 ? t.slice(0, 7) + "…" : t; };
+  // 묶음: 동네(동네 정류소 9곳 이상·마을버스), 서울·광역(직행좌석·시외), 가장자리(동네를 조금만 지남).
+  // 직행좌석·시외·광역은 동네 정류소가 많아도 서울·광역(10-20 사용자: 4101번 → 숭례문이 동네 정류소 22곳이라 '동네'에 있었다)
+  const group = r => isTtak(r) ? "ttak" : r.type.includes("마을") ? "town" : /직행|시외|광역/.test(r.type) ? "far" : r.stops_local >= 9 ? "town" : "edge";
+  const GROUPS = [["town", "동네"], ["far", "서울·광역"], ["edge", "가장자리"]];
+  // 처음 고르는 노선: 동네 정류소가 많고 자주 오는 것(정류소 수 ÷ 배차)
+  const score = r => r.stops_local / Math.max(r.gap || 60, 10);
+  const qs = new URLSearchParams(location.search);
+  // 첫 화면 '버스 현황' 문의 가지: bus.html?g=town|far|edge|ttak 이면 그 묶음에서 가장 쓸모 있는 노선을 먼저 연다
+  const g0 = ["town", "far", "edge", "ttak"].includes(qs.get("g")) ? qs.get("g") : "town";
+  let cur = routes.find(r => r.no === qs.get("route")) || routes.filter(r => group(r) === g0).sort((a, b) => score(b) - score(a))[0]
+    || routes.filter(r => group(r) === "town").sort((a, b) => score(b) - score(a))[0];
+
+  const map = new N.Map("map", { center: LL(37.14, 127.18), zoom: 12, zoomControl: true,
+    zoomControlOptions: { position: N.Position.TOP_LEFT, style: N.ZoomControlStyle.SMALL }, mapDataControl: false, scaleControl: false });
+  const info = new N.InfoWindow({ content: "", borderWidth: 0, backgroundColor: "transparent", disableAnchor: true, pixelOffset: new N.Point(0, -16) });
+  N.Event.addListener(map, "click", () => info.close());
+  // 정류소 이름은 확대 13부터(회차 정류소 먼저, 그다음 순번 순으로 자리를 잡는다) — 가게와 달리 정류소는 띄엄띄엄 있어서 멀리서도 보이게(사용자 10-15).
+  // 자리: 오른쪽·왼쪽·위·아래 중 다른 이름표·정류소 점과 안 겹치는 곳 → 없으면 이름표끼리만 안 겹치는 곳 → 그래도 없으면 숨김.
+  // 확대 FULL_ZOOM부터는 겹쳐도 다 보인다(10-20: 서울 도심에서 세종문화회관·숭례문·명동이 끝까지 안 보였다)
+  const NAME_ZOOM = 13, FULL_ZOOM = 16, mapEl = document.getElementById("map");
+  const ruler = document.createElement("canvas").getContext("2d");
+  let labels = [], dots = [];  // labels { k, nm, ll, w, end }, dots 보이는 정류소 점 LatLng — drawRoute가 채운다
+  const hit = (b, c) => b[0] < c[2] && c[0] < b[2] && b[1] < c[3] && c[1] < b[3];
+  const POS = { r: (x, y, w) => [x - 6, y - 10, x + 14 + w, y + 12], l: (x, y, w) => [x - 14 - w, y - 10, x + 6, y + 12],
+                t: (x, y, w) => [x - w / 2 - 4, y - 24, x + w / 2 + 4, y + 6], b: (x, y, w) => [x - w / 2 - 4, y - 6, x + w / 2 + 4, y + 26] };
+  const syncNames = () => {
+    const spans = new Map([...mapEl.querySelectorAll(".stop span[data-k]")].map(el => [+el.dataset.k, el]));
+    const show = new Map();  // k → 자리
+    if (map.getZoom() >= NAME_ZOOM) {
+      const pr = map.getProjection(), boxes = [], all = map.getZoom() >= FULL_ZOOM;
+      const dotBox = dots.map(ll => { const p = pr.fromCoordToOffset(ll); return [p.x - 5, p.y - 5, p.x + 5, p.y + 5]; });
+      for (const o of labels) {
+        const p = pr.fromCoordToOffset(o.ll);
+        const others = dotBox.filter(d => Math.abs(d[0] + 5 - p.x) > 1 || Math.abs(d[1] + 5 - p.y) > 1);  // 자기 점은 빼고
+        const free = Object.keys(POS).map(k => [k, POS[k](p.x, p.y, o.w)]).filter(([, b]) => !boxes.some(c => hit(b, c)));
+        const pick = free.find(([, b]) => !others.some(c => hit(b, c))) || free[0] || (all ? ["r", POS.r(p.x, p.y, o.w)] : null);
+        if (!pick) continue;
+        boxes.push(pick[1]); show.set(o.k, pick[0]);
+      }
+    }
+    spans.forEach((el, k) => { el.classList.toggle("on", show.has(k)); el.dataset.pos = show.get(k) || "r"; });
+  };
+  N.Event.addListener(map, "idle", syncNames);
+  N.Event.addListener(map, "zoom_changed", () => { if (map.getZoom() < NAME_ZOOM) syncNames(); });
+
+  let lines = [], stopMarks = [], busMarks = new Map(), timer = null, left = 0, last = null, openPlate = null;
+
+  function renderChips() {
+    const ttak = routes.filter(isTtak), box = document.getElementById("groups");
+    const was = [...box.querySelectorAll(".row")].map(el => el.scrollLeft);  // 다시 그려도 밀어 둔 자리 그대로(전에는 맨 앞으로 돌아갔다)
+    box.innerHTML =
+      GROUPS.map(([g, name]) => {
+        const rs = routes.filter(r => group(r) === g);
+        if (!rs.length) return "";
+        return `<div class="row"><small>${name}</small>${(g === "town" ? ttak : []).concat(rs).map(r =>
+          `<button class="chip" data-id="${r.id}" aria-pressed="${r === cur}" title="${esc(r.from)} → ${esc(r.to)}">${esc(r.no.replace("용인", ""))}</button>`).join("")}</div>`;
+      }).join("");
+    box.querySelectorAll(".row").forEach((el, i) => {
+      el.scrollLeft = was[i] || 0;
+      // 고른 번호가 줄 밖에 있으면(?route=4101로 들어올 때) 보이는 곳까지 민다
+      const on = el.querySelector('[aria-pressed="true"]');
+      if (on && (on.offsetLeft < el.scrollLeft || on.offsetLeft + on.offsetWidth > el.scrollLeft + el.clientWidth))
+        el.scrollLeft = on.offsetLeft - el.clientWidth / 2 + on.offsetWidth / 2;
+    });
+  }
+  // PC 마우스로 번호 줄 넘기기(10-20 사용자 "마우스로 스크롤이 안돼"): 휠을 굴리면 옆으로, 꾹 눌러 끌어도 옆으로.
+  // 휴대폰은 손가락으로 미는 원래 방식 그대로. 줄 끝에 닿으면 휠을 놓아준다
+  const groupsEl = document.getElementById("groups");
+  groupsEl.addEventListener("wheel", e => {
+    const row = e.target.closest(".row");
+    if (!row || row.scrollWidth <= row.clientWidth || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+    const d = e.deltaMode === 1 ? e.deltaY * 40 : e.deltaY, max = row.scrollWidth - row.clientWidth;
+    if ((d < 0 && row.scrollLeft <= 0) || (d > 0 && row.scrollLeft >= max - 1)) return;
+    row.scrollLeft += d; e.preventDefault();
+  }, { passive: false });
+  let drag = null;
+  groupsEl.addEventListener("pointerdown", e => {
+    const row = e.target.closest(".row");
+    if (e.pointerType !== "mouse" || e.button !== 0 || !row || row.scrollWidth <= row.clientWidth) return;
+    drag = { row, x: e.clientX, left: row.scrollLeft, moved: false };
+  });
+  addEventListener("pointermove", e => {
+    if (!drag) return;
+    if (!drag.moved && Math.abs(e.clientX - drag.x) > 5) { drag.moved = true; drag.row.classList.add("drag"); }
+    if (drag.moved) drag.row.scrollLeft = drag.left - (e.clientX - drag.x);
+  });
+  addEventListener("pointerup", () => {
+    if (!drag) return;
+    drag.row.classList.remove("drag");
+    if (drag.moved) { const stop = ev => { ev.stopPropagation(); ev.preventDefault(); }; groupsEl.addEventListener("click", stop, { capture: true, once: true }); setTimeout(() => groupsEl.removeEventListener("click", stop, { capture: true }), 0); }
+    drag = null;
+  });
+  groupsEl.addEventListener("click", e => {
+    const b = e.target.closest("[data-id]"); if (!b) return;
+    cur = routes.find(r => String(r.id) === b.dataset.id);
+    history.replaceState(null, "", "?route=" + encodeURIComponent(cur.no));
+    renderChips(); drawRoute(true); refresh();
+  });
+
+  function drawRoute(fit) {
+    info.close(); openPlate = null; stopOpen = null; last = null;
+    lines.forEach(l => l.setMap(null)); stopMarks.forEach(m => m.setMap(null)); busMarks.forEach(o => o.m.setMap(null));
+    lines = []; stopMarks = []; busMarks = new Map();
+    const color = isTtak(cur) ? "#D9480F" : "#0E8A5A";
+    lines = cur.line.map(seg => new N.Polyline({ map, path: seg.map(p => LL(p[0], p[1])), strokeColor: color, strokeWeight: 5, strokeOpacity: .75 }));
+    buildTrack();
+    // 정류소마다 방향: 한 정류소를 갈 때·올 때 다 서면 both
+    const dirs = new Map();
+    cur.stops.forEach((sid, i) => { if (ST[sid]) dirs.set(sid, (dirs.get(sid) || new Set()).add(dirOf(i + 1))); });
+    // 이름표는 같은 이름이 300m 안에 이미 붙었으면 생략한다(길 건너 맞은편 정류소)
+    const named = [];
+    const seen = new Set();
+    labels = []; dots = []; ruler.font = "700 12px " + getComputedStyle(document.body).fontFamily;
+    cur.stops.forEach((sid, i) => {
+      const s = ST[sid]; if (!s || seen.has(sid)) return; seen.add(sid);
+      const ds = dirs.get(sid), dir = ds.has("end") ? "end" : ds.size > 1 ? "both" : [...ds][0];
+      const nm = s[2].replace(/\((중|경유)\)$/, "");
+      const dup = named.some(o => o.nm === nm && Math.hypot((o.s[0] - s[0]) * KY, (o.s[1] - s[1]) * KX) < 300);
+      const via = s[2].includes("(경유)"), k = labels.length;
+      if (!dup) named.push({ nm, s });
+      if (!via) dots.push(LL(s[0], s[1]));
+      if (!dup && !via) labels.push({ k, nm, ll: LL(s[0], s[1]), w: ruler.measureText(nm).width, end: dir === "end" });
+      const m = new N.Marker({ map, position: LL(s[0], s[1]), zIndex: dir === "end" ? 60 : 50, title: s[2],
+        icon: { content: `<div class="stop ${dir}${via ? " via" : ""}">${dup || via ? "" : `<span data-k="${k}">${esc(nm)}</span>`}</div>`, anchor: new N.Point(4, 4) } });
+      const way = dir === "end" ? "회차 정류소(종점)" : dir === "both" ? "양쪽 방향" : `${short(dest(i + 1))} 방면`;
+      N.Event.addListener(m, "click", () => openStop(sid, m, way));
+      stopMarks.push(m);
+    });
+    labels.sort((a, b) => b.end - a.end);  // 회차 정류소 이름이 먼저 자리 잡는다(나머지는 순번 순 그대로)
+    syncNames();
+    if (fit) {
+      const pts = cur.line.flat();
+      if (pts.length) {
+        const b = new N.LatLngBounds(LL(pts[0][0], pts[0][1]), LL(pts[0][0], pts[0][1]));
+        pts.forEach(p => b.extend(LL(p[0], p[1])));
+        map.fitBounds(b, { top: 30, right: 30, bottom: 30, left: 30 });
+      }
+    }
+    renderSide();
+  }
+  const popHtml = inner => `<div class="pop"><button class="x" type="button" aria-label="닫기">×</button>${inner}</div>`;
+  function bindX() { setTimeout(() => document.querySelector(".pop .x")?.addEventListener("click", e => { e.stopPropagation(); info.close(); openPlate = null; stopOpen = null; }), 0); }
+
+  // 정류소 창(2026-10-18): 지금 노선 버스가 이 정류소까지 몇 정거장 전인지 — 이미 받은 위치로 세서 추가 조회가 없다(arrive.js first).
+  // 갈 때·올 때 다 서는 정류소는 방면마다 한 줄. '이 정류소 모든 버스'는 지나는 노선마다 위치를 물어 옆 목록 맨 위에 보인다
+  let stopOpen = null, stopAll = null;
+  function openStop(sid, m, way) {
+    const s = ST[sid]; stopOpen = { sid, m, way }; openPlate = null;
+    const seqs = cur.stops.map((x, j) => x === sid ? j + 1 : 0).filter(Boolean);
+    const rows = isTtak(cur) ? ["부르면 오는 버스라 위치가 없어요(똑타 앱)"] : seqs.map(q => {
+      const f = last && !last.error ? Arrive.first(last.buses, q) : null;
+      return `${esc(short(dest(q)))} 방면 · ${!last ? "불러오는 중…" : last.error ? "위치 정보 없음" : f ? `<em>${Arrive.when(f.n)}</em>` : "오는 버스 없음"}`;
+    });
+    info.setContent(popHtml(`<b>${esc(s[2])}</b><span>${esc(cur.no)}번이 여기까지${/회차|양쪽/.test(way) ? ` · ${esc(way)}` : ""}</span><span class="nx">${rows.join("<br>")}</span>` +
+      `<button class="all" type="button">이 정류소에 오는 버스 모두</button>`));
+    info.open(map, m); bindX();
+    setTimeout(() => document.querySelector(".pop .all")?.addEventListener("click", e => { e.stopPropagation(); showStop(sid); }), 0);
+  }
+  async function showStop(sid) {
+    const s = ST[sid], nm = s[2].replace(/\((중|경유)\)$/, "");
+    // 길 건너 맞은편(이름 같고 200m 안)도 같이 — 방면은 목록에 나온다
+    const ids = Object.keys(ST).filter(k => ST[k][2].replace(/\((중|경유)\)$/, "") === nm && Math.hypot((ST[k][0] - s[0]) * KY, (ST[k][1] - s[1]) * KX) < 200);
+    const me = stopAll = { sid, nm, ids, res: null };
+    if (sheet.mode() === "big") sheet.snap("half");
+    renderSide(); document.getElementById("side").scrollTop = 0;
+    const res = await Arrive.check(B, ids);
+    if (stopAll !== me) return;  // 기다리는 사이 닫았거나 다른 정류소를 눌렀다
+    me.res = res; renderSide();
+  }
+  function stopCard() {
+    if (!stopAll) return "";
+    return `<div class="card stopall"><button class="x" type="button" data-stop-close aria-label="닫기">×</button><h2>${esc(stopAll.nm)}</h2>
+      <div class="meta">이 정류소에 오는 버스 · <button class="re" type="button" data-stop-re>새로 보기</button></div>
+      ${stopAll.res ? Arrive.html(stopAll.res) : `<p class="ar-note">오는 버스를 세는 중…</p>`}</div>`;
+  }
+
+  // 버스는 노선 선(도로)을 따라 놓는다. 10-15 사용자 "확대하니 버스가 도로 노선 위에 있지 않고 논밭으로 움직여" —
+  // 전에는 두 정류소를 직선으로 이어 그 위에 놓고 직선으로 옮겼다. 이제 선 조각마다 누적 거리(m)를 두고,
+  // 정류소마다 선 위 자리(조각 k·거리 d)를 정류소 순서대로 찾는다(같은 길을 갔다 오는 노선이 돌아오는 쪽에 붙지 않게 앞으로만).
+  const KX = 88800, KY = 111000;
+  let track = [], stopAt = [];
+  function buildTrack() {
+    const L = cur.line;
+    track = L.map(seg => { let d = 0; return seg.map((p, i) => i ? (d += Math.hypot((p[0] - seg[i - 1][0]) * KY, (p[1] - seg[i - 1][1]) * KX)) : 0); });
+    stopAt = [];
+    let ck = 0, cd = 0;
+    for (const sid of cur.stops) {
+      const s = ST[sid];
+      if (!s) { stopAt.push(null); continue; }
+      let best = null;
+      for (let k = ck; k < L.length; k++) {
+        const seg = L[k];
+        for (let j = 0; j < seg.length - 1; j++) {
+          const a = seg[j], b = seg[j + 1];
+          const ax = a[1] * KX, ay = a[0] * KY, vx = b[1] * KX - ax, vy = b[0] * KY - ay, px = s[1] * KX, py = s[0] * KY, l2 = vx * vx + vy * vy;
+          const t = l2 ? Math.max(0, Math.min(1, ((px - ax) * vx + (py - ay) * vy) / l2)) : 0;
+          const d = track[k][j] + t * Math.sqrt(l2);
+          if (k === ck && d < cd) continue;
+          const off = Math.hypot(ax + t * vx - px, ay + t * vy - py);
+          const ahead = k === ck ? d - cd : track[ck].at(-1) - cd + 500 * (k - ck) + d;
+          const cost = off + ahead * .01;  // 1km 앞 = 10m 더 먼 것과 같게 친다
+          if (!best || cost < best.cost) best = { cost, off, k, d };
+        }
+      }
+      // 정류소는 선에서 보통 6m(90%가 13m 안, 10-15 계산) — 60m 넘게 떨어지면 선 위 자리를 못 찾은 것으로 본다
+      if (best && best.off < 60) { stopAt.push({ k: best.k, d: best.d }); ck = best.k; cd = best.d; } else stopAt.push(null);
+    }
+  }
+  function pointAt(k, d) {
+    const seg = cur.line[k], c = track[k];
+    let j = 1;
+    while (j < seg.length - 1 && c[j] < d) j++;
+    const a = seg[j - 1], b = seg[j], f = c[j] > c[j - 1] ? Math.max(0, Math.min(1, (d - c[j - 1]) / (c[j] - c[j - 1]))) : 0;
+    return [a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f];
+  }
+  // 버스 자리: 정류소 단위. 1 도착 = 그 정류소, 2 출발 = 다음 정류소까지 길의 30%, 0 교차로 통과 = 60%(화면용 어림)
+  // 돌려주는 값: { p: [위도, 경도], k, d } — k·d가 있으면 선 위 자리다
+  function spot(b) {
+    const i = b.seq - 1, here = ST[cur.stops[i]];
+    if (!here) return null;
+    const f = b.st === 2 ? .3 : b.st === 0 ? .6 : 0, A = stopAt[i], B2 = stopAt[i + 1];
+    if (A && f && B2 && B2.k === A.k && B2.d > A.d) { const d = A.d + (B2.d - A.d) * f; return { p: pointAt(A.k, d), k: A.k, d }; }
+    if (A) return { p: pointAt(A.k, A.d), k: A.k, d: A.d };
+    return { p: [here[0], here[1]] };  // 선 위 자리를 못 찾은 정류소: 정류소 좌표 그대로
+  }
+  const STATE = { 1: "도착", 2: "출발", 0: "지나 다음 정류소로" };
+  const CROWD = { 1: "여유", 2: "보통", 3: "혼잡", 4: "매우 혼잡" };
+  function busText(b) {
+    const s = ST[cur.stops[b.seq - 1]];
+    const where = s ? `${s[2]} ${STATE[b.st] ?? ""}` : "더 먼 곳";
+    // 빈자리는 좌석버스만 준다(일반 버스는 늘 0이 와서 '빈자리 0'으로 잘못 보였다, 10-14)
+    const extra = [/좌석/.test(cur.type) && b.seat >= 0 && b.seat != null ? `빈자리 ${b.seat}` : "", CROWD[b.crowd] || "", b.low === 1 ? "저상" : ""].filter(Boolean).join(" · ");
+    return { where, extra };
+  }
+  // 옮기기 1.5초: 같은 선 조각에서 앞으로 4km 안이면 길을 따라, 둘 다 선 위인데 그렇지 않으면(되돌아감·조각이 바뀜) 바로 그 자리로
+  function animate(o, to) {
+    const m = o.m, from = m.getPosition(), at = o.at, t0 = performance.now(), dur = 1500;
+    const road = at && at.k != null && to.k === at.k && to.d >= at.d && to.d - at.d < 4000;
+    o.at = to;
+    if (!road && at && at.k != null && to.k != null) { m.setPosition(LL(to.p[0], to.p[1])); return; }
+    const step = t => { const k = Math.min(1, (t - t0) / dur), e = k * (2 - k);
+      const p = road ? pointAt(to.k, at.d + (to.d - at.d) * e) : [from.lat() + (to.p[0] - from.lat()) * e, from.lng() + (to.p[1] - from.lng()) * e];
+      m.setPosition(LL(p[0], p[1])); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }
+  function drawBuses() {
+    const keep = new Set();
+    for (const b of (last && last.buses) || []) {
+      const s = spot(b); if (!s) continue;
+      const p = s.p;
+      keep.add(b.v);
+      const html = `<div class="bus k${cur.type_cd}"><b>${esc(cur.no.replace("용인", ""))}</b><small>→ ${esc(short(dest(b.seq)))}</small>`
+        + `${b.crowd >= 3 ? `<i class="crowd">${CROWD[b.crowd]}</i>` : ""}${b.low === 1 ? "<i>저상</i>" : ""}</div>`;
+      let o = busMarks.get(b.v);
+      if (!o) {
+        const m = new N.Marker({ map, position: LL(p[0], p[1]), zIndex: 200, icon: { content: html, anchor: new N.Point(0, 0) } });
+        o = { m, b, at: s }; busMarks.set(b.v, o);
+        N.Event.addListener(m, "click", () => openBus(o));
+      } else {
+        o.m.setIcon({ content: html, anchor: new N.Point(0, 0) });
+        const now = o.m.getPosition();
+        if (Math.abs(now.lat() - p[0]) > 1e-6 || Math.abs(now.lng() - p[1]) > 1e-6) animate(o, s);
+        o.b = b;
+      }
+      if (openPlate === b.v) openBus(o);
+    }
+    for (const [v, o] of busMarks) if (!keep.has(v)) { o.m.setMap(null); busMarks.delete(v); }
+  }
+  function openBus(o) {
+    const t = busText(o.b);
+    info.setContent(popHtml(`<b>${esc(cur.no)}번 · ${esc(o.b.v)}</b>${esc(dest(o.b.seq))} 방면<br>${esc(t.where)}${t.extra ? `<br><span>${esc(t.extra)}</span>` : ""}`));
+    info.open(map, o.m); openPlate = o.b.v; stopOpen = null; bindX();
+  }
+
+  function renderSide() {
+    const r = cur, bs = (last && last.buses) || [];
+    const inTown = bs.filter(b => ST[r.stops[b.seq - 1]]).sort((a, b) => a.seq - b.seq);
+    const out = bs.length - inTown.length;
+    const time = (a, b) => a && b ? `${a} ~ ${b}` : "정보 없음";
+    let html = stopCard() + `<div class="card${isTtak(r) ? " ttak-box" : ""}"><h2>${esc(r.no)}${r.no.includes("번") ? "" : "번"}</h2>
+      <div class="meta">${esc(r.type)} · ${esc(r.from)} ↔ ${esc(r.to)}</div>
+      <div class="legend" aria-label="정류소 색"><span><i class="stop go"></i>${esc(short(dest(1)))} 방면</span>${oneWay(r) ? "" :
+        `<span><i class="stop back"></i>${esc(short(r.from))} 방면</span><span><i class="stop end"></i>회차</span>`}</div>
+      <dl><dt>첫차·막차</dt><dd>${esc(time(r.first, r.last))}${r.first_back ? ` (반대쪽 ${esc(time(r.first_back, r.last_back))})` : ""}</dd>
+      <dt>배차</dt><dd>${r.gap ? `출퇴근 약 ${r.gap}분${r.gap_off ? ` · 평소 약 ${r.gap_off}분` : ""}` : "정보 없음"}</dd>
+      <dt>버스 회사</dt><dd>${esc(r.company)}${r.company_tel ? ` · <a class="tel" href="tel:${esc(r.company_tel)}">${esc(r.company_tel)}</a>` : ""}</dd></dl>
+      ${isTtak(r) ? `<p class="note" style="color:#9A3412">똑버스는 정해진 시간표 없이 <b>부르면 오는 버스</b>예요. 경기도 '똑타' 앱에서 부르고 결제해요(1,450원, 환승 할인).</p>` : ""}</div>`;
+    if (last && last.error) html += `<p class="warn">${esc(last.error)}</p>`;
+    else if (last) {
+      html += `<p class="meta" style="margin:6px 2px">지금 운행 중 ${inTown.length}대${out ? ` · 더 먼 곳 ${out}대` : ""}${last.stale ? ' · <span class="warn">조금 전 정보</span>' : ""}</p>`;
+      html += `<ul class="buses">${inTown.map(b => { const t = busText(b);
+        return `<li data-v="${esc(b.v)}"><b>${esc(t.where)}</b><span>${esc(short(dest(b.seq)))} 방면 · ${esc(b.v)}${t.extra ? " · " + esc(t.extra) : ""}</span></li>`; }).join("")}
+        ${!bs.length && isTtak(r) ? `<li class="out">똑버스는 실시간 위치가 공개 데이터에 나오지 않아요(10-14 확인: 노선은 있으나 위치 0대). 똑타 앱에서 부르면 앱에 위치가 나와요.</li>`
+          : !inTown.length ? `<li class="out">지금 지도 안을 달리는 ${esc(r.no)}번이 없어요.${out ? " 더 먼 곳에서 오는 중이에요." : ""}</li>` : ""}</ul>`;
+    } else html += `<p class="meta">버스 위치를 불러오는 중…</p>`;
+    html += `<p class="note">위치는 GPS가 아니라 '몇 번째 정류소에 도착·출발'한 기준이에요. 정류소 사이에서는 노선 길을 따라 어림으로 그려요. ${EVERY}초마다 새로 받아요.<br>
+      출처: ${esc((last && last.src) || "경기도 버스정보")} · 노선 정보 ${esc(B.updated_at.slice(0, 10))} 받음(공공데이터포털).</p>`;
+    document.getElementById("side").innerHTML = html;
+  }
+  document.getElementById("side").addEventListener("click", e => {
+    if (e.target.closest("[data-stop-close]")) { stopAll = null; renderSide(); return; }
+    if (e.target.closest("[data-stop-re]")) { showStop(stopAll.sid); return; }
+    const li = e.target.closest("[data-v]"); if (!li) return;
+    const o = busMarks.get(li.dataset.v); if (!o) return;
+    if (sheet.mode() === "list") sheet.snap("half");
+    map.setCenter(o.m.getPosition()); if (map.getZoom() < 14) map.setZoom(14); openBus(o);
+  });
+
+  async function refresh() {
+    clearTimeout(timer);
+    const id = cur.id;
+    try {
+      const r = await fetch(`${BUS_API}?route=${id}`, { cache: "no-store" });
+      const d = await r.json();
+      if (cur.id !== id) return;  // 기다리는 사이 다른 노선을 눌렀다
+      last = d;
+    } catch (e) {
+      if (cur.id !== id) return;
+      last = { ...(last || {}), error: "버스 위치를 받아 오지 못했어요. 잠시 뒤 다시 해 볼게요.", buses: (last && last.buses) || [] };
+    }
+    drawBuses(); renderSide();
+    if (stopOpen && info.getMap()) openStop(stopOpen.sid, stopOpen.m, stopOpen.way);  // 열린 정류소 창의 '몇 정거장 전'도 새로
+    left = EVERY; tickLoop();
+  }
+  function tickLoop() {
+    document.getElementById("tick").innerHTML = `<b>${left}</b>초 뒤 새로`;
+    if (left-- <= 0) { if (!document.hidden) refresh(); else timer = setTimeout(tickLoop, 1000); return; }
+    timer = setTimeout(tickLoop, 1000);
+  }
+  document.addEventListener("visibilitychange", () => { if (!document.hidden && left <= 0) refresh(); });  // 화면을 끄면 묻지 않는다(한도 아끼기)
+
+  renderChips();
+  const sheet = addSheet(document.querySelector(".body"), document.getElementById("grip"));
+  // 노선 버튼 줄이 그려지면 지도 칸 높이가 바뀐다 — 네이버 지도는 처음 크기를 기억해서 중심이 34px 아래로 어긋났다(10-15)
+  new ResizeObserver(() => map.autoResize()).observe(document.getElementById("map"));
+  drawRoute(true); refresh();
+  const locMsg = document.getElementById("locmsg");
+  addLocate(map, document.getElementById("locate"), { onMsg: m => { locMsg.textContent = m; locMsg.hidden = !m; } });
+})();
+</script>
+</body>
+</html>

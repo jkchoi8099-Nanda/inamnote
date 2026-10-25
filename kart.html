@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#0A5C3D">
+<title>이남 카트 · 이남노트</title>
+<meta name="description" content="이동읍에서 남사읍을 돌아 이동저수지까지, 실제 도로 모양 그대로 달리는 이남노트 미니 카트 게임">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  :root {
+    --ink: #191F28; --ink-2: #4E5968; --ink-3: #6B7684; --bg: #F2F4F6; --line: #E5E8EB;
+    --moss: #0E8A5A; --moss-dark: #0A5C3D; --leaf: #2FC67A; --clay: #FF6B35;
+    --safe-b: env(safe-area-inset-bottom, 0px);
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #8FD3A8; color: var(--ink);
+    font-family: "Pretendard Variable", Pretendard, system-ui, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+    -webkit-user-select: none; user-select: none; touch-action: none; }
+  #view { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+  button { font: inherit; color: inherit; cursor: pointer; }
+
+  /* ── 게임 중 화면 글자 ── */
+  .hud { position: fixed; inset: 0; pointer-events: none; }
+  .hud[hidden], .screen[hidden] { display: none !important; }
+  .hud-top { position: absolute; top: max(12px, env(safe-area-inset-top)); left: 12px; right: 12px;
+    display: flex; align-items: flex-start; gap: 10px; }
+  .slot { width: 64px; height: 64px; border-radius: 20px; background: rgba(255,255,255,.92);
+    box-shadow: 0 6px 20px rgba(0,0,0,.18); display: grid; place-items: center; flex: none; position: relative; }
+  .slot:not(.has):not(.spin) { background: rgba(255,255,255,.55); }
+  .slot img { width: 46px; height: 46px; opacity: 0; transform: scale(.6); transition: transform .15s, opacity .15s; }
+  .slot.has img { opacity: 1; transform: scale(1); }
+  .slot.spin img { opacity: 1; transform: scale(.9); }
+  .slot small { position: absolute; bottom: -18px; left: 0; right: 0; text-align: center; font-size: 11px; font-weight: 800;
+    color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,.5); }
+  .lapbox { background: rgba(25,31,40,.78); color: #fff; border-radius: 18px; padding: 8px 14px; line-height: 1.15;
+    box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+  .lapbox b { font-size: 22px; font-weight: 800; letter-spacing: -.02em; }
+  .lapbox span { font-size: 12px; font-weight: 700; opacity: .75; margin-left: 3px; }
+  .lapbox em { display: block; font-style: normal; font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; opacity: .92; }
+  .mini { margin-left: auto; width: 150px; height: 112px; border-radius: 18px; background: rgba(255,255,255,.88);
+    box-shadow: 0 6px 20px rgba(0,0,0,.18); flex: none; }
+  .rank { position: absolute; right: 16px; bottom: calc(140px + var(--safe-b)); color: #fff; font-weight: 900;
+    text-shadow: 0 3px 0 rgba(0,0,0,.25), 0 6px 18px rgba(0,0,0,.35); line-height: 1; letter-spacing: -.04em; }
+  .rank b { font-size: 76px; }
+  .rank span { font-size: 26px; margin-left: 2px; }
+  .rank.r1 b { color: #FFD43B; } .rank.r2 b { color: #E9ECEF; } .rank.r3 b { color: #FFA94D; }
+  .speed { position: absolute; left: 16px; bottom: calc(140px + var(--safe-b)); color: #fff; font-weight: 800;
+    text-shadow: 0 2px 10px rgba(0,0,0,.4); font-variant-numeric: tabular-nums; }
+  .speed b { font-size: 30px; letter-spacing: -.03em; } .speed span { font-size: 12px; margin-left: 3px; opacity: .85; }
+  .toast { position: absolute; top: 22%; left: 50%; transform: translate(-50%, -8px); background: rgba(255,255,255,.95);
+    color: var(--ink); padding: 10px 18px 10px 14px; border-radius: 999px; font-weight: 800; font-size: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.18); opacity: 0; transition: opacity .25s, transform .25s; white-space: nowrap;
+    display: flex; align-items: center; gap: 8px; }
+  .toast.on { opacity: 1; transform: translate(-50%, 0); }
+  .toast i { width: 10px; height: 10px; border-radius: 50%; background: var(--clay); display: inline-block; }
+  .toast.warn { background: #FFF4E5; color: #9A5B00; }
+  .count { position: absolute; top: 34%; left: 0; right: 0; text-align: center; font-weight: 900; font-size: 120px; color: #fff;
+    letter-spacing: -.05em; text-shadow: 0 6px 0 rgba(0,0,0,.18), 0 10px 40px rgba(0,0,0,.35); opacity: 0; }
+  .count.pop { animation: pop .9s ease-out both; }
+  .count.go { color: #FFD43B; font-size: 96px; }
+  @keyframes pop { 0% { opacity: 0; transform: scale(1.6); } 15% { opacity: 1; transform: scale(1); } 75% { opacity: 1; } 100% { opacity: 0; transform: scale(.9); } }
+  .corner { position: absolute; top: calc(max(12px, env(safe-area-inset-top)) + 122px); right: 12px; display: flex; gap: 8px; pointer-events: auto; }
+  .ibtn { width: 40px; height: 40px; border-radius: 14px; border: 0; background: rgba(255,255,255,.88); font-weight: 900;
+    box-shadow: 0 4px 14px rgba(0,0,0,.15); display: grid; place-items: center; font-size: 15px; }
+
+  /* 휴대폰 버튼 */
+  .touch { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 12px calc(14px + var(--safe-b));
+    display: flex; justify-content: space-between; align-items: flex-end; pointer-events: none; }
+  .touch[hidden] { display: none; }
+  .touch .grp { display: flex; gap: 10px; align-items: flex-end; pointer-events: auto; }
+  .touch button { border: 0; border-radius: 26px; background: rgba(255,255,255,.82); color: var(--ink); font-weight: 900;
+    box-shadow: 0 6px 18px rgba(0,0,0,.2); touch-action: none; }
+  .touch button.on { background: #fff; transform: scale(.94); }
+  .b-dir { width: 76px; height: 76px; font-size: 26px; }
+  .b-drift { width: 96px; height: 76px; font-size: 15px; background: rgba(14,138,90,.92) !important; color: #fff !important; }
+  .b-item { width: 64px; height: 64px; font-size: 13px; }
+  .b-brake { width: 56px; height: 48px; font-size: 12px; }
+  .stack { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
+
+  /* ── 시작·결과·멈춤 화면 ── */
+  .screen { position: fixed; inset: 0; display: grid; place-items: center; padding: 20px 16px calc(20px + var(--safe-b));
+    background: linear-gradient(180deg, rgba(10,92,61,.10), rgba(10,40,30,.45)); overflow-y: auto; touch-action: pan-y; }
+  .card { width: min(440px, 100%); background: #fff; border-radius: 28px; padding: 22px 22px 20px;
+    box-shadow: 0 24px 60px rgba(0,0,0,.25); }
+  .back { display: inline-flex; align-items: center; gap: 4px; color: var(--ink-2); font-size: 14px; font-weight: 700;
+    text-decoration: none; padding: 6px 10px 6px 0; }
+  .eyebrow { margin: 10px 0 2px; font-size: 12px; font-weight: 800; letter-spacing: .2em; color: var(--moss); }
+  .title-row { display: flex; align-items: center; gap: 12px; }
+  .title-row img { width: 56px; height: 56px; }
+  h1 { margin: 0; font-size: 40px; font-weight: 800; letter-spacing: -.045em; line-height: 1.1; }
+  h2 { margin: 0 0 4px; font-size: 28px; font-weight: 800; letter-spacing: -.04em; }
+  .sub { margin: 6px 0 14px; color: var(--ink-2); font-size: 16px; font-weight: 600; line-height: 1.5; }
+  .route { background: var(--bg); border-radius: 20px; padding: 12px; display: flex; gap: 12px; align-items: center; }
+  .route canvas { width: 120px; height: 90px; flex: none; }
+  .route p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--ink-2); }
+  .route b { color: var(--ink); }
+  .opt { margin-top: 14px; }
+  .opt label { display: block; font-size: 13px; font-weight: 800; color: var(--ink-3); margin-bottom: 6px; }
+  .seg { display: flex; background: var(--bg); border-radius: 14px; padding: 4px; gap: 4px; }
+  .seg button { flex: 1; border: 0; background: transparent; border-radius: 10px; padding: 9px 0; font-size: 15px; font-weight: 700; color: var(--ink-2); }
+  .seg button[aria-pressed="true"] { background: #fff; color: var(--ink); box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+  .go { width: 100%; margin-top: 18px; border: 0; border-radius: 999px; padding: 16px; font-size: 18px; font-weight: 800;
+    background: var(--ink); color: #fff; transition: transform .1s; }
+  .go:active { transform: scale(.97); }
+  .go.ghost { background: var(--bg); color: var(--ink); margin-top: 8px; }
+  .how { margin: 14px 0 0; font-size: 13px; color: var(--ink-3); line-height: 1.6; text-align: center; }
+  .how kbd { font: inherit; font-weight: 800; color: var(--ink-2); background: var(--bg); border-radius: 6px; padding: 1px 6px; }
+  .best { margin: 6px 0 0; font-size: 13px; text-align: center; color: var(--moss); font-weight: 800; min-height: 1em; }
+  .foot { margin: 14px auto 0; max-width: 440px; font-size: 12px; color: rgba(255,255,255,.92); text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,.4); }
+  .wrap { width: min(440px, 100%); }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 15px; }
+  td { padding: 9px 4px; border-bottom: 1px solid var(--line); }
+  td:first-child { width: 44px; font-weight: 900; color: var(--ink-3); }
+  td:last-child { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); font-weight: 600; }
+  tr.me td { color: var(--moss-dark); font-weight: 900; }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; vertical-align: 1px; }
+  .res-head { display: flex; align-items: center; gap: 12px; }
+  .res-head img { width: 56px; height: 56px; }
+  .res-head p { margin: 0; color: var(--ink-2); font-weight: 700; }
+  .nb { color: var(--clay) !important; }
+  @media (min-width: 900px) {
+    .mini { width: 220px; height: 165px; }
+    .rank b { font-size: 96px; }
+    .rank, .speed { bottom: 28px; }
+    .corner { top: calc(max(12px, env(safe-area-inset-top)) + 177px); }
+  }
+  /* 휴대폰 버튼이 보일 때는 순위·속도를 버튼 위로 */
+  .hud.t .rank, .hud.t .speed { bottom: calc(104px + var(--safe-b)); }
+  .hud.t .rank b { font-size: 64px; }
+</style>
+<script src="count.js" async></script>
+</head>
+<body>
+<canvas id="view" aria-label="이남 카트 경주 화면"></canvas>
+
+<div id="hud" class="hud" hidden>
+  <div class="hud-top">
+    <div id="slot" class="slot"><img id="slot-img" alt=""><small id="slot-name"></small></div>
+    <div class="lapbox"><b id="lap">1/2</b><span>바퀴</span><em id="time">0:00.00</em></div>
+    <canvas id="mini" class="mini" width="440" height="330" aria-hidden="true"></canvas>
+  </div>
+  <div class="corner">
+    <button id="mute" class="ibtn" aria-label="소리 끄기">🔊</button>
+    <button id="pause" class="ibtn" aria-label="잠깐 멈춤">II</button>
+  </div>
+  <div id="speed" class="speed"><b>0</b><span>km/h</span></div>
+  <div id="rank" class="rank"><b>6</b><span>위</span></div>
+  <div id="toast" class="toast"></div>
+  <div id="count" class="count"></div>
+  <div id="touch" class="touch" hidden>
+    <div class="grp">
+      <button class="b-dir" data-k="left" aria-label="왼쪽">◀</button>
+      <button class="b-dir" data-k="right" aria-label="오른쪽">▶</button>
+    </div>
+    <div class="grp">
+      <div class="stack">
+        <button class="b-item" data-k="item">아이템</button>
+        <button class="b-brake" data-k="brake">브레이크</button>
+      </div>
+      <button class="b-drift" data-k="drift">드리프트</button>
+    </div>
+  </div>
+</div>
+
+<section id="title" class="screen">
+  <div class="wrap">
+    <div class="card">
+      <a class="back" href="index.html">← 이남노트</a>
+      <p class="eyebrow">INAM KART</p>
+      <div class="title-row"><img src="img/emoji/kart-car.webp" alt=""><h1>이남 카트</h1></div>
+      <p class="sub">이동읍에서 출발해 남사읍을 돌고<br>이동저수지를 지나 다시 이동읍으로.</p>
+      <div class="route">
+        <canvas id="mini-title" width="240" height="180" aria-hidden="true"></canvas>
+        <p>실제 버스 노선 길 <b id="real-km">21.7km</b>를<br>모양 그대로 <b id="game-km">2.2km</b>로 줄인 경주로예요.<br>남곡사거리·남사·어비리·이동저수지를 지나요.</p>
+      </div>
+      <div class="opt">
+        <label>바퀴 수</label>
+        <div class="seg" id="opt-laps"><button data-v="1">1바퀴</button><button data-v="2">2바퀴</button><button data-v="3">3바퀴</button></div>
+      </div>
+      <div class="opt">
+        <label>상대 빠르기</label>
+        <div class="seg" id="opt-level"><button data-v="0">느긋</button><button data-v="1">보통</button><button data-v="2">빠름</button></div>
+      </div>
+      <button id="go" class="go">출발하기</button>
+      <p class="how" id="how-key">가속은 자동이에요. <kbd>← →</kbd> 방향 · <kbd>Space</kbd> 드리프트 · <kbd>X</kbd> 아이템 · <kbd>↓</kbd> 브레이크<br>굽은 길에서 드리프트를 길게 하다 떼면 빨라져요.</p>
+      <p class="how" id="how-touch" hidden>가속은 자동이에요. ◀ ▶로 방향, 굽은 길에서 <b>드리프트</b>를 누르고 있다 떼면 빨라져요.</p>
+      <p class="best" id="best"></p>
+    </div>
+    <p class="foot">이 사이트는 용인시·LH·삼성전자와 무관한 민간 지역 정보 사이트입니다.</p>
+  </div>
+</section>
+
+<section id="paused" class="screen" hidden>
+  <div class="card">
+    <h2>잠깐 멈춤</h2>
+    <button id="resume" class="go">계속 달리기</button>
+    <button id="restart" class="go ghost">처음부터</button>
+    <button id="quit" class="go ghost">처음 화면으로</button>
+  </div>
+</section>
+
+<section id="result" class="screen" hidden>
+  <div class="wrap">
+    <div class="card">
+      <div class="res-head"><img id="res-img" src="img/emoji/kart-trophy.webp" alt=""><div><h2 id="res-title">1위!</h2><p id="res-sub"></p></div></div>
+      <table id="res-table"></table>
+      <button id="again" class="go">한 번 더</button>
+      <button id="home" class="go ghost">처음 화면으로</button>
+    </div>
+    <p class="foot">경주로 모양: 경기도 버스정보 노선 경로(25·72·6번)를 이어 붙임 · 아이콘 Microsoft Fluent Emoji(MIT)</p>
+  </div>
+</section>
+
+<script src="data/kart_track.js"></script>
+<script type="module" src="kart.js"></script>
+</body>
+</html>

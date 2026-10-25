@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>이남노트 · 이동·남사 길잡이</title>
+<meta name="description" content="용인 이동읍·남사읍에서 식당·숙소·빨래방·약국·학교를 찾고, LH 보상 공고·공식 고시·청약 공고를 한곳에서 봅니다.">
+<meta name="theme-color" content="#F2F4F6">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="이남노트">
+<meta property="og:title" content="이남노트 · 이동·남사 길잡이">
+<meta property="og:description" content="반도체 산단이 들어오는 동네, 어디로 가면 되는지 한곳에서. 출처와 날짜를 붙여 정리합니다.">
+<!-- og:image·canonical은 도메인이 정해지면 절대 주소로 넣는다 (og.png 준비됨) -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="count.js" async></script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<div class="dormant" id="dormant" hidden><div class="wrap"><span></span></div></div>
+<!-- 소개 영상(처음 한 번). 10-21부터 H영상(실제 화면 18초): img/intro-h.mp4, 원본 영상/inam_H_screens18.html. 재생·닫기는 home.js '소개 영상'.
+     ?intro → 다시 보기, ?intro&t=5 → 그 초에 멈춘 화면(점검용). 3판(코드로 그린 지도 애니메이션)은 git d314bcf까지. -->
+<div class="intro" id="intro" role="dialog" aria-modal="true" aria-label="이남노트 소개" tabindex="-1" hidden></div>
+<template id="intro-tpl">
+  <video src="img/intro-h.mp4" muted autoplay playsinline preload="auto" aria-label="이남노트 소개 영상: 이동·남사 정보를 앱 여러 개 대신 이남노트 하나로 — 홈, 장소 찾기, 버스, 날씨, 공식 소식, 혜택, 공사 시계 화면"></video>
+  <div class="intro-bar" aria-hidden="true"><i><b></b></i></div>
+  <button class="intro-skip" type="button" data-close>건너뛰기</button>
+  <button class="intro-sound" type="button">소리 켜기</button>
+  <button class="intro-go" type="button" data-close>들어가기</button>
+</template>
+
+<header class="nav"><div class="wrap">
+  <a class="logo" href="./"><b>이남노트</b><span>이동·남사 노트</span></a>
+  <nav class="nav-links" aria-label="주 메뉴"><a href="./" aria-current="page">홈</a><a href="map.html">지도</a><a href="news.html">소식</a><a href="about.html">소개</a></nav>
+</div></header>
+
+<main id="main">
+<!-- 첫 화면(2026-10-14 사용자 결정, 같은 날 디자인 다시): 소개 영상 → 큰 문(벤토 타일, 안에 실제 숫자·소식) → 문을 누르면 카드가 펼쳐져 문 안(가지).
+     문은 home.js의 DOORS에서 그린다. 아래 링크는 JS가 없을 때만 쓰는 대체 링크다. -->
+<section class="home">
+  <div class="wrap">
+    <div id="hall">
+      <div class="hello">
+        <p class="hello-k">이동·남사 노트</p>
+        <h1>이동·남사,<br>어느 문부터 열까요?</h1>
+      </div>
+      <div class="today-line" id="today-line" aria-label="오늘">
+        <p class="alert" id="alert" hidden></p>
+        <div class="row" id="today-row"><span id="today-stamp">오늘</span><span>불러오는 중…</span></div>
+      </div>
+      <nav class="bento" id="doors" aria-label="큰 문">
+        <a class="door" href="map.html"><b>이남 장소 찾기</b></a>
+        <a class="door" href="news.html"><b>이남 소식</b></a>
+        <a class="door" href="bus.html"><b>이남 버스 현황</b></a>
+        <a class="door" href="about.html#contact"><b>이남 커뮤니티</b></a>
+        <a class="door" href="about.html"><b>이남노트 소개</b></a>
+      </nav>
+    </div>
+    <div class="room" id="branch" hidden></div>
+  </div>
+</section>
+
+<section class="sec" id="feed-sec" style="padding-top:36px">
+  <div class="wrap two">
+    <div>
+      <div class="sec-head"><span class="eyebrow">Latest</span><h2>새로 나온 소식</h2><p>보상·고시·청약·혜택·용인시 소식까지 가장 최근 순. 공식 소식과 혜택은 자동으로 모으고, 기사는 원문을 확인한 것만 올립니다.</p></div>
+      <!-- app.js feedRows: 공식 소식·혜택(benefits_recent.js)·사장님 지원사업(programs.js)·기사(feed.json)를 날짜순으로, 줄마다 꼬리표 -->
+      <ul class="feed" id="feed" data-limit="8"><li><span class="fh"><span class="t t-news">안내</span></span><b>불러오는 중…</b></li></ul>
+      <button class="btn btn-light feed-more" id="feed-more" type="button" hidden>더 보기</button>
+      <p class="more-links"><a href="notices.html">공식 소식 전체 →</a><a href="benefits.html">혜택 전체 →</a><a href="news.html#news">기사 →</a></p>
+    </div>
+    <!-- 지금 접수 중인 혜택(2026-10-23 사용자: 이남 커뮤니티 자리에 지원금·혜택 찾기 중 카테고리 상관없이 접수 중인 목록).
+         app.js가 benefits_recent.js에서 용인·경기·전국 모두 오늘 접수 중인 것만 마감 가까운 순으로. 커뮤니티 방 셋은 '커뮤니티' 문 안에 그대로 있다 -->
+    <div id="open-sec">
+      <div class="sec-head"><span class="eyebrow">Open now</span><h2 style="font-size:26px">지금 접수 중인 혜택</h2><p>용인시·경기도·전국 지원금·혜택 중 오늘 신청할 수 있는 것만, 마감 가까운 순. 금액과 자격은 원문에서 확인하세요.</p></div>
+      <ul class="feed" id="open-ben" data-limit="6"><li><span class="fh"><span class="t t-ben">혜택</span></span><b>불러오는 중…</b></li></ul>
+      <button class="btn btn-light feed-more" id="open-more" type="button" hidden>더 보기</button>
+      <p class="more-links"><a href="benefits.html?open=1#list-sec">혜택 전체에서 찾기 →</a><span id="open-src" style="font-weight:400;color:var(--ink-3)"></span></p>
+      <!-- 언제든 신청할 수 있는 혜택(2026-10-25 사용자 "마감일 없는 상시신청은 따로 칸"). 위 '지금 접수 중'에 섞으면 마감 순서가 흐려져
+           따로 둔다. app.js가 benefits_recent.js의 always(많이 찾는 순)를 지역 칩(용인·경기·전국)으로 나눠 보여 준다 -->
+      <div id="always-sec">
+        <div class="sec-head"><span class="eyebrow">Anytime</span><h2 style="font-size:22px">언제든 신청할 수 있는 혜택</h2><p>마감일 없이 ‘상시 신청’인 것만, 많이 찾는 순.</p></div>
+        <nav class="chips-row" id="always-areas" aria-label="어디 혜택"></nav>
+        <ul class="feed" id="always-ben" data-limit="5"><li><span class="fh"><span class="t t-ben">혜택</span></span><b>불러오는 중…</b></li></ul>
+        <button class="btn btn-light feed-more" id="always-more" type="button" hidden>더 보기</button>
+        <p class="more-links"><a id="always-all" href="benefits.html?always=1#list-sec">혜택 전체에서 상시 신청 찾기 →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-white">
+  <div class="wrap two">
+    <div>
+      <div class="sec-head"><span class="eyebrow">Construction clock</span><h2>산단·신도시·도로,<br>어디까지 왔나</h2></div>
+      <ul class="mini">
+        <li><b>반도체 국가산단</b><span class="stage" data-step="2"><span class="bar"><i></i><i></i><i></i><i></i></span>확정·준비</span><p>1공구 낙찰자 선정(9월), 10월 계약·착공 목표. 팹 1호기 가동 목표 2029년 10월.</p></li>
+        <li><b>이동 신도시</b><span class="stage" data-step="2"><span class="bar"><i></i><i></i><i></i><i></i></span>확정·준비</span><p>2025년 1월 지구 지정. 6월 보도로는 약 2만 호, 첫 입주 2033년 말 목표(지구계획 승인 전).</p></li>
+        <li><b>국도 45호선 확장</b><span class="stage" data-step="2"><span class="bar"><i></i><i></i><i></i><i></i></span>확정·준비</span><p>첫 입찰 유찰 뒤 재입찰 중. 입찰서 접수 2027년 3월 예정.</p></li>
+      </ul>
+      <p class="more-links"><a href="news.html#clock">공사 시계 전체 보기 →</a></p>
+    </div>
+    <div>
+      <div class="panel brief">
+        <div><span class="kicker">일요일 저녁 7시</span><h2 style="margin-top:8px">한 주 치를 일요일 저녁에</h2><p>산단 시계, 공식 발표, 새로 확인한 것, 고친 것. 카카오톡 채널 ‘이남노트’ 소식으로 올립니다.</p></div>
+        <div class="cta"><a class="btn btn-dark" href="about.html#contact">카카오톡 채널 보기</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <b>이 사이트는 용인시·LH·삼성전자와 무관한 민간 지역 정보 사이트입니다.</b>
+  <div class="grid">
+    <span>문의·제보: <span data-contact>카카오톡 채널 준비 중</span> · <a href="news.html#corrections">정정 기록</a> · <a href="about.html">소개·원칙</a></span>
+    <span>자동 정보 출처: 기상청 · 한국환경공단 에어코리아 · 한국천문연구원 공공데이터. 원자료를 고치지 않고 보여 줍니다. 장소: 행정안전부 인허가 데이터 · 소상공인시장진흥공단 상가정보. 공식 소식: 토지이음 · LH · 용인시 · 처인구청. 혜택: 행정안전부 공공서비스 정보 · 중소벤처24.</span>
+    <span>내용 최종 확인 <span data-last-reviewed class="num">2026.10.08</span></span>
+  </div>
+</div></footer>
+<script src="data/notices.js"></script>
+<script src="data/benefits_recent.js"></script>
+<script src="data/programs.js"></script>
+<script src="app.js"></script>
+<!-- 장소 데이터(약 560KB)는 화면을 먼저 그린 뒤 받는다. 받으면 문 숫자와 검색 미리보기가 채워진다 -->
+<script src="places-search.js" defer></script>
+<script src="data/places.js" defer></script>
+<script src="data/intro.js" defer></script>
+<script src="home.js" defer></script>
+</body>
+</html>

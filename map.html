@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>이남노트 · 동네 지도</title>
+<meta name="description" content="용인 이동읍·남사읍의 식당·카페·편의점·숙소·세탁소·골프장을 종류별로 골라 보는 지도. 공공 인허가 데이터 기준.">
+<meta name="theme-color" content="#F2F4F6">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="style.css">
+<!-- 바탕 지도: 네이버 지도 Dynamic Map(무료 월 600만 건, 콘솔에서 한도 설정). Client ID는 공개용 값이다. Web 서비스 URL에 등록된 주소에서만 뜬다. -->
+<style>
+  /* 휴대폰: 한 화면짜리 앱처럼 쓴다(사용자 10-12 "지도가 한 화면을 넘어가고, 지도 위에서는 화면 스크롤이 안 된다") */
+  .mp { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto 1fr; height: 100svh; overflow: hidden; }
+  .mp-head { padding: 18px 0 8px; }
+  .mp-head h1 { font-size: clamp(24px, 5vw, 34px); }
+  .mp-head p { color: var(--ink-3); font-size: 14px; margin-top: 4px; }
+  .mp-head a { color: var(--moss); font-weight: 700; text-decoration: none; }
+  .mp-head { display: flex; flex-wrap: wrap; align-items: center; column-gap: 16px; row-gap: 6px; }
+  .mp-head > p:first-child { flex-basis: 100%; }
+  .mp-head .search { flex: 1 1 260px; max-width: 460px; }
+
+  .doors { display: flex; gap: 8px; overflow-x: auto; padding: 10px 0 4px; scrollbar-width: none; }
+  .doors::-webkit-scrollbar { display: none; }
+  .chip { flex: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2);
+          border-radius: 999px; padding: 9px 15px; font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; white-space: nowrap; min-height: 44px; }
+  .chip[aria-pressed="true"] { background: var(--moss-dark); border-color: var(--moss-dark); color: #fff; }
+  .chip:disabled { opacity: .5; cursor: not-allowed; }
+  .chip .n { font-weight: 500; opacity: .75; margin-left: 4px; }
+  .chip.sm { font-size: 14px; padding: 7px 12px; min-height: 38px; font-weight: 600; }
+  .subs { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0 10px; scrollbar-width: none; }
+  .tags { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding: 0 0 8px; align-items: center; }
+  .tags small { flex: none; }
+  .tags[hidden] { display: none; }
+  .tags small { color: var(--ink-3); font-size: 13px; }
+
+  .body { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: var(--map-h, 42%) auto minmax(0, 1fr); gap: 0; min-height: 0; }
+  .mp > * { min-width: 0; }  /* 버튼 줄이 길어도 화면 폭을 넘지 않게(10-12 휴대폰에서 지도가 698px로 늘어났다) */
+  .mapbox { position: relative; height: 100%; min-height: 0; }  /* 휴대폰 높이는 손잡이(sheet.js)가 정한다. 전에는 300px 고정이라 목록이 한두 줄만 보였다(10-15) */
+  /* 네이버 지도가 컨테이너에 position:relative를 직접 넣으므로 inset 대신 높이로 채운다 */
+  #map { width: 100%; height: 100%; border-radius: var(--r-md); border: 1px solid var(--line); overflow: hidden; }
+  .maperr { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 20px; color: var(--ink-3); font-size: 14px; }
+  /* 점 크기는 확대에 따라 줄인다(--pin, layout()이 정함, 사용자 10-13 "축소했을 땐 점의 크기를 줄이면"). 눌리는 곳도 보이는 점만큼만 */
+  .pin { position: relative; width: 16px; height: 16px; pointer-events: none; }
+  .pin i { display: block; width: 16px; height: 16px; box-sizing: border-box; border-radius: 50%; background: var(--moss); border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,.3);
+           transform: scale(var(--pin, 1)); pointer-events: auto; }
+  .pin span { display: none; position: absolute; left: 18px; top: -1px; white-space: nowrap; font-size: 12px; font-weight: 800; color: var(--ink);
+              text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff; pointer-events: none; }
+  .pin.lab span { display: block; }
+  /* 운영자 가게(places_extra.json mine, 사용자 10-13 "빨간색으로, 눈에 잘 띄게, 축소해도 작게 하지마"): 빨강·늘 16px·맨 위 */
+  .pin.mine i { background: #E03131; transform: none; box-shadow: 0 0 0 3px rgba(224,49,49,.25), 0 1px 3px rgba(0,0,0,.35); }
+  .pop { background: var(--surface); border-radius: var(--r-sm); box-shadow: var(--shadow); padding: 14px 16px; max-width: 280px; font-family: var(--font); position: relative; }
+  .pop .x { position: absolute; top: 6px; right: 8px; border: 0; background: none; font-size: 18px; color: var(--ink-3); cursor: pointer; padding: 4px; }
+  .side { padding: 0 0 24px; overflow-y: auto; min-height: 0; overscroll-behavior: contain; }
+  .search { width: 100%; font: inherit; font-size: 16px; box-sizing: border-box; padding: 12px 16px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface); color: var(--ink); }
+  .count { color: var(--ink-3); font-size: 14px; margin: 10px 2px; }
+  .list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .item { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-sm); padding: 12px 14px; cursor: pointer; }
+  .item:hover, .item.on { border-color: var(--moss); }
+  .item b { display: block; font-size: 16px; }
+  .item span { color: var(--ink-3); font-size: 13px; }
+  /* 메뉴(사용자 10-13 "가게마다 들어가지 않고 목록에서 바로 메뉴를 보고 빠르게 판단"): 확인한 메뉴는 그 자리에서 펼치고, 없으면 네이버로 바로 */
+  .mbtn { float: right; clear: right; margin-top: 4px; font: inherit; font-size: 13px; font-weight: 800; border-radius: 999px; padding: 5px 11px;
+          border: 1px solid var(--moss-dark); background: var(--moss-dark); color: #fff; cursor: pointer; text-decoration: none; }
+  .mbtn.ghost { background: var(--surface); color: var(--ink-3); border-color: var(--line); font-weight: 700; }
+  .menu { clear: both; margin-top: 10px; border-top: 1px dashed var(--line); padding-top: 8px; cursor: default; }
+  .menu h4 { margin: 8px 0 2px; font-size: 13px; color: var(--moss-dark); }
+  .menu h4:first-child { margin-top: 0; }
+  .menu ul { list-style: none; margin: 0; padding: 0; }
+  .menu li { display: flex; justify-content: space-between; gap: 10px; font-size: 14px; padding: 2px 0; color: var(--ink); }
+  .menu li em { font-style: normal; font-weight: 800; white-space: nowrap; }
+  .pop .menu { max-height: 240px; overflow-y: auto; }
+  .item .top { display: block; margin-top: 3px; color: var(--ink-2); font-size: 13px; }
+  .item .top em { font-style: normal; font-weight: 800; color: var(--ink); }
+  .count b { color: var(--ink); }
+  .more { margin-top: 10px; width: 100%; }
+
+  .pop b { font-size: 16px; display: block; margin-bottom: 2px; }
+  .pop .meta { color: var(--ink-3); font-size: 13px; }
+  .pop .info { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; margin: 8px 0 0; font-size: 14px; }
+  .pop .info dt { color: var(--ink-3); font-weight: 700; }
+  .pop .info dd { margin: 0; color: var(--ink); user-select: text; }
+  .pop .info .tel { color: var(--moss); font-weight: 800; text-decoration: none; }
+  .pop .info .none { color: var(--ink-3); font-size: 13px; }
+  .pop .btns { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+  .pop .btns a { text-decoration: none; border-radius: 999px; padding: 6px 12px; font-weight: 700; font-size: 13px; border: 1px solid var(--line); color: var(--ink-2); }
+  .pop .btns a.main { background: var(--moss-dark); border-color: var(--moss-dark); color: #fff; }
+
+  .note { color: var(--clay-ink); font-size: 13px; padding: 14px 0 0; }
+  .item .dist { float: right; color: var(--moss); font-weight: 800; font-size: 14px; }
+  .count .warn { color: var(--warn); }
+  .count .name-only { font: inherit; font-size: 13px; color: var(--ink-2); background: none; border: 0; padding: 4px 0; text-decoration: underline; cursor: pointer; }
+
+  @media (max-width: 899px) {
+    .mp-head { padding: 8px 0 2px; }
+    .mp-head > p:first-child { flex-basis: auto; }
+    .mp-head h1 { display: none; }  /* 휴대폰은 검색창 안내 문구가 제목을 대신한다 */
+    .mp-head .search { flex-basis: 0; padding: 9px 14px; }
+    .mp-head .sub { display: none; }
+    .doors { padding-top: 6px; }
+    .tags { display: none; }  /* 아직 눌리지 않는 '현장 확인' 칩 줄 — 휴대폰에서는 목록 자리를 먼저 준다(10-15) */
+    .count { margin-top: 2px; }
+    .chip { min-height: 40px; padding: 7px 13px; font-size: 14px; }
+    .chip.sm { min-height: 34px; padding: 5px 11px; font-size: 13px; }
+  }
+  @media (min-width: 900px) {
+    .mp { height: auto; min-height: 100dvh; overflow: visible; }
+    .body { grid-template-columns: 1fr 380px; grid-template-rows: none; gap: 20px; height: calc(100dvh - 200px); }
+    .mapbox { min-height: 300px; }
+    .side { padding: 0; overflow-y: auto; }
+  }
+</style>
+<script src="count.js" async></script>
+</head>
+<body>
+<div class="mp wrap">
+  <header class="mp-head">
+    <p><a href="index.html">← 이남노트</a> &nbsp;·&nbsp; <a href="bus.html">🚌 버스 지금 어디</a></p>
+    <h1>무엇을 찾으세요?</h1>
+    <input class="search" id="q" type="search" enterkeyhint="search" placeholder="부동산, 약국, 미용실, 가게 이름…" aria-label="전체에서 찾기">
+    <p class="sub">이동읍·남사읍, 누른 종류만 지도에 나와요.</p>
+  </header>
+
+  <div>
+    <nav class="doors" id="doors" aria-label="종류"></nav>
+    <div class="subs" id="subs" aria-label="세부 종류"></div>
+    <div class="tags" id="tags" aria-label="동네 사람이 확인한 정보">
+      <small>현장 확인 후 열려요 →</small>
+      <button class="chip sm" disabled>새벽 영업</button>
+      <button class="chip sm" disabled>단체 식사</button>
+      <button class="chip sm" disabled>대형차 주차</button>
+      <button class="chip sm" disabled>외국어 메뉴</button>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="mapbox"><div id="map" role="region" aria-label="지도"></div>
+      <button class="locate" id="locate" type="button" aria-pressed="false">◎ 내 위치</button></div>
+    <button class="grip" id="grip" type="button" aria-label="목록 크게 보기"></button>
+    <aside class="side">
+      <p class="count" id="count"></p>
+      <ul class="list" id="list"></ul>
+      <button class="chip more" id="more" hidden>더 보기</button>
+      <p class="note" id="note"></p>
+    </aside>
+  </div>
+</div>
+
+<script>window.navermap_authFailure = () => { document.getElementById("map").innerHTML = '<p class="maperr">지도를 불러오지 못했어요(네이버 지도 인증 실패). 목록은 그대로 쓸 수 있어요.</p>'; };</script>
+<script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=vhdkduuv0z"></script>
+<script src="data/places.js"></script>
+<script src="places-search.js"></script>
+<script src="locate.js"></script>
+<script src="sheet.js"></script>
+<script>
+(() => {
+  const D = window.PLACES;
+  // 큰 문: 인허가 업태를 사람이 찾는 말로 묶는다. ready:false는 데이터 준비 중.
+  const DOORS = [
+    { id: "food",  label: "식당" },
+    { id: "cafe",  label: "카페·간식" },
+    { id: "store", label: "편의점" },
+    { id: "realty", label: "부동산" },  // 상가정보 공인중개사무소(places-search.js doorOf)
+    { id: "stay",  label: "숙소" },
+    { id: "laundry", label: "세탁소" },
+    { id: "coin",  label: "빨래방" },  // 상가정보 + 직접 확인(places_manual.json)
+    { id: "golf",  label: "골프장" },
+    { id: "school", label: "학교" },  // 전국초중등학교위치표준데이터(파일) → data/schools.json
+  ];
+  const SUBS = {
+    school: [["초등학교", t => t === "초등학교"], ["중학교", t => t === "중학교"], ["고등학교", t => t === "고등학교"]],
+    food: [
+      // t: 인허가 업태, k: 상가정보 세부 업종(menu_kind, 2026-10-13) — '기타'로만 적힌 식당도 세부 업종으로 칩에 잡힌다
+      ["한식", (t, k) => t === "한식" || t === "탕류(보신용)" || t === "냉면집" || t === "횟집" ||
+        ["백반/한정식", "국/탕/찌개류", "국수/칼국수", "냉면/밀면", "횟집", "해산물 구이/찜", "전/부침개", "기타 한식 음식점"].includes(k)],
+      ["고기", (t, k) => t.startsWith("식육") || k.includes("고기") || k === "곱창 전골/구이" || k === "족발/보쌈"],
+      ["중식", (t, k) => t === "중국식" || k === "중국집" || k === "마라탕/훠궈"],
+      ["치킨·호프", (t, k) => t.includes("통닭") || t.includes("호프") || t === "정종/대포집/소주방" || ["치킨", "생맥주 전문", "요리 주점"].includes(k)],
+      ["분식", (t, k) => t === "분식" || t.startsWith("김밥") || k === "김밥/만두/분식"],
+      ["양식·일식·뷔페", (t, k) => ["경양식", "일식", "뷔페식", "패밀리레스트랑", "외국음식전문점(인도,태국등)"].includes(t) ||
+        ["피자", "경양식", "버거", "일식 회/초밥", "일식 면 요리", "뷔페", "베트남식 전문", "기타 서양식 음식점", "토스트/샌드위치/샐러드"].includes(k)],
+    ],
+  };
+  const { doorOf, split } = window.PlaceSearch;  // 검색 규칙은 첫 화면과 같이 쓴다(places-search.js)
+  const places = D.places.map(p => ({ ...p, door: doorOf(p) })).sort((a, b) => a.name.localeCompare(b.name, "ko"));
+
+  // nameOnly: 이름에만 검색어가 든 곳(업종 다름)만 보는 중인지, extra·main: 그런 곳 수와 업종 맞는 곳 수(places-search.js split)
+  const state = { door: "food", sub: null, q: "", shown: 30, here: null, locMsg: "", nameOnly: false, extra: 0, main: 0 };
+  // 첫 화면에서 들어올 때: map.html?door=stay, ?door=food&sub=한식, ?q=약국
+  const qs = new URLSearchParams(location.search);
+  if (DOORS.some(d => d.id === qs.get("door"))) state.door = qs.get("door");
+  if ((SUBS[state.door] || []).some(s => s[0] === qs.get("sub"))) state.sub = qs.get("sub");
+  if (qs.get("q")) { state.q = qs.get("q").trim(); document.getElementById("q").value = state.q; }
+  const N = naver.maps;
+  const LL = (lat, lng) => new N.LatLng(lat, lng);
+  const map = new N.Map("map", {
+    center: LL(37.14, 127.18), zoom: 12, zoomControl: true,
+    zoomControlOptions: { position: N.Position.TOP_LEFT, style: N.ZoomControlStyle.SMALL },
+    mapDataControl: false, scaleControl: false,
+  });
+  const info = new N.InfoWindow({ content: "", borderWidth: 0, backgroundColor: "transparent", disableAnchor: true, pixelOffset: new N.Point(0, -12) });
+  N.Event.addListener(map, "click", () => info.close());
+  // 가게 이름: 종류가 아니라 "지금 화면에 보이는 점 수"로 정한다(사용자 10-12 "모텔처럼 몇 개 안 되면 확대 안 해도 이름이").
+  // 화면 안 점이 LABEL_MAX개 이하면 이름을 보이고, 이름끼리 겹치면 먼저 놓인 것만 남긴다.
+  const LABEL_MAX = 30;
+  let shown = [];
+  function syncLabels() {
+    const bounds = map.getBounds(), proj = map.getProjection();
+    const inView = shown.filter(p => bounds.hasLatLng(LL(p.lat, p.lng)));
+    const on = new Set();
+    if (inView.length <= LABEL_MAX) {
+      const boxes = [];
+      for (const p of inView) {
+        const o = proj.fromCoordToOffset(LL(p.lat, p.lng)), x = o.x + (p.dx || 0), y = o.y + (p.dy || 0);  // 같은 건물로 벌려 놓은 만큼
+        const b = { l: x + 8, r: x + 22 + p.name.length * 12, t: y - 9, btm: y + 9 };
+        if (boxes.some(x => b.l < x.r && b.r > x.l && b.t < x.btm && b.btm > x.t)) continue;
+        boxes.push(b); on.add(p.id);
+      }
+    }
+    for (const [id, o] of markers) o.m.getElement()?.querySelector(".pin")?.classList.toggle("lab", on.has(id));
+  }
+  N.Event.addListener(map, "idle", () => { if (map.getZoom() !== layoutZoom) layout(); syncLabels(); });
+
+  // 내 위치(locate.js, 버스 지도와 같은 버튼): 위치가 잡히면 목록을 가까운 순으로 바꾸고 거리를 붙인다.
+  // 운전 중에는 1초마다 위치가 오므로 목록은 50m 넘게 움직였을 때만 다시 그린다(목록을 보는 중에 자꾸 튀지 않게).
+  addLocate(map, document.getElementById("locate"), {
+    onFix: (lat, lng) => {
+      const was = state.here; state.here = { lat, lng };
+      if (!was || meters(was, state.here) > 50 || state.locMsg) { state.locMsg = ""; render(false); } else state.here = was;
+    },
+    onMsg: m => { state.locMsg = m; render(false); },
+  });
+  const R = 6371e3, rad = x => x * Math.PI / 180;
+  const meters = (a, b) => { const dLat = rad(b.lat - a.lat), dLng = rad(b.lng - a.lng);
+    const h = Math.sin(dLat / 2) ** 2 + Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(dLng / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(h)); };
+  const dist = p => state.here ? meters(state.here, p) : null;
+  const fmt = m => m < 1000 ? `${Math.round(m / 10) * 10}m` : `${(m / 1000).toFixed(1)}km`;
+
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  // 동네 이름. 동네 밖 주소(은화삼CC '… (호동, 은화삼C.C)')는 괄호 안 법정동 — 없으면 목록에 '골프장 ·'만 남았다(10-15)
+  const town = a => (a.match(/이동읍|남사읍/) || [])[0] || (a.match(/\(([^,()]+?동)[,)]/) || [])[1] || "";
+  const popup = p => {
+    const naver = "https://map.naver.com/p/search/" + encodeURIComponent(p.name + " " + town(p.addr));
+    return `<div class="pop"><button class="x" type="button" aria-label="닫기">×</button><b>${esc(p.name)}</b>
+      <div class="meta">${esc(kindOf(p))}${p.since ? ` · ${esc(p.since.slice(0, 4))}년 인허가` : ""}</div>
+      <dl class="info">
+        <dt>주소</dt><dd>${esc(p.addr.replace("경기도 ", "")) || "주소 없음"}</dd>
+        <dt>전화</dt><dd>${p.tel ? `<a class="tel" href="tel:${esc(p.tel.replace(/\s/g, ""))}">${esc(p.tel)}</a>` : `<span class="none">공공데이터에 없음 · 네이버 지도에서 확인</span>`}</dd>
+      </dl>
+      <div class="btns"><a class="main route" href="${naver}" data-id="${esc(p.id)}" target="_blank" rel="noopener">네이버 길찾기</a>
+      <a class="view" href="${naver}" target="_blank" rel="noopener">네이버 지도에서 보기</a>
+      ${p.menu ? `<a class="mtoggle" href="#">메뉴 보기</a>` : ""}</div>${p.menu ? `<div class="menu" hidden>${menuHtml(p)}</div>` : ""}</div>`;
+  };
+  // 세부 업종: 상가정보에서 짝지은 것(menu_kind, build_places.py add_menu_kind)이 있으면 그것 — '기타'·'한식'보다 무엇을 파는지 알 수 있다
+  const kindOf = p => p.menu_kind || p.type || p.kind;
+  // 목록 줄에 대표 메뉴 두 개와 값 — 누르지 않고도 판단(첫 묶음 앞 두 개)
+  const topMenu = p => p.menu ? `<span class="top">${p.menu[0].items.slice(0, 2).map(([n, w]) => `${esc(n)} <em>${esc(w)}</em>`).join(" · ")}</span>` : "";
+  const menuCount = p => (p.menu || []).reduce((n, g) => n + g.items.length, 0);
+  const menuHtml = p => p.menu.map(g => `<h4>${esc(g.g)}</h4><ul>${g.items.map(([n, w]) => `<li>${esc(n)}<em>${esc(w)}</em></li>`).join("")}</ul>`).join("");  // 메뉴 밑 작은 글씨(원산지·확인일·출처)는 보이지 않는다(사용자 10-13 "밑에 작은글씨 삭제해") — menu_checked·menu_src는 데이터에만
+  const menuBtn = p => p.menu ? `<button class="mbtn" type="button" data-menu="${esc(p.id)}" aria-expanded="false">메뉴 ${menuCount(p)}</button>`
+    : ["food", "cafe"].includes(p.cat) ? `<a class="mbtn ghost" href="https://map.naver.com/p/search/${encodeURIComponent(p.name + " " + town(p.addr))}" target="_blank" rel="noopener" data-naver="${esc(p.id)}">메뉴 · 네이버</a>` : "";
+
+  function filtered() {
+    let r;
+    state.extra = 0;
+    if (state.q) {  // 검색 중에는 문을 무시하고 전체에서
+      const s = split(places, state.q);
+      state.extra = s.nameOnly.length;
+      if (!state.extra) state.nameOnly = false;
+      r = state.nameOnly ? s.nameOnly : s.main;  // 버튼을 누르면 이름에만 든 곳'만' 본다(뒤에 붙이면 74곳 아래라 눌러도 안 보였다)
+      state.main = s.main.length;
+    } else {
+      r = places.filter(p => p.door === state.door);
+      if (state.sub) { const f = SUBS[state.door].find(s => s[0] === state.sub)[1]; r = r.filter(p => f(p.type || "", p.menu_kind || "")); }
+    }
+    if (state.here) r = r.map(p => ({ ...p, d: dist(p) })).sort((a, b) => a.d - b.d);
+    return r;
+  }
+
+  function renderDoors() {
+    const el = document.getElementById("doors");
+    el.innerHTML = DOORS.map(d => {
+      const n = places.filter(p => p.door === d.id).length;
+      const off = d.ready === false || !n;
+      return `<button class="chip" data-door="${d.id}" aria-pressed="${!state.q && state.door === d.id}" ${off ? "disabled" : ""}>${d.label}${off ? '<span class="n">준비 중</span>' : `<span class="n">${n}</span>`}</button>`;
+    }).join("");
+    const subs = state.q ? [] : SUBS[state.door] || [];
+    document.getElementById("subs").innerHTML = subs.length
+      ? [["전체"], ...subs].map(([s]) => `<button class="chip sm" data-sub="${s}" aria-pressed="${(state.sub || "전체") === s}">${s}</button>`).join("")
+      : "";
+    // '현장 확인' 칩(새벽 영업·단체 식사…)은 먹는 곳 이야기라 식당·카페에서만(10-15, 부동산·골프장에도 떠 있었다)
+    document.getElementById("tags").hidden = !!state.q || !["food", "cafe"].includes(state.door);
+  }
+
+  // 핀이 겹치지 않게 화면에서 벌려 놓는다(지도 좌표는 그대로, 아이콘만 픽셀로 옮긴다).
+  // 인허가·상가정보 좌표는 건물(번지) 단위라 같은 건물 가게가 정확히 겹치고(2,074곳 중 1,056곳), 옆 건물끼리도 몇 m라 핀(16px)이 겹친다.
+  // 겹친 채 두면 이름표는 아래 핀 것, 손가락은 위 핀을 눌러 엉뚱한 가게가 열린다(2026-10-13 사용자: 돈가네를 누르면 양평해장국).
+  // 묶지 않고 가게마다 핀을 따로 둔다(사용자 "핀을 나눠야지", "상가 건물은 핀을 나눠서 각각"):
+  // 점 지름은 확대에 따라 16px(18 이상)에서 6px(13 이하)까지 줄이고(사용자 10-13, PIN_PX), 어느 확대에서든
+  // ① 같은 좌표는 세로 한 줄(6곳까지, 이름표가 오른쪽이라) 또는 해바라기 나선으로 먼저 벌리고 ② 가까운 점끼리 지름+3px 떨어질 때까지 서로 민다.
+  // 확대가 바뀔 때마다 다시 계산한다. 작은 점은 손가락으로 가려 누르기 어려우니, 덜 확대했을 때 FINGER px 안에 다른 점이 있으면 누를 때 확대한다.
+  const markers = new Map();   // 가게 id → { m, p, html }
+  const ptKey = p => `${p.lat.toFixed(5)},${p.lng.toFixed(5)}`;
+  const SPREAD_ZOOM = 17, FINGER = 18;
+  // 점 지름(px): 18 이상 16 · 17 13 · 16 10 · 15 8 · 14 7 · 13 이하 6 (10-13 휴대폰 확인 "아직도 커" — 16에서 16px은 송전 중심이 벌집이 됐다)
+  const PIN_PX = { 18: 16, 17: 13, 16: 10, 15: 8, 14: 7 };
+  const pinScale = z => (z >= 18 ? 16 : PIN_PX[z] || 6) / 16;
+  let GAP = 20, MIN = 19, CAP = Infinity;  // CAP: 덜 확대했을 때 점이 제자리에서 밀려날 수 있는 최대 px(넘으면 다른 동네처럼 보인다)
+  function spread(n, i) {
+    if (n === 1) return [0, 0];
+    if (n <= 6) return [0, Math.round((i - (n - 1) / 2) * GAP)];
+    const r = GAP * 0.9 * Math.sqrt(i), a = i * 2.39996;  // 황금각 — 점끼리 고르게 떨어진다
+    return [Math.round(r * Math.cos(a)), Math.round(r * Math.sin(a))];
+  }
+  let layoutZoom = null;
+  function layout() {
+    layoutZoom = map.getZoom();
+    const sc = pinScale(layoutZoom);
+    document.getElementById("map").style.setProperty("--pin", sc);
+    MIN = Math.round(16 * sc) + 3; GAP = MIN + 1; CAP = layoutZoom >= SPREAD_ZOOM ? Infinity : Math.round(16 * sc * 2.5);
+    const proj = map.getProjection();
+    // r: 점 반지름(운영자 가게는 늘 8px), w: 밀리는 몫(운영자 가게는 제자리 고정 0 — 옆 점이 대신 비킨다)
+    const pts = shown.map(p => { const o = proj.fromCoordToOffset(LL(p.lat, p.lng)); return { p, x0: o.x, y0: o.y, x: o.x, y: o.y, r: p.mine ? 8 : 8 * sc, w: p.mine ? 0 : 1 }; });
+    const CELL = 19;  // 가장 큰 쌍(8 + 8 + 3)보다 커야 이웃 칸만 봐도 된다
+    {
+      const same = new Map();
+      for (const q of pts) { const k = ptKey(q.p); if (!same.has(k)) same.set(k, []); same.get(k).push(q); }
+      for (const g of same.values()) g.forEach((q, i) => { const [dx, dy] = spread(g.length, i); q.x += dx; q.y += dy; });
+      for (let it = 0; it < 40; it++) {
+        const grid = new Map();
+        pts.forEach((q, i) => { const c = `${Math.floor(q.x / CELL)},${Math.floor(q.y / CELL)}`; if (!grid.has(c)) grid.set(c, []); grid.get(c).push(i); });
+        let moved = false;
+        pts.forEach((q, i) => {
+          const cx = Math.floor(q.x / CELL), cy = Math.floor(q.y / CELL);
+          for (let a = -1; a <= 1; a++) for (let b = -1; b <= 1; b++) for (const j of grid.get(`${cx + a},${cy + b}`) || []) {
+            if (j <= i) continue;  // 한 쌍은 한 번만
+            const o = pts[j];
+            let dx = o.x - q.x, dy = o.y - q.y, d = Math.hypot(dx, dy);
+            const need = q.r + o.r + 3, ws = q.w + o.w;
+            if (d >= need || !ws) continue;
+            if (d < 0.5) { dx = 0; dy = 1; d = 1; }
+            const k = (need - d) / d / ws;
+            q.x -= dx * k * q.w; q.y -= dy * k * q.w; o.x += dx * k * o.w; o.y += dy * k * o.w; moved = true;
+          }
+        });
+        for (const q of pts) {  // 너무 멀리 밀린 점은 CAP까지만 — 남는 겹침은 누를 때 확대(crowded)로 푼다
+          const ox = q.x - q.x0, oy = q.y - q.y0, r = Math.hypot(ox, oy);
+          if (r > CAP) { q.x = q.x0 + ox * CAP / r; q.y = q.y0 + oy * CAP / r; }
+        }
+        if (!moved) break;
+      }
+    }
+    for (const q of pts) {
+      const dx = Math.round(q.x - q.x0), dy = Math.round(q.y - q.y0);
+      q.p.dx = dx; q.p.dy = dy;
+      const o = markers.get(q.p.id);
+      if (!o) continue;
+      o.p = q.p;
+      if (o.ax === dx && o.ay === dy) continue;  // 화면에 실제로 놓인 자리(ax, ay)와 비교한다 — o.p와 q.p는 같은 객체라 p.dx로 비교하면 늘 같다(10-13 버그)
+      o.ax = dx; o.ay = dy;
+      o.m.setIcon({ content: o.html, anchor: new N.Point(8 - dx, 8 - dy) });
+    }
+  }
+  // 덜 확대해 핀이 아직 겹친 곳을 누르면, 엉뚱한 가게를 띄우지 않고 그 자리로 확대해 핀을 나눈다.
+  function crowded(p) {
+    if (map.getZoom() >= SPREAD_ZOOM || p.mine) return false;  // 운영자 가게는 늘 맨 위·제 크기라 바로 연다
+    const proj = map.getProjection(), at = q => { const o = proj.fromCoordToOffset(LL(q.lat, q.lng)); return [o.x + (q.dx || 0), o.y + (q.dy || 0)]; };
+    const [x, y] = at(p);
+    return shown.some(q => q.id !== p.id && Math.abs(q.lat - p.lat) < 0.01 && Math.hypot(...at(q).map((v, i) => v - [x, y][i])) < FINGER);
+  }
+  function zoomTo(p) { info.close(); openId = null; map.morph(LL(p.lat, p.lng), 17); }
+  let openId = null;
+  function openPlace(p, m) {
+    const box = document.createElement("div");
+    box.innerHTML = popup(p);
+    const el = box.firstElementChild;
+    el.querySelector(".x").addEventListener("click", e => { e.stopPropagation(); info.close(); openId = null; });
+    el.querySelector("a.route").addEventListener("click", e => route(e, p));
+    el.querySelector("a.view").addEventListener("click", e => view(e, p));
+    el.querySelector("a.mtoggle")?.addEventListener("click", e => {
+      e.preventDefault(); e.stopPropagation();
+      const m = el.querySelector(".menu"); m.hidden = !m.hidden; e.currentTarget.textContent = m.hidden ? "메뉴 보기" : "메뉴 접기";
+    });
+    info.setOptions({ pixelOffset: new N.Point(p.dx || 0, (p.dy || 0) - 12) });  // 안내 창 꼬리를 벌려 놓은 핀에 맞춘다
+    info.setContent(el); info.open(map, m); openId = p.id;
+  }
+  function render(fit) {
+    const r = filtered();
+    shown = r;
+    const ids = new Set(r.map(p => p.id));
+    if (openId && !ids.has(openId)) { info.close(); openId = null; }
+    for (const [id, o] of markers) if (!ids.has(id)) { o.m.setMap(null); markers.delete(id); }
+    for (const p of r) {
+      if (markers.has(p.id)) continue;
+      const html = `<div class="pin${p.mine ? " mine" : ""}"><i></i><span>${esc(p.name)}</span></div>`;
+      const m = new N.Marker({ map, position: LL(p.lat, p.lng), title: p.name, zIndex: p.mine ? 500 : 100, icon: { content: html, anchor: new N.Point(8, 8) } });
+      const o = { m, p, html, ax: 0, ay: 0 };  // ax, ay: 아이콘을 실제로 옮겨 놓은 픽셀
+      N.Event.addListener(m, "click", () => crowded(o.p) ? zoomTo(o.p) : openPlace(o.p, m));  // o.p: 벌린 자리(dx, dy)가 바뀌어도 최신 것
+      markers.set(p.id, o);
+    }
+    if (fit && r.length) {
+      const b = new N.LatLngBounds(LL(r[0].lat, r[0].lng), LL(r[0].lat, r[0].lng));
+      r.forEach(p => b.extend(LL(p.lat, p.lng)));
+      map.fitBounds(b, { top: 30, right: 30, bottom: 30, left: 30 });
+      if (map.getZoom() > 16) map.setZoom(16);
+    }
+    const Q = `‘${esc(state.q)}’`;
+    document.getElementById("count").innerHTML = (state.nameOnly
+        ? `이름에만 <b>${Q}</b>이(가) 든 곳 ${r.length}곳 · 업종이 달라요 · <button class="name-only" type="button">업종 맞는 ${state.main}곳으로</button>`
+        : (state.q ? `<b>${Q}</b> 전체에서 ` : "") + `${r.length}곳` +
+          (state.extra ? ` · <button class="name-only" type="button">이름에만 ${Q} 든 곳 ${state.extra}곳</button>` : "")) +
+      (state.here ? " · 가까운 순" : "") + (state.locMsg ? ` <span class="warn">${esc(state.locMsg)}</span>` : "");
+    document.getElementById("list").innerHTML = r.slice(0, state.shown).map(p =>
+      `<li class="item" data-id="${esc(p.id)}">${menuBtn(p)}<b>${esc(p.name)}</b>${p.d != null ? `<span class="dist">${fmt(p.d)}</span>` : ""}<span>${esc(kindOf(p))} · ${esc(town(p.addr))}</span>${topMenu(p)}</li>`).join("");
+    document.getElementById("more").hidden = r.length <= state.shown;
+    setTimeout(() => { layout(); syncLabels(); }, 0);  // 지도가 안 움직여도(검색·필터만 바뀌어도) 핀 자리와 이름을 다시 맞춘다
+  }
+
+  document.getElementById("doors").addEventListener("click", e => {
+    const b = e.target.closest("[data-door]"); if (!b || b.disabled) return;
+    state.door = b.dataset.door; state.sub = null; state.q = ""; document.getElementById("q").value = ""; state.shown = 30; renderDoors(); render(true);
+  });
+  document.getElementById("subs").addEventListener("click", e => {
+    const b = e.target.closest("[data-sub]"); if (!b) return;
+    state.sub = b.dataset.sub === "전체" ? null : b.dataset.sub; state.shown = 30; renderDoors(); render(true);
+  });
+  let qTimer;
+  document.getElementById("q").addEventListener("input", e => {
+    clearTimeout(qTimer);
+    qTimer = setTimeout(() => { state.q = e.target.value.trim(); state.shown = 30; state.nameOnly = false; renderDoors(); render(true); }, 250);
+  });
+  document.getElementById("count").addEventListener("click", e => {
+    if (!e.target.closest(".name-only")) return;
+    state.nameOnly = !state.nameOnly; state.shown = 30; render(true);
+  });
+  document.getElementById("q").addEventListener("keydown", e => { if (e.key === "Enter") e.target.blur(); });
+  document.getElementById("more").addEventListener("click", () => { state.shown += 30; render(false); });
+  // 네이버 길찾기: 휴대폰이면 네이버 지도 앱(nmap:// URL Scheme, 출발지를 비우면 현재 위치)으로,
+  // 앱이 없거나 PC면 링크에 걸린 네이버 지도 웹 검색으로 간다. 1.5km 안은 도보, 그 밖은 자동차로 연다(앱에서 바꿀 수 있다).
+  const isPhone = /Android|iPhone|iPad/i.test(navigator.userAgent);
+  // 휴대폰: 앱을 같은 탭에서 바로 연다. 1.5초 안에 앱으로 넘어가지 않으면(앱 없음) 같은 탭에서 웹으로 간다.
+  function openApp(e, appUrl) {
+    if (!isPhone) return;  // PC는 링크(네이버 지도 웹, 새 탭)로 간다
+    e.preventDefault();
+    const web = e.currentTarget.href;
+    const t = setTimeout(() => { if (!document.hidden) location.href = web; }, 1500);
+    document.addEventListener("visibilitychange", () => clearTimeout(t), { once: true });
+    location.href = appUrl;
+  }
+  function route(e, p) {
+    const d = dist(p);
+    const mode = d != null && d < 1500 ? "walk" : "car";
+    const q = new URLSearchParams({ dlat: p.lat, dlng: p.lng, dname: p.name, appname: location.origin });
+    openApp(e, `nmap://route/${mode}?${q}`);
+  }
+  // 지도에서 보기: 웹 링크를 새 탭으로 열면 네이버가 앱 설치 페이지를 띄운 채 탭이 남는다(사용자 10-12) →
+  // 휴대폰은 앱의 검색(nmap://search)으로 바로 연다. 가게 이름 + 읍으로 찾아 리뷰·영업시간이 있는 장소 화면이 나온다.
+  function view(e, p) {
+    const q = new URLSearchParams({ query: `${p.name} ${town(p.addr)}`, appname: location.origin });
+    openApp(e, `nmap://search?${q}`);
+  }
+
+  document.getElementById("list").addEventListener("click", e => {
+    if (e.target.closest(".menu")) return;  // 펼친 메뉴 안을 눌러도 지도로 가지 않는다
+    const mb = e.target.closest("[data-menu]");
+    if (mb) {
+      const li = mb.closest(".item"), open = li.querySelector(".menu");
+      if (open) { open.remove(); mb.setAttribute("aria-expanded", "false"); return; }
+      const p = places.find(x => x.id === mb.dataset.menu);
+      li.insertAdjacentHTML("beforeend", `<div class="menu">${menuHtml(p)}</div>`); mb.setAttribute("aria-expanded", "true");
+      return;
+    }
+    const nb = e.target.closest("[data-naver]");
+    if (nb) { view(e, places.find(x => x.id === nb.dataset.naver)); return; }  // 휴대폰은 네이버 지도 앱 검색으로
+    const li = e.target.closest(".item"); if (!li) return;
+    const o = markers.get(li.dataset.id); if (!o) return;
+    if (sheet.mode() === "list") sheet.snap("half");  // 목록을 크게 본 채 가게를 누르면 지도가 보이게 반반으로
+    map.setCenter(o.m.getPosition()); map.setZoom(17); openPlace(o.p, o.m);
+  });
+
+  document.getElementById("note").textContent =
+    `출처: ${D.source} · ${D.updated_at.slice(0, 10)} 받음. 문을 닫았는데 남아 있는 곳이 있을 수 있어요.`;
+  const sheet = addSheet(document.querySelector(".body"), document.getElementById("grip"));
+  new ResizeObserver(() => map.autoResize()).observe(document.getElementById("map"));  // 손잡이로 지도 높이가 바뀌면 네이버 지도 크기도
+  renderDoors(); render(true);
+})();
+</script>
+</body>
+</html>

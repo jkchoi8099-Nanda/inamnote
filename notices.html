@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>이남노트 · 읍 소식</title>
+<meta name="description" content="용인 이동읍·남사읍에 해당하는 공식 고시와 읍 소식, 용인시·처인구 소식을 제목·날짜·원문 링크로 모았습니다.">
+<meta name="theme-color" content="#F2F4F6">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="style.css">
+<!-- 시제품(2026-10-12, 2단계 2-1). 데이터: scripts/build_notices.py → data/notices.js. 2026-10-16부터 글을 누르면 이 화면 안 읽기 창(#r=키)에서 본문을 보여 준다(data/notice_bodies.json). 휴대폰 뒤로가기 = 창 닫기. -->
+<style>
+  .nt { padding-top: 14px; padding-bottom: 48px; max-width: 760px; }
+  .nt-head p { color: var(--ink-3); font-size: 14px; margin-top: 4px; }
+  .nt-head a { color: var(--moss); font-weight: 700; text-decoration: none; }
+  .nt-head h1 { font-size: clamp(24px, 6vw, 34px); margin-top: 6px; }
+  .tabs { display: flex; gap: 8px; overflow-x: auto; padding: 14px 0 6px; scrollbar-width: none; }
+  .chip { flex: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: 999px;
+          padding: 8px 14px; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; min-height: 40px; }
+  .chip[aria-pressed="true"] { background: var(--moss-dark); border-color: var(--moss-dark); color: #fff; }
+  .chip .n { font-weight: 500; opacity: .75; margin-left: 4px; }
+  .list { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 10px; }
+  .it a { display: block; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-sm); padding: 14px 16px; text-decoration: none; color: var(--ink); }
+  .it a:hover { border-color: var(--moss); }
+  .it .top { display: flex; gap: 8px; align-items: center; font-size: 13px; color: var(--ink-3); }
+  .it .badge { border-radius: 999px; padding: 2px 8px; font-weight: 700; font-size: 12px; background: var(--moss-tint); color: var(--moss-dark); }
+  .it .badge.b { background: var(--news-tint); color: var(--news); }
+  .it .badge.lh { background: var(--clay-tint); color: var(--clay-ink); }
+  .it .badge.comp { background: var(--warn-tint); color: var(--warn); }
+  .it .badge.city { background: var(--ok-tint); color: var(--ok); }
+  .it .near { font-size: 12px; font-weight: 700; color: var(--moss-dark); }
+  .it .fresh { font-size: 12px; font-weight: 800; color: #fff; background: var(--clay); border-radius: 999px; padding: 1px 8px; }
+  .it b { display: block; font-size: 16px; line-height: 1.45; margin: 6px 0 4px; }
+  .it .org { font-size: 13px; color: var(--ink-3); }
+  .note { color: var(--clay-ink); font-size: 13px; margin-top: 18px; }
+  /* 읽기 창: 화면을 덮는 한 장. 주소 끝 #r=키 — 뒤로가기를 누르면 키가 빠지면서 닫힌다 */
+  .rd { position: fixed; inset: 0; z-index: 50; background: var(--bg); overflow-y: auto; overscroll-behavior: contain; }
+  .rd[hidden] { display: none; }
+  .rd-bar { position: sticky; top: 0; z-index: 1; background: var(--bg); border-bottom: 1px solid var(--line); }
+  .rd-bar .in { max-width: 760px; margin: 0 auto; padding: 8px 12px; display: flex; align-items: center; gap: 6px; }
+  .rd-back { border: 0; background: none; font: inherit; font-size: 15px; font-weight: 700; color: var(--ink); min-height: 44px; padding: 0 8px;
+             display: inline-flex; align-items: center; gap: 4px; cursor: pointer; border-radius: 10px; }
+  .rd-back:hover { background: var(--surface); }
+  .rd-in { max-width: 760px; margin: 0 auto; padding: 18px 20px 56px; }
+  .rd-in .top { display: flex; gap: 8px; align-items: center; font-size: 13px; color: var(--ink-3); flex-wrap: wrap; }
+  .rd-in .badge { border-radius: 999px; padding: 2px 8px; font-weight: 700; font-size: 12px; background: var(--moss-tint); color: var(--moss-dark); }
+  .rd-in .badge.b { background: var(--news-tint); color: var(--news); }
+  .rd-in .badge.lh { background: var(--clay-tint); color: var(--clay-ink); }
+  .rd-in .badge.comp { background: var(--warn-tint); color: var(--warn); }
+  .rd-in .badge.city { background: var(--ok-tint); color: var(--ok); }
+  .rd-in h2 { font-size: clamp(21px, 5.4vw, 27px); line-height: 1.4; margin: 10px 0 6px; letter-spacing: -0.01em; }
+  .rd-in .org { font-size: 14px; color: var(--ink-3); }
+  .rd-info { margin: 16px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; font-size: 14px; background: var(--surface);
+             border: 1px solid var(--line); border-radius: var(--r-sm); padding: 12px 14px; }
+  .rd-info dt { color: var(--ink-3); } .rd-info dd { margin: 0; }
+  .rd-imgs img { display: block; width: 100%; height: auto; border-radius: var(--r-sm); margin-top: 16px; background: var(--surface); }
+  .rd-body { margin-top: 18px; font-size: 16px; line-height: 1.75; color: var(--ink); overflow-wrap: anywhere; }
+  .rd-body p { margin: 0 0 14px; }
+  .rd-empty { margin-top: 18px; padding: 14px 16px; border-radius: var(--r-sm); background: var(--surface); border: 1px dashed var(--line); color: var(--ink-2); font-size: 15px; }
+  .rd-files-h { font-size: 14px; color: var(--ink-3); margin: 22px 0 8px; }
+  .rd-files { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .rd-files a, .rd-files span.f { display: flex; gap: 10px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-sm);
+                                   padding: 12px 14px; color: var(--ink); text-decoration: none; font-size: 14px; line-height: 1.4; min-height: 44px; overflow-wrap: anywhere; }
+  .rd-files a:hover { border-color: var(--moss); }
+  .rd-files .fn { flex: 1; min-width: 0; }
+  .rd-files .act { flex: none; font-size: 13px; font-weight: 700; color: var(--moss-dark); }
+  .rd-doc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-sm); }
+  .rd-doc summary { display: flex; gap: 10px; align-items: center; padding: 12px 14px; font-size: 14px; line-height: 1.4; min-height: 44px; cursor: pointer;
+                    list-style: none; overflow-wrap: anywhere; }
+  .rd-doc summary::-webkit-details-marker { display: none; }
+  .rd-doc[open] summary .act { color: var(--ink-3); }
+  .rd-doc .rd-body { margin: 0; padding: 4px 16px 6px; border-top: 1px solid var(--line); font-size: 15px; }
+  .rd-doc .rd-body p { margin: 10px 0 0; }
+  .rd-doc .rd-dl { display: block; padding: 10px 16px 14px; font-size: 13px; color: var(--ink-3); }
+  .rd-files .ext { flex: none; font-size: 11px; font-weight: 800; color: var(--moss-dark); background: var(--moss-tint); border-radius: 6px; padding: 3px 6px; text-transform: uppercase; }
+  .rd-go { display: flex; justify-content: center; align-items: center; margin-top: 24px; min-height: 50px; border-radius: var(--r-sm); background: var(--moss-dark);
+           color: #fff; font-weight: 700; text-decoration: none; font-size: 16px; }
+  .rd-src { margin-top: 14px; font-size: 13px; color: var(--ink-3); line-height: 1.6; }
+  @media (prefers-reduced-motion: no-preference) {
+    .rd:not([hidden]) .rd-in { animation: rd-up .28s cubic-bezier(.2, .8, .2, 1); }
+    @keyframes rd-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  }
+</style>
+<script src="count.js" async></script>
+</head>
+<body>
+<main class="nt wrap">
+  <header class="nt-head">
+    <p><a href="index.html">← 이남노트</a> · <a href="map.html">동네 지도</a></p>
+    <h1>이동·남사 공식 소식</h1>
+    <p>관공서·LH에 올라온 고시와 소식 중 우리 동네에 해당하는 것만 모았어요. 용인시 전체 소식은 '용인시 소식'에 따로 있어요. 누르면 바로 읽을 수 있어요.</p>
+  </header>
+  <nav class="tabs" id="tabs" aria-label="출처"></nav>
+  <ul class="list" id="list"></ul>
+  <p class="note" id="note"></p>
+</main>
+<section class="rd" id="rd" hidden aria-modal="true" role="dialog" aria-labelledby="rd-title">
+  <div class="rd-bar"><div class="in"><button class="rd-back" id="rd-back" type="button" aria-label="목록으로">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>목록</button></div></div>
+  <article class="rd-in" id="rd-in"></article>
+</section>
+<script src="data/notices.js"></script>
+<script>
+(() => {
+  const D = window.NOTICES;
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  // 용인시·처인구 소식(2026-10-16): scope "city"는 시 전체 글이라 '전체'에 섞지 않고 '용인시 소식' 탭에만 둔다
+  const CITY = new Set(["용인시 보도자료", "용인시 공지", "처인구 소식"]);
+  const TABS = [["all", "전체", x => x.scope !== "city"], ["comp", "보상(LH)", x => x.src === "LH 보상공고"],
+                ["gosi", "공식 고시", x => x.src === "토지이음 고시"],
+                ["home", "청약·임대", x => x.src === "LH 청약·임대"],
+                ["lh", "LH 소식", x => x.src.startsWith("LH") && !["LH 보상공고", "LH 청약·임대"].includes(x.src)], ["eup", "읍 소식", x => x.src.endsWith("읍 소식")],
+                ["city", "용인시 소식", x => CITY.has(x.src)]];
+  const badge = x => CITY.has(x.src) ? " city" : x.src === "토지이음 고시" ? "" : x.src === "LH 보상공고" ? " comp" : x.src.startsWith("LH") ? " lh" : " b";
+  // 첫 화면에서 들어올 때: notices.html?tab=comp 처럼 탭을 고른 채로 연다
+  const want = new URLSearchParams(location.search).get("tab");
+  // 글마다 바뀌지 않는 짧은 키(원문 주소로 만든다) — 목록 순서가 바뀌어도 #r=키가 같은 글을 가리킨다
+  const key = x => { let h = 5381; for (const c of x.url) h = (h * 33 + c.charCodeAt(0)) >>> 0; return h.toString(36); };
+  let tab = TABS.some(t => t[0] === want) ? want : "all";
+  // 지난 방문 뒤 새 글(2026-10-18) — app.js NEW와 같은 규칙·같은 저장값. 첫 화면을 거치지 않고 바로 들어와도 같은 결과
+  const NEW = new Set((() => {
+    try {
+      const ses = sessionStorage.getItem("inam_new");
+      if (ses) return JSON.parse(ses);
+      const all = D.items.filter(x => x.scope !== "city").map(x => x.url), seen = localStorage.getItem("inam_seen");
+      const had = new Set(seen ? JSON.parse(seen) : []), fresh = seen ? all.filter(u => !had.has(u)) : [];
+      if (all.length) { sessionStorage.setItem("inam_new", JSON.stringify(fresh)); localStorage.setItem("inam_seen", JSON.stringify(all)); }
+      return fresh;
+    } catch (e) { return []; }
+  })());
+  function render() {
+    document.getElementById("tabs").innerHTML = TABS.map(([id, label, f]) =>
+      `<button class="chip" data-tab="${id}" aria-pressed="${tab === id}">${label}<span class="n">${D.items.filter(f).length}</span></button>`).join("");
+    const f = TABS.find(t => t[0] === tab)[2];
+    document.getElementById("list").innerHTML = D.items.filter(f).map(x => `<li class="it"><a href="${esc(x.url)}" data-key="${key(x)}">
+      <span class="top"><span class="badge${badge(x)}">${esc(x.src)}</span><span class="num">${esc(x.date)}</span>${NEW.has(x.url) ? '<span class="fresh">새 글</span>' : ""}${tab === "city" && x.scope === "town" ? '<span class="near">우리 동네</span>' : ""}</span>
+      <b>${esc(x.title.replace(/^\[(신규|변경|폐지)\]\s*/, ""))}</b>
+      <span class="org">${esc(x.org)}${x.no ? " · " + esc(x.no) : ""}</span></a></li>`).join("");
+  }
+  document.getElementById("tabs").addEventListener("click", e => {
+    const b = e.target.closest("[data-tab]");
+    if (!b) return;
+    tab = b.dataset.tab;
+    // 고른 탭을 주소에 남긴다 → 원문을 보고 돌아올 때 페이지가 새로 불려도 같은 탭(10-16 검증)
+    history.replaceState(history.state, "", (tab === "all" ? location.pathname : `?tab=${tab}`) + location.hash);
+    render();
+  });
+
+  /* 읽기 창(2026-10-16 사용자 "링크로 연결되면 … 다시 페이지로 돌아와야 돼서 불편"): 글을 누르면 원문 사이트로 가지 않고 여기서 본문을 보여 준다.
+     열 때 주소에 #r=키를 더한다 → 휴대폰 뒤로가기가 창을 닫고 목록 자리로 돌아온다. 원문·첨부 링크도 같은 탭으로 열어 뒤로가기로 돌아온다.
+     본문은 data/notice_bodies.json(scripts/build_notices.py가 새 글만 받아 둔다)을 처음 열 때 한 번 받는다.
+     열 때 목록 기록에는 스크롤 위치를, 창 기록에는 {reader: true}를 남긴다 → 원문에 갔다 와서 페이지가 새로 불려도 뒤로가기·스크롤이 맞다(10-16 검증). */
+  const rd = document.getElementById("rd"), rdIn = document.getElementById("rd-in"), main = document.querySelector("main");
+  let bodies = null, openKey = null, closing = false, lastY = 0;
+  // 받기에 실패하면 기억하지 않는다 → 다음 글을 열 때 다시 받는다
+  const getBodies = () => bodies || (bodies = fetch("data/notice_bodies.json").then(r => { if (!r.ok) throw r.status; return r.json(); })
+    .catch(() => { bodies = null; return null; }));
+  const paras = t => t.split(/\n{2,}/).map(p => `<p>${esc(p).replace(/\n/g, "<br>")}</p>`).join("");
+  const ext = n => (n.match(/\.([a-z0-9]+)\s*$/i) || [, "파일"])[1];
+  // b: undefined = 받는 중, false = 받기 실패, null = 이 글은 본문 없음
+  function fill(x, b) {
+    let h = `<span class="top"><span class="badge${badge(x)}">${esc(x.src)}</span><span class="num">${esc(x.date)}</span></span>
+      <h2 id="rd-title">${esc(x.title.replace(/^\[(신규|변경|폐지)\]\s*/, ""))}</h2><p class="org">${esc(x.org)}${x.no ? " · " + esc(x.no) : ""}</p>`;
+    if (b === undefined) { rdIn.innerHTML = h + '<p class="rd-empty">본문을 불러오는 중이에요…</p>'; return; }
+    if (b === false) {
+      rdIn.innerHTML = h + `<p class="rd-empty">본문을 받지 못했어요. 잠시 뒤 다시 열거나 원문에서 봐 주세요.</p><a class="rd-go" href="${esc(x.url)}">원문 사이트에서 보기</a>`;
+      return;
+    }
+    const files = (b && b.files) || [];
+    if (b && b.info && b.info.length) h += `<dl class="rd-info">${b.info.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("")}</dl>`;
+    if (b && b.imgs && b.imgs.length)
+      h += `<div class="rd-imgs">${b.imgs.map(u => `<img src="${esc(u)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">`).join("")}</div>`;
+    if (b && b.text) h += `<div class="rd-body">${paras(b.text)}</div>`;
+    else h += `<p class="rd-empty">${files.length ? "자세한 내용은 아래 첨부 문서에 있어요." : "이 글은 원문 사이트에서 볼 수 있어요."}</p>`;
+    if (files.length)
+      // 첨부(10-16 사용자 "hwp는 안 열리는데"): 휴대폰엔 한글 뷰어가 없다 → ① 관공서 바로보기(view, 용인시·LH)로 열고
+      // ② 바로보기가 없는 hwpx(처인구청)는 뽑아 둔 글자(text)를 이 창에서 펼친다 ③ 둘 다 없으면 내려받기·원문
+      h += `<h3 class="rd-files-h">첨부 문서 ${files.length}개</h3><ul class="rd-files">${files.map(f => {
+        const tag = `<span class="ext">${esc(ext(f.name))}</span>`;
+        if (f.view) return `<li><a href="${esc(f.view)}">${tag}<span class="fn">${esc(f.name)}</span><span class="act">바로보기</span></a></li>`;
+        if (f.text) return `<li><details class="rd-doc"><summary>${tag}<span class="fn">${esc(f.name)}</span><span class="act">펼쳐 보기</span></summary>
+          <div class="rd-body">${paras(f.text.replace(/\n/g, "\n\n"))}</div>${f.url ? `<a class="rd-dl" href="${esc(f.url)}">파일 내려받기</a>` : ""}</details></li>`;
+        if (f.url) return `<li><a href="${esc(f.url)}">${tag}<span class="fn">${esc(f.name)}</span></a></li>`;
+        return `<li><span class="f">${tag}<span class="fn">${esc(f.name)} · 원문에서 받기</span></span></li>`;
+      }).join("")}</ul>`;
+    h += `<a class="rd-go" href="${esc(x.url)}">원문 사이트에서 보기</a>`;
+    h += `<p class="rd-src">출처: ${esc((b && b.license) || x.org)}. 이남노트는 내용을 고치지 않고 옮겼어요${b && b.at ? ` (${esc(b.at)} 받음)` : ""}. 신청·기한은 꼭 원문에서 확인하세요.</p>`;
+    rdIn.innerHTML = h;
+  }
+  function route() {
+    const k = (location.hash.match(/^#r=([a-z0-9]+)$/) || [])[1];
+    const x = k && D.items.find(i => key(i) === k);
+    closing = false;
+    if (!x) {
+      if (!rd.hidden) {
+        rd.hidden = true; main.inert = false; document.body.style.overflow = "";
+        const st = history.state;
+        scrollTo(0, st && st.y != null ? st.y : lastY);
+        // 키보드로 보던 사람이 누른 글에서 이어 가게
+        document.querySelector(`#list a[data-key="${openKey}"]`)?.focus({ preventScroll: true });
+      }
+      openKey = null;
+      return;
+    }
+    if (openKey === k && !rd.hidden) return;  // popstate와 hashchange가 함께 와도 한 번만
+    if (rd.hidden) lastY = scrollY;
+    openKey = k;
+    rd.hidden = false; main.inert = true; rd.scrollTop = 0; document.body.style.overflow = "hidden";
+    fill(x);
+    document.getElementById("rd-back").focus({ preventScroll: true });
+    getBodies().then(all => { if (openKey === k) fill(x, all ? all[x.url] || null : false); });
+  }
+  document.getElementById("list").addEventListener("click", e => {
+    const a = e.target.closest("a[data-key]");
+    if (!a || e.ctrlKey || e.metaKey || e.shiftKey || e.button) return;  // 새 탭으로 열고 싶은 사람은 원래대로
+    e.preventDefault();
+    history.replaceState({ ...(history.state || {}), y: scrollY }, "");
+    history.pushState({ reader: true }, "", "#r=" + a.dataset.key);
+    route();
+  });
+  // 목록에서 열었으면 뒤로가기와 똑같이, 공유 주소로 바로 들어왔으면 #r=만 지운다. 빠르게 두 번 눌러도 한 번만 닫는다
+  const close = () => {
+    if (closing) return;
+    closing = true;
+    if (history.state && history.state.reader) history.back();
+    else { history.replaceState(null, "", location.pathname + location.search); route(); }
+  };
+  document.getElementById("rd-back").addEventListener("click", close);
+  addEventListener("keydown", e => { if (e.key === "Escape" && !rd.hidden) close(); });
+  addEventListener("popstate", route);
+  addEventListener("hashchange", route);
+  // 탭을 고른 채로 들어오면(첫 화면 '용인시 소식' 등) 그 칩이 화면 밖에 있을 수 있다 → 보이게 옆으로 민다
+  addEventListener("load", () => document.querySelector(`[data-tab="${tab}"]`)?.scrollIntoView({ block: "nearest", inline: "center" }));
+  document.getElementById("note").textContent =
+    `출처: 토지이음(국토교통부) 고시정보, LH 보상공고·보도자료·공모·공지·청약플러스, 처인구청 이동읍·남사읍 소식 게시판·처인 홍보관, 용인시청 보도자료(최근 30일)·시정소식 · ${D.updated_at.slice(0, 10)} 받음. 글을 누르면 본문을 바로 볼 수 있어요(용인시·처인구·토지이음은 본문, LH는 첨부 문서). 신청·기한은 꼭 원문에서 확인하세요.`;
+  render();
+  route();  // #r=키로 바로 들어온 경우(공유한 주소)
+})();
+</script>
+</body>
+</html>

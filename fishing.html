@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#0A5C3D">
+<title>이동저수지 낚시 · 이남노트</title>
+<meta name="description" content="실제 이동저수지 좌대 자리에서 찌를 보고 챔질하는 이남노트 미니 낚시 게임. 오늘의 입질 운을 시험해 보세요.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  :root {
+    --ink: #191F28; --ink-2: #4E5968; --ink-3: #6B7684; --bg: #F2F4F6; --line: #E5E8EB;
+    --moss: #0E8A5A; --moss-dark: #0A5C3D; --leaf: #2FC67A; --clay: #FF6B35; --clay-ink: #C2410C;
+    --safe-b: env(safe-area-inset-bottom, 0px); --safe-t: env(safe-area-inset-top, 0px);
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #2E5D6B; color: var(--ink);
+    font-family: "Pretendard Variable", Pretendard, system-ui, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+    -webkit-user-select: none; user-select: none; touch-action: none; }
+  #view { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+  button { font: inherit; color: inherit; cursor: pointer; }
+  [hidden] { display: none !important; }
+
+  /* ── 낚시 중 화면 ── */
+  .hud { position: fixed; inset: 0; pointer-events: none; }
+  .top { position: absolute; top: max(12px, var(--safe-t)); left: 12px; right: 12px; display: flex; gap: 8px; align-items: flex-start; }
+  .pill { background: rgba(255,255,255,.92); border-radius: 16px; padding: 8px 12px; box-shadow: 0 6px 20px rgba(0,0,0,.16); line-height: 1.25; }
+  .pill b { font-size: 15px; font-weight: 800; letter-spacing: -.02em; display: block; }
+  .pill span { font-size: 12px; color: var(--ink-3); font-weight: 600; }
+  .spot-btn { pointer-events: auto; border: 0; text-align: left; }
+  .right { margin-left: auto; display: flex; gap: 8px; align-items: flex-start; }
+  .bait { text-align: center; min-width: 64px; }
+  .ibtn { pointer-events: auto; width: 40px; height: 40px; border-radius: 14px; border: 0; background: rgba(255,255,255,.9); font-weight: 900;
+    box-shadow: 0 4px 14px rgba(0,0,0,.15); display: grid; place-items: center; font-size: 15px; }
+  .inset { position: absolute; top: calc(max(12px, var(--safe-t)) + 62px); left: 50%; transform: translateX(-50%); width: 136px; height: 136px;
+    border-radius: 20px; border: 6px solid rgba(255,255,255,.96); box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+  .inset::after { content: "찌"; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff;
+    font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 999px; }
+  .status { position: absolute; left: 0; right: 0; bottom: calc(168px + var(--safe-b)); text-align: center; color: #fff; font-weight: 800; font-size: 17px;
+    text-shadow: 0 2px 10px rgba(0,0,0,.55); padding: 0 20px; }
+  .status small { display: block; font-size: 13px; font-weight: 600; opacity: .9; margin-top: 2px; }
+  .gauge { position: absolute; left: 50%; bottom: calc(118px + var(--safe-b)); transform: translateX(-50%); width: min(340px, calc(100% - 48px)); height: 26px;
+    background: rgba(25,31,40,.72); border-radius: 999px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+  .gauge .zone { position: absolute; top: 4px; bottom: 4px; border-radius: 999px; background: linear-gradient(90deg, #2FC67A, #0E8A5A); }
+  .gauge .zone::after { content: ""; position: absolute; top: 0; bottom: 0; left: 37.5%; width: 25%; background: rgba(255,255,255,.35); border-radius: 999px; }
+  .gauge .needle { position: absolute; top: -2px; bottom: -2px; width: 6px; margin-left: -3px; background: #fff; border-radius: 3px; box-shadow: 0 0 10px rgba(255,255,255,.9); }
+  .gauge.power { background: linear-gradient(90deg, rgba(47,198,122,.55), rgba(255,212,59,.65), rgba(255,107,53,.8)); }
+  .gauge .marks { position: absolute; inset: 0; display: flex; justify-content: space-between; padding: 0 12px; align-items: center; font-size: 11px; font-weight: 800; color: rgba(255,255,255,.95); }
+  .hits { position: absolute; left: 50%; bottom: calc(150px + var(--safe-b)); transform: translateX(-50%); display: flex; gap: 6px; }
+  .hits i { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,.35); display: block; }
+  .hits i.on { background: #2FC67A; box-shadow: 0 0 8px #2FC67A; }
+  .hits i.miss { background: #FF6B35; }
+  .act { pointer-events: auto; position: absolute; left: 50%; bottom: calc(24px + var(--safe-b)); transform: translateX(-50%); width: min(340px, calc(100% - 48px));
+    border: 0; border-radius: 999px; padding: 20px; font-size: 20px; font-weight: 900; background: var(--ink); color: #fff; box-shadow: 0 10px 28px rgba(0,0,0,.3);
+    transition: transform .08s, background .2s; letter-spacing: -.02em; }
+  .act:active { transform: translateX(-50%) scale(.97); }
+  .act.hot { background: var(--clay); }
+  .act.reel { background: var(--moss); }
+  .toast { position: absolute; top: 40%; left: 50%; transform: translate(-50%, -8px); background: rgba(255,255,255,.96); color: var(--ink);
+    padding: 12px 20px; border-radius: 999px; font-weight: 900; font-size: 20px; box-shadow: 0 8px 24px rgba(0,0,0,.2); opacity: 0;
+    transition: opacity .2s, transform .2s; white-space: nowrap; }
+  .toast.on { opacity: 1; transform: translate(-50%, 0); }
+  .toast.warn { background: #FFF4E5; color: #9A5B00; }
+
+  /* ── 카드 화면 ── */
+  .screen { position: fixed; inset: 0; display: grid; place-items: center; padding: 20px 16px calc(20px + var(--safe-b)); overflow-y: auto; touch-action: pan-y;
+    background: linear-gradient(180deg, rgba(8,40,48,.15), rgba(8,30,36,.55)); }
+  .wrap { width: min(440px, 100%); }
+  .card { background: #fff; border-radius: 28px; padding: 22px 22px 20px; box-shadow: 0 24px 60px rgba(0,0,0,.28); }
+  .back { display: inline-flex; color: var(--ink-2); font-size: 14px; font-weight: 700; text-decoration: none; padding: 6px 10px 6px 0; border: 0; background: none; }
+  .eyebrow { margin: 10px 0 2px; font-size: 12px; font-weight: 800; letter-spacing: .2em; color: var(--moss); }
+  .title-row { display: flex; align-items: center; gap: 12px; }
+  .title-row img { width: 56px; height: 56px; }
+  h1 { margin: 0; font-size: 38px; font-weight: 800; letter-spacing: -.045em; line-height: 1.1; }
+  h2 { margin: 0 0 4px; font-size: 26px; font-weight: 800; letter-spacing: -.04em; }
+  .sub { margin: 6px 0 14px; color: var(--ink-2); font-size: 16px; font-weight: 600; line-height: 1.5; }
+  .luck { background: var(--bg); border-radius: 20px; padding: 14px 16px; }
+  .luck .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 5px 0; font-size: 15px; }
+  .luck .row span { color: var(--ink-3); font-weight: 700; font-size: 13px; white-space: nowrap; }
+  .luck .row b { font-weight: 800; text-align: right; }
+  .stars { color: #F59F00; letter-spacing: 1px; font-size: 17px; }
+  .stars em { color: #DEE2E6; font-style: normal; }
+  .note { margin: 8px 0 0; font-size: 12px; color: var(--ink-3); line-height: 1.5; }
+  .go { width: 100%; margin-top: 16px; border: 0; border-radius: 999px; padding: 16px; font-size: 18px; font-weight: 800; background: var(--ink); color: #fff; }
+  .go:active { transform: scale(.98); }
+  .go.ghost { background: var(--bg); color: var(--ink); margin-top: 8px; }
+  .go:disabled { opacity: .45; }
+  .foot { margin: 14px auto 0; max-width: 440px; font-size: 12px; color: rgba(255,255,255,.92); text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,.45); line-height: 1.5; }
+  .map { width: 100%; aspect-ratio: 1 / 1.02; border-radius: 20px; background: #E7F0EA; display: block; touch-action: manipulation; }
+  .spots { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+  .spot { display: flex; gap: 12px; align-items: center; text-align: left; border: 0; background: var(--bg); border-radius: 18px; padding: 12px 14px; width: 100%; }
+  .spot[aria-pressed="true"] { background: #E3F6EC; box-shadow: inset 0 0 0 2px var(--moss); }
+  .spot i { width: 28px; height: 28px; border-radius: 50%; background: var(--clay); color: #fff; font-style: normal; font-weight: 900; display: grid; place-items: center; flex: none; font-size: 14px; }
+  .spot b { display: block; font-size: 16px; font-weight: 800; }
+  .spot span { display: block; font-size: 13px; color: var(--ink-2); line-height: 1.45; margin-top: 2px; }
+  .spot em { display: block; font-style: normal; font-size: 12px; color: var(--moss-dark); font-weight: 700; margin-top: 4px; }
+  .fishcard { text-align: center; position: relative; }
+  .card.fishcard { background: transparent; box-shadow: none; }
+  .fishcard > * { position: relative; z-index: 1; }
+  /* 카드 바탕은 따로 둔다 — 축하 때 고기 둘레에서 카드 크기로 펼쳐진다 */
+  .fishcard .panel { position: absolute; z-index: 0; left: 0; top: 0; width: 100%; height: 100%; border-radius: 28px; background: #fff;
+    box-shadow: 0 24px 60px rgba(0,0,0,.28); overflow: hidden; }
+  .fishcard.gold .panel { background: linear-gradient(160deg, #FFF1C2 0%, #F6C453 55%, #E8A92A 100%); }
+  .fishcard.gold .size small, .fishcard.gold p { color: #5A4310; }
+  .rays { position: absolute; left: 50%; width: 900px; height: 900px; margin-left: -450px; border-radius: 50%; opacity: 0;
+    background: repeating-conic-gradient(rgba(255,255,255,0) 0deg 7.5deg, rgba(255,250,225,.6) 7.5deg 15deg);
+    -webkit-mask: radial-gradient(circle, #000 16%, transparent 60%); mask: radial-gradient(circle, #000 16%, transparent 60%); }
+  .fishcard .art { position: relative; width: 100%; max-width: 360px; aspect-ratio: 2 / 1; margin: 0 auto; }
+  .fishcard .art canvas { width: 100%; height: 100%; display: block; transform-origin: 50% 50%; }
+  .shine { position: absolute; inset: 0; opacity: 0; pointer-events: none;
+    background: linear-gradient(105deg, transparent 38%, rgba(255,255,255,.9) 50%, transparent 62%) no-repeat; background-size: 260% 100%;
+    -webkit-mask-size: 100% 100%; mask-size: 100% 100%; }
+  .stamp { position: absolute; right: 1%; top: 0; padding: 3px 12px; border: 4px solid currentColor; border-radius: 14px; font-weight: 900; font-size: 26px;
+    letter-spacing: -.02em; color: #C2410C; background: rgba(255,255,255,.94); transform: rotate(-10deg); white-space: nowrap; }
+  .stamp.gold { color: #9A6200; background: #FFF6D6; }
+  .ruler { display: block; width: 100%; max-width: 360px; aspect-ratio: 720 / 112; margin: 0 auto; }
+  #c-name { overflow: hidden; padding: 2px 0 4px; }
+  #c-name span { display: inline-block; }
+  #catch .wrap { position: relative; z-index: 1; }
+  .gold-fill { position: absolute; inset: 0; z-index: 0; background: #F6C453; pointer-events: none; }
+  .screen.celebrating { overflow: hidden; }
+  .fishcard .size { font-size: 44px; font-weight: 900; letter-spacing: -.04em; margin: 4px 0 0; }
+  .fishcard .size small { font-size: 18px; font-weight: 700; color: var(--ink-3); margin-left: 6px; }
+  .badges { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin: 8px 0 4px; min-height: 26px; }
+  .badge { font-size: 13px; font-weight: 800; padding: 4px 10px; border-radius: 999px; background: var(--bg); color: var(--ink-2); }
+  .badge.gold { background: #FFF3BF; color: #8A5A00; }
+  .badge.new { background: #E3F6EC; color: var(--moss-dark); }
+  .badge.warn { background: #FFF4E5; color: #9A5B00; }
+  .fishcard p { margin: 6px 0 0; font-size: 14px; color: var(--ink-2); line-height: 1.55; }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 15px; }
+  td { padding: 9px 4px; border-bottom: 1px solid var(--line); }
+  td:last-child { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); font-weight: 600; }
+  .dex { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+  .dex div { background: var(--bg); border-radius: 16px; padding: 8px 6px 10px; text-align: center; }
+  .dex canvas { width: 100%; aspect-ratio: 2 / 1; display: block; }
+  .dex b { display: block; font-size: 14px; font-weight: 800; margin-top: 2px; }
+  .dex span { display: block; font-size: 12px; color: var(--ink-3); font-weight: 600; }
+  .dex .no b { color: var(--ink-3); }
+</style>
+<script src="count.js" async></script>
+</head>
+<body>
+<canvas id="view" aria-label="이동저수지 낚시 화면"></canvas>
+
+<div id="hud" class="hud" hidden>
+  <div class="top">
+    <button id="spot-btn" class="pill spot-btn"><b id="spot-name">버들섬 좌대</b><span>← 자리 바꾸기</span></button>
+    <div class="right">
+      <div class="pill bait"><b id="bait">10</b><span id="bait-label">남은 미끼</span></div>
+      <div class="pill bait"><b id="count">0</b><span>마리</span></div>
+      <button id="mute" class="ibtn" aria-label="소리 끄기">🔊</button>
+    </div>
+  </div>
+  <div id="inset" class="inset" hidden aria-hidden="true"></div>
+  <div id="status" class="status"></div>
+  <div id="hits" class="hits" hidden></div>
+  <div id="gauge" class="gauge" hidden><div class="zone" id="zone"></div><div class="marks" id="marks"></div><div class="needle" id="needle"></div></div>
+  <button id="act" class="act">던지기</button>
+  <div id="toast" class="toast"></div>
+</div>
+
+<section id="title" class="screen">
+  <div class="wrap">
+    <div class="card">
+      <a class="back" href="index.html">← 이남노트</a>
+      <p class="eyebrow">IDONG RESERVOIR</p>
+      <div class="title-row"><img src="img/emoji/fish-rod.webp" alt=""><h1>이동저수지 낚시</h1></div>
+      <p class="sub">실제 좌대 자리를 골라 찌를 보다가<br>딱 올라올 때 챔질! 오늘 운은 어떨까요?</p>
+      <div class="luck">
+        <div class="row"><span id="t-date">오늘</span><b class="stars" id="t-stars" aria-label="입질 운"></b></div>
+        <div class="row"><span>오늘 잘 무는 고기</span><b id="t-fish">-</b></div>
+        <div class="row"><span>지금 이동읍</span><b id="t-now">-</b></div>
+        <div class="row"><span>남은 미끼</span><b id="t-bait">10개</b></div>
+      </div>
+      <p class="note" id="t-note">입질 운·잘 무는 고기는 날짜로 정해지는 게임 속 운이에요. 날씨·시각은 실제 값을 써요.</p>
+      <button id="go" class="go">자리 고르기</button>
+      <button id="open-dex" class="go ghost">내 물고기 도감</button>
+      <button id="open-sum" class="go ghost" hidden>오늘 조과 보기</button>
+    </div>
+    <p class="foot">이 사이트는 용인시·LH·삼성전자와 무관한 민간 지역 정보 사이트입니다.</p>
+  </div>
+</section>
+
+<section id="pick" class="screen" hidden>
+  <div class="wrap">
+    <div class="card">
+      <button class="back" id="pick-back">← 처음으로</button>
+      <h2>어느 좌대에 앉을까요?</h2>
+      <p class="sub" style="margin-bottom:10px">위성사진에서 실제로 좌대가 모여 있는 자리예요.<br>자리 이름은 게임에서 지은 이름이에요.</p>
+      <canvas id="map" class="map" width="720" height="734" aria-label="이동저수지 좌대 자리 지도"></canvas>
+      <div class="spots" id="spots"></div>
+      <button id="sit" class="go">여기서 낚시하기</button>
+    </div>
+    <p class="foot">저수지 모양 © OpenStreetMap 기여자 · 좌대 자리 브이월드 위성영상 확인(2026-10-21)</p>
+  </div>
+</section>
+
+<section id="catch" class="screen" hidden>
+  <div id="gold-fill" class="gold-fill" hidden></div>
+  <div class="wrap">
+    <div class="card fishcard" id="c-card">
+      <div class="panel" id="c-panel"><div class="rays" id="c-rays"></div></div>
+      <div class="art" id="c-art">
+        <canvas id="fish-art" width="720" height="360" aria-hidden="true"></canvas>
+        <div class="shine" id="c-shine"></div>
+        <div class="stamp" id="c-stamp" hidden></div>
+      </div>
+      <canvas class="ruler" id="c-ruler" width="720" height="112" hidden aria-hidden="true"></canvas>
+      <h2 id="c-name">붕어</h2>
+      <div class="size" id="c-size">31.2<small>cm</small></div>
+      <div class="badges" id="c-badges"></div>
+      <p id="c-text"></p>
+      <button id="release" class="go">살려 보내고 다시 던지기</button>
+    </div>
+  </div>
+</section>
+
+<section id="summary" class="screen" hidden>
+  <div class="wrap">
+    <div class="card">
+      <h2 id="s-title">오늘 낚시 끝!</h2>
+      <p class="sub" id="s-sub" style="margin-bottom:4px"></p>
+      <table id="s-table"></table>
+      <button id="share" class="go">조과 자랑하기</button>
+      <button id="practice" class="go ghost">연습 낚시 더 하기 (기록 안 남음)</button>
+      <button id="s-home" class="go ghost">처음 화면으로</button>
+    </div>
+  </div>
+</section>
+
+<section id="dexs" class="screen" hidden>
+  <div class="wrap">
+    <div class="card">
+      <button class="back" id="dex-back">← 돌아가기</button>
+      <h2>내 물고기 도감</h2>
+      <p class="sub" id="dex-sub" style="margin-bottom:0"></p>
+      <div class="dex" id="dex"></div>
+    </div>
+    <p class="foot">기록은 이 브라우저에만 저장돼요.</p>
+  </div>
+</section>
+
+<script src="data/fishing_lake.js"></script>
+<script type="module" src="fishing.js"></script>
+</body>
+</html>

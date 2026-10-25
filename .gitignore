@@ -1,0 +1,5 @@
+# site/를 따로 공개 저장소로 뗄 때를 위한 목록(2026-10-14). 바깥 .gitignore와 같은 내용
+__pycache__/
+*.pyc
+data/raw/
+.env

@@ -1,0 +1,7 @@
+{
+  "_설명": "운영자가 사이트 내용을 마지막으로 확인한 날(last_reviewed). 14일이 지나면 첫 화면에 '갱신 쉬는 중' 안내가 자동으로 뜬다. 문의처는 카카오 채널을 만든 뒤 채운다.",
+  "last_reviewed": "2026-10-25",
+  "dormant_after_days": 14,
+  "contact": { "kakao_channel_url": "", "kakao_search_id": "" },
+  "blog_url": ""
+}

@@ -1,0 +1,38 @@
+# 이남노트 '오늘' 카드 자동 갱신
+# 30분마다 공공데이터를 받아 data/today.json을 바꾸고, 바뀌었을 때만 커밋한다(GitHub Pages가 자동 반영).
+# 저장소 Settings > Secrets and variables > Actions 에 DATA_GO_KR_KEY(공공데이터포털 Decoding 키)를 넣는다.
+# 다섯 소스가 전부 실패하거나 키가 없으면 실패로 끝난다 → GitHub가 저장소 주인에게 메일을 보낸다(2026-10-14).
+# 해외 서버(Modal)에서 apis.data.go.kr 접속 확인 2026-10-14. GitHub 서버에서의 실제 실행은 공개 뒤 첫 수동 실행으로 확인한다.
+name: today
+on:
+  schedule:
+    - cron: "7,37 * * * *"   # UTC 기준 매시 7분·37분 (KST도 같은 분). GitHub 예약은 몇 분~수십 분 늦을 수 있다
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: data-commit   # notices.yml과 같은 이름: 두 작업이 동시에 push하다 부딪치지 않게
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 데이터 받기
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: python scripts/update_today.py
+      - name: 바뀌었으면 커밋
+        if: always()   # 일부만 받아도(지난 값 유지) 반영한다. 앞 단계가 실패했으면 작업 전체는 실패로 남는다
+        run: |
+          if git diff --quiet -- data/today.json; then echo "변경 없음"; exit 0; fi
+          git config user.name "inamnote-bot"
+          git config user.email "inamnote-bot@users.noreply.github.com"
+          git add data/today.json
+          git commit -m "today: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --quiet
+          git push

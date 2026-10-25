@@ -1,0 +1,46 @@
+# 이남노트 '읍 소식' 자동 갱신(2026-10-14)
+# 하루 두 번 토지이음 고시·처인구청 읍 게시판·처인 홍보관·LH 게시판·LH 청약플러스·용인시청 보도자료·시정소식을 읽어 data/notices.json·notices.js를 바꾼다.
+# 출처 목록과 거르는 규칙의 원본은 scripts/build_notices.py 머리말이다(출처를 더하거나 빼면 거기만 고친다).
+# 새 글의 본문도 받아 data/notice_bodies.json에 더한다(2026-10-16, 읽기 창용 — 이미 받은 글은 다시 받지 않는다). 시크릿은 today.yml과 같은 DATA_GO_KR_KEY(LH 청약플러스용).
+# 한 곳이 실패하면 그곳은 지난 결과를 유지하고 작업은 실패로 끝난다 → 메일.
+# 해외 서버(Modal)에서 토지이음 19·처인구청 4·LH 14건으로 PC와 같게 받히는 것 확인 2026-10-14.
+# 처인구청은 중간 인증서를 안 보내서 scripts/cheoingu_ca.pem이 필요하다.
+name: notices
+on:
+  schedule:
+    - cron: "10 21,9 * * *"   # UTC 21:10·09:10 = KST 06:10·18:10
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: data-commit
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 소식 받기
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: python scripts/build_notices.py
+      # 혜택 목록(2026-10-16): 행안부 공공서비스(혜택) 정보. 실패하면 지난 파일 유지 + 작업 실패
+      - name: 혜택 받기
+        if: always()
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: python scripts/build_benefits.py
+      - name: 바뀌었으면 커밋
+        if: always()
+        run: |
+          if git diff --quiet -- data/notices.json data/notices.js data/notice_bodies.json data/benefits.json data/benefits.js data/benefits_recent.js data/benefit_bodies.json; then echo "변경 없음"; exit 0; fi
+          git config user.name "inamnote-bot"
+          git config user.email "inamnote-bot@users.noreply.github.com"
+          git add data/notices.json data/notices.js data/notice_bodies.json data/benefits.json data/benefits.js data/benefits_recent.js data/benefit_bodies.json
+          git commit -m "notices: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --quiet
+          git push

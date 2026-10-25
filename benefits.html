@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>이남노트 · 혜택·생활 제도</title>
+<meta name="description" content="이동·남사 주민이 받을 수 있는 용인시·경기도·정부 혜택과 잘 모르는 생활 제도를 모았습니다.">
+<meta name="theme-color" content="#F2F4F6">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="style.css">
+<!-- 2026-10-16. 혜택 목록: scripts/build_benefits.py → data/benefits.js(행안부 공공서비스(혜택) 정보, 자동).
+     생활 제도 카드: data/tips.js(사람이 손으로, 확인일 표시). 금액·자격은 원문(정부24)에서 확인하게 한다. -->
+<style>
+  .bf { padding-top: 14px; padding-bottom: 48px; max-width: 760px; }
+  .bf-head p { color: var(--ink-3); font-size: 14px; margin-top: 4px; }
+  .bf-head a { color: var(--moss); font-weight: 700; text-decoration: none; }
+  .bf-head h1 { font-size: clamp(24px, 6vw, 34px); margin-top: 6px; }
+  .bf h2 { font-size: 19px; margin: 28px 0 4px; }
+  .bf h2 + .sub { color: var(--ink-3); font-size: 14px; margin: 0 0 10px; }
+
+  .tips { display: grid; gap: 12px; }
+  .tip { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); padding: 16px 18px; }
+  .tip-h { display: flex; gap: 12px; align-items: center; }
+  .tip-h img { width: 44px; height: 44px; flex: none; }
+  .tip-h b { font-size: 17px; }
+  .tip .lead { margin: 10px 0 0; font-size: 15px; line-height: 1.55; color: var(--ink); }
+  .tip details { margin-top: 8px; }
+  .tip summary { cursor: pointer; color: var(--moss); font-weight: 700; font-size: 14px; padding: 6px 0; list-style-position: inside; }
+  .tip ul { margin: 4px 0 0; padding-left: 18px; color: var(--ink-2); font-size: 14px; line-height: 1.6; }
+  .tip li + li { margin-top: 4px; }
+  .tip .how { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .tip .how a { background: var(--moss-dark); color: #fff; border-radius: 999px; padding: 9px 16px; font-size: 14px; font-weight: 700; text-decoration: none; min-height: 40px; display: inline-flex; align-items: center; }
+  .tip .how a + a { background: var(--moss-tint); color: var(--moss-dark); }
+  .tip .meta { margin-top: 10px; font-size: 12.5px; color: var(--ink-3); line-height: 1.5; }
+  .tip .meta a { color: var(--clay-ink); }
+  .tip .stale { color: var(--warn); font-weight: 700; }
+
+  .tabs { display: flex; gap: 8px; overflow-x: auto; padding: 6px 0; scrollbar-width: none; }
+  .tabs + .tabs { padding-top: 0; }
+  .chip { flex: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: 999px;
+          padding: 8px 14px; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; min-height: 40px; }
+  .chip[aria-pressed="true"] { background: var(--moss-dark); border-color: var(--moss-dark); color: #fff; }
+  .chip.sm { font-weight: 600; font-size: 13.5px; min-height: 36px; padding: 6px 12px; }
+  .chip.sm[aria-pressed="true"] { background: var(--moss-tint); border-color: var(--moss); color: var(--moss-dark); }
+  .chip .n { font-weight: 500; opacity: .75; margin-left: 4px; }
+  .find { display: flex; gap: 8px; align-items: center; margin: 8px 0 4px; }
+  .find input { flex: 1; min-width: 0; border: 1px solid var(--line); background: var(--surface); border-radius: 12px; padding: 11px 14px; font: inherit; font-size: 15px; color: var(--ink); }
+  .find input:focus { outline: 2px solid var(--moss); outline-offset: 0; border-color: var(--moss); }
+  .find label { display: flex; gap: 6px; align-items: center; font-size: 14px; color: var(--ink-2); white-space: nowrap; cursor: pointer; }
+  .count { font-size: 13px; color: var(--ink-3); margin: 8px 0 0; }
+
+  .list { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 10px; }
+  .it a { display: block; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-sm); padding: 14px 16px; text-decoration: none; color: var(--ink); }
+  .it a:hover { border-color: var(--moss); }
+  .it .top { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12px; }
+  .it .badge { border-radius: 999px; padding: 2px 8px; font-weight: 700; background: var(--news-tint); color: var(--news); }
+  .it .badge.open { background: var(--moss-tint); color: var(--moss-dark); }
+  .it .badge.soon { background: var(--warn-tint); color: var(--warn); }
+  .it .badge.done { background: var(--bg-2); color: var(--ink-3); }
+  .it .badge.kind { background: transparent; border: 1px solid var(--line); color: var(--ink-3); font-weight: 600; }
+  .it b { display: block; font-size: 16px; line-height: 1.45; margin: 6px 0 2px; }
+  .it .sum { font-size: 14px; color: var(--ink-2); line-height: 1.5; }
+  .it .who { font-size: 13.5px; color: var(--ink-2); line-height: 1.5; margin-top: 6px; }
+  .it .who em { font-style: normal; font-weight: 700; color: var(--ink-3); margin-right: 4px; }
+  .it .org { font-size: 12.5px; color: var(--ink-3); margin-top: 6px; }
+  .more { display: block; width: 100%; margin-top: 12px; }
+  .empty { color: var(--ink-3); font-size: 14px; padding: 18px 4px; }
+  .note { color: var(--clay-ink); font-size: 13px; margin-top: 18px; line-height: 1.55; }
+  .note a { color: inherit; }
+  .gov { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 14px; background: var(--moss-tint); border-radius: var(--r-sm); padding: 14px 16px; color: var(--moss-dark); text-decoration: none; font-size: 14px; line-height: 1.5; }
+  .gov b { display: block; font-size: 15px; }
+  /* 읽기 창(2026-10-23, notices.html과 같은 틀): 혜택을 누르면 정부24로 가지 않고 여기서 전문. 주소 끝 #b=서비스ID — 뒤로가기를 누르면 닫힌다 */
+  .rd { position: fixed; inset: 0; z-index: 50; background: var(--bg); overflow-y: auto; overscroll-behavior: contain; }
+  .rd[hidden] { display: none; }
+  .rd-bar { position: sticky; top: 0; z-index: 1; background: var(--bg); border-bottom: 1px solid var(--line); }
+  .rd-bar .in { max-width: 760px; margin: 0 auto; padding: 8px 12px; display: flex; align-items: center; gap: 6px; }
+  .rd-back { border: 0; background: none; font: inherit; font-size: 15px; font-weight: 700; color: var(--ink); min-height: 44px; padding: 0 8px;
+             display: inline-flex; align-items: center; gap: 4px; cursor: pointer; border-radius: 10px; }
+  .rd-back:hover { background: var(--surface); }
+  .rd-in { max-width: 760px; margin: 0 auto; padding: 18px 20px 56px; }
+  .rd-in .top { display: flex; gap: 6px; align-items: center; font-size: 12px; flex-wrap: wrap; }
+  .rd-in .badge { border-radius: 999px; padding: 2px 8px; font-weight: 700; background: var(--news-tint); color: var(--news); }
+  .rd-in .badge.open { background: var(--moss-tint); color: var(--moss-dark); }
+  .rd-in .badge.soon { background: var(--warn-tint); color: var(--warn); }
+  .rd-in .badge.done { background: var(--bg-2); color: var(--ink-3); }
+  .rd-in .badge.kind { background: transparent; border: 1px solid var(--line); color: var(--ink-3); font-weight: 600; }
+  .rd-in h2 { font-size: clamp(21px, 5.4vw, 27px); line-height: 1.4; margin: 10px 0 6px; letter-spacing: -0.01em; }
+  .rd-in .org { font-size: 14px; color: var(--ink-3); }
+  .rd-info { margin: 16px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; font-size: 14px; background: var(--surface);
+             border: 1px solid var(--line); border-radius: var(--r-sm); padding: 12px 14px; }
+  .rd-info dt { color: var(--ink-3); } .rd-info dd { margin: 0; overflow-wrap: anywhere; }
+  .rd-sec h3 { font-size: 16px; margin: 24px 0 6px; color: var(--moss-dark); }
+  .rd-sec p { margin: 0; font-size: 15.5px; line-height: 1.75; color: var(--ink); white-space: pre-line; overflow-wrap: anywhere; }
+  .rd-sec a, .rd-src a { color: var(--moss-dark); }
+  .rd-empty { margin-top: 18px; padding: 14px 16px; border-radius: var(--r-sm); background: var(--surface); border: 1px dashed var(--line); color: var(--ink-2); font-size: 15px; }
+  .rd-go { display: flex; justify-content: center; align-items: center; margin-top: 24px; min-height: 50px; border-radius: var(--r-sm); background: var(--moss-dark);
+           color: #fff; font-weight: 700; text-decoration: none; font-size: 16px; }
+  .rd-go + .rd-go { margin-top: 10px; background: var(--moss-tint); color: var(--moss-dark); }
+  .rd-src { margin-top: 14px; font-size: 13px; color: var(--ink-3); line-height: 1.6; }
+</style>
+<script src="count.js" async></script>
+</head>
+<body>
+<main class="bf wrap">
+  <header class="bf-head">
+    <p><a href="index.html">← 이남노트</a> · <a href="notices.html">공식 소식</a></p>
+    <h1>혜택·생활 제도</h1>
+    <p>몰라서 못 받는 게 없게. 우리 동네 사람이 받을 수 있는 용인시·경기도·정부 지원과, 잘 모르는 생활 제도를 모았어요.</p>
+  </header>
+
+  <section id="tips-sec">
+    <h2>알아 두면 좋은 생활 제도</h2>
+    <p class="sub">이남노트가 공식 안내를 직접 읽고 정리했어요.</p>
+    <div class="tips" id="tips"></div>
+  </section>
+
+  <section id="list-sec">
+    <h2>지원금·혜택 찾기</h2>
+    <p class="sub">누르면 대상·지원 내용·신청 방법·서류를 바로 볼 수 있어요. 신청 전에 원문에서 한 번 더 확인하세요.</p>
+    <nav class="tabs" id="areas" aria-label="어디 혜택"></nav>
+    <nav class="tabs" id="whos" aria-label="누구에게"></nav>
+    <div class="find">
+      <input id="q" type="search" placeholder="예: 출산, 난방, 교통비, 농기계" aria-label="혜택 검색">
+      <label><input type="checkbox" id="open"> 지금 접수 중</label>
+      <label><input type="checkbox" id="always"> 상시 신청</label>
+    </div>
+    <p class="count" id="count"></p>
+    <ul class="list" id="list"></ul>
+    <button class="chip more" id="more" hidden>더 보기</button>
+    <a class="gov" href="https://www.gov.kr/portal/rcvfvrSvc/main" target="_blank" rel="noopener">
+      <span><b>내 조건에 맞는 혜택 한 번에 찾기</b>정부24 '보조금24'에 로그인하면 나이·가구·소득에 맞는 것만 골라 줘요.</span><span aria-hidden="true">›</span></a>
+  </section>
+  <p class="note" id="note"></p>
+
+  <section id="biz-sec">
+    <h2>용인 사장님·창업 지원사업</h2>
+    <p class="sub">용인시산업진흥원 등이 지금 모집 중인 지원사업과 교육이에요. 매일 아침 새로 받아요.</p>
+    <ul class="list" id="biz"></ul>
+    <a class="gov" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do" target="_blank" rel="noopener">
+      <span><b>경기도·전국 지원사업 더 찾기</b>기업마당에서 지역·분야로 골라 볼 수 있어요.</span><span aria-hidden="true">›</span></a>
+    <p class="note" id="biz-note"></p>
+  </section>
+</main>
+<section class="rd" id="rd" hidden aria-modal="true" role="dialog" aria-labelledby="rd-title">
+  <div class="rd-bar"><div class="in"><button class="rd-back" id="rd-back" type="button" aria-label="목록으로">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>목록</button></div></div>
+  <article class="rd-in" id="rd-in"></article>
+</section>
+<script src="data/tips.js"></script>
+<script src="data/benefits.js"></script>
+<script src="data/programs.js"></script>
+<script>
+// 용인 사장님·창업 지원사업: data/programs.js(scripts/build_programs.py ← 공모 레이더). 지원사업은 start~end가 접수 기간,
+// 교육·행사는 start가 행사일·end가 신청 마감. 마감 지난 건 숨긴다(목록이 하루 묵어도 맞게).
+(() => {
+  const P = window.PROGRAMS, box = document.getElementById("biz");
+  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const today = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
+  const days = (a, b) => Math.round((new Date(b) - new Date(a)) / 864e5);
+  const md = s => s.slice(5).replace("-", ".").replace(/^0/, "").replace(/\.0/, ".");
+  if (!P) { box.innerHTML = '<li class="empty">지원사업 목록을 불러오지 못했어요. 아래 기업마당에서 찾아 주세요.</li>'; return; }
+  const state = x => {
+    if (!x.end) return ["", "상시 접수"];
+    if (x.kind === "지원사업" && x.start && x.start > today) return ["", `${md(x.start)}부터 접수`];
+    const left = days(today, x.end);
+    return left <= 7 ? ["soon", left ? `신청 마감 ${md(x.end)} · ${left}일 남음` : "오늘 신청 마감"] : ["open", `신청 ${md(x.end)}까지`];
+  };
+  const rows = P.items.filter(x => !x.end || x.end >= today).sort((a, b) => (a.end || "9999").localeCompare(b.end || "9999"));
+  box.innerHTML = rows.map(x => {
+    const s = state(x);
+    const on = x.kind !== "지원사업" && x.start && x.start >= today && x.start !== x.end ? `<span class="badge kind">${md(x.start)} 진행</span>` : "";
+    return `<li class="it"><a href="${esc(x.url)}" target="_blank" rel="noopener">
+      <span class="top"><span class="badge ${s[0]}">${esc(s[1])}</span><span class="badge kind">${esc(x.kind)}</span>${on}</span>
+      <b>${esc(x.name)}</b>
+      ${x.sum ? `<span class="sum">${esc(x.sum)}</span>` : ""}
+      <span class="org">${esc(x.org)}</span></a></li>`;
+  }).join("") || '<li class="empty">지금 모집 중인 용인 지원사업이 없어요. 아래 기업마당에서 경기도 전체를 찾아 보세요.</li>';
+  document.getElementById("biz-note").textContent =
+    `출처: 중소벤처24(기업마당 공고 포함)·K-Startup 공고를 매일 모은 것 · ${P.updated_at.slice(0, 10).replaceAll("-", ".")} 받음. 대상·조건은 꼭 원문에서 확인하세요.`;
+})();
+</script>
+<script>
+(() => {
+  const D = window.BENEFITS, T = window.TIPS || [];
+  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const today = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);  // 한국 날짜
+  const days = (a, b) => Math.round((new Date(b) - new Date(a)) / 864e5);
+  const md = s => s.slice(5).replace("-", ".").replace(/^0/, "").replace(/\.0/, ".");
+
+  // ── 생활 제도 카드 ──
+  document.getElementById("tips").innerHTML = T.map(t => {
+    const stale = days(t.checked, today) > 120;
+    return `<article class="tip" id="tip-${esc(t.id)}">
+      <div class="tip-h"><img src="img/emoji/${esc(t.emoji)}.webp" alt="" width="44" height="44"><b>${esc(t.title)}</b></div>
+      <p class="lead">${esc(t.lead)}</p>
+      <details><summary>자세히 보기</summary><ul>${t.points.map(p => `<li>${esc(p)}</li>`).join("")}</ul></details>
+      <div class="how">${t.how.map(([l, u]) => `<a href="${esc(u)}"${u.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}>${esc(l)}</a>`).join("")}</div>
+      <p class="meta">${t.hours ? esc(t.hours) + "<br>" : ""}출처: ${t.src.map(([l, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(l)}</a>`).join(", ")}
+        · ${esc(t.checked.replaceAll("-", "."))} 확인${stale ? ' · <span class="stale">확인한 지 오래됐어요, 원문을 먼저 보세요</span>' : ""}</p></article>`;
+  }).join("");
+  if (!T.length) document.getElementById("tips-sec").hidden = true;
+
+  if (!D) { document.getElementById("list").innerHTML = '<li class="empty">혜택 목록을 불러오지 못했어요. 아래 보조금24에서 찾아 주세요.</li>'; return; }
+
+  // ── 혜택 목록 ──
+  const AREAS = [["yongin", "용인시"], ["gg", "경기도"], ["nation", "전국 · 많이 찾는"]];
+  const WHO = [["all", "모두"], ...D.who];
+  const state = (x) => {
+    if (!x.end) return null;
+    if (x.end < today) return ["done", "올해 접수 끝"];
+    if (x.start > today) return ["", `${md(x.start)}부터 접수`];
+    const left = days(today, x.end);
+    return [left <= 14 ? "soon" : "open", left <= 14 ? `마감 ${md(x.end)} · ${left}일 남음` : `접수 중 · ${md(x.end)}까지`];
+  };
+  const isOpen = x => { const s = state(x); return s && (s[0] === "open" || s[0] === "soon"); };
+  const p = new URLSearchParams(location.search);
+  const byId = id => D.items.find(x => x.id === id);
+  const hashId = () => (location.hash.match(/^#b=(\w+)$/) || [])[1];
+  // 공유 주소처럼 #b=만 달고 들어오면 뒤에 깔린 목록도 그 혜택의 지역으로
+  let area = AREAS.some(a => a[0] === p.get("area")) ? p.get("area") : (byId(hashId()) || {}).area || "yongin";
+  let who = WHO.some(w => w[0] === p.get("who")) ? p.get("who") : "all";
+  let shown = 30;
+  const qEl = document.getElementById("q"), openEl = document.getElementById("open");
+  qEl.value = p.get("q") || "";  // 첫 화면 '새로 나온 소식'에서 혜택 하나를 눌러 오면 그 이름으로 찾은 채로 연다
+  openEl.checked = p.get("open") === "1";  // 첫 화면 '지금 접수 중인 혜택' → 혜택 전체에서 찾기
+  // 상시 신청(2026-10-25): 마감일 없이 '상시신청'인 것. 첫 화면 '언제든 신청할 수 있는 혜택'과 같은 기준(scripts/build_benefits.py write_recent)
+  const alwaysEl = document.getElementById("always");
+  alwaysEl.checked = p.get("always") === "1";
+  const isAlways = x => !x.end && (x.when || "").includes("상시");
+  const words = () => qEl.value.trim().split(/\s+/).filter(Boolean);
+  const hay = x => [x.name, x.sum, x.who, x.what, x.org].join(" ");
+  const match = x => (who === "all" || x.tags.includes(who)) && (!openEl.checked || isOpen(x)) && (!alwaysEl.checked || isAlways(x)) &&
+    words().every(w => hay(x).includes(w));
+  // 지금 접수 중 → 마감 가까운 순이 먼저, 나머지는 많이 찾는 순
+  const order = (a, b) => (isOpen(b) - isOpen(a)) || (isOpen(a) && isOpen(b) ? a.end.localeCompare(b.end) : 0) || b.views - a.views;
+
+  function render() {
+    const inArea = D.items.filter(x => x.area === area);
+    document.getElementById("areas").innerHTML = AREAS.map(([id, label]) =>
+      `<button class="chip" data-area="${id}" aria-pressed="${area === id}">${label}<span class="n">${D.items.filter(x => x.area === id).length}</span></button>`).join("");
+    document.getElementById("whos").innerHTML = WHO.map(([id, label]) => {
+      const n = id === "all" ? inArea.length : inArea.filter(x => x.tags.includes(id)).length;
+      return n ? `<button class="chip sm" data-who="${id}" aria-pressed="${who === id}">${label}<span class="n">${n}</span></button>` : "";
+    }).join("");
+    const rows = inArea.filter(match).sort(order);
+    document.getElementById("count").textContent = `${rows.length}건` + (area === "nation" ? " · 전국 사업 중 정부24에서 많이 찾는 것만 추렸어요" : "");
+    document.getElementById("list").innerHTML = rows.slice(0, shown).map(x => {
+      const s = state(x);
+      return `<li class="it"><a href="${esc(x.url)}" data-id="${esc(x.id)}" target="_blank" rel="noopener">
+        <span class="top">${s ?`<span class="badge ${s[0]}">${esc(s[1])}</span>` : x.when ? `<span class="badge">${esc(x.when.length > 22 ? "신청: 원문 확인" : x.when)}</span>` : ""}${x.kind ? `<span class="badge kind">${esc(x.kind)}</span>` : ""}</span>
+        <b>${esc(x.name)}</b>
+        ${x.sum ? `<span class="sum">${esc(x.sum)}</span>` : ""}
+        ${x.who ? `<span class="who"><em>대상</em>${esc(x.who)}</span>` : ""}
+        <span class="org">${esc(x.org)}${x.tel ? " · " + esc(x.tel) : ""}</span></a></li>`;
+    }).join("") || '<li class="empty">맞는 혜택이 없어요. 다른 말로 찾거나 위에서 다른 곳을 골라 보세요.</li>';
+    const more = document.getElementById("more");
+    more.hidden = rows.length <= shown;
+    more.textContent = `더 보기 (${rows.length - shown}건 더)`;
+  }
+  document.getElementById("areas").addEventListener("click", e => { const b = e.target.closest("[data-area]"); if (b) { area = b.dataset.area; who = "all"; shown = 30; render(); } });
+  document.getElementById("whos").addEventListener("click", e => { const b = e.target.closest("[data-who]"); if (b) { who = b.dataset.who; shown = 30; render(); } });
+  document.getElementById("more").addEventListener("click", () => { shown += 30; render(); });
+  qEl.addEventListener("input", () => { shown = 30; render(); });
+  openEl.addEventListener("change", () => { shown = 30; render(); });
+  alwaysEl.addEventListener("change", () => { shown = 30; render(); });
+  document.getElementById("note").innerHTML =
+    `출처: 행정안전부 「대한민국 공공서비스(혜택) 정보」(공공데이터포털, 정부24·보조금24와 같은 원본) · ${esc(D.updated_at.slice(0, 10))} 받음 · 전체 ${D.total.toLocaleString("ko-KR")}건 중 용인시·경기도 사업과 전국 인기 사업만. 목록의 요약은 원문을 줄인 것이고, 누르면 전문을 볼 수 있어요.`;
+
+  /* 읽기 창(2026-10-23 사용자 "혜택 관련 글인데 바로 본문이 안 보이고 링크로 연결"): notices.html 읽기 창과 같은 방식.
+     누르면 주소에 #b=서비스ID를 더하고 화면을 덮는 한 장에 전문(data/benefit_bodies.json, scripts/build_benefits.py가 serviceDetail에서 받음)을 보여 준다.
+     뒤로가기 = 닫기. 첫 화면에서 benefits.html?area=…&q=…#b=ID로 바로 들어오면 창이 열린 채로 시작하고, '목록'을 누르면 그 혜택으로 찾은 목록이 남는다.
+     본문은 처음 열 때 한 번 받는다(약 650KB, 목록 화면은 안 받는다). */
+  const rd = document.getElementById("rd"), rdIn = document.getElementById("rd-in"), main = document.querySelector("main");
+  let bodies = null, openId = null, closing = false, lastY = 0;
+  const getBodies = () => bodies || (bodies = fetch("data/benefit_bodies.json").then(r => { if (!r.ok) throw r.status; return r.json(); })
+    .catch(() => { bodies = null; return null; }));
+  const link = t => esc(t).replace(/https?:\/\/[^\s<>"'()]+[^\s<>"'().,]/g, u => `<a href="${u}" target="_blank" rel="noopener">${u}</a>`);
+  // b: undefined = 받는 중, false = 받기 실패, null = 이 혜택은 본문 없음
+  function fill(x, b) {
+    const s = state(x);
+    let h = `<span class="top">${s ? `<span class="badge ${s[0]}">${esc(s[1])}</span>` : ""}${x.kind ? `<span class="badge kind">${esc(x.kind)}</span>` : ""}</span>
+      <h2 id="rd-title">${esc(x.name)}</h2><p class="org">${esc(x.org)}</p>`;
+    const when = (b && b.when) || x.when;
+    h += `<dl class="rd-info">${when ? `<dt>신청 기간</dt><dd>${esc(when)}</dd>` : ""}${x.how ? `<dt>신청 방법</dt><dd>${esc(x.how)}</dd>` : ""}${x.tel && !(b && b.secs && b.secs.length) ? `<dt>문의</dt><dd>${esc(x.tel)}</dd>` : ""}</dl>`;
+    if (b === undefined) { rdIn.innerHTML = h + '<p class="rd-empty">자세한 내용을 불러오는 중이에요…</p>'; return; }
+    if (b && b.secs && b.secs.length) h += b.secs.map(([t, v]) => `<section class="rd-sec"><h3>${esc(t)}</h3><p>${link(v)}</p></section>`).join("");
+    else {
+      // 본문을 못 받았거나 없으면 목록에 있는 요약이라도
+      h += [["무엇인가요", x.sum], ["누가 받나요", x.who], ["무엇을 주나요", x.what]].filter(r => r[1])
+        .map(([t, v]) => `<section class="rd-sec"><h3>${t}</h3><p>${esc(v)}</p></section>`).join("");
+      h += `<p class="rd-empty">${b === false ? "자세한 내용을 받지 못했어요. 잠시 뒤 다시 열거나 정부24 원문에서 봐 주세요." : "이 혜택은 요약만 있어요. 자세한 건 정부24 원문에서 봐 주세요."}</p>`;
+    }
+    if (b && b.apply) h += `<a class="rd-go" href="${esc(b.apply)}" target="_blank" rel="noopener">온라인으로 신청하러 가기</a>`;
+    h += `<a class="rd-go" href="${esc(x.url)}" target="_blank" rel="noopener">정부24 원문에서 보기</a>`;
+    h += `<p class="rd-src">${b && b.law ? `근거: ${esc(b.law)}<br>` : ""}출처: 행정안전부 「대한민국 공공서비스(혜택) 정보」(정부24 원본)${b && b.mod ? ` · 원문 고친 날 ${esc(b.mod)}` : ""} · ${esc(D.updated_at.slice(0, 10))} 받음.
+      이남노트는 내용을 고치지 않고 옮겼어요. 금액·자격·기한은 신청 전에 원문이나 문의처에서 확인하세요.</p>`;
+    rdIn.innerHTML = h;
+  }
+  function route() {
+    const id = hashId(), x = id && byId(id);
+    closing = false;
+    if (!x) {
+      if (!rd.hidden) {
+        rd.hidden = true; main.inert = false; document.body.style.overflow = "";
+        const st = history.state;
+        scrollTo(0, st && st.y != null ? st.y : lastY);
+        document.querySelector(`#list a[data-id="${openId}"]`)?.focus({ preventScroll: true });
+      }
+      openId = null;
+      return;
+    }
+    if (openId === id && !rd.hidden) return;  // popstate와 hashchange가 함께 와도 한 번만
+    if (rd.hidden) lastY = scrollY;
+    openId = id;
+    rd.hidden = false; main.inert = true; rd.scrollTop = 0; document.body.style.overflow = "hidden";
+    fill(x);
+    document.getElementById("rd-back").focus({ preventScroll: true });
+    getBodies().then(all => { if (openId === id) fill(x, all ? all[id] || null : false); });
+  }
+  document.getElementById("list").addEventListener("click", e => {
+    const a = e.target.closest("a[data-id]");
+    if (!a || e.ctrlKey || e.metaKey || e.shiftKey || e.button) return;  // 새 탭으로 열고 싶은 사람은 원래대로(정부24)
+    e.preventDefault();
+    history.replaceState({ ...(history.state || {}), y: scrollY }, "");
+    history.pushState({ reader: true }, "", "#b=" + a.dataset.id);
+    route();
+  });
+  const close = () => {
+    if (closing) return;
+    closing = true;
+    if (history.state && history.state.reader) history.back();
+    else { history.replaceState(null, "", location.pathname + location.search); route(); }
+  };
+  document.getElementById("rd-back").addEventListener("click", close);
+  addEventListener("keydown", e => { if (e.key === "Escape" && !rd.hidden) close(); });
+  addEventListener("popstate", route);
+  addEventListener("hashchange", route);
+  render();
+  route();  // #b=ID로 바로 들어온 경우(첫 화면·공유 주소)
+})();
+</script>
+</body>
+</html>
