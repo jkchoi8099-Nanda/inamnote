@@ -125,8 +125,8 @@
 <script src="sheet.js"></script>
 <script>
 (() => {
-  // 실시간 위치를 묻는 곳. 미리보기: PC 미리보기 서버(scripts/serve_preview.py). 공개 뒤: 키를 숨기는 중계 서버 주소로 바꾼다.
-  const BUS_API = "/api/bus";
+  // 실시간 위치를 묻는 곳. arrive.js가 정한다(미리보기: PC 미리보기 서버, 공개 사이트: Cloudflare 중계)
+  const BUS_API = Arrive.POS;
   const EVERY = 25;  // 초. 중계도 25초 동안 같은 답을 준다
   const B = window.BUS, ST = B.stations;
   const N = naver.maps, LL = (a, b) => new N.LatLng(a, b);

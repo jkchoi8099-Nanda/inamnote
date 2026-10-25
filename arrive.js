@@ -2,7 +2,9 @@
    1) 먼저 도착 예정(/api/arrive?station=, 경기도_버스도착정보 — 사용자가 10-18 신청, 같은 날 됨). 정류소 하나에 1건이라 한도도 덜 쓴다.
    2) 그게 안 되면(중계 없음·한도·오류) 버스 위치(/api/bus, 노선마다 '몇 번째 정류소')로 정류소 수만 센다 — 몇 분 뒤인지는 모른다. */
 window.Arrive = (() => {
-  const ARR = "/api/arrive", POS = "/api/bus";
+  // 묻는 곳: 공개 사이트는 키를 숨기는 Cloudflare 중계(바깥 저장소 relay/, 2026-10-26), 미리보기는 PC 미리보기 서버의 같은 주소. bus.html도 이 값을 쓴다
+  const RELAY = location.hostname.endsWith("github.io") ? "https://inamnote-bus.jkchoi8099.workers.dev" : "";
+  const ARR = RELAY + "/api/arrive", POS = RELAY + "/api/bus";
   const MAX = 14;  // 위치로 셀 때 한 번에 묻는 노선 수. 용인터미널 쪽 정류소는 노선이 27개라 자주 오는 것부터(중계 하루 한도 아끼기)
   const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   // bus.html과 같은 규칙: 노선 정류소 목록은 기점 → 회차(turn) → 기점 한 줄. 그 순번에서 가는 쪽 종점
@@ -102,5 +104,5 @@ window.Arrive = (() => {
       `${esc(res.src || "경기도 버스정보")} · ${hm}${res.stale ? " · 조금 전 정보" : ""}</p>`;
   }
 
-  return { check, html, first, when, dest, passes };
+  return { check, html, first, when, dest, passes, POS };
 })();
