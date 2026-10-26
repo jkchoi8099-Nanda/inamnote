@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-26T13:23+09:00",
+ "updated_at": "2026-10-27T01:05+09:00",
  "errors": [],
  "items": [
   {
@@ -19,6 +19,24 @@
    "title": "용인특례시 처인구, 냉난방 시설 갖춘 버스승강장 10곳 새 단장",
    "scope": "town",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261026075407095"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-26",
+   "org": "용인특례시 대중교통과",
+   "no": "",
+   "title": "용인시 광역버스, 시내버스 파업 예정 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261026145152132"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-26",
+   "org": "용인특례시 보건행정과",
+   "no": "",
+   "title": "[보건소] ★(법정의무교육대상) 교육 종료 안내★",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=3&q_bbscttSn=20261026140337704&q_category=main"
   },
   {
    "src": "용인시 보도자료",
@@ -754,15 +772,6 @@
    "title": "용인시 음식물류 폐기물 처리수수료 2026년 10월 고지금액 알림(실사용 기간 : 2026.9. 1. ~ 9. 30.)",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261001084730950"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-01",
-   "org": "용인특례시 보건정책과",
-   "no": "",
-   "title": "[보건소] [버블하트캠페인] 올바른 손씻기 챌린지 '버블하트 캠페인' 10월 신청 시작합니다!",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261001083440132&q_category=main"
   },
   {
    "src": "용인시 보도자료",
