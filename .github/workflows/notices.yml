@@ -1,4 +1,4 @@
-# 이남노트 '읍 소식' 자동 갱신(2026-10-14)
+# 이남노트 '읍 소식' 자동 갱신(2026-10-14). 2026-10-26부터 용인 지원사업(data/programs.js)도 여기서
 # 하루 두 번 토지이음 고시·처인구청 읍 게시판·처인 홍보관·LH 게시판·LH 청약플러스·용인시청 보도자료·시정소식을 읽어 data/notices.json·notices.js를 바꾼다.
 # 출처 목록과 거르는 규칙의 원본은 scripts/build_notices.py 머리말이다(출처를 더하거나 빼면 거기만 고친다).
 # 새 글의 본문도 받아 data/notice_bodies.json에 더한다(2026-10-16, 읽기 창용 — 이미 받은 글은 다시 받지 않는다). 시크릿은 today.yml과 같은 DATA_GO_KR_KEY(LH 청약플러스용).
@@ -34,13 +34,25 @@ jobs:
         env:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
         run: python scripts/build_benefits.py
+      # 용인 사장님·창업 지원사업(2026-10-26 공개 절차 3d ①): PC 공모 레이더 대신 여기서 중소벤처24 공고·행사·K-Startup을 모은다.
+      # 셋 다 실패하면 지난 programs.js 유지, 하나라도 실패하면 작업 실패(메일)
+      - name: 지원사업 받기
+        if: always()
+        env:
+          SMES_PBLANC_KEY: ${{ secrets.SMES_PBLANC_KEY }}
+          SMES_EVENT_KEY: ${{ secrets.SMES_EVENT_KEY }}
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: |
+          rc=0; python scripts/collect_programs.py "$RUNNER_TEMP/local_programs.json" || rc=$?
+          if [ -f "$RUNNER_TEMP/local_programs.json" ]; then RADAR_JSON="$RUNNER_TEMP/local_programs.json" python scripts/build_programs.py; fi
+          exit $rc
       - name: 바뀌었으면 커밋
         if: always()
         run: |
-          if git diff --quiet -- data/notices.json data/notices.js data/notice_bodies.json data/benefits.json data/benefits.js data/benefits_recent.js data/benefit_bodies.json; then echo "변경 없음"; exit 0; fi
+          if git diff --quiet -- data/notices.json data/notices.js data/notice_bodies.json data/benefits.json data/benefits.js data/benefits_recent.js data/benefit_bodies.json data/programs.js; then echo "변경 없음"; exit 0; fi
           git config user.name "inamnote-bot"
           git config user.email "inamnote-bot@users.noreply.github.com"
-          git add data/notices.json data/notices.js data/notice_bodies.json data/benefits.json data/benefits.js data/benefits_recent.js data/benefit_bodies.json
+          git add data/notices.json data/notices.js data/notice_bodies.json data/benefits.json data/benefits.js data/benefits_recent.js data/benefit_bodies.json data/programs.js
           git commit -m "notices: $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase --quiet
           git push

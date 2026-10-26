@@ -9,6 +9,7 @@
   민간 업체(행정사·컨설팅·(주)) 모집글과 다른 시·도에서 여는 행사도 뺀다.
 - 지원사업은 start~end가 접수 기간, 행사·교육은 start가 행사일·end가 신청 마감이다(레이더 src_smes_event).
   접수 중·마감은 화면이 그날 날짜로 판단한다(목록이 하루 묵어도 맞게).
+- 공개 사이트(GitHub Actions, 2026-10-26~)는 레이더 결과가 없으므로 scripts/collect_programs.py가 같은 모양 JSON을 만들어 RADAR_JSON으로 넘긴다(notices.yml).
 - PROGRAMS_OUT: 다른 곳에 쓰고 싶을 때만(공개 전 미리보기 서버가 git 밖 사본을 갱신한다 — scripts/serve_preview.py).
 """
 import json

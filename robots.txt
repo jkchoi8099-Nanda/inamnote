@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://xn--q20bn4dp0plyg.com/sitemap.xml
