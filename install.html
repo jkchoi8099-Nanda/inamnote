@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>이남노트 · 홈 화면에 두기</title>
+<meta name="description" content="이남노트를 휴대폰 홈 화면에 두고 앱처럼 여는 방법. 아이폰·안드로이드·삼성 인터넷·카카오톡에서 연 경우까지.">
+<meta name="theme-color" content="#F2F4F6">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icon/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="이남노트">
+<script src="pwa.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="style.css">
+<!-- 홈 화면 앱 설치 안내(2026-10-26, 결정 로그 2026-10-16 '앱으로 바꿀까', 공개 절차 3c). 첫 화면 '홈 화면에 이남노트 두기' 줄이 여기로 온다.
+     맨 위 '지금 쓰는 브라우저' 칸은 아래 스크립트가 pwa.js의 InamApp.env로 골라 채운다. 나머지 방법은 접힌 칸에 전부 둔다(JS가 없어도 읽힌다).
+     카카오톡 안 브라우저는 홈 화면 추가가 안 돼서 먼저 바깥 브라우저로 연다(kakaotalk://web/openExternal). -->
+<style>
+  .ins { padding-top: 14px; padding-bottom: 48px; max-width: 640px; }
+  .ins-head p { color: var(--ink-3); font-size: 14px; margin-top: 4px; }
+  .ins-head a { color: var(--moss); font-weight: 700; text-decoration: none; }
+  .ins-head h1 { font-size: clamp(26px, 7vw, 36px); margin-top: 6px; }
+  .ins-head .lead { color: var(--ink-2); font-size: 16px; margin-top: 10px; }
+  .preview { display: flex; align-items: center; gap: 16px; margin-top: 20px; padding: 18px; border-radius: var(--r-md); background: var(--surface); }
+  .preview figure { margin: 0; display: grid; justify-items: center; gap: 6px; flex: none; }
+  .preview figure img { width: 64px; height: 64px; border-radius: 15px; box-shadow: 0 6px 18px rgba(14, 138, 90, .25); }
+  .preview figcaption { font-size: 12.5px; font-weight: 600; color: var(--ink-2); }
+  .preview p { font-size: 14.5px; color: var(--ink-2); }
+  .now { margin-top: 14px; padding: 22px 20px; border-radius: var(--r-md); background: var(--surface); }
+  .now .k { font-size: 13px; font-weight: 800; color: var(--moss); }
+  .now h2 { font-size: 21px; margin-top: 4px; }
+  .now .cta { margin-top: 16px; }
+  .now .btn { min-height: 54px; }
+  .now .sub { margin-top: 12px; font-size: 14px; color: var(--ink-3); }
+  .steps { list-style: none; margin: 14px 0 0; padding: 0; counter-reset: s; display: grid; gap: 12px; }
+  .steps li { counter-increment: s; display: flex; gap: 12px; align-items: flex-start; font-size: 15.5px; line-height: 1.55; }
+  .steps li::before { content: counter(s); flex: none; width: 26px; height: 26px; border-radius: 999px; background: var(--moss-tint); color: var(--moss-dark);
+    font-size: 14px; font-weight: 800; display: grid; place-items: center; margin-top: 1px; }
+  .steps b { font-weight: 800; }
+  .ico { display: inline-block; width: 20px; height: 20px; vertical-align: -4px; margin: 0 2px; color: var(--moss-dark); }
+  .more { margin-top: 30px; }
+  .more h2 { font-size: 19px; }
+  .more details { margin-top: 10px; border-radius: var(--r-sm); background: var(--surface); }
+  .more summary { cursor: pointer; padding: 15px 18px; font-weight: 700; list-style: none; display: flex; justify-content: space-between; }
+  .more summary::-webkit-details-marker { display: none; }
+  .more summary::after { content: "+"; color: var(--ink-3); font-weight: 600; }
+  .more details[open] summary::after { content: "−"; }
+  .more details .steps { margin: 0; padding: 0 18px 18px; }
+  .good { margin-top: 30px; }
+  .good h2 { font-size: 19px; }
+  .good ul { margin: 10px 0 0; padding-left: 20px; color: var(--ink-2); font-size: 15px; display: grid; gap: 6px; }
+  .done { color: var(--ok); }
+</style>
+<script src="count.js" async></script>
+</head>
+<body>
+<main class="ins wrap">
+  <header class="ins-head">
+    <p><a href="index.html">← 이남노트</a></p>
+    <h1>홈 화면에 이남노트 두기</h1>
+    <p class="lead">한 번 두면 앱처럼 아이콘을 눌러 바로 열려요. 가입이나 앱 장터 설치는 필요 없고, 용량도 거의 차지하지 않아요.</p>
+  </header>
+
+  <div class="preview">
+    <figure><img src="img/icon/icon-192.png" alt="이남노트 아이콘" width="64" height="64"><figcaption>이남노트</figcaption></figure>
+    <p>홈 화면에 이 아이콘이 생겨요. 열면 주소창 없이 화면 가득 이남노트가 보여요.</p>
+  </div>
+
+  <!-- 지금 쓰는 브라우저에 맞는 방법(스크립트가 채운다). JS가 없으면 아래 '휴대폰별 방법'만 보인다 -->
+  <section class="now" id="now" hidden aria-live="polite"></section>
+
+  <section class="more" aria-labelledby="more-h">
+    <h2 id="more-h">휴대폰별 방법</h2>
+    <details id="m-ios"><summary>아이폰 · Safari</summary>
+      <ol class="steps">
+        <li><span>화면 아래(또는 위)의 <b>공유 버튼</b><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="공유"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/></svg>을 눌러요. 안 보이면 <b>⋯</b>을 먼저 누르면 나와요.</span></li>
+        <li><span>목록을 내려 <b>홈 화면에 추가</b>를 눌러요.</span></li>
+        <li><span>오른쪽 위 <b>추가</b>를 누르면 끝이에요.</span></li>
+      </ol>
+    </details>
+    <details id="m-iosc"><summary>아이폰 · Chrome</summary>
+      <ol class="steps">
+        <li><span>주소창 오른쪽의 <b>공유 버튼</b><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="공유"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/></svg>을 눌러요.</span></li>
+        <li><span><b>홈 화면에 추가</b>를 누르고 <b>추가</b>를 눌러요.</span></li>
+        <li><span>목록에 없으면 iOS가 오래된 것이에요(16.4 이상 필요). Safari에서 해 주세요.</span></li>
+      </ol>
+    </details>
+    <details id="m-and"><summary>안드로이드 · Chrome</summary>
+      <ol class="steps">
+        <li><span>오른쪽 위 <b>⋮</b>(점 세 개)를 눌러요.</span></li>
+        <li><span><b>홈 화면에 추가</b> 또는 <b>앱 설치</b>를 눌러요.</span></li>
+        <li><span><b>설치</b>(또는 <b>추가</b>)를 누르면 끝이에요.</span></li>
+      </ol>
+    </details>
+    <details id="m-sam"><summary>갤럭시 · 삼성 인터넷</summary>
+      <ol class="steps">
+        <li><span>아래 <b>≡</b>(메뉴)를 눌러요.</span></li>
+        <li><span><b>현재 페이지 추가</b>(또는 <b>페이지 추가</b>) → <b>홈 화면</b>을 눌러요.</span></li>
+        <li><span><b>추가</b>를 누르면 끝이에요. 주소창에 설치 아이콘이 보이면 그걸 눌러도 돼요.</span></li>
+      </ol>
+    </details>
+    <details id="m-kakao"><summary>카카오톡·네이버 앱에서 열었을 때</summary>
+      <ol class="steps">
+        <li><span>앱 안 화면에서는 홈 화면에 둘 수 없어요. 먼저 <b>다른 브라우저로 열기</b>를 해야 해요.</span></li>
+        <li><span>화면 구석의 <b>⋮</b> 또는 <b>⋯</b>(공유) 메뉴에서 <b>다른 브라우저로 열기</b>(아이폰은 <b>Safari로 열기</b>)를 눌러요.</span></li>
+        <li><span>열린 Safari·Chrome에서 위 방법대로 하면 돼요.</span></li>
+      </ol>
+    </details>
+    <details id="m-pc"><summary>PC · Chrome·Edge</summary>
+      <ol class="steps">
+        <li><span>주소창 오른쪽 끝의 <b>설치 아이콘</b>(모니터에 화살표)을 눌러요.</span></li>
+        <li><span><b>설치</b>를 누르면 이남노트가 따로 창으로 열려요.</span></li>
+      </ol>
+    </details>
+  </section>
+
+  <section class="good" aria-labelledby="good-h">
+    <h2 id="good-h">알아 두면 좋은 것</h2>
+    <ul>
+      <li>홈 화면에서 열어도 같은 이남노트예요. 열 때마다 새 소식·혜택·날씨를 받아요.</li>
+      <li>인터넷이 끊겨도 한 번 본 화면은 열려요. 그때 받아 둔 내용이라 지난 정보일 수 있어요.</li>
+      <li>지우고 싶으면 아이콘을 길게 눌러 삭제하면 돼요. 가입이 없어 따로 지울 계정도 없어요.</li>
+      <li>앱 장터에 올린 앱이 아니라 홈 화면에 둔 바로가기예요. 이남노트는 용인시·LH·삼성전자의 공식 앱이 아니에요.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <b>이 사이트는 용인시·LH·삼성전자와 무관한 민간 지역 정보 사이트입니다.</b>
+</div></footer>
+
+<script>
+// 지금 쓰는 브라우저 칸. pwa.js(defer)가 먼저 돈 뒤라 InamApp이 있다
+addEventListener("DOMContentLoaded", () => {
+  const A = window.InamApp;
+  if (!A) return;
+  const E = A.env, box = document.getElementById("now");
+  const steps = id => document.querySelector(`#${id} .steps`).outerHTML;
+
+  function paint() {
+    let html;
+    if (E.standalone || E.installed) {
+      html = `<p class="k">끝났어요</p><h2 class="done">홈 화면에 이남노트를 두었어요</h2>
+        <p class="sub">다음부터는 홈 화면의 이남노트 아이콘으로 여시면 돼요.</p>
+        <div class="cta"><a class="btn btn-dark" href="./">첫 화면으로</a></div>`;
+    } else if (A.canPrompt()) {
+      html = `<p class="k">지금 쓰는 브라우저</p><h2>버튼 하나로 둘 수 있어요</h2>
+        <div class="cta"><button class="btn btn-dark" type="button" id="go">홈 화면에 추가</button></div>
+        <p class="sub">창이 뜨면 <b>설치</b>(또는 <b>추가</b>)를 눌러 주세요.</p>`;
+    } else if (E.kakao) {
+      html = `<p class="k">지금 카카오톡 안에서 보고 계세요</p><h2>먼저 다른 브라우저로 열어 주세요</h2>
+        <p class="sub" style="margin-top:6px">카카오톡 안 화면에서는 홈 화면에 둘 수 없어요.</p>
+        <div class="cta"><a class="btn btn-dark" id="ext" href="#">${E.ios ? "Safari로" : "Chrome으로"} 열기</a></div>
+        <p class="sub">버튼이 안 되면 화면 구석의 <b>⋮</b> 또는 <b>⋯</b> 메뉴에서 <b>다른 브라우저로 열기</b>를 눌러 주세요. 열리면 이 화면이 다시 보이고, 거기서 이어서 하면 돼요.</p>`;
+    } else if (E.inapp) {
+      html = `<p class="k">지금 앱 안 화면에서 보고 계세요</p><h2>먼저 다른 브라우저로 열어 주세요</h2>
+        ${steps("m-kakao")}
+        <div class="cta"><button class="btn btn-light" type="button" id="copy">주소 복사</button></div>`;
+    } else if (E.iosChrome) {
+      html = `<p class="k">지금 쓰는 브라우저 · 아이폰 Chrome</p><h2>세 번만 누르면 돼요</h2>${steps("m-iosc")}`;
+    } else if (E.ios) {
+      html = `<p class="k">지금 쓰는 브라우저 · 아이폰 Safari</p><h2>세 번만 누르면 돼요</h2>${steps("m-ios")}`;
+    } else if (E.samsung) {
+      html = `<p class="k">지금 쓰는 브라우저 · 삼성 인터넷</p><h2>세 번만 누르면 돼요</h2>${steps("m-sam")}`;
+    } else if (E.android) {
+      html = `<p class="k">지금 쓰는 브라우저 · 안드로이드</p><h2>세 번만 누르면 돼요</h2>${steps("m-and")}`;
+    } else {
+      html = `<p class="k">지금 PC에서 보고 계세요</p><h2>휴대폰에서 이 주소를 열어 주세요</h2>
+        <p class="sub" style="margin-top:6px;word-break:break-all"><b class="num">${location.href.replace(/[#?].*$/, "")}</b></p>
+        <div class="cta"><button class="btn btn-light" type="button" id="copy">주소 복사</button></div>
+        <p class="sub">PC에 두고 싶으면 아래 'PC · Chrome·Edge'를 보세요.</p>`;
+    }
+    box.innerHTML = html;
+    box.hidden = false;
+
+    const go = document.getElementById("go");
+    if (go) go.onclick = () => A.prompt();
+    const ext = document.getElementById("ext");
+    if (ext) ext.onclick = e => { e.preventDefault(); location.href = "kakaotalk://web/openExternal?url=" + encodeURIComponent(location.href); };
+    const copy = document.getElementById("copy");
+    if (copy) copy.onclick = () => {
+      const url = location.href.replace(/[#?].*$/, "");
+      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject())
+        .then(() => { copy.textContent = "복사했어요"; }, () => { copy.textContent = url; });
+    };
+  }
+  A.onChange(paint);
+  paint();
+});
+</script>
+</body>
+</html>
