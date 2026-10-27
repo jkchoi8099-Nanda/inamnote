@@ -156,7 +156,8 @@
     var today = kstNow().toISOString().slice(0, 10);
     var isNew = {}; NEW.forEach(function (u) { isNew[u] = 1; });
     var open = function (x) { return x.start && x.start <= today && (!x.end || x.end >= today); };
-    var md = function (d) { return dotDate(d.slice(5)); };
+    // 날짜가 빈 항목이 하나만 있어도 칸 전체가 멈췄다(10-26 레이더 공고 end=null) → 빈 값은 빈 글자로
+    var md = function (d) { return d ? dotDate(String(d).slice(5)) : ''; };
     var rows = [];
     ((window.NOTICES && window.NOTICES.items) || []).forEach(function (x) {
       var tg = NTAG(x);
@@ -171,7 +172,8 @@
     ((window.PROGRAMS && window.PROGRAMS.items) || []).filter(open).forEach(function (x) {
       var edu = x.kind !== '지원사업';
       rows.push({ date: x.start, rank: 1, tag: edu ? '사장님 교육' : '사장님 지원', cls: 't-ben', title: x.name, href: 'benefits.html#biz-sec',
-        meta: (edu ? '교육 ' + md(x.start) + ' · 신청 ' + md(x.end) + '까지' : '접수 ' + md(x.start) + '~' + md(x.end)) + ' · ' + esc(x.org) });
+        meta: (edu ? '교육 ' + md(x.start) + (x.end ? ' · 신청 ' + md(x.end) + '까지' : '')
+          : '접수 ' + md(x.start) + (x.end ? '~' + md(x.end) : ' · 상시 접수')) + ' · ' + esc(x.org) });
     });
     articles.forEach(function (i) {
       var t = TYPE[i.type] || TYPE.news, b = BADGE[i.badge] || BADGE.warn;
