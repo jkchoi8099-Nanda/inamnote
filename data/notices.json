@@ -1,6 +1,11 @@
 {
- "updated_at": "2026-10-27T09:23+09:00",
- "errors": [],
+ "updated_at": "2026-10-28T00:20+09:00",
+ "errors": [
+  "처인구 게시판: <urlopen error timed out>",
+  "용인시 보도자료: <urlopen error timed out>",
+  "용인시 공지: <urlopen error timed out>",
+  "처인 홍보관: <urlopen error timed out>"
+ ],
  "items": [
   {
    "src": "용인시 보도자료",
