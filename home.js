@@ -39,7 +39,7 @@
   const DOORS = [
     // 장소 찾기 + 내 주변(2026-10-20 사용자 "장소 찾기와 내주변은 거의 비슷한 역할 아닐까? 합쳐도 될거 같아") → 내 주변은 이 문 안 첫 줄.
     // 위치 권한은 그 줄을 눌렀을 때만 묻는다. 예전 주소 #near는 이 문을 열고 그 줄을 펼친다(route)
-    { id: "place", pre: "이남", label: "장소 찾기", desc: "식당·약국·학교·빨래방, 내 주변 500m 정류소·가게까지", emoji: "pin", size: "wide", theme: "green", search: true,
+    { id: "place", pre: "이남", label: "장소 찾기", desc: "식당·약국·학교·빨래방, 내 주변 500m 정류소·가게까지", emoji: "pin", size: "wide", theme: "green", search: true, map: true,
       tile: () => `<span class="fake-q">${emo("search", "fq-i")}가게 이름, 약국, 미용실…</span>` +
         (places.length ? `<span class="chips"><span>가게·시설 ${fmt(places.length)}곳</span><span>식당 ${places.filter(p => p.door === "food").length}</span><span>약국 ${places.filter(found("약국")).length}</span></span>` : ""),
       kids: [
@@ -216,10 +216,13 @@
   const hall = document.getElementById("hall"), doorsEl = document.getElementById("doors"), room = document.getElementById("branch");
 
   // ── 큰 문(타일) ──
+  // 장소 찾기 타일 배경 지도(2026-10-29 사용자 "핀만 덩그러니 … 배경에 지도, 우리 가게 위치에 핀"): 실제 버스 길·가게 자리로 그린 그림
+  // (scripts/build_tilemap.py, 가게가 그림 한가운데) 위에 핀을 가운데 꽂는다. 가게 이름은 넣지 않는다
+  const tileMap = () => `<span class="tile-map" aria-hidden="true"><img class="tm-bg" src="img/tile-map.svg" alt="" decoding="async"><i class="tm-ping"></i>${emo("pin", "tm-pin")}</span>`;
   doorsEl.innerHTML = DOORS.map((d, i) =>
     `<a class="door s-${d.size || "half"} th-${d.theme || "white"}" href="#${d.id}" data-door="${d.id}" style="--i:${i}">
       ${d.badge && d.badge() ? `<span class="new-n">새 글 ${d.badge()}</span>` : ""}<span class="k">${esc(d.pre)}</span><h2>${esc(d.label)}</h2><span class="d">${esc(d.desc)}</span>
-      <span class="live">${d.tile ? d.tile() : ""}</span>${emo(d.emoji)}</a>`).join("");
+      <span class="live">${d.tile ? d.tile() : ""}</span>${d.map ? tileMap() : emo(d.emoji)}</a>`).join("");
 
   // 문 ↔ 문 안 전환: 누른 타일과 문 안 머리에 같은 이름을 줘서 브라우저가 이어 붙여 움직이게 한다
   let cur = null, pushed = false;

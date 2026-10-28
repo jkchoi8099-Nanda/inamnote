@@ -348,6 +348,25 @@ p { margin: 0; }
 .door .emo { position: absolute; right: 10px; bottom: 8px; width: 78px; height: 78px; z-index: -1; filter: drop-shadow(0 10px 14px rgba(25, 31, 40, .14));
              transition: transform .5s cubic-bezier(.3, 1.6, .5, 1); }
 .door:hover .emo { transform: translateY(-6px) rotate(-8deg) scale(1.08); }
+/* 장소 찾기 타일 배경 지도(2026-10-29, home.js tileMap): 실제 버스 길·가게 자리 그림 위, 한가운데(=가게)에 핀. 글자 쪽은 옅게 사라진다 */
+.door .tile-map { position: absolute; top: 0; right: 0; bottom: 0; width: 64%; z-index: -1; pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%); mask-image: linear-gradient(90deg, transparent 0%, #000 45%); }
+.door .tm-bg { width: 100%; height: 100%; object-fit: cover; display: block; }
+.door .tm-pin { position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; margin: -54px 0 0 -29px;  /* 핀 끝(그림 아래 가운데)이 가게 자리에 */
+  filter: drop-shadow(0 8px 10px rgba(0, 40, 20, .28)); transform-origin: 50% 100%; transition: transform .5s cubic-bezier(.3, 1.6, .5, 1); }
+.door:hover .tm-pin { transform: translateY(-6px) scale(1.06); }
+.door .tm-ping { position: absolute; left: 50%; top: 50%; width: 14px; height: 6px; margin: -3px 0 0 -7px; border-radius: 50%;
+  background: rgba(0, 40, 20, .35); }
+.door .tm-ping::after { content: ""; position: absolute; left: 50%; top: 50%; width: 46px; height: 20px; margin: -10px 0 0 -23px; border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, .7); opacity: 0; animation: tm-ping 2.6s ease-out infinite; }
+@keyframes tm-ping { 0% { transform: scale(.3); opacity: .9; } 70%, 100% { transform: scale(1.5); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .door .tm-ping::after { animation: none; } }
+/* 휴대폰: 검색칸·글자를 피해 핀(그림 가운데)이 오른쪽 위(가로 79%·세로 36%)에 오게 그림을 크게 깔고 민다 */
+@media (max-width: 899px) { .door .tile-map { width: 90%; height: 140%; top: -34%; right: -24%; bottom: auto; } }
+@media (min-width: 900px) {
+  .s-wide:first-child .tile-map { width: 72%; }
+  .s-wide:first-child .tm-pin { width: 84px; height: 84px; margin: -78px 0 0 -42px; }
+}
 .door .big { font-size: 30px; font-weight: 800; letter-spacing: -0.05em; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .door .big small { font-size: 15px; font-weight: 700; margin-left: 2px; color: var(--ink-3); letter-spacing: -0.02em; }
 .door .big.sm { font-size: 17px; letter-spacing: -0.03em; color: var(--moss); }
