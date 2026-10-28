@@ -96,19 +96,6 @@
 "at": "2026-10-28",
 "v": 2
 },
-<<<<<<< Updated upstream
-"https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20261028185410422#2026-2982": {
-"text": "● 고 시\n- 용인시 고시 제2026-605[남이도시계획시설(연구시설:한화시스템) 사업시행자 지정 및 실시계획 인가]\n\n● 공 고\n- 용인시 공고 제2026-2970호 [도시계획시설(도로 중로 1-140호 외 2) 실시계획(변경) 열람(정정)]\n- 용인시 공고 제2026-2971호 [고림진덕지구 내 도시계획시설(경관녹지2,7,8호) 공사완료]\n- 용인시 공고 제2026-2980호 [도시계획시설(시장14호) 공사완료]\n- 용인시 공고 제2026-2982호 [용인 첨단시스템반도체 클러스터 국가산업단지 개발사업(본공사) 착공 등의 공개 공고]\n- 용인시 공고 제2026-2983호 [사업인정에 관한 주민 등의 의견 청취 공고 [농어촌도로 양지읍 식금선(리도 202호)]]",
-"imgs": [],
-"files": [
-{
-"name": "시보2026-195호.pdf",
-"url": "https://www.yongin.go.kr/component/file/ND_fileDownload.do?q_fileSn=524037&q_fileId=d0f1c492-ee19-4216-824a-2f7439fcb318",
-"view": "https://www.yongin.go.kr/home/preview.jsp?f=/upload/bbs/2026/10/28/2a8eb934-57a2-40d9-86a8-e150cfe1c043.pdf&sn=524037&id=d0f1c492-ee19-4216-824a-2f7439fcb318&rs=/webcontent/convert/"
-}
-],
-"license": "용인특례시 · 공공누리 제1유형(출처표시)",
-=======
 "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=148713": {
 "text": "「용인 첨단반도체 클러스터 국가산업단지 개발사업」에 대하여「환경영향평가법」제37조제2항 및 동법 시행령 제55조의 4규정에 따라 환경영향평가 대상사업의 착공 내용을 다음과 같이 공개합니다.",
 "imgs": [],
@@ -141,7 +128,6 @@
 ]
 ],
 "license": "용인특례시 고시·공고(새올) · 고시·공고는 저작권 보호 대상이 아님(저작권법 7조)",
->>>>>>> Stashed changes
 "at": "2026-10-29",
 "v": 2
 },

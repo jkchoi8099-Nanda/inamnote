@@ -1,9 +1,5 @@
 {
-<<<<<<< Updated upstream
- "updated_at": "2026-10-29T00:57+09:00",
-=======
- "updated_at": "2026-10-29T01:04+09:00",
->>>>>>> Stashed changes
+ "updated_at": "2026-10-29T01:29+09:00",
  "errors": [],
  "items": [
   {
@@ -69,21 +65,13 @@
   },
   {
    "src": "용인시 고시·공고",
-<<<<<<< Updated upstream
-   "date": "2026-10-28",
-   "org": "용인특례시 · 용인시보 제2026-195호",
-=======
    "via": "새올",
    "date": "2026-10-28",
    "org": "용인특례시 반도체국가산단과",
->>>>>>> Stashed changes
    "no": "용인시 공고 제2026-2982호",
    "title": "용인 첨단시스템반도체 클러스터 국가산업단지 개발사업(본공사) 착공 등의 공개 공고",
    "scope": "town",
    "cat": "gosi",
-<<<<<<< Updated upstream
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20261028185410422#2026-2982"
-=======
    "until": "2031-12-31",
    "nos": [
     "용인시공고제2026-2982호"
@@ -99,7 +87,6 @@
     }
    ],
    "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=148713"
->>>>>>> Stashed changes
   },
   {
    "src": "용인시 보도자료",
