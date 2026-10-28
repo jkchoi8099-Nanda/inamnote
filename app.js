@@ -142,7 +142,7 @@
      같은 날이면 우리 동네 글(보상·청약·고시·읍·LH) → 혜택·지원사업 → 기사 → 용인시 전체 글 순. 공식 글을 누르면 소식 화면 읽기 창(notices.html#r=키). */
   var NTAG = function (x) {
     var s = x.src;
-    return s === '토지이음 고시' ? ['공식 고시', 't-gov'] : s === 'LH 보상공고' ? ['보상', 't-site'] : s === 'LH 청약·임대' ? ['청약·임대', 't-shop'] :
+    return s === '토지이음 고시' || x.cat === 'gosi' ? ['공식 고시', 't-gov'] : s === 'LH 보상공고' || x.cat === 'comp' ? ['보상', 't-site'] : s === 'LH 청약·임대' ? ['청약·임대', 't-shop'] :
       /^LH/.test(s) ? ['LH 소식', 't-gov'] : /읍 소식$/.test(s) ? [s, 't-gov'] : ['용인시 소식', 't-news'];
   };
   var AREA_TAG = { yongin: '용인시 혜택', gg: '경기도 혜택', nation: '전국 혜택' };

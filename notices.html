@@ -116,12 +116,13 @@
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   // 용인시·처인구 소식(2026-10-16): scope "city"는 시 전체 글이라 '전체'에 섞지 않고 '용인시 소식' 탭에만 둔다
   const CITY = new Set(["용인시 보도자료", "용인시 공지", "처인구 소식"]);
-  const TABS = [["all", "전체", x => x.scope !== "city"], ["comp", "보상(LH)", x => x.src === "LH 보상공고"],
-                ["gosi", "공식 고시", x => x.src === "토지이음 고시"],
+  // 용인시보 고시·공고(2026-10-28): 수용재결·공시송달 등 보상 절차는 cat "comp"로 '보상' 탭, 나머지는 '공식 고시' 탭
+  const TABS = [["all", "전체", x => x.scope !== "city"], ["comp", "보상", x => x.src === "LH 보상공고" || x.cat === "comp"],
+                ["gosi", "공식 고시", x => x.src === "토지이음 고시" || x.cat === "gosi"],
                 ["home", "청약·임대", x => x.src === "LH 청약·임대"],
                 ["lh", "LH 소식", x => x.src.startsWith("LH") && !["LH 보상공고", "LH 청약·임대"].includes(x.src)], ["eup", "읍 소식", x => x.src.endsWith("읍 소식")],
                 ["city", "용인시 소식", x => CITY.has(x.src)]];
-  const badge = x => CITY.has(x.src) ? " city" : x.src === "토지이음 고시" ? "" : x.src === "LH 보상공고" ? " comp" : x.src.startsWith("LH") ? " lh" : " b";
+  const badge = x => CITY.has(x.src) ? " city" : x.src === "토지이음 고시" || x.cat === "gosi" ? "" : x.src === "LH 보상공고" || x.cat === "comp" ? " comp" : x.src.startsWith("LH") ? " lh" : " b";
   // 첫 화면에서 들어올 때: notices.html?tab=comp 처럼 탭을 고른 채로 연다
   const want = new URLSearchParams(location.search).get("tab");
   // 글마다 바뀌지 않는 짧은 키(원문 주소로 만든다) — 목록 순서가 바뀌어도 #r=키가 같은 글을 가리킨다
@@ -242,7 +243,7 @@
   // 탭을 고른 채로 들어오면(첫 화면 '용인시 소식' 등) 그 칩이 화면 밖에 있을 수 있다 → 보이게 옆으로 민다
   addEventListener("load", () => document.querySelector(`[data-tab="${tab}"]`)?.scrollIntoView({ block: "nearest", inline: "center" }));
   document.getElementById("note").textContent =
-    `출처: 토지이음(국토교통부) 고시정보, LH 보상공고·보도자료·공모·공지·청약플러스, 처인구청 이동읍·남사읍 소식 게시판·처인 홍보관, 용인시청 보도자료(최근 30일)·시정소식 · ${D.updated_at.slice(0, 10)} 받음. 글을 누르면 본문을 바로 볼 수 있어요(용인시·처인구·토지이음은 본문, LH는 첨부 문서). 신청·기한은 꼭 원문에서 확인하세요.`;
+    `출처: 토지이음(국토교통부) 고시정보, LH 보상공고·보도자료·공모·공지·청약플러스, 처인구청 이동읍·남사읍 소식 게시판·처인 홍보관, 용인시청 보도자료(최근 30일)·시정소식·용인시보 고시·공고(이동·남사·국가산단 관련) · ${D.updated_at.slice(0, 10)} 받음. 글을 누르면 본문을 바로 볼 수 있어요(용인시·처인구·토지이음은 본문, LH는 첨부 문서). 신청·기한은 꼭 원문에서 확인하세요.`;
   render();
   route();  // #r=키로 바로 들어온 경우(공유한 주소)
 })();

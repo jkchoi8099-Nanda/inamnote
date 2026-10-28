@@ -22,7 +22,7 @@
   // 검색어로 셀 때는 지도와 같은 기준 — 업종이 맞는 곳만(이름에만 든 곳은 지도에서 따로 접어 둔다, places-search.js split)
   const found = w => { const ids = new Set(S ? S.split(places, w).main.map(p => p.id) : []); return p => ids.has(p.id); };
   const SRC = {
-    comp: x => x.src === "LH 보상공고", gosi: x => x.src === "토지이음 고시", home: x => x.src === "LH 청약·임대",
+    comp: x => x.src === "LH 보상공고" || x.cat === "comp", gosi: x => x.src === "토지이음 고시" || x.cat === "gosi", home: x => x.src === "LH 청약·임대",
     lh: x => x.src.startsWith("LH") && !["LH 보상공고", "LH 청약·임대"].includes(x.src), eup: x => x.src.endsWith("읍 소식"),
     city: x => ["용인시 보도자료", "용인시 공지", "처인구 소식"].includes(x.src),
   };
@@ -63,7 +63,7 @@
       note: "공식 소식은 여기서 본문까지 읽을 수 있어요. 신청·기한은 원문에서 한 번 더 확인하세요.",
       tile: () => latest ? `<span class="hl"><span class="hl-tag">${esc(latest.src)} · ${esc(latest.date.slice(5).replace("-", "."))}</span>${esc(latest.title)}</span>` : "",
       kids: [
-        { label: "보상·이주", emoji: "money", desc: "LH 보상 공고, 자주 묻는 질문", kids: [t("보상 공고(LH)", "comp"), go("보상·이주 궁금한 점", "news.html#faq-comp"), go("땅·집 거래 허가", "news.html#faq-land")] },
+        { label: "보상·이주", emoji: "money", desc: "LH 보상 공고, 자주 묻는 질문", kids: [t("보상 공고(LH·용인시)", "comp"), go("보상·이주 궁금한 점", "news.html#faq-comp"), go("땅·집 거래 허가", "news.html#faq-land")] },
         { label: "공식 발표", emoji: "loud", desc: "토지이음 고시·LH·읍 소식·용인시", kids: [t("공식 고시", "gosi"), t("LH 소식", "lh"), t("읍 소식", "eup"), t("용인시 소식", "city"), go("공식 소식 전체", "notices.html")] },
         { ...t("청약·임대", "home", "LH 공고"), emoji: "house" },
         // 혜택 목록(data/benefits.js, 약 280KB)은 첫 화면에서 안 불러온다 → 숫자 없이 둔다

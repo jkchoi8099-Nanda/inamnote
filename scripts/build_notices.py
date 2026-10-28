@@ -14,6 +14,8 @@
    시 전체 글은 하루 9건쯤이라 주민이 신청·참여·조심할 글만 남긴다(시장 동정·기부·수상·다른 구 이야기·행정 공시는 뺀다).
    이동·남사·처인·산단 글은 scope "town"(전체 탭에도 보임), 나머지 시 전체 글은 scope "city"('용인시 소식' 탭에만).
    네이버 검색에 함께 나오는 계약정보·기업지원·수지구청·시의회 소식지·문화재단·평생학습관은 동네 주민 소식이 아니라 넣지 않았다.
+6. 용인시보의 고시·공고 줄(2026-10-28): 수용재결신청서 열람공고·재결서 공시송달처럼 용인시가 내는 국가산단 보상 공고는
+   이 줄로만 나온다. 이동·남사·국가산단 관련만 src "용인시 고시·공고", 보상 절차면 cat "comp"(화면 '보상' 탭), 아니면 cat "gosi"('공식 고시' 탭).
 처인구청 서버는 오래된 TLS 설정이라 파이썬 기본값으로는 접속이 안 된다 → 보안 수준을 한 단계 낮춘 연결을 쓴다.
 """
 import base64
@@ -240,6 +242,65 @@ def yongin_notice():
     return uniq
 
 
+# 용인시보(2026-10-28 사용자 "보상 이주 청약 임대 공사 어디까지 공식발표 전부"): 용인시가 내는 고시·공고(수용재결신청서 열람공고·
+# 재결서 공시송달·사업인정 의견청취 등)는 따로 게시판이 없고 시정소식의 '용인시보' 글 본문에 "- 용인시 공고 제2026-2858호 [제목]" 줄로만 나온다.
+# 그 줄 가운데 이동·남사·국가산단 관련만 남긴다. 같은 시보에서 차수만 다른 공고(16~21차 등)는 한 건으로 묶는다.
+# 열람·의견 제출 기간은 공고문(PDF)에만 있어 옮기지 않는다 → 읽기 창의 시보 본문·첨부에서 원문을 본다.
+# 시보는 하루 1건쯤, 쪽당 50줄에 9일 치쯤. 한 번 나온 시보는 바뀌지 않으니 최근 14일만 다시 읽고 그보다 오래된 건 지난 결과를 그대로 둔다.
+# 처음 채울 때·빠진 기간을 메울 때는 GAZETTE_DAYS=120 python scripts/build_notices.py 처럼 늘려서 한 번 돌린다(2026-10-28 처음 채움)
+GAZETTE_DAYS = int(os.environ.get("GAZETTE_DAYS", 14))
+GAZETTE_LINE = re.compile(r"^-\s*(용인시[^\[]{0,30}?(?:고시|공고) 제(\d{4}-\d+)호)\s*\[(.+)\]\s*$")
+GAZETTE_COMP = re.compile(r"수용|재결|보상|사업인정|공시송달|토지\s?(?:등\s?)?취득")
+GAZETTE_SKIP = re.compile(r"일반산업단지|일반산단|원삼|통삼|백암")  # SK 일반산단(원삼)은 범위 밖(결정 로그 Q3)
+GAZETTE_ROUND = re.compile(r"\s*,?\s*(\d+(?:~\d+)?)\s*(?:회차|차)|\s*,?\s*\d{2}(?:수용|경정|이의)\d{4}")
+
+
+def yongin_gazette():
+    out, cutoff = [], (datetime.now(KST) - timedelta(days=GAZETTE_DAYS)).strftime("%Y%m%d")
+    try:
+        prev = json.loads(OUT.read_text(encoding="utf-8"))["items"]
+    except Exception:
+        prev = []
+    sibo, done = [], False
+    for p in range(1, 61):  # 날짜가 cutoff보다 오래되면 멈춘다(쪽당 1주일 남짓 — 처음 채울 때 200일이면 30쪽쯤)
+        page = get(f"{YONGIN}BD_selectBbsList.do?q_bbsCode=1001&q_rowPerPage=50&q_currPage={p}", ctx=LEGACY_TLS)
+        for r in rows(page):
+            m = re.search(r'q_bbscttSn=(\d+)[^"]*"[^>]*>(용인시보[^<]*)</a>', r)
+            if not m:
+                continue
+            if m.group(1)[:8] < cutoff:
+                done = True
+                break
+            sibo.append((m.group(1), text(m.group(2))))
+        if done:
+            break
+        time.sleep(0.5)
+    for sn, name in sibo:
+        url = f"{YONGIN}BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn={sn}"
+        body = body_yongin(get(url, ctx=LEGACY_TLS), url)["text"]
+        groups = {}
+        for line in body.split("\n"):
+            g = GAZETTE_LINE.match(line.strip())
+            if not g or not TOWN.search(g.group(3)) or (GAZETTE_SKIP.search(g.group(3)) and not re.search("이동|남사", g.group(3))):
+                continue
+            title = g.group(3)
+            base = re.sub(r"\(\s*\)|\[\s*\]", "", re.sub(r"\s*,\s*(?=[\])])", "", GAZETTE_ROUND.sub("", title)))  # 차수를 떼고 남는 빈 괄호도 지운다
+            groups.setdefault(base, []).append((g.group(1), g.group(2), title))
+        num = re.search(r"제(\d{4}-\d+)호", name)
+        for base, got in groups.items():
+            rounds = [r for _, _, t in got for r in re.findall(r"(\d+(?:~\d+)?)\s*(?:회차|차)\b", t)]
+            title = got[0][2] if len(got) == 1 else f"{base} {'·'.join(rounds)}차 ({len(got)}건)" if rounds else f"{base} ({len(got)}건)"
+            no = got[0][0] if len(got) == 1 else f"{got[0][0]} 외 {len(got) - 1}건"
+            # 주소 끝 #공고번호: 같은 시보에서 나온 두 건이 같은 키(notices.html key())를 갖지 않게. 서버는 # 뒤를 보지 않는다
+            out.append({"src": "용인시 고시·공고", "date": f"{sn[:4]}-{sn[4:6]}-{sn[6:8]}",
+                        "org": f"용인특례시 · 용인시보 제{num.group(1)}호" if num else "용인특례시 · 용인시보", "no": no,
+                        "title": title, "scope": "town", "cat": "comp" if GAZETTE_COMP.search(base) else "gosi",
+                        "url": f"{url}#{got[0][1]}"})
+        time.sleep(0.3)
+    cut = f"{cutoff[:4]}-{cutoff[4:6]}-{cutoff[6:8]}"
+    return out + [x for x in prev if x.get("src") == "용인시 고시·공고" and x["date"] < cut]
+
+
 def cheoin_promo():
     """처인구청 '처인 홍보관': 읍면동·구청 과가 올린다. 작성자가 이동읍·남사읍이거나 구청 과인 글만(다른 동·면 글은 뺀다)."""
     out = []
@@ -446,7 +507,7 @@ def main():
     for name, fn, srcs in (("토지이음", eum, {"토지이음 고시"}), ("처인구 게시판", boards, {"이동읍 소식", "남사읍 소식"}),
                            ("LH", lh, {s for s, *_ in LH_BOARDS}), ("LH 청약플러스", lh_apply, {"LH 청약·임대"}),
                            ("용인시 보도자료", yongin_press, {"용인시 보도자료"}), ("용인시 공지", yongin_notice, {"용인시 공지"}),
-                           ("처인 홍보관", cheoin_promo, {"처인구 소식"})):
+                           ("처인 홍보관", cheoin_promo, {"처인구 소식"}), ("용인시보 고시·공고", yongin_gazette, {"용인시 고시·공고"})):
         try:
             got = fn()
             print(f"{name}: {len(got)}건")
