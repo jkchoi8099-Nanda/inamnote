@@ -1,6 +1,8 @@
 {
- "updated_at": "2026-10-28T17:46+09:00",
- "errors": [],
+ "updated_at": "2026-10-28T19:18+09:00",
+ "errors": [
+  "용인시보 고시·공고: The read operation timed out"
+ ],
  "items": [
   {
    "src": "용인시 보도자료",
@@ -19,6 +21,15 @@
    "title": "용인특례시, 전기자동차 900대분 구매 보조금 지원",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261028075004059"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-28",
+   "org": "용인특례시 수도행정과",
+   "no": "",
+   "title": "[상하수도] 상하수도 요금인상 안내문",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1015&q_clCode=1&q_bbscttSn=20261028180840374"
   },
   {
    "src": "용인시 공지",
@@ -839,15 +850,6 @@
    "title": "[보건소] (선착순!)임산부의 날 기념, 직장인 임산부를 위한 탁상용 배려 표지판 신청 안내",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261002170828558&q_category=main"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-02",
-   "org": "용인특례시 재난대응담당관",
-   "no": "",
-   "title": "2026년 재난대응 안전한국훈련 실시",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261002114440572"
   },
   {
    "src": "용인시 보도자료",

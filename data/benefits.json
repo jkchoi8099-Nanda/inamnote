@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-28T09:27+09:00",
- "total": 10946,
+ "updated_at": "2026-10-28T19:19+09:00",
+ "total": 10942,
  "who": [
   [
    "kid",
@@ -52,7 +52,7 @@
     "low"
    ],
    "views": 1786,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000628"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000002&bnefType=all&svcId=405000000628"
   },
   {
    "id": "405000000629",
@@ -71,8 +71,8 @@
    "tags": [
     "low"
    ],
-   "views": 1357,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000629"
+   "views": 1358,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000077&bnefType=all&svcId=405000000629"
   },
   {
    "id": "405000000631",
@@ -93,8 +93,8 @@
     "young",
     "low"
    ],
-   "views": 7056,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000631"
+   "views": 7059,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001611&bnefType=all&svcId=405000000631"
   },
   {
    "id": "405000000632",
@@ -113,8 +113,8 @@
    "tags": [
     "kid"
    ],
-   "views": 1517,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000632"
+   "views": 1519,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001612&bnefType=all&svcId=405000000632"
   },
   {
    "id": "405000000633",
@@ -131,8 +131,8 @@
    "tel": "용인시 장학재단/031-6193-4823",
    "kind": "현금(장학금)",
    "tags": [],
-   "views": 1444,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000633"
+   "views": 1445,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001613&bnefType=all&svcId=405000000633"
   },
   {
    "id": "405000000634",
@@ -152,7 +152,7 @@
     "dis"
    ],
    "views": 1351,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000634"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001614&bnefType=all&svcId=405000000634"
   },
   {
    "id": "405000000635",
@@ -172,8 +172,8 @@
     "dis",
     "low"
    ],
-   "views": 1492,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000635"
+   "views": 1493,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001615&bnefType=all&svcId=405000000635"
   },
   {
    "id": "405000000636",
@@ -192,8 +192,8 @@
    "tags": [
     "low"
    ],
-   "views": 3152,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000636"
+   "views": 3154,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001616&bnefType=all&svcId=405000000636"
   },
   {
    "id": "405000000639",
@@ -212,8 +212,8 @@
    "tags": [
     "old"
    ],
-   "views": 2402,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000639"
+   "views": 2403,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001619&bnefType=all&svcId=405000000639"
   },
   {
    "id": "405000000640",
@@ -231,7 +231,7 @@
    "kind": "현금",
    "tags": [],
    "views": 1879,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000640"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003537&bnefType=all&svcId=405000000640"
   },
   {
    "id": "405000000641",
@@ -251,8 +251,8 @@
     "kid",
     "dis"
    ],
-   "views": 1357,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000641"
+   "views": 1358,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003836&bnefType=all&svcId=405000000641"
   },
   {
    "id": "405000000644",
@@ -272,8 +272,8 @@
     "kid",
     "low"
    ],
-   "views": 1352,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000644"
+   "views": 1353,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003972&bnefType=all&svcId=405000000644"
   },
   {
    "id": "405000000645",
@@ -292,8 +292,8 @@
    "tags": [
     "kid"
    ],
-   "views": 2393,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000645"
+   "views": 2396,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004059&bnefType=all&svcId=405000000645"
   },
   {
    "id": "405000000647",
@@ -312,8 +312,8 @@
    "tags": [
     "kid"
    ],
-   "views": 1333,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000647"
+   "views": 1334,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004312&bnefType=all&svcId=405000000647"
   },
   {
    "id": "405000000649",
@@ -334,7 +334,7 @@
     "low"
    ],
    "views": 6127,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000649"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004786&bnefType=all&svcId=405000000649"
   },
   {
    "id": "405000000651",
@@ -354,8 +354,8 @@
     "kid",
     "biz"
    ],
-   "views": 1973,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000651"
+   "views": 1974,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005523&bnefType=all&svcId=405000000651"
   },
   {
    "id": "405000000652",
@@ -374,8 +374,8 @@
    "tags": [
     "kid"
    ],
-   "views": 1338,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000652"
+   "views": 1339,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005656&bnefType=all&svcId=405000000652"
   },
   {
    "id": "405000000654",
@@ -392,8 +392,8 @@
    "tel": "자치분권과/031-6193-2638",
    "kind": "현금",
    "tags": [],
-   "views": 1391,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000654"
+   "views": 1392,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005863&bnefType=all&svcId=405000000654"
   },
   {
    "id": "405000000655",
@@ -412,8 +412,8 @@
    "tags": [
     "kid"
    ],
-   "views": 18343,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000655"
+   "views": 18349,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005864&bnefType=all&svcId=405000000655"
   },
   {
    "id": "405000000656",
@@ -432,8 +432,8 @@
    "tags": [
     "kid"
    ],
-   "views": 1347,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000656"
+   "views": 1348,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005870&bnefType=all&svcId=405000000656"
   },
   {
    "id": "405000000657",
@@ -452,8 +452,8 @@
    "tags": [
     "dis"
    ],
-   "views": 1348,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000657"
+   "views": 1349,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005874&bnefType=all&svcId=405000000657"
   },
   {
    "id": "405000000658",
@@ -472,8 +472,8 @@
    "tags": [
     "kid"
    ],
-   "views": 1207,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000658"
+   "views": 1208,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006077&bnefType=all&svcId=405000000658"
   },
   {
    "id": "405000000659",
@@ -492,8 +492,8 @@
    "tags": [
     "kid"
    ],
-   "views": 1279,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000659"
+   "views": 1280,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006138&bnefType=all&svcId=405000000659"
   },
   {
    "id": "405000000660",
@@ -512,8 +512,8 @@
    "tags": [
     "kid"
    ],
-   "views": 1530,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000660"
+   "views": 1532,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006282&bnefType=all&svcId=405000000660"
   },
   {
    "id": "405000000661",
@@ -532,8 +532,8 @@
    "tags": [
     "young"
    ],
-   "views": 1716,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000661"
+   "views": 1717,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006501&bnefType=all&svcId=405000000661"
   },
   {
    "id": "405000000665",
@@ -552,8 +552,8 @@
    "tags": [
     "dis"
    ],
-   "views": 1534,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000665"
+   "views": 1535,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=809767&bnefType=all&svcId=405000000665"
   },
   {
    "id": "405000000671",
@@ -572,8 +572,8 @@
    "tags": [
     "kid"
    ],
-   "views": 1797,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000671"
+   "views": 1799,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2108801&bnefType=all&svcId=405000000671"
   },
   {
    "id": "405000000672",
@@ -593,8 +593,8 @@
     "kid",
     "dis"
    ],
-   "views": 1222,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000672"
+   "views": 1224,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2110202&bnefType=all&svcId=405000000672"
   },
   {
    "id": "405000000675",
@@ -611,8 +611,8 @@
    "tel": "처인구보건소/031-6193-0171||처인구보건소/031-6193-0175",
    "kind": "현금",
    "tags": [],
-   "views": 3565,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000675"
+   "views": 3568,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2113206&bnefType=all&svcId=405000000675"
   },
   {
    "id": "405000000678",
@@ -631,8 +631,8 @@
    "tags": [
     "kid"
    ],
-   "views": 141448,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000678"
+   "views": 141449,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2115604&bnefType=all&svcId=405000000678"
   },
   {
    "id": "405000000685",
@@ -649,8 +649,8 @@
    "tel": "처인구보건소/031-6193-0171||처인구보건소/031-6193-0175",
    "kind": "현금",
    "tags": [],
-   "views": 1866,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000685"
+   "views": 1867,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2121109&bnefType=all&svcId=405000000685"
   },
   {
    "id": "405000000689",
@@ -669,8 +669,8 @@
    "tags": [
     "kid"
    ],
-   "views": 8976,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000689"
+   "views": 8979,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2126401&bnefType=all&svcId=405000000689"
   },
   {
    "id": "405000000690",
@@ -687,8 +687,8 @@
    "tel": "기타/1522-3556",
    "kind": "현금(보험)",
    "tags": [],
-   "views": 3843,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/405000000690"
+   "views": 3854,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2128707&bnefType=all&svcId=405000000690"
   },
   {
    "id": "O00009400001",
@@ -707,8 +707,8 @@
    "tags": [
     "dis"
    ],
-   "views": 3932,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00009400001"
+   "views": 3935,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2109508&bnefType=all&svcId=O00009400001"
   },
   {
    "id": "641000000111",
@@ -727,8 +727,8 @@
    "tags": [
     "kid"
    ],
-   "views": 19354,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000111"
+   "views": 19361,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000205&bnefType=all&svcId=641000000111"
   },
   {
    "id": "641000000113",
@@ -745,8 +745,8 @@
    "tel": "택시교통과/031-8030-3612",
    "kind": "현금",
    "tags": [],
-   "views": 1777,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000113"
+   "views": 1780,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000464&bnefType=all&svcId=641000000113"
   },
   {
    "id": "641000000114",
@@ -766,8 +766,8 @@
     "old",
     "low"
    ],
-   "views": 2262,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000114"
+   "views": 2264,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000484&bnefType=all&svcId=641000000114"
   },
   {
    "id": "641000000115",
@@ -787,8 +787,8 @@
     "dis",
     "low"
    ],
-   "views": 5731,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000115"
+   "views": 5732,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000764&bnefType=all&svcId=641000000115"
   },
   {
    "id": "641000000116",
@@ -810,8 +810,8 @@
     "dis",
     "low"
    ],
-   "views": 2910,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000116"
+   "views": 2915,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000792&bnefType=all&svcId=641000000116"
   },
   {
    "id": "641000000117",
@@ -828,8 +828,8 @@
    "tel": "수원시/031-5191-3458||고양시/031-8075-4604||용인시/031-6193-3465||성남…",
    "kind": "기타",
    "tags": [],
-   "views": 4149,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000117"
+   "views": 4151,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000940&bnefType=all&svcId=641000000117"
   },
   {
    "id": "641000000120",
@@ -848,8 +848,8 @@
    "tags": [
     "farm"
    ],
-   "views": 4047,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000120"
+   "views": 4068,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001102&bnefType=all&svcId=641000000120"
   },
   {
    "id": "641000000121",
@@ -866,8 +866,8 @@
    "tel": "택시교통과/031-8030-3612",
    "kind": "현금",
    "tags": [],
-   "views": 3081,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000121"
+   "views": 3083,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001220&bnefType=all&svcId=641000000121"
   },
   {
    "id": "641000000122",
@@ -886,8 +886,8 @@
    "tags": [
     "kid"
    ],
-   "views": 2659,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000122"
+   "views": 2661,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001231&bnefType=all&svcId=641000000122"
   },
   {
    "id": "641000000124",
@@ -907,8 +907,8 @@
     "young",
     "low"
    ],
-   "views": 3719,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000124"
+   "views": 3722,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002017&bnefType=all&svcId=641000000124"
   },
   {
    "id": "641000000125",
@@ -930,8 +930,8 @@
     "dis",
     "low"
    ],
-   "views": 3137,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000125"
+   "views": 3143,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002029&bnefType=all&svcId=641000000125"
   },
   {
    "id": "641000000127",
@@ -948,8 +948,8 @@
    "tel": "청소년과/031-8008-2575",
    "kind": "현금",
    "tags": [],
-   "views": 2361,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000127"
+   "views": 2363,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002031&bnefType=all&svcId=641000000127"
   },
   {
    "id": "641000000128",
@@ -968,8 +968,8 @@
    "tags": [
     "low"
    ],
-   "views": 1552,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000128"
+   "views": 1553,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002032&bnefType=all&svcId=641000000128"
   },
   {
    "id": "641000000129",
@@ -988,8 +988,8 @@
    "tags": [
     "kid"
    ],
-   "views": 11824,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000129"
+   "views": 11828,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002033&bnefType=all&svcId=641000000129"
   },
   {
    "id": "641000000130",
@@ -1008,8 +1008,8 @@
    "tags": [
     "farm"
    ],
-   "views": 1301,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000130"
+   "views": 1302,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002054&bnefType=all&svcId=641000000130"
   },
   {
    "id": "641000000131",
@@ -1028,8 +1028,8 @@
    "tags": [
     "farm"
    ],
-   "views": 1432,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000131"
+   "views": 1434,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002056&bnefType=all&svcId=641000000131"
   },
   {
    "id": "641000000133",
@@ -1048,8 +1048,8 @@
    "tags": [
     "farm"
    ],
-   "views": 1490,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000133"
+   "views": 1491,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002194&bnefType=all&svcId=641000000133"
   },
   {
    "id": "641000000134",
@@ -1068,8 +1068,8 @@
    "tags": [
     "farm"
    ],
-   "views": 1415,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000134"
+   "views": 1416,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002195&bnefType=all&svcId=641000000134"
   },
   {
    "id": "641000000136",
@@ -1086,8 +1086,8 @@
    "tel": "가평군정신건강복지센터/031-581-8881||고양시정신건강복지센터/031-968-2333||과천시정신건강…",
    "kind": "현금",
    "tags": [],
-   "views": 6825,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000136"
+   "views": 6826,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002197&bnefType=all&svcId=641000000136"
   },
   {
    "id": "641000000137",
@@ -1106,8 +1106,8 @@
    "tags": [
     "kid"
    ],
-   "views": 49674,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000137"
+   "views": 49684,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002198&bnefType=all&svcId=641000000137"
   },
   {
    "id": "641000000138",
@@ -1126,8 +1126,8 @@
    "tags": [
     "young"
    ],
-   "views": 111842,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000138"
+   "views": 111866,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002199&bnefType=all&svcId=641000000138"
   },
   {
    "id": "641000000139",
@@ -1146,8 +1146,8 @@
    "tags": [
     "kid"
    ],
-   "views": 434325,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000139"
+   "views": 434513,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002200&bnefType=all&svcId=641000000139"
   },
   {
    "id": "641000000140",
@@ -1165,7 +1165,7 @@
    "kind": "서비스(일자리)",
    "tags": [],
    "views": 19992,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000140"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002222&bnefType=all&svcId=641000000140"
   },
   {
    "id": "641000000141",
@@ -1185,8 +1185,8 @@
     "old",
     "low"
    ],
-   "views": 3887,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000141"
+   "views": 3891,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002223&bnefType=all&svcId=641000000141"
   },
   {
    "id": "641000000142",
@@ -1205,8 +1205,8 @@
    "tags": [
     "farm"
    ],
-   "views": 2011,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000142"
+   "views": 2012,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002224&bnefType=all&svcId=641000000142"
   },
   {
    "id": "641000000143",
@@ -1225,8 +1225,8 @@
    "tags": [
     "dis"
    ],
-   "views": 2049,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000143"
+   "views": 2052,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002225&bnefType=all&svcId=641000000143"
   },
   {
    "id": "641000000144",
@@ -1245,8 +1245,8 @@
    "tags": [
     "kid"
    ],
-   "views": 5217,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000144"
+   "views": 5219,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002226&bnefType=all&svcId=641000000144"
   },
   {
    "id": "641000000145",
@@ -1263,8 +1263,8 @@
    "tel": "자치행정과/031-8008-4090",
    "kind": "현금",
    "tags": [],
-   "views": 3570,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000145"
+   "views": 3571,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002227&bnefType=all&svcId=641000000145"
   },
   {
    "id": "641000000146",
@@ -1284,8 +1284,8 @@
     "dis",
     "low"
    ],
-   "views": 7007,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000146"
+   "views": 7011,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002247&bnefType=all&svcId=641000000146"
   },
   {
    "id": "641000000147",
@@ -1305,8 +1305,8 @@
     "dis",
     "low"
    ],
-   "views": 7011,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000147"
+   "views": 7012,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002248&bnefType=all&svcId=641000000147"
   },
   {
    "id": "641000000149",
@@ -1327,8 +1327,8 @@
     "dis",
     "low"
    ],
-   "views": 1430,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000149"
+   "views": 1431,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002250&bnefType=all&svcId=641000000149"
   },
   {
    "id": "641000000150",
@@ -1347,8 +1347,8 @@
    "tags": [
     "farm"
    ],
-   "views": 4053,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000150"
+   "views": 4074,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002251&bnefType=all&svcId=641000000150"
   },
   {
    "id": "641000000151",
@@ -1365,8 +1365,8 @@
    "tel": "경기도 노동정책과/031-8030-2595||경기관광공사/031-259-4750",
    "kind": "이용권",
    "tags": [],
-   "views": 10607,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000151"
+   "views": 10614,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002252&bnefType=all&svcId=641000000151"
   },
   {
    "id": "641000000152",
@@ -1385,8 +1385,8 @@
    "tags": [
     "farm"
    ],
-   "views": 1739,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000152"
+   "views": 1740,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002253&bnefType=all&svcId=641000000152"
   },
   {
    "id": "641000000154",
@@ -1405,8 +1405,8 @@
    "tags": [
     "farm"
    ],
-   "views": 1579,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000154"
+   "views": 1581,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003869&bnefType=all&svcId=641000000154"
   },
   {
    "id": "641000000155",
@@ -1425,8 +1425,8 @@
    "tags": [
     "low"
    ],
-   "views": 6956,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000155"
+   "views": 6957,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003887&bnefType=all&svcId=641000000155"
   },
   {
    "id": "641000000156",
@@ -1443,8 +1443,8 @@
    "tel": "가평군 자살예방센터/031-581-8881||고양시 자살예방센터/031-927-9275||과천시 자살예방센…",
    "kind": "서비스(의료)",
    "tags": [],
-   "views": 2765,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000156"
+   "views": 2767,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004034&bnefType=all&svcId=641000000156"
   },
   {
    "id": "641000000157",
@@ -1463,8 +1463,8 @@
    "tags": [
     "biz"
    ],
-   "views": 8187,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000157"
+   "views": 8200,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004112&bnefType=all&svcId=641000000157"
   },
   {
    "id": "641000000159",
@@ -1484,8 +1484,8 @@
     "kid",
     "young"
    ],
-   "views": 2594,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000159"
+   "views": 2597,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004391&bnefType=all&svcId=641000000159"
   },
   {
    "id": "641000000161",
@@ -1504,8 +1504,8 @@
    "tags": [
     "farm"
    ],
-   "views": 1437,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000161"
+   "views": 1438,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004597&bnefType=all&svcId=641000000161"
   },
   {
    "id": "641000000164",
@@ -1524,8 +1524,8 @@
    "tags": [
     "low"
    ],
-   "views": 31649,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000164"
+   "views": 31662,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004941&bnefType=all&svcId=641000000164"
   },
   {
    "id": "641000000166",
@@ -1544,8 +1544,8 @@
    "tags": [
     "farm"
    ],
-   "views": 1888,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000166"
+   "views": 1889,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005141&bnefType=all&svcId=641000000166"
   },
   {
    "id": "641000000168",
@@ -1565,7 +1565,7 @@
     "farm"
    ],
    "views": 1388,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000168"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005249&bnefType=all&svcId=641000000168"
   },
   {
    "id": "641000000169",
@@ -1585,7 +1585,7 @@
     "farm"
    ],
    "views": 1389,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000169"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005429&bnefType=all&svcId=641000000169"
   },
   {
    "id": "641000000170",
@@ -1604,8 +1604,8 @@
    "tags": [
     "farm"
    ],
-   "views": 5978,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000170"
+   "views": 5979,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005583&bnefType=all&svcId=641000000170"
   },
   {
    "id": "641000000171",
@@ -1625,8 +1625,8 @@
     "kid",
     "low"
    ],
-   "views": 4588,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000171"
+   "views": 4589,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005609&bnefType=all&svcId=641000000171"
   },
   {
    "id": "641000000172",
@@ -1645,8 +1645,8 @@
    "tags": [
     "farm"
    ],
-   "views": 1844,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000172"
+   "views": 1846,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005676&bnefType=all&svcId=641000000172"
   },
   {
    "id": "641000000173",
@@ -1666,8 +1666,8 @@
     "dis",
     "low"
    ],
-   "views": 3727,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000173"
+   "views": 3728,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005757&bnefType=all&svcId=641000000173"
   },
   {
    "id": "641000000174",
@@ -1687,8 +1687,8 @@
     "old",
     "low"
    ],
-   "views": 1916,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000174"
+   "views": 1919,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005872&bnefType=all&svcId=641000000174"
   },
   {
    "id": "641000000175",
@@ -1707,8 +1707,8 @@
    "tags": [
     "kid"
    ],
-   "views": 4699,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000175"
+   "views": 4700,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006171&bnefType=all&svcId=641000000175"
   },
   {
    "id": "641000000177",
@@ -1725,8 +1725,8 @@
    "tel": "복지정책과/031-8008-5664",
    "kind": "현금",
    "tags": [],
-   "views": 1638,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000177"
+   "views": 1639,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006363&bnefType=all&svcId=641000000177"
   },
   {
    "id": "641000000178",
@@ -1743,8 +1743,8 @@
    "tel": "택시교통과/031-8030-3613",
    "kind": "현금(감면)",
    "tags": [],
-   "views": 1501,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000178"
+   "views": 1502,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006500&bnefType=all&svcId=641000000178"
   },
   {
    "id": "641000000180",
@@ -1761,8 +1761,8 @@
    "tel": "경기도 청소년과/031-8008-2558",
    "kind": "이용권",
    "tags": [],
-   "views": 14058,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000180"
+   "views": 14072,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006567&bnefType=all&svcId=641000000180"
   },
   {
    "id": "641000000181",
@@ -1779,8 +1779,8 @@
    "tel": "경기도 복지정책과/031-8008-4303||경기도 복지정책과/031-8008-3363||경기도 복지정책과…",
    "kind": "기타·현금",
    "tags": [],
-   "views": 9770,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000181"
+   "views": 9771,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006636&bnefType=all&svcId=641000000181"
   },
   {
    "id": "641000000182",
@@ -1799,8 +1799,8 @@
    "tags": [
     "farm"
    ],
-   "views": 1475,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000182"
+   "views": 1476,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006669&bnefType=all&svcId=641000000182"
   },
   {
    "id": "641000000183",
@@ -1820,8 +1820,8 @@
     "old",
     "biz"
    ],
-   "views": 1988,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000183"
+   "views": 1989,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=804387&bnefType=all&svcId=641000000183"
   },
   {
    "id": "641000000184",
@@ -1840,8 +1840,8 @@
    "tags": [
     "biz"
    ],
-   "views": 3510,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000184"
+   "views": 3511,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=808910&bnefType=all&svcId=641000000184"
   },
   {
    "id": "641000000185",
@@ -1860,8 +1860,8 @@
    "tags": [
     "biz"
    ],
-   "views": 9461,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000185"
+   "views": 9465,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=808911&bnefType=all&svcId=641000000185"
   },
   {
    "id": "641000000189",
@@ -1882,8 +1882,8 @@
     "dis",
     "low"
    ],
-   "views": 5139,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000189"
+   "views": 5142,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=809804&bnefType=all&svcId=641000000189"
   },
   {
    "id": "641000000192",
@@ -1902,8 +1902,8 @@
    "tags": [
     "young"
    ],
-   "views": 60984,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000192"
+   "views": 60997,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=810317&bnefType=all&svcId=641000000192"
   },
   {
    "id": "641000000193",
@@ -1922,8 +1922,8 @@
    "tags": [
     "young"
    ],
-   "views": 45877,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000193"
+   "views": 45884,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=810356&bnefType=all&svcId=641000000193"
   },
   {
    "id": "641000000196",
@@ -1942,8 +1942,8 @@
    "tags": [
     "kid"
    ],
-   "views": 2320,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000196"
+   "views": 2321,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105305&bnefType=all&svcId=641000000196"
   },
   {
    "id": "641000000663",
@@ -1963,8 +1963,8 @@
     "old",
     "low"
    ],
-   "views": 2817,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000663"
+   "views": 2819,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2114318&bnefType=all&svcId=641000000663"
   },
   {
    "id": "641000000664",
@@ -1983,8 +1983,8 @@
    "tags": [
     "kid"
    ],
-   "views": 10450,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000664"
+   "views": 10452,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2115301&bnefType=all&svcId=641000000664"
   },
   {
    "id": "641000000668",
@@ -2003,8 +2003,8 @@
    "tags": [
     "young"
    ],
-   "views": 373,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000668"
+   "views": 376,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2128516&bnefType=all&svcId=641000000668"
   },
   {
    "id": "641000000669",
@@ -2023,8 +2023,8 @@
    "tags": [
     "young"
    ],
-   "views": 2797,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000669"
+   "views": 2798,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2128820&bnefType=all&svcId=641000000669"
   },
   {
    "id": "641000000671",
@@ -2043,8 +2043,8 @@
    "tags": [
     "kid"
    ],
-   "views": 13246,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000671"
+   "views": 13250,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2132623&bnefType=all&svcId=641000000671"
   },
   {
    "id": "641000000672",
@@ -2063,8 +2063,8 @@
    "tags": [
     "low"
    ],
-   "views": 710,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000672"
+   "views": 711,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2143621&bnefType=all&svcId=641000000672"
   },
   {
    "id": "641000000673",
@@ -2081,8 +2081,8 @@
    "tel": "신용회복위원회/1600-5500||경기복지재단/031-267-9354",
    "kind": "현금(융자)",
    "tags": [],
-   "views": 941,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000673"
+   "views": 948,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2143622&bnefType=all&svcId=641000000673"
   },
   {
    "id": "641000000679",
@@ -2101,8 +2101,8 @@
    "tags": [
     "old"
    ],
-   "views": 657,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000679"
+   "views": 660,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2144416&bnefType=all&svcId=641000000679"
   },
   {
    "id": "641000000690",
@@ -2121,8 +2121,8 @@
    "tags": [
     "biz"
    ],
-   "views": 613,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000690"
+   "views": 615,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2146417&bnefType=all&svcId=641000000690"
   },
   {
    "id": "641000000692",
@@ -2141,8 +2141,8 @@
    "tags": [
     "low"
    ],
-   "views": 497,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000692"
+   "views": 498,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2147921&bnefType=all&svcId=641000000692"
   },
   {
    "id": "641000000693",
@@ -2161,8 +2161,8 @@
    "tags": [
     "kid"
    ],
-   "views": 5120,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000693"
+   "views": 5128,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2148316&bnefType=all&svcId=641000000693"
   },
   {
    "id": "641000000695",
@@ -2181,8 +2181,8 @@
    "tags": [
     "dis"
    ],
-   "views": 952,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000695"
+   "views": 957,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2150017&bnefType=all&svcId=641000000695"
   },
   {
    "id": "641000000697",
@@ -2199,8 +2199,8 @@
    "tel": "경기남부청소년자립지원관(이용형)/031-360-1824||경기북부청소년자립지원관(이용형)/031-928-1…",
    "kind": "현금",
    "tags": [],
-   "views": 439,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000697"
+   "views": 440,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2153417&bnefType=all&svcId=641000000697"
   },
   {
    "id": "641000000698",
@@ -2220,8 +2220,8 @@
     "old",
     "low"
    ],
-   "views": 383,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000698"
+   "views": 385,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2154328&bnefType=all&svcId=641000000698"
   },
   {
    "id": "641000000699",
@@ -2241,8 +2241,8 @@
     "young",
     "biz"
    ],
-   "views": 551,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000699"
+   "views": 553,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156429&bnefType=all&svcId=641000000699"
   },
   {
    "id": "641000000700",
@@ -2261,8 +2261,8 @@
    "tags": [
     "biz"
    ],
-   "views": 497,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000700"
+   "views": 499,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156430&bnefType=all&svcId=641000000700"
   },
   {
    "id": "641000000704",
@@ -2279,8 +2279,8 @@
    "tel": "경기도 체육진흥과/031-8008-4535",
    "kind": "현금",
    "tags": [],
-   "views": 1138,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000704"
+   "views": 1140,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156161&bnefType=all&svcId=641000000704"
   },
   {
    "id": "641000000706",
@@ -2299,8 +2299,8 @@
    "tags": [
     "kid"
    ],
-   "views": 562,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000706"
+   "views": 564,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156163&bnefType=all&svcId=641000000706"
   },
   {
    "id": "641000000725",
@@ -2319,8 +2319,8 @@
    "tags": [
     "kid"
    ],
-   "views": 455,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000725"
+   "views": 456,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2158316&bnefType=all&svcId=641000000725"
   },
   {
    "id": "641000000730",
@@ -2337,8 +2337,8 @@
    "tel": "경기도 콜센터/031-120||수원시 돌봄정책과/1899-3300||용인시 복지정책과/1577-1122||…",
    "kind": "서비스(돌봄)",
    "tags": [],
-   "views": 779,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000730"
+   "views": 784,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2158817&bnefType=all&svcId=641000000730"
   },
   {
    "id": "641000000737",
@@ -2358,8 +2358,8 @@
     "young",
     "biz"
    ],
-   "views": 2249,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000737"
+   "views": 2260,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159416&bnefType=all&svcId=641000000737"
   },
   {
    "id": "641000000739",
@@ -2376,8 +2376,8 @@
    "tel": "화성시 청년청소년정책과/031-5189-3146||평택시 반도체AI과/031-8024-3472||파주시 일…",
    "kind": "기타(교육)",
    "tags": [],
-   "views": 591,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000739"
+   "views": 592,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159417&bnefType=all&svcId=641000000739"
   },
   {
    "id": "641000000742",
@@ -2394,8 +2394,8 @@
    "tel": "경기도 일자리재단/031-270-6655",
    "kind": "기타(교육)",
    "tags": [],
-   "views": 380,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000742"
+   "views": 381,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159420&bnefType=all&svcId=641000000742"
   },
   {
    "id": "641000000743",
@@ -2412,8 +2412,8 @@
    "tel": "경기도일자리재단/031-270-6636",
    "kind": "기타(교육)",
    "tags": [],
-   "views": 376,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000743"
+   "views": 378,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159421&bnefType=all&svcId=641000000743"
   },
   {
    "id": "641000000786",
@@ -2432,8 +2432,8 @@
    "tags": [
     "biz"
    ],
-   "views": 493,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000786"
+   "views": 494,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159568&bnefType=all&svcId=641000000786"
   },
   {
    "id": "641000000795",
@@ -2452,8 +2452,8 @@
    "tags": [
     "biz"
    ],
-   "views": 463,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000795"
+   "views": 464,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159577&bnefType=all&svcId=641000000795"
   },
   {
    "id": "641000000802",
@@ -2474,8 +2474,8 @@
     "dis",
     "low"
    ],
-   "views": 321,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000802"
+   "views": 322,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159774&bnefType=all&svcId=641000000802"
   },
   {
    "id": "641000000806",
@@ -2494,8 +2494,8 @@
    "tags": [
     "biz"
    ],
-   "views": 829,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000806"
+   "views": 831,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159780&bnefType=all&svcId=641000000806"
   },
   {
    "id": "641000000808",
@@ -2514,8 +2514,8 @@
    "tags": [
     "biz"
    ],
-   "views": 750,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000808"
+   "views": 753,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159581&bnefType=all&svcId=641000000808"
   },
   {
    "id": "641000000812",
@@ -2534,8 +2534,8 @@
    "tags": [
     "biz"
    ],
-   "views": 509,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000812"
+   "views": 511,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159583&bnefType=all&svcId=641000000812"
   },
   {
    "id": "641000000817",
@@ -2554,8 +2554,8 @@
    "tags": [
     "biz"
    ],
-   "views": 568,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000817"
+   "views": 571,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159799&bnefType=all&svcId=641000000817"
   },
   {
    "id": "641000000824",
@@ -2574,8 +2574,8 @@
    "tags": [
     "biz"
    ],
-   "views": 503,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000824"
+   "views": 504,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159838&bnefType=all&svcId=641000000824"
   },
   {
    "id": "641000000825",
@@ -2594,8 +2594,8 @@
    "tags": [
     "biz"
    ],
-   "views": 488,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000825"
+   "views": 489,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159843&bnefType=all&svcId=641000000825"
   },
   {
    "id": "641000000826",
@@ -2614,8 +2614,8 @@
    "tags": [
     "biz"
    ],
-   "views": 572,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000826"
+   "views": 574,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159918&bnefType=all&svcId=641000000826"
   },
   {
    "id": "641000000837",
@@ -2634,8 +2634,8 @@
    "tags": [
     "biz"
    ],
-   "views": 827,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000837"
+   "views": 829,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2160021&bnefType=all&svcId=641000000837"
   },
   {
    "id": "641000000846",
@@ -2654,8 +2654,8 @@
    "tags": [
     "biz"
    ],
-   "views": 645,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000846"
+   "views": 647,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2160026&bnefType=all&svcId=641000000846"
   },
   {
    "id": "641000000847",
@@ -2674,8 +2674,8 @@
    "tags": [
     "biz"
    ],
-   "views": 614,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000847"
+   "views": 616,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2160027&bnefType=all&svcId=641000000847"
   },
   {
    "id": "641000000851",
@@ -2694,8 +2694,8 @@
    "tags": [
     "biz"
    ],
-   "views": 746,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000851"
+   "views": 749,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2161617&bnefType=all&svcId=641000000851"
   },
   {
    "id": "641000000852",
@@ -2714,8 +2714,8 @@
    "tags": [
     "low"
    ],
-   "views": 321,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000852"
+   "views": 324,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2160074&bnefType=all&svcId=641000000852"
   },
   {
    "id": "641000000853",
@@ -2735,7 +2735,7 @@
     "biz"
    ],
    "views": 229,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000853"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2162619&bnefType=all&svcId=641000000853"
   },
   {
    "id": "641000000855",
@@ -2755,8 +2755,8 @@
     "old",
     "low"
    ],
-   "views": 508,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000855"
+   "views": 511,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2170427&bnefType=all&svcId=641000000855"
   },
   {
    "id": "641000000856",
@@ -2775,8 +2775,8 @@
    "tags": [
     "low"
    ],
-   "views": 336,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000856"
+   "views": 338,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2174116&bnefType=all&svcId=641000000856"
   },
   {
    "id": "641000000858",
@@ -2795,8 +2795,8 @@
    "tags": [
     "young"
    ],
-   "views": 1819,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000858"
+   "views": 1835,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2185016&bnefType=all&svcId=641000000858"
   },
   {
    "id": "641000000859",
@@ -2816,8 +2816,8 @@
     "kid",
     "old"
    ],
-   "views": 204,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000859"
+   "views": 205,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2185216&bnefType=all&svcId=641000000859"
   },
   {
    "id": "641000000874",
@@ -2834,8 +2834,8 @@
    "tel": "신청 관련 - 경기도일자리재단/031-270-9940||사업 관련 - 경기도청 노동권익과/031-8030-…",
    "kind": "현금",
    "tags": [],
-   "views": 53,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000874"
+   "views": 54,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2185627&bnefType=all&svcId=641000000874"
   },
   {
    "id": "641000000875",
@@ -2855,7 +2855,7 @@
     "kid"
    ],
    "views": 71,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000875"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2185629&bnefType=all&svcId=641000000875"
   },
   {
    "id": "641000000878",
@@ -2872,8 +2872,8 @@
    "tel": "경기도 청소년과/031-8008-2591",
    "kind": "서비스(돌봄)·서비스(의료)·서비스(일자리)·현금",
    "tags": [],
-   "views": 25,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/641000000878"
+   "views": 29,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2189139&bnefType=all&svcId=641000000878"
   },
   {
    "id": "O00003000001",
@@ -2893,7 +2893,7 @@
     "low"
    ],
    "views": 9103,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00003000001"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001673&bnefType=all&svcId=O00003000001"
   },
   {
    "id": "O00043900003",
@@ -2915,8 +2915,8 @@
     "dis",
     "low"
    ],
-   "views": 15520,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00043900003"
+   "views": 15521,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2138326&bnefType=all&svcId=O00043900003"
   },
   {
    "id": "O00044100001",
@@ -2939,8 +2939,8 @@
     "dis",
     "low"
    ],
-   "views": 10500,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00044100001"
+   "views": 10502,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001456&bnefType=all&svcId=O00044100001"
   },
   {
    "id": "O00044700005",
@@ -2960,7 +2960,7 @@
     "low"
    ],
    "views": 1576,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00044700005"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001791&bnefType=all&svcId=O00044700005"
   },
   {
    "id": "O00045200001",
@@ -2979,8 +2979,8 @@
    "tags": [
     "biz"
    ],
-   "views": 6272,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045200001"
+   "views": 6274,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001324&bnefType=all&svcId=O00045200001"
   },
   {
    "id": "O00045200002",
@@ -2999,8 +2999,8 @@
    "tags": [
     "biz"
    ],
-   "views": 760,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045200002"
+   "views": 763,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159576&bnefType=all&svcId=O00045200002"
   },
   {
    "id": "O00045200003",
@@ -3019,8 +3019,8 @@
    "tags": [
     "biz"
    ],
-   "views": 511,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045200003"
+   "views": 513,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159579&bnefType=all&svcId=O00045200003"
   },
   {
    "id": "O00045700002",
@@ -3039,8 +3039,8 @@
    "tags": [
     "biz"
    ],
-   "views": 1547,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045700002"
+   "views": 1549,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156177&bnefType=all&svcId=O00045700002"
   },
   {
    "id": "O00045700003",
@@ -3059,8 +3059,8 @@
    "tags": [
     "biz"
    ],
-   "views": 362,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045700003"
+   "views": 363,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156178&bnefType=all&svcId=O00045700003"
   },
   {
    "id": "O00045700007",
@@ -3079,8 +3079,8 @@
    "tags": [
     "biz"
    ],
-   "views": 1111,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045700007"
+   "views": 1112,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156182&bnefType=all&svcId=O00045700007"
   },
   {
    "id": "O00045700008",
@@ -3100,7 +3100,7 @@
     "biz"
    ],
    "views": 608,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045700008"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156183&bnefType=all&svcId=O00045700008"
   },
   {
    "id": "O00045700009",
@@ -3120,8 +3120,8 @@
     "young",
     "biz"
    ],
-   "views": 308,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045700009"
+   "views": 309,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156184&bnefType=all&svcId=O00045700009"
   },
   {
    "id": "O00045700010",
@@ -3140,8 +3140,8 @@
    "tags": [
     "biz"
    ],
-   "views": 410,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045700010"
+   "views": 411,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156185&bnefType=all&svcId=O00045700010"
   },
   {
    "id": "O00045700011",
@@ -3160,8 +3160,8 @@
    "tags": [
     "biz"
    ],
-   "views": 559,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045700011"
+   "views": 560,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156186&bnefType=all&svcId=O00045700011"
   },
   {
    "id": "O00045700012",
@@ -3182,7 +3182,7 @@
     "biz"
    ],
    "views": 266,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045700012"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156187&bnefType=all&svcId=O00045700012"
   },
   {
    "id": "O00045700015",
@@ -3202,7 +3202,7 @@
     "biz"
    ],
    "views": 278,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045700015"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156190&bnefType=all&svcId=O00045700015"
   },
   {
    "id": "O00045700018",
@@ -3221,8 +3221,8 @@
    "tags": [
     "biz"
    ],
-   "views": 360,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045700018"
+   "views": 363,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156194&bnefType=all&svcId=O00045700018"
   },
   {
    "id": "O00045700019",
@@ -3241,8 +3241,8 @@
    "tags": [
     "biz"
    ],
-   "views": 413,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045700019"
+   "views": 415,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156195&bnefType=all&svcId=O00045700019"
   },
   {
    "id": "O00045700020",
@@ -3261,8 +3261,8 @@
    "tags": [
     "biz"
    ],
-   "views": 405,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045700020"
+   "views": 406,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156196&bnefType=all&svcId=O00045700020"
   },
   {
    "id": "O00045700023",
@@ -3281,8 +3281,8 @@
    "tags": [
     "biz"
    ],
-   "views": 380,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045700023"
+   "views": 381,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159016&bnefType=all&svcId=O00045700023"
   },
   {
    "id": "O00045700025",
@@ -3301,8 +3301,8 @@
    "tags": [
     "biz"
    ],
-   "views": 422,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045700025"
+   "views": 423,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159018&bnefType=all&svcId=O00045700025"
   },
   {
    "id": "O00045800002",
@@ -3322,7 +3322,7 @@
     "old"
    ],
    "views": 1516,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045800002"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001379&bnefType=all&svcId=O00045800002"
   },
   {
    "id": "O00045800003",
@@ -3341,8 +3341,8 @@
    "tags": [
     "old"
    ],
-   "views": 5566,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045800003"
+   "views": 5567,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001380&bnefType=all&svcId=O00045800003"
   },
   {
    "id": "149200000026",
@@ -3362,8 +3362,8 @@
     "kid",
     "biz"
    ],
-   "views": 5155982,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000026"
+   "views": 5157133,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=754680&bnefType=all&svcId=149200000026"
   },
   {
    "id": "105100000001",
@@ -3382,8 +3382,8 @@
    "tags": [
     "kid"
    ],
-   "views": 2434796,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/105100000001"
+   "views": 2434939,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=556551&bnefType=all&svcId=105100000001"
   },
   {
    "id": "149200005007",
@@ -3402,8 +3402,8 @@
    "tags": [
     "young"
    ],
-   "views": 1296501,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005007"
+   "views": 1297328,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=797786&bnefType=all&svcId=149200005007"
   },
   {
    "id": "B55140800003",
@@ -3422,8 +3422,8 @@
    "tags": [
     "kid"
    ],
-   "views": 1079173,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55140800003"
+   "views": 1079343,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999071&bnefType=all&svcId=B55140800003"
   },
   {
    "id": "SD0000015536",
@@ -3443,8 +3443,8 @@
     "biz",
     "low"
    ],
-   "views": 795566,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000015536"
+   "views": 796486,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=516503&bnefType=all&svcId=SD0000015536"
   },
   {
    "id": "161300000103",
@@ -3463,8 +3463,8 @@
    "tags": [
     "young"
    ],
-   "views": 724680,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/161300000103"
+   "views": 724891,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2126303&bnefType=all&svcId=161300000103"
   },
   {
    "id": "135200005003",
@@ -3483,8 +3483,8 @@
    "tags": [
     "low"
    ],
-   "views": 685465,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005003"
+   "views": 685652,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900010&bnefType=all&svcId=135200005003"
   },
   {
    "id": "999000000024",
@@ -3501,8 +3501,8 @@
    "tel": "서울주택도시공사/1600-3456",
    "kind": "기타",
    "tags": [],
-   "views": 673167,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000024"
+   "views": 673195,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999075&bnefType=all&svcId=999000000024"
   },
   {
    "id": "161300000076",
@@ -3521,8 +3521,8 @@
    "tags": [
     "kid"
    ],
-   "views": 637308,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/161300000076"
+   "views": 637382,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739245&bnefType=all&svcId=161300000076"
   },
   {
    "id": "135200005013",
@@ -3541,8 +3541,8 @@
    "tags": [
     "young"
    ],
-   "views": 610338,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005013"
+   "views": 610402,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805494&bnefType=all&svcId=135200005013"
   },
   {
    "id": "161300000088",
@@ -3562,8 +3562,8 @@
     "young",
     "low"
    ],
-   "views": 572379,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/161300000088"
+   "views": 572411,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999078&bnefType=all&svcId=161300000088"
   },
   {
    "id": "999000000008",
@@ -3582,8 +3582,8 @@
    "tags": [
     "kid"
    ],
-   "views": 567561,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000008"
+   "views": 567788,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999029&bnefType=all&svcId=999000000008"
   },
   {
    "id": "SD0000011848",
@@ -3602,8 +3602,8 @@
    "tags": [
     "young"
    ],
-   "views": 554006,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000011848"
+   "views": 554041,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=758402&bnefType=all&svcId=SD0000011848"
   },
   {
    "id": "WII000000310",
@@ -3620,8 +3620,8 @@
    "tel": "국민연금공단(중앙노후준비지원센터)/1355",
    "kind": "기타(교육)",
    "tags": [],
-   "views": 550591,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000310"
+   "views": 550615,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999132&bnefType=all&svcId=WII000000310"
   },
   {
    "id": "135200000115",
@@ -3641,8 +3641,8 @@
     "kid",
     "old"
    ],
-   "views": 549281,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000115"
+   "views": 549297,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=749131&bnefType=all&svcId=135200000115"
   },
   {
    "id": "WII000001410",
@@ -3661,8 +3661,8 @@
    "tags": [
     "low"
    ],
-   "views": 490210,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001410"
+   "views": 490260,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=575760&bnefType=all&svcId=WII000001410"
   },
   {
    "id": "424000000006",
@@ -3681,8 +3681,8 @@
    "tags": [
     "low"
    ],
-   "views": 429272,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/424000000006"
+   "views": 429294,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=663171&bnefType=all&svcId=424000000006"
   },
   {
    "id": "161300000001",
@@ -3699,8 +3699,8 @@
    "tel": "국토교통부/1599-0001||주택도시보증공사/1566-9009||우리은행/1599-0800||국민은행/1…",
    "kind": "현금(융자)",
    "tags": [],
-   "views": 427636,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/161300000001"
+   "views": 427641,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739256&bnefType=all&svcId=161300000001"
   },
   {
    "id": "171000000005",
@@ -3720,8 +3720,8 @@
     "old",
     "low"
    ],
-   "views": 420626,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/171000000005"
+   "views": 420635,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=748477&bnefType=all&svcId=171000000005"
   },
   {
    "id": "336000000096",
@@ -3740,8 +3740,8 @@
    "tags": [
     "low"
    ],
-   "views": 367931,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/336000000096"
+   "views": 367976,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999076&bnefType=all&svcId=336000000096"
   },
   {
    "id": "999000000025",
@@ -3760,8 +3760,8 @@
    "tags": [
     "low"
    ],
-   "views": 328829,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000025"
+   "views": 328857,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999077&bnefType=all&svcId=999000000025"
   },
   {
    "id": "SD0000016138",
@@ -3781,8 +3781,8 @@
     "kid",
     "dis"
    ],
-   "views": 303515,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000016138"
+   "views": 303540,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=75100&bnefType=all&svcId=SD0000016138"
   },
   {
    "id": "142100000062",
@@ -3799,8 +3799,8 @@
    "tel": "상생페이백 콜센터/1533-2800",
    "kind": "기타",
    "tags": [],
-   "views": 280691,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/142100000062"
+   "views": 280725,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2152556&bnefType=all&svcId=142100000062"
   },
   {
    "id": "B55201500004",
@@ -3819,8 +3819,8 @@
    "tags": [
     "low"
    ],
-   "views": 257496,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55201500004"
+   "views": 257511,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999145&bnefType=all&svcId=B55201500004"
   },
   {
    "id": "140000000176",
@@ -3841,8 +3841,8 @@
     "dis",
     "low"
    ],
-   "views": 242622,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/140000000176"
+   "views": 242631,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=753134&bnefType=all&svcId=140000000176"
   },
   {
    "id": "B55353000001",
@@ -3864,8 +3864,8 @@
     "dis",
     "low"
    ],
-   "views": 229550,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55353000001"
+   "views": 229619,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999178&bnefType=all&svcId=B55353000001"
   },
   {
    "id": "132000000006",
@@ -3882,8 +3882,8 @@
    "tel": "도로교통공단/1577-1120",
    "kind": "현금(감면)",
    "tags": [],
-   "views": 225263,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/132000000006"
+   "views": 225273,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=761842&bnefType=all&svcId=132000000006"
   },
   {
    "id": "WII000001460",
@@ -3902,8 +3902,8 @@
    "tags": [
     "kid"
    ],
-   "views": 219878,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001460"
+   "views": 219959,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=758582&bnefType=all&svcId=WII000001460"
   },
   {
    "id": "149200000009",
@@ -3924,8 +3924,8 @@
     "biz",
     "low"
    ],
-   "views": 218463,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000009"
+   "views": 218481,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=105992&bnefType=all&svcId=149200000009"
   },
   {
    "id": "134200000045",
@@ -3944,8 +3944,8 @@
    "tags": [
     "low"
    ],
-   "views": 216437,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200000045"
+   "views": 216455,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=762701&bnefType=all&svcId=134200000045"
   },
   {
    "id": "149200000092",
@@ -3962,8 +3962,8 @@
    "tel": "고용노동부 고객상담센터/1350",
    "kind": "상담/법률지원·서비스(일자리)",
    "tags": [],
-   "views": 209677,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000092"
+   "views": 209678,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=517149&bnefType=all&svcId=149200000092"
   },
   {
    "id": "SD0000004508",
@@ -3982,8 +3982,8 @@
    "tags": [
     "kid"
    ],
-   "views": 198051,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000004508"
+   "views": 198063,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=83660&bnefType=all&svcId=SD0000004508"
   },
   {
    "id": "161300000099",
@@ -4002,8 +4002,8 @@
    "tags": [
     "young"
    ],
-   "views": 193834,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/161300000099"
+   "views": 193933,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805687&bnefType=all&svcId=161300000099"
   },
   {
    "id": "SSE000000170",
@@ -4022,8 +4022,8 @@
    "tags": [
     "old"
    ],
-   "views": 186859,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SSE000000170"
+   "views": 186931,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=72548&bnefType=all&svcId=SSE000000170"
   },
   {
    "id": "999000000023",
@@ -4044,7 +4044,7 @@
     "low"
    ],
    "views": 186343,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000023"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=573411&bnefType=all&svcId=999000000023"
   },
   {
    "id": "135200005004",
@@ -4063,8 +4063,8 @@
    "tags": [
     "low"
    ],
-   "views": 184231,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005004"
+   "views": 184248,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900011&bnefType=all&svcId=135200005004"
   },
   {
    "id": "WII000001470",
@@ -4083,8 +4083,8 @@
    "tags": [
     "kid"
    ],
-   "views": 181982,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001470"
+   "views": 181992,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999073&bnefType=all&svcId=WII000001470"
   },
   {
    "id": "WII000000300",
@@ -4103,8 +4103,8 @@
    "tags": [
     "low"
    ],
-   "views": 171561,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000300"
+   "views": 171571,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=760851&bnefType=all&svcId=WII000000300"
   },
   {
    "id": "B41000200003",
@@ -4126,8 +4126,8 @@
     "dis",
     "low"
    ],
-   "views": 163878,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200003"
+   "views": 163949,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000928&bnefType=all&svcId=B41000200003"
   },
   {
    "id": "174000000029",
@@ -4146,8 +4146,8 @@
    "tags": [
     "kid"
    ],
-   "views": 159591,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/174000000029"
+   "views": 159627,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=593069&bnefType=all&svcId=174000000029"
   },
   {
    "id": "GMO000000010",
@@ -4166,8 +4166,8 @@
    "tags": [
     "dis"
    ],
-   "views": 157849,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GMO000000010"
+   "views": 157853,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=728849&bnefType=all&svcId=GMO000000010"
   },
   {
    "id": "135200000120",
@@ -4186,8 +4186,8 @@
    "tags": [
     "kid"
    ],
-   "views": 157645,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000120"
+   "views": 157701,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=700023&bnefType=all&svcId=135200000120"
   },
   {
    "id": "999000000044",
@@ -4207,8 +4207,8 @@
     "kid",
     "young"
    ],
-   "views": 148489,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000044"
+   "views": 148501,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999161&bnefType=all&svcId=999000000044"
   },
   {
    "id": "149200000041",
@@ -4225,8 +4225,8 @@
    "tel": "중장년내일센터/02-6021-1100",
    "kind": "서비스(일자리)",
    "tags": [],
-   "views": 146998,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000041"
+   "views": 147070,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=518133&bnefType=all&svcId=149200000041"
   },
   {
    "id": "B55258400009",
@@ -4243,8 +4243,8 @@
    "tel": "한국환경공단 탄소중립실천지원부/032-590-3434",
    "kind": "기타·현금",
    "tags": [],
-   "views": 143358,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55258400009"
+   "views": 143362,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999225&bnefType=all&svcId=B55258400009"
   },
   {
    "id": "326000000053",
@@ -4264,7 +4264,7 @@
     "kid"
    ],
    "views": 137663,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/326000000053"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=588799&bnefType=all&svcId=326000000053"
   },
   {
    "id": "135200000017",
@@ -4284,8 +4284,8 @@
     "old",
     "dis"
    ],
-   "views": 137565,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000017"
+   "views": 137571,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=172402&bnefType=all&svcId=135200000017"
   },
   {
    "id": "GKE000000070",
@@ -4304,8 +4304,8 @@
    "tags": [
     "low"
    ],
-   "views": 128274,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GKE000000070"
+   "views": 128278,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=108010&bnefType=all&svcId=GKE000000070"
   },
   {
    "id": "SD0000007672",
@@ -4325,8 +4325,8 @@
     "kid",
     "low"
    ],
-   "views": 121955,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000007672"
+   "views": 121986,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999124&bnefType=all&svcId=SD0000007672"
   },
   {
    "id": "135200000125",
@@ -4345,8 +4345,8 @@
    "tags": [
     "old"
    ],
-   "views": 116894,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000125"
+   "views": 116904,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=701075&bnefType=all&svcId=135200000125"
   },
   {
    "id": "SSI000000020",
@@ -4367,8 +4367,8 @@
     "young",
     "low"
    ],
-   "views": 108084,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SSI000000020"
+   "views": 108107,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=87903&bnefType=all&svcId=SSI000000020"
   },
   {
    "id": "999000000043",
@@ -4387,8 +4387,8 @@
    "tags": [
     "low"
    ],
-   "views": 105463,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000043"
+   "views": 105497,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999152&bnefType=all&svcId=999000000043"
   },
   {
    "id": "999000000022",
@@ -4413,7 +4413,7 @@
     "low"
    ],
    "views": 104962,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000022"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999070&bnefType=all&svcId=999000000022"
   },
   {
    "id": "SME000000100",
@@ -4432,8 +4432,8 @@
    "tags": [
     "kid"
    ],
-   "views": 101967,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SME000000100"
+   "views": 101989,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=753142&bnefType=all&svcId=SME000000100"
   },
   {
    "id": "131200000008",
@@ -4452,8 +4452,8 @@
    "tags": [
     "kid"
    ],
-   "views": 101076,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/131200000008"
+   "views": 101120,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999002&bnefType=all&svcId=131200000008"
   },
   {
    "id": "137100000033",
@@ -4472,8 +4472,8 @@
    "tags": [
     "old"
    ],
-   "views": 100841,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/137100000033"
+   "views": 100851,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=790133&bnefType=all&svcId=137100000033"
   },
   {
    "id": "PTR000051706",
@@ -4490,8 +4490,8 @@
    "tel": "주택도시보증공사/1566-9009",
    "kind": "현금(융자)",
    "tags": [],
-   "views": 100431,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/PTR000051706"
+   "views": 100436,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999074&bnefType=all&svcId=PTR000051706"
   },
   {
    "id": "999000000004",
@@ -4510,8 +4510,8 @@
    "tags": [
     "kid"
    ],
-   "views": 100076,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000004"
+   "views": 100141,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999019&bnefType=all&svcId=999000000004"
   },
   {
    "id": "138300000017",
@@ -4530,8 +4530,8 @@
    "tags": [
     "low"
    ],
-   "views": 96836,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000017"
+   "views": 96841,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=508718&bnefType=all&svcId=138300000017"
   },
   {
    "id": "999000000092",
@@ -4553,8 +4553,8 @@
     "dis",
     "low"
    ],
-   "views": 96026,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000092"
+   "views": 96038,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999259&bnefType=all&svcId=999000000092"
   },
   {
    "id": "135200005001",
@@ -4573,8 +4573,8 @@
    "tags": [
     "low"
    ],
-   "views": 94719,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005001"
+   "views": 94728,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900008&bnefType=all&svcId=135200005001"
   },
   {
    "id": "149200000020",
@@ -4594,8 +4594,8 @@
     "kid",
     "low"
    ],
-   "views": 89478,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000020"
+   "views": 89482,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999023&bnefType=all&svcId=149200000020"
   },
   {
    "id": "GFO000000030",
@@ -4615,8 +4615,8 @@
     "kid",
     "biz"
    ],
-   "views": 88488,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GFO000000030"
+   "views": 88496,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=579594&bnefType=all&svcId=GFO000000030"
   },
   {
    "id": "171000000009",
@@ -4635,8 +4635,8 @@
    "tags": [
     "low"
    ],
-   "views": 87658,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/171000000009"
+   "views": 87662,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=747031&bnefType=all&svcId=171000000009"
   },
   {
    "id": "SD0000008743",
@@ -4653,8 +4653,8 @@
    "tel": "국민건강보험공단 고객센터/1577-1000",
    "kind": "서비스(의료)·의료지원",
    "tags": [],
-   "views": 87222,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000008743"
+   "views": 87267,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=729189&bnefType=all&svcId=SD0000008743"
   },
   {
    "id": "172100000012",
@@ -4676,8 +4676,8 @@
     "dis",
     "low"
    ],
-   "views": 86085,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/172100000012"
+   "views": 86115,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2110213&bnefType=all&svcId=172100000012"
   },
   {
    "id": "B55370100044",
@@ -4696,8 +4696,8 @@
    "tags": [
     "young"
    ],
-   "views": 85822,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55370100044"
+   "views": 85938,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2182516&bnefType=all&svcId=B55370100044"
   },
   {
    "id": "149200005002",
@@ -4716,8 +4716,8 @@
    "tags": [
     "low"
    ],
-   "views": 84942,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005002"
+   "views": 84943,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999015&bnefType=all&svcId=149200005002"
   },
   {
    "id": "999000000026",
@@ -4739,8 +4739,8 @@
     "old",
     "low"
    ],
-   "views": 84842,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000026"
+   "views": 84875,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999079&bnefType=all&svcId=999000000026"
   },
   {
    "id": "337000000013",
@@ -4759,8 +4759,8 @@
    "tags": [
     "low"
    ],
-   "views": 82362,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/337000000013"
+   "views": 82368,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999153&bnefType=all&svcId=337000000013"
   },
   {
    "id": "SBA000000100",
@@ -4780,8 +4780,8 @@
     "old",
     "low"
    ],
-   "views": 81848,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SBA000000100"
+   "views": 81856,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=167950&bnefType=all&svcId=SBA000000100"
   },
   {
    "id": "999000000090",
@@ -4800,8 +4800,8 @@
    "tags": [
     "kid"
    ],
-   "views": 80585,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000090"
+   "views": 80604,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999257&bnefType=all&svcId=999000000090"
   },
   {
    "id": "134200000003",
@@ -4821,8 +4821,8 @@
     "kid",
     "low"
    ],
-   "views": 80431,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200000003"
+   "views": 80444,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=726481&bnefType=all&svcId=134200000003"
   },
   {
    "id": "134200005002",
@@ -4841,8 +4841,8 @@
    "tags": [
     "kid"
    ],
-   "views": 79146,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200005002"
+   "views": 79152,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900001&bnefType=all&svcId=134200005002"
   },
   {
    "id": "SD0000007429",
@@ -4861,8 +4861,8 @@
    "tags": [
     "biz"
    ],
-   "views": 73468,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000007429"
+   "views": 73484,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=39748&bnefType=all&svcId=SD0000007429"
   },
   {
    "id": "148000000007",
@@ -4879,8 +4879,8 @@
    "tel": "기후에너지환경부 교통환경과/044-201-6930||한국자동차환경협회 콜센터/1544-0907||한국자동차…",
    "kind": "현금",
    "tags": [],
-   "views": 73393,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/148000000007"
+   "views": 73395,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=558379&bnefType=all&svcId=148000000007"
   },
   {
    "id": "B55121000003",
@@ -4901,8 +4901,8 @@
     "dis",
     "low"
    ],
-   "views": 70310,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55121000003"
+   "views": 70324,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2110157&bnefType=all&svcId=B55121000003"
   },
   {
    "id": "135200000015",
@@ -4922,8 +4922,8 @@
     "old",
     "low"
    ],
-   "views": 69939,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000015"
+   "views": 69956,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=701248&bnefType=all&svcId=135200000015"
   },
   {
    "id": "149200000063",
@@ -4944,8 +4944,8 @@
     "biz",
     "low"
    ],
-   "views": 68678,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000063"
+   "views": 68696,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999033&bnefType=all&svcId=149200000063"
   },
   {
    "id": "999000000027",
@@ -4966,8 +4966,8 @@
     "biz",
     "low"
    ],
-   "views": 67309,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000027"
+   "views": 67313,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999080&bnefType=all&svcId=999000000027"
   },
   {
    "id": "423000000362",
@@ -4988,8 +4988,8 @@
     "dis",
     "low"
    ],
-   "views": 66474,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/423000000362"
+   "views": 66522,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746602&bnefType=all&svcId=423000000362"
   },
   {
    "id": "135200005015",
@@ -5008,8 +5008,8 @@
    "tags": [
     "kid"
    ],
-   "views": 66189,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005015"
+   "views": 66238,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805790&bnefType=all&svcId=135200005015"
   },
   {
    "id": "408000000419",
@@ -5028,8 +5028,8 @@
    "tags": [
     "low"
    ],
-   "views": 65764,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/408000000419"
+   "views": 65767,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999155&bnefType=all&svcId=408000000419"
   },
   {
    "id": "999000000007",
@@ -5046,8 +5046,8 @@
    "tel": "고용노동부 고객상담센터/1350",
    "kind": "현금",
    "tags": [],
-   "views": 65462,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000007"
+   "views": 65517,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999028&bnefType=all&svcId=999000000007"
   },
   {
    "id": "149200005001",
@@ -5066,8 +5066,8 @@
    "tags": [
     "low"
    ],
-   "views": 65104,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005001"
+   "views": 65107,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999034&bnefType=all&svcId=149200005001"
   },
   {
    "id": "137100000236",
@@ -5086,8 +5086,8 @@
    "tags": [
     "low"
    ],
-   "views": 64764,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/137100000236"
+   "views": 64770,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=753387&bnefType=all&svcId=137100000236"
   },
   {
    "id": "SSE000000050",
@@ -5107,8 +5107,8 @@
     "old",
     "low"
    ],
-   "views": 63535,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SSE000000050"
+   "views": 63573,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=757126&bnefType=all&svcId=SSE000000050"
   },
   {
    "id": "SSE000000100",
@@ -5128,8 +5128,8 @@
     "old",
     "low"
    ],
-   "views": 63193,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SSE000000100"
+   "views": 63317,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=577852&bnefType=all&svcId=SSE000000100"
   },
   {
    "id": "161300000101",
@@ -5152,8 +5152,8 @@
     "dis",
     "low"
    ],
-   "views": 62645,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/161300000101"
+   "views": 62659,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2103502&bnefType=all&svcId=161300000101"
   },
   {
    "id": "137100000006",
@@ -5173,8 +5173,8 @@
     "dis",
     "low"
    ],
-   "views": 62296,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/137100000006"
+   "views": 62307,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999118&bnefType=all&svcId=137100000006"
   },
   {
    "id": "135200005005",
@@ -5193,8 +5193,8 @@
    "tags": [
     "low"
    ],
-   "views": 62131,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005005"
+   "views": 62152,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900012&bnefType=all&svcId=135200005005"
   },
   {
    "id": "B55211100001",
@@ -5213,8 +5213,8 @@
    "tags": [
     "low"
    ],
-   "views": 61171,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55211100001"
+   "views": 61174,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002174&bnefType=all&svcId=B55211100001"
   },
   {
    "id": "142000000014",
@@ -5231,8 +5231,8 @@
    "tel": "중소벤처기업부 인력정책과/044-204-7746",
    "kind": "기타",
    "tags": [],
-   "views": 59642,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/142000000014"
+   "views": 59643,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999197&bnefType=all&svcId=142000000014"
   },
   {
    "id": "WLU000000020",
@@ -5252,8 +5252,8 @@
     "kid",
     "low"
    ],
-   "views": 58093,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WLU000000020"
+   "views": 58101,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=173701&bnefType=all&svcId=WLU000000020"
   },
   {
    "id": "B01000300002",
@@ -5270,8 +5270,8 @@
    "tel": "기금관리처/051-794-3755",
    "kind": "현금(융자)",
    "tags": [],
-   "views": 57639,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B01000300002"
+   "views": 57658,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000537&bnefType=all&svcId=B01000300002"
   },
   {
    "id": "B27000100005",
@@ -5288,8 +5288,8 @@
    "tel": "(국번없이)132 법률상담 콜센타/132",
    "kind": "기타(상담)",
    "tags": [],
-   "views": 57428,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B27000100005"
+   "views": 57432,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000940&bnefType=all&svcId=B27000100005"
   },
   {
    "id": "B46001400003",
@@ -5308,8 +5308,8 @@
    "tags": [
     "low"
    ],
-   "views": 57377,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B46001400003"
+   "views": 57383,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002071&bnefType=all&svcId=B46001400003"
   },
   {
    "id": "VOU000000020",
@@ -5330,8 +5330,8 @@
     "dis",
     "low"
    ],
-   "views": 57275,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/VOU000000020"
+   "views": 57304,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=719747&bnefType=all&svcId=VOU000000020"
   },
   {
    "id": "B55145700016",
@@ -5350,8 +5350,8 @@
    "tags": [
     "kid"
    ],
-   "views": 56471,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55145700016"
+   "views": 56496,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=94779&bnefType=all&svcId=B55145700016"
   },
   {
    "id": "135200000005",
@@ -5370,8 +5370,8 @@
    "tags": [
     "kid"
    ],
-   "views": 55678,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000005"
+   "views": 55687,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999156&bnefType=all&svcId=135200000005"
   },
   {
    "id": "WII000001340",
@@ -5391,8 +5391,8 @@
     "dis",
     "low"
    ],
-   "views": 55646,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001340"
+   "views": 55649,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=725443&bnefType=all&svcId=WII000001340"
   },
   {
    "id": "SPE000000060",
@@ -5411,8 +5411,8 @@
    "tags": [
     "dis"
    ],
-   "views": 54867,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SPE000000060"
+   "views": 54869,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=749143&bnefType=all&svcId=SPE000000060"
   },
   {
    "id": "SD0000005037",
@@ -5432,8 +5432,8 @@
     "kid",
     "dis"
    ],
-   "views": 54400,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000005037"
+   "views": 54402,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=573410&bnefType=all&svcId=SD0000005037"
   },
   {
    "id": "149200000147",
@@ -5450,8 +5450,8 @@
    "tel": "고용노동부 고객상담센터/1350",
    "kind": "기타(상담)·서비스(일자리)",
    "tags": [],
-   "views": 53182,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000147"
+   "views": 53183,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999016&bnefType=all&svcId=149200000147"
   },
   {
    "id": "WII000001320",
@@ -5468,8 +5468,8 @@
    "tel": "국가보훈부 보훈상담센터/1577-0606||주소지 관할 보훈지(방)청/1577-0606",
    "kind": "서비스(일자리)·의료지원",
    "tags": [],
-   "views": 52857,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001320"
+   "views": 52863,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=730957&bnefType=all&svcId=WII000001320"
   },
   {
    "id": "B55201500202",
@@ -5486,8 +5486,8 @@
    "tel": "국민연금공단/063-711-7800",
    "kind": "기타",
    "tags": [],
-   "views": 52408,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55201500202"
+   "views": 52608,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100952&bnefType=all&svcId=B55201500202"
   },
   {
    "id": "135200000114",
@@ -5507,8 +5507,8 @@
     "kid",
     "dis"
    ],
-   "views": 51992,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000114"
+   "views": 52010,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=594728&bnefType=all&svcId=135200000114"
   },
   {
    "id": "SHE000000020",
@@ -5528,8 +5528,8 @@
     "kid",
     "low"
    ],
-   "views": 51873,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SHE000000020"
+   "views": 51875,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=753167&bnefType=all&svcId=SHE000000020"
   },
   {
    "id": "135200005010",
@@ -5548,8 +5548,8 @@
    "tags": [
     "low"
    ],
-   "views": 50942,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005010"
+   "views": 50953,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805488&bnefType=all&svcId=135200005010"
   },
   {
    "id": "B55271100008",
@@ -5569,8 +5569,8 @@
     "old",
     "biz"
    ],
-   "views": 49331,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55271100008"
+   "views": 49344,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001384&bnefType=all&svcId=B55271100008"
   },
   {
    "id": "SCY000000080",
@@ -5591,8 +5591,8 @@
     "dis",
     "low"
    ],
-   "views": 48681,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SCY000000080"
+   "views": 48688,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=7537&bnefType=all&svcId=SCY000000080"
   },
   {
    "id": "SD0000016119",
@@ -5611,8 +5611,8 @@
    "tags": [
     "dis"
    ],
-   "views": 48369,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000016119"
+   "views": 48389,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=756537&bnefType=all&svcId=SD0000016119"
   },
   {
    "id": "B41000200041",
@@ -5629,8 +5629,8 @@
    "tel": "고객센터/1551-1212",
    "kind": "현금",
    "tags": [],
-   "views": 48214,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200041"
+   "views": 48229,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2123525&bnefType=all&svcId=B41000200041"
   },
   {
    "id": "507000000642",
@@ -5649,8 +5649,8 @@
    "tags": [
     "farm"
    ],
-   "views": 48043,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/507000000642"
+   "views": 48048,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=510258&bnefType=all&svcId=507000000642"
   },
   {
    "id": "149200000037",
@@ -5670,8 +5670,8 @@
     "biz",
     "low"
    ],
-   "views": 47003,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000037"
+   "views": 47007,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=754678&bnefType=all&svcId=149200000037"
   },
   {
    "id": "149200000153",
@@ -5690,8 +5690,8 @@
    "tags": [
     "kid"
    ],
-   "views": 46272,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000153"
+   "views": 46277,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746900&bnefType=all&svcId=149200000153"
   },
   {
    "id": "B55037300001",
@@ -5713,8 +5713,8 @@
     "dis",
     "low"
    ],
-   "views": 45578,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55037300001"
+   "views": 45584,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000943&bnefType=all&svcId=B55037300001"
   },
   {
    "id": "116010000001",
@@ -5734,8 +5734,8 @@
     "kid",
     "low"
    ],
-   "views": 44830,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/116010000001"
+   "views": 44838,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=754881&bnefType=all&svcId=116010000001"
   },
   {
    "id": "135200005012",
@@ -5754,8 +5754,8 @@
    "tags": [
     "low"
    ],
-   "views": 44525,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005012"
+   "views": 44538,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805492&bnefType=all&svcId=135200005012"
   },
   {
    "id": "131200000004",
@@ -5774,8 +5774,8 @@
    "tags": [
     "dis"
    ],
-   "views": 43060,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/131200000004"
+   "views": 43072,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999003&bnefType=all&svcId=131200000004"
   },
   {
    "id": "SD0000001579",
@@ -5795,7 +5795,7 @@
     "farm"
    ],
    "views": 42316,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000001579"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=686949&bnefType=all&svcId=SD0000001579"
   },
   {
    "id": "999000000013",
@@ -5814,8 +5814,8 @@
    "tags": [
     "kid"
    ],
-   "views": 42006,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000013"
+   "views": 42025,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999050&bnefType=all&svcId=999000000013"
   },
   {
    "id": "GES000000110",
@@ -5832,8 +5832,8 @@
    "tel": "한국장학재단 상담센터/1599-2000",
    "kind": "현금(융자)",
    "tags": [],
-   "views": 41754,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GES000000110"
+   "views": 41756,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999061&bnefType=all&svcId=GES000000110"
   },
   {
    "id": "SD0000018904",
@@ -5852,8 +5852,8 @@
    "tags": [
     "biz"
    ],
-   "views": 41270,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000018904"
+   "views": 41273,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=606474&bnefType=all&svcId=SD0000018904"
   },
   {
    "id": "B41000200038",
@@ -5872,8 +5872,8 @@
    "tags": [
     "biz"
    ],
-   "views": 40684,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200038"
+   "views": 40704,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2111602&bnefType=all&svcId=B41000200038"
   },
   {
    "id": "999000000036",
@@ -5892,8 +5892,8 @@
    "tags": [
     "dis"
    ],
-   "views": 40299,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000036"
+   "views": 40363,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999119&bnefType=all&svcId=999000000036"
   },
   {
    "id": "B55370100033",
@@ -5912,8 +5912,8 @@
    "tags": [
     "low"
    ],
-   "views": 40223,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55370100033"
+   "views": 40240,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2149520&bnefType=all&svcId=B55370100033"
   },
   {
    "id": "GES000000120",
@@ -5932,8 +5932,8 @@
    "tags": [
     "kid"
    ],
-   "views": 39827,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GES000000120"
+   "views": 39833,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=726472&bnefType=all&svcId=GES000000120"
   },
   {
    "id": "142000000099",
@@ -5953,8 +5953,8 @@
     "young",
     "biz"
    ],
-   "views": 39427,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/142000000099"
+   "views": 39441,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=514311&bnefType=all&svcId=142000000099"
   },
   {
    "id": "429000000646",
@@ -5974,8 +5974,8 @@
     "dis",
     "low"
    ],
-   "views": 39161,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/429000000646"
+   "views": 39165,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=731761&bnefType=all&svcId=429000000646"
   },
   {
    "id": "SD0000003857",
@@ -5995,8 +5995,8 @@
     "biz",
     "dis"
    ],
-   "views": 38469,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000003857"
+   "views": 38482,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=585576&bnefType=all&svcId=SD0000003857"
   },
   {
    "id": "135200000090",
@@ -6015,8 +6015,8 @@
    "tags": [
     "dis"
    ],
-   "views": 38429,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000090"
+   "views": 38438,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=729489&bnefType=all&svcId=135200000090"
   },
   {
    "id": "WII000000500",
@@ -6037,8 +6037,8 @@
     "dis",
     "low"
    ],
-   "views": 37552,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000500"
+   "views": 37562,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=165908&bnefType=all&svcId=WII000000500"
   },
   {
    "id": "SHE000000090",
@@ -6057,8 +6057,8 @@
    "tags": [
     "low"
    ],
-   "views": 37137,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SHE000000090"
+   "views": 37143,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=753155&bnefType=all&svcId=SHE000000090"
   },
   {
    "id": "SD0000016141",
@@ -6077,8 +6077,8 @@
    "tags": [
     "old"
    ],
-   "views": 36960,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000016141"
+   "views": 36975,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746536&bnefType=all&svcId=SD0000016141"
   },
   {
    "id": "B55284500010",
@@ -6100,8 +6100,8 @@
     "farm",
     "low"
    ],
-   "views": 36761,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55284500010"
+   "views": 36781,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002090&bnefType=all&svcId=B55284500010"
   },
   {
    "id": "127000000002",
@@ -6121,8 +6121,8 @@
     "dis",
     "low"
    ],
-   "views": 36496,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/127000000002"
+   "views": 36499,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999123&bnefType=all&svcId=127000000002"
   },
   {
    "id": "B55190400005",
@@ -6141,8 +6141,8 @@
    "tags": [
     "low"
    ],
-   "views": 36448,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55190400005"
+   "views": 36465,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100960&bnefType=all&svcId=B55190400005"
   },
   {
    "id": "135200000002",
@@ -6162,8 +6162,8 @@
     "old",
     "low"
    ],
-   "views": 36281,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000002"
+   "views": 36293,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746547&bnefType=all&svcId=135200000002"
   },
   {
    "id": "SD0000007626",
@@ -6184,7 +6184,7 @@
     "dis"
    ],
    "views": 36092,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000007626"
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=790129&bnefType=all&svcId=SD0000007626"
   },
   {
    "id": "B55271100006",
@@ -6203,8 +6203,8 @@
    "tags": [
     "biz"
    ],
-   "views": 35581,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55271100006"
+   "views": 35584,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000978&bnefType=all&svcId=B55271100006"
   },
   {
    "id": "B49000100208",
@@ -6221,8 +6221,8 @@
    "tel": "복지계획부/052-704-7336",
    "kind": "시설이용",
    "tags": [],
-   "views": 34590,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B49000100208"
+   "views": 34592,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001618&bnefType=all&svcId=B49000100208"
   },
   {
    "id": "SD0000016094",
@@ -6241,8 +6241,8 @@
    "tags": [
     "kid"
    ],
-   "views": 34429,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000016094"
+   "views": 34435,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=585138&bnefType=all&svcId=SD0000016094"
   },
   {
    "id": "155000000017",
@@ -6263,8 +6263,8 @@
     "old",
     "dis"
    ],
-   "views": 34335,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/155000000017"
+   "views": 34337,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=510041&bnefType=all&svcId=155000000017"
   },
   {
    "id": "B01000300013",
@@ -6283,8 +6283,8 @@
    "tags": [
     "biz"
    ],
-   "views": 34085,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B01000300013"
+   "views": 34093,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105847&bnefType=all&svcId=B01000300013"
   },
   {
    "id": "WII000000040",
@@ -6303,8 +6303,8 @@
    "tags": [
     "kid"
    ],
-   "views": 33956,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000040"
+   "views": 33957,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=62025&bnefType=all&svcId=WII000000040"
   },
   {
    "id": "PTR000050390",
@@ -6325,8 +6325,8 @@
     "dis",
     "low"
    ],
-   "views": 33712,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/PTR000050390"
+   "views": 33741,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=741282&bnefType=all&svcId=PTR000050390"
   },
   {
    "id": "PTR000051390",
@@ -6345,8 +6345,8 @@
    "tags": [
     "kid"
    ],
-   "views": 33481,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/PTR000051390"
+   "views": 33482,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=106347&bnefType=all&svcId=PTR000051390"
   },
   {
    "id": "SD0000001491",
@@ -6365,8 +6365,8 @@
    "tags": [
     "biz"
    ],
-   "views": 33385,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000001491"
+   "views": 33387,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=78964&bnefType=all&svcId=SD0000001491"
   },
   {
    "id": "SPE000000010",
@@ -6387,8 +6387,8 @@
     "dis",
     "low"
    ],
-   "views": 32760,
-   "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SPE000000010"
+   "views": 32770,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=681344&bnefType=all&svcId=SPE000000010"
   }
  ]
 }
