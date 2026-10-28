@@ -1,8 +1,6 @@
 {
- "updated_at": "2026-10-28T19:18+09:00",
- "errors": [
-  "용인시보 고시·공고: The read operation timed out"
- ],
+ "updated_at": "2026-10-29T00:57+09:00",
+ "errors": [],
  "items": [
   {
    "src": "용인시 보도자료",
@@ -39,6 +37,16 @@
    "title": "제7기 용인청년정책네트워크 위원 모집 공고",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261028173817413"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "date": "2026-10-28",
+   "org": "용인특례시 · 용인시보 제2026-195호",
+   "no": "용인시 공고 제2026-2982호",
+   "title": "용인 첨단시스템반도체 클러스터 국가산업단지 개발사업(본공사) 착공 등의 공개 공고",
+   "scope": "town",
+   "cat": "gosi",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20261028185410422#2026-2982"
   },
   {
    "src": "용인시 보도자료",
@@ -913,24 +921,6 @@
    "title": "용인특례시, 제8회 북페스티벌 ‘일상의 빈칸을 채우는 독서 파티’ 개최",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260929074945878"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-28",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시 중독관리통합지원센터, ‘찾아가는 이동상담’",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260928075446850"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-28",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 리튬이온배터리 화재 안전교육과 화재진압 실습 교육 마련",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260928074714648"
   },
   {
    "src": "남사읍 소식",
