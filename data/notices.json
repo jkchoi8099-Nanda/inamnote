@@ -1,12 +1,25 @@
 {
- "updated_at": "2026-10-28T00:20+09:00",
- "errors": [
-  "처인구 게시판: <urlopen error timed out>",
-  "용인시 보도자료: <urlopen error timed out>",
-  "용인시 공지: <urlopen error timed out>",
-  "처인 홍보관: <urlopen error timed out>"
- ],
+ "updated_at": "2026-10-28T09:27+09:00",
+ "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-28",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시 신봉도서관, 청소년자료실 함께 만들어갈 청소년 홍보단 1기 모집",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261028075023769"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-28",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 전기자동차 900대분 구매 보조금 지원",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261028075004059"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-10-27",
@@ -33,6 +46,33 @@
    "title": "용인특례시, 수능 마친 수험생 위한 특별 프로그램 운영",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261027074709935"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-27",
+   "org": "용인특례시 농촌테마과",
+   "no": "",
+   "title": "[농촌테마파크] -농촌테마파크 10월 5째주~11월1째주 주말상시체험진행 : 10/31(토)~11/1(일)",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261027162007303"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-27",
+   "org": "용인특례시 기후대기과",
+   "no": "",
+   "title": "2026 용인특례시 탄소중립 녹색성장 포럼 개최 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261027155128093"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-27",
+   "org": "용인특례시 기후대기과",
+   "no": "",
+   "title": "2026년 3분기 다중이용시설 실내공기질 측정결과 공개 알림",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261027112141707"
   },
   {
    "src": "용인시 보도자료",
@@ -779,33 +819,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261001075508216"
   },
   {
-   "src": "용인시 공지",
-   "date": "2026-10-01",
-   "org": "용인특례시 기후대기과",
-   "no": "",
-   "title": "「라돈 무료 측정 및 저감 컨설팅 서비스 사업」안내(한국환경공단）",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261001141718345"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-01",
-   "org": "용인특례시 농촌테마과",
-   "no": "",
-   "title": "[농촌테마파크] 10월5일 (월)대체공휴일 농촌테마파크 개장 및 체험 운영안내 입니다.",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261001133713142"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-01",
-   "org": "용인특례시 자원순환과",
-   "no": "",
-   "title": "용인시 음식물류 폐기물 처리수수료 2026년 10월 고지금액 알림(실사용 기간 : 2026.9. 1. ~ 9. 30.)",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261001084730950"
-  },
-  {
    "src": "용인시 보도자료",
    "date": "2026-09-30",
    "org": "용인특례시",
@@ -867,15 +880,6 @@
    "title": "용인특례시, 리튬이온배터리 화재 안전교육과 화재진압 실습 교육 마련",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260928074714648"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-28",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 추석 앞두고 감염병 예방수칙 안내",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260928074518026"
   },
   {
    "src": "남사읍 소식",
