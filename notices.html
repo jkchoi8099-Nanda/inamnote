@@ -40,6 +40,8 @@
   .it .badge.city { background: var(--ok-tint); color: var(--ok); }
   .it .near { font-size: 12px; font-weight: 700; color: var(--moss-dark); }
   .it .fresh { font-size: 12px; font-weight: 800; color: #fff; background: var(--clay); border-radius: 999px; padding: 1px 8px; }
+  /* 열람·의견 마감(새올 게재기간 끝, 2026-10-29) */
+  .it .until { font-size: 12px; font-weight: 800; color: var(--clay); border: 1px solid currentColor; border-radius: 999px; padding: 0 7px; }
   .it b { display: block; font-size: 16px; line-height: 1.45; margin: 6px 0 4px; }
   .it .org { font-size: 13px; color: var(--ink-3); }
   .note { color: var(--clay-ink); font-size: 13px; margin-top: 18px; }
@@ -139,12 +141,17 @@
       return fresh;
     } catch (e) { return []; }
   })());
+  // 새올 고시·공고의 게재기간 끝 = 열람·의견 제출 마감(2026-10-29). 아직 안 지났고 공고일에서 90일 안일 때만 —
+  // 착공 공개 공고처럼 '~2031-12-31'로 걸어 두는 글은 마감이 아니라서 숨긴다
+  const TODAY = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
+  const until = x => x.until && x.until >= TODAY && (Date.parse(x.until) - Date.parse(x.date)) / 864e5 <= 90
+    ? `<span class="until">~${esc(x.until.slice(5).replace("-", "."))}까지</span>` : "";
   function render() {
     document.getElementById("tabs").innerHTML = TABS.map(([id, label, f]) =>
       `<button class="chip" data-tab="${id}" aria-pressed="${tab === id}">${label}<span class="n">${D.items.filter(f).length}</span></button>`).join("");
     const f = TABS.find(t => t[0] === tab)[2];
     document.getElementById("list").innerHTML = D.items.filter(f).map(x => `<li class="it"><a href="${esc(x.url)}" data-key="${key(x)}">
-      <span class="top"><span class="badge${badge(x)}">${esc(x.src)}</span><span class="num">${esc(x.date)}</span>${NEW.has(x.url) ? '<span class="fresh">새 글</span>' : ""}${tab === "city" && x.scope === "town" ? '<span class="near">우리 동네</span>' : ""}</span>
+      <span class="top"><span class="badge${badge(x)}">${esc(x.src)}</span><span class="num">${esc(x.date)}</span>${until(x)}${NEW.has(x.url) ? '<span class="fresh">새 글</span>' : ""}${tab === "city" && x.scope === "town" ? '<span class="near">우리 동네</span>' : ""}</span>
       <b>${esc(x.title.replace(/^\[(신규|변경|폐지)\]\s*/, ""))}</b>
       <span class="org">${esc(x.org)}${x.no ? " · " + esc(x.no) : ""}</span></a></li>`).join("");
   }
@@ -243,7 +250,7 @@
   // 탭을 고른 채로 들어오면(첫 화면 '용인시 소식' 등) 그 칩이 화면 밖에 있을 수 있다 → 보이게 옆으로 민다
   addEventListener("load", () => document.querySelector(`[data-tab="${tab}"]`)?.scrollIntoView({ block: "nearest", inline: "center" }));
   document.getElementById("note").textContent =
-    `출처: 토지이음(국토교통부) 고시정보, LH 보상공고·보도자료·공모·공지·청약플러스, 처인구청 이동읍·남사읍 소식 게시판·처인 홍보관, 용인시청 보도자료(최근 30일)·시정소식·용인시보 고시·공고(이동·남사·국가산단 관련) · ${D.updated_at.slice(0, 10)} 받음. 글을 누르면 본문을 바로 볼 수 있어요(용인시·처인구·토지이음은 본문, LH는 첨부 문서). 신청·기한은 꼭 원문에서 확인하세요.`;
+    `출처: 토지이음(국토교통부) 고시정보, LH 보상공고·보도자료·공모·공지·청약플러스, 처인구청 이동읍·남사읍 소식 게시판·처인 홍보관, 용인시청 보도자료(최근 30일)·시정소식, 용인시 고시·공고(새올 게시판·용인시보, 이동·남사·국가산단 관련 — '~날짜까지'는 게재기간 끝) · ${D.updated_at.slice(0, 10)} 받음. 글을 누르면 본문을 바로 볼 수 있어요(용인시·처인구·토지이음은 본문, LH는 첨부 문서). 신청·기한은 꼭 원문에서 확인하세요.`;
   render();
   route();  // #r=키로 바로 들어온 경우(공유한 주소)
 })();

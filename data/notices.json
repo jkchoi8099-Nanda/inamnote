@@ -1,7 +1,36 @@
 {
+<<<<<<< Updated upstream
  "updated_at": "2026-10-29T00:57+09:00",
+=======
+ "updated_at": "2026-10-29T01:04+09:00",
+>>>>>>> Stashed changes
  "errors": [],
  "items": [
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-10-29",
+   "org": "용인특례시 주택정비과",
+   "no": "용인시 공고 제2026-2961호",
+   "title": "보상계획 열람 및 토지출입 공고(이동2구역 주거환경개선사업)",
+   "scope": "town",
+   "cat": "comp",
+   "until": "2026-11-12",
+   "nos": [
+    "용인시공고제2026-2961호"
+   ],
+   "parts": [
+    {
+     "mgt": "148638",
+     "title": "보상계획 열람 및 토지출입 공고(이동2구역 주거환경개선사업)",
+     "no": "용인시 공고 제2026-2961호",
+     "dept": "주택정비과",
+     "date": "2026-10-29",
+     "until": "2026-11-12"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=148638"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-10-28",
@@ -40,13 +69,37 @@
   },
   {
    "src": "용인시 고시·공고",
+<<<<<<< Updated upstream
    "date": "2026-10-28",
    "org": "용인특례시 · 용인시보 제2026-195호",
+=======
+   "via": "새올",
+   "date": "2026-10-28",
+   "org": "용인특례시 반도체국가산단과",
+>>>>>>> Stashed changes
    "no": "용인시 공고 제2026-2982호",
    "title": "용인 첨단시스템반도체 클러스터 국가산업단지 개발사업(본공사) 착공 등의 공개 공고",
    "scope": "town",
    "cat": "gosi",
+<<<<<<< Updated upstream
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20261028185410422#2026-2982"
+=======
+   "until": "2031-12-31",
+   "nos": [
+    "용인시공고제2026-2982호"
+   ],
+   "parts": [
+    {
+     "mgt": "148713",
+     "title": "용인 첨단시스템반도체 클러스터 국가산업단지 개발사업(본공사) 착공 등의 공개 공고",
+     "no": "용인시 공고 제2026-2982호",
+     "dept": "반도체국가산단과",
+     "date": "2026-10-28",
+     "until": "2031-12-31"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=148713"
+>>>>>>> Stashed changes
   },
   {
    "src": "용인시 보도자료",
@@ -140,13 +193,28 @@
   },
   {
    "src": "용인시 고시·공고",
+   "via": "새올",
    "date": "2026-10-26",
-   "org": "용인특례시 · 용인시보 제2026-193호",
+   "org": "용인특례시 반도체국가산단과",
    "no": "용인시 공고 제2026-2936호",
    "title": "공시송달 공고[용인 첨단시스템반도체 클러스터 국가산업단지 수용재결]",
    "scope": "town",
    "cat": "comp",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20261026184322998#2026-2936"
+   "until": "2026-11-09",
+   "nos": [
+    "용인시공고제2026-2936호"
+   ],
+   "parts": [
+    {
+     "mgt": "148573",
+     "title": "공시송달 공고[용인 첨단시스템반도체 클러스터 국가산업단지 수용재결]",
+     "no": "용인시 공고 제2026-2936호",
+     "dept": "반도체국가산단과",
+     "date": "2026-10-26",
+     "until": "2026-11-09"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=148573"
   },
   {
    "src": "용인시 보도자료",
@@ -204,23 +272,55 @@
   },
   {
    "src": "용인시 고시·공고",
+   "via": "새올",
    "date": "2026-10-22",
-   "org": "용인특례시 · 용인시보 제2026-191호",
-   "no": "용인시 공고 제2026-2915호 외 2건",
-   "title": "재결서 정본 공시송달 공고(용인 첨단시스템반도체 클러스터 국가산업단지) 1·6·8차 (3건)",
+   "org": "용인특례시 반도체국가산단과",
+   "no": "용인시 공고 제2026-2915호 외 3건",
+   "title": "재결서 정본 공시송달 공고(용인 첨단시스템반도체 클러스터 국가산업단지) 1·6·8·10차 (4건)",
    "scope": "town",
    "cat": "comp",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20261022194301069#2026-2915"
-  },
-  {
-   "src": "용인시 고시·공고",
-   "date": "2026-10-22",
-   "org": "용인특례시 · 용인시보 제2026-191호",
-   "no": "용인시 공고 제2026-2918호",
-   "title": "재결서 정본 공시송달 의뢰(용인 첨단시스템반도체 클러스터 국가산업단지, 10차 26수용0611)",
-   "scope": "town",
-   "cat": "comp",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20261022194301069#2026-2918"
+   "until": "2026-11-06",
+   "nos": [
+    "용인시공고제2026-2915호",
+    "용인시공고제2026-2916호",
+    "용인시공고제2026-2917호",
+    "용인시공고제2026-2918호"
+   ],
+   "parts": [
+    {
+     "mgt": "148502",
+     "title": "재결서 정본 공시송달 공고(용인 첨단시스템반도체 클러스터 국가산업단지, 1차 26경정0156)",
+     "no": "용인시 공고 제2026-2915호",
+     "dept": "반도체국가산단과",
+     "date": "2026-10-22",
+     "until": "2026-11-06"
+    },
+    {
+     "mgt": "148503",
+     "title": "재결서 정본 공시송달 공고(용인 첨단시스템반도체 클러스터 국가산업단지, 6차 26경정0171)",
+     "no": "용인시 공고 제2026-2916호",
+     "dept": "반도체국가산단과",
+     "date": "2026-10-22",
+     "until": "2026-11-06"
+    },
+    {
+     "mgt": "148505",
+     "title": "재결서 정본 공시송달 공고(용인 첨단시스템반도체 클러스터 국가산업단지, 8차 26수용0609)",
+     "no": "용인시 공고 제2026-2917호",
+     "dept": "반도체국가산단과",
+     "date": "2026-10-22",
+     "until": "2026-11-06"
+    },
+    {
+     "mgt": "148506",
+     "title": "재결서 정본 공시송달 공고(용인 첨단시스템반도체 클러스터 국가산업단지, 10차 26수용0611)",
+     "no": "용인시 공고 제2026-2918호",
+     "dept": "반도체국가산단과",
+     "date": "2026-10-22",
+     "until": "2026-11-06"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=148502"
   },
   {
    "src": "용인시 보도자료",
@@ -266,6 +366,31 @@
    "title": "[농촌테마파크] 용인농촌테마파크 가을 축제 (10/24~25일)",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261021080516136"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-10-21",
+   "org": "용인특례시 농업정책과",
+   "no": "용인시 공고 제2026-2912호",
+   "title": "[공고]농업생산기반시설의 사용허가 신청에 따른 주민의견 청취[송전리 1051 외 3필지]",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "2026-11-04",
+   "nos": [
+    "용인시공고제2026-2912호"
+   ],
+   "parts": [
+    {
+     "mgt": "148488",
+     "title": "[공고]농업생산기반시설의 사용허가 신청에 따른 주민의견 청취[송전리 1051 외 3필지]",
+     "no": "용인시 공고 제2026-2912호",
+     "dept": "농업정책과",
+     "date": "2026-10-21",
+     "until": "2026-11-04"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=148488"
   },
   {
    "src": "용인시 보도자료",
@@ -448,13 +573,73 @@
   },
   {
    "src": "용인시 고시·공고",
+   "via": "새올",
    "date": "2026-10-16",
-   "org": "용인특례시 · 용인시보 제2026-187호",
+   "org": "용인특례시 반도체국가산단과",
    "no": "용인시 공고 제2026-2858호 외 5건",
    "title": "수용재결신청서 열람공고[용인 첨단시스템반도체 클러스터 국가산업단지] 16·17·18·19·20·21차 (6건)",
    "scope": "town",
    "cat": "comp",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20261016190559798#2026-2858"
+   "until": "2026-11-02",
+   "nos": [
+    "용인시공고제2026-2858호",
+    "용인시공고제2026-2859호",
+    "용인시공고제2026-2860호",
+    "용인시공고제2026-2861호",
+    "용인시공고제2026-2862호",
+    "용인시공고제2026-2863호"
+   ],
+   "parts": [
+    {
+     "mgt": "148258",
+     "title": "수용재결신청서 열람공고[용인 첨단시스템반도체 클러스터 국가산업단지, 16차, 26수용0914]",
+     "no": "용인시 공고 제2026-2858호",
+     "dept": "반도체국가산단과",
+     "date": "2026-10-16",
+     "until": "2026-11-02"
+    },
+    {
+     "mgt": "148259",
+     "title": "수용재결신청서 열람공고[용인 첨단시스템반도체 클러스터 국가산업단지, 17차, 26수용0915]",
+     "no": "용인시 공고 제2026-2859호",
+     "dept": "반도체국가산단과",
+     "date": "2026-10-16",
+     "until": "2026-11-02"
+    },
+    {
+     "mgt": "148260",
+     "title": "수용재결신청서 열람공고[용인 첨단시스템반도체 클러스터 국가산업단지, 18차, 26수용0916]",
+     "no": "용인시 공고 제2026-2860호",
+     "dept": "반도체국가산단과",
+     "date": "2026-10-16",
+     "until": "2026-11-02"
+    },
+    {
+     "mgt": "148261",
+     "title": "수용재결신청서 열람공고[용인 첨단시스템반도체 클러스터 국가산업단지, 19차, 26수용0917]",
+     "no": "용인시 공고 제2026-2861호",
+     "dept": "반도체국가산단과",
+     "date": "2026-10-16",
+     "until": "2026-11-02"
+    },
+    {
+     "mgt": "148262",
+     "title": "수용재결신청서 열람공고[용인 첨단시스템반도체 클러스터 국가산업단지, 20차, 26수용0918]",
+     "no": "용인시 공고 제2026-2862호",
+     "dept": "반도체국가산단과",
+     "date": "2026-10-16",
+     "until": "2026-11-02"
+    },
+    {
+     "mgt": "148263",
+     "title": "수용재결신청서 열람공고[용인 첨단시스템반도체 클러스터 국가산업단지, 21차, 26수용0919]",
+     "no": "용인시 공고 제2026-2863호",
+     "dept": "반도체국가산단과",
+     "date": "2026-10-16",
+     "until": "2026-11-02"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=148258"
   },
   {
    "src": "용인시 보도자료",
@@ -797,6 +982,14 @@
    "url": "https://www.cheoingu.go.kr/home/boardView.do?brd_mgrno=275&menu_no=1667&brd_no=84860"
   },
   {
+   "src": "LH 보상공고",
+   "date": "2026-10-02",
+   "org": "LH",
+   "no": "",
+   "title": "[보상계획] 국지도 84호선 중리~천리 도로개설공사 수용재결 공시송달 공고",
+   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=734313"
+  },
+  {
    "src": "용인시 보도자료",
    "date": "2026-10-02",
    "org": "용인특례시",
@@ -940,13 +1133,28 @@
   },
   {
    "src": "용인시 고시·공고",
+   "via": "새올",
    "date": "2026-09-22",
-   "org": "용인특례시 · 용인시보 제2026-174호",
+   "org": "용인특례시 반도체국가산단과",
    "no": "용인시 공고 제2026-2700호",
    "title": "용인 첨단시스템반도체 클러스터 국가산업단지 개발사업 착공 등의 공개 공고",
    "scope": "town",
    "cat": "gosi",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260922190400423#2026-2700"
+   "until": "2031-12-31",
+   "nos": [
+    "용인시공고제2026-2700호"
+   ],
+   "parts": [
+    {
+     "mgt": "147758",
+     "title": "용인 첨단시스템반도체 클러스터 국가산업단지 개발사업 착공 등의 공개 공고",
+     "no": "용인시 공고 제2026-2700호",
+     "dept": "반도체국가산단과",
+     "date": "2026-09-22",
+     "until": "2031-12-31"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=147758"
   },
   {
    "src": "LH 보상공고",
@@ -959,22 +1167,40 @@
   {
    "src": "용인시 고시·공고",
    "date": "2026-09-18",
-   "org": "용인특례시 · 용인시보 제2026-172호",
-   "no": "용인시 고시 제2026-526호",
-   "title": "농어촌도로의 노선 지정(변경)에 관한 공고 및 고시(남사읍 삼인선(리도 205호) 개설공사)",
-   "scope": "town",
-   "cat": "gosi",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260918174938803#2026-526"
-  },
-  {
-   "src": "용인시 고시·공고",
-   "date": "2026-09-18",
    "org": "용인특례시 · 용인시보 제2026-171호",
    "no": "용인시 공고 제2026-2660호",
    "title": "공시송달공고[용인 첨단시스템반도체 클러스터 국가산업단지]",
    "scope": "town",
    "cat": "comp",
+   "nos": [
+    "용인시공고제2026-2660호"
+   ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260918142920683#2026-2660"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-09-18",
+   "org": "용인특례시 건설정책과",
+   "no": "용인시 고시 제2026-526호",
+   "title": "[고시] 농어촌도로의 노선 지정(변경)에 관한 공고 및 고시[남사읍 삼인선(리도 205호) 개설공사]",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시고시제2026-526호"
+   ],
+   "parts": [
+    {
+     "mgt": "147719",
+     "title": "[고시] 농어촌도로의 노선 지정(변경)에 관한 공고 및 고시[남사읍 삼인선(리도 205호) 개설공사]",
+     "no": "용인시 고시 제2026-526호",
+     "dept": "건설정책과",
+     "date": "2026-09-18",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=147719"
   },
   {
    "src": "남사읍 소식",
@@ -988,21 +1214,66 @@
    "src": "용인시 고시·공고",
    "date": "2026-09-09",
    "org": "용인특례시 · 용인시보 제2026-166호",
-   "no": "용인시 고시 제2026-511호",
-   "title": "[고시] 농어촌도로의 노선 지정에 관한 정정 공고 및 고시[남사읍 중동선(농도 314호선)]",
-   "scope": "town",
-   "cat": "gosi",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260909200319646#2026-511"
-  },
-  {
-   "src": "용인시 고시·공고",
-   "date": "2026-09-09",
-   "org": "용인특례시 · 용인시보 제2026-166호",
    "no": "용인시 공고 제2026-2585호 외 2건",
    "title": "재결서정본 공시송달[용인 첨단시스템반도체 클러스터 국가산업단지] 2·3·6차 (3건)",
    "scope": "town",
    "cat": "comp",
+   "nos": [
+    "용인시공고제2026-2585호",
+    "용인시공고제2026-2586호",
+    "용인시공고제2026-2587호"
+   ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260909200319646#2026-2585"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-09-09",
+   "org": "용인특례시 건설정책과",
+   "no": "용인시 고시 제2026-511호",
+   "title": "[고시] 농어촌도로의 노선 지정에 관한 정정 공고 및 고시[남사읍 중동선(농도 314호선)]",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시고시제2026-511호"
+   ],
+   "parts": [
+    {
+     "mgt": "147431",
+     "title": "[고시] 농어촌도로의 노선 지정에 관한 정정 공고 및 고시[남사읍 중동선(농도 314호선)]",
+     "no": "용인시 고시 제2026-511호",
+     "dept": "건설정책과",
+     "date": "2026-09-09",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=147431"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-09-08",
+   "org": "용인특례시 도시건축2과",
+   "no": "용인시 처인구 공고 제2026-1050호",
+   "title": "도로지정 공고[천리66-6]",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시처인구공고제2026-1050호"
+   ],
+   "parts": [
+    {
+     "mgt": "147412",
+     "title": "도로지정 공고[천리66-6]",
+     "no": "용인시 처인구 공고 제2026-1050호",
+     "dept": "도시건축2과",
+     "date": "2026-09-08",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=147412"
   },
   {
    "src": "LH 청약·임대",
@@ -1028,7 +1299,60 @@
    "title": "공시송달공고[용인 첨단시스템반도체 클러스터 국가산업단지 수용재결]",
    "scope": "town",
    "cat": "comp",
+   "nos": [
+    "용인시공고제2026-2558호"
+   ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260907223710422#2026-2558"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-09-07",
+   "org": "용인특례시 도시정비과",
+   "no": "용인시 고시 제2026-503호",
+   "title": "천리지구 내 도시계획시설(중로 2-1호, 중로 3-1호) 사업시행자 지정 및 실시계획 인가",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시고시제2026-503호"
+   ],
+   "parts": [
+    {
+     "mgt": "147341",
+     "title": "천리지구 내 도시계획시설(중로 2-1호, 중로 3-1호) 사업시행자 지정 및 실시계획 인가",
+     "no": "용인시 고시 제2026-503호",
+     "dept": "도시정비과",
+     "date": "2026-09-07",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=147341"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-09-07",
+   "org": "용인특례시 도시정비과",
+   "no": "용인시 고시 제2026-504호",
+   "title": "천리지구 내 도시계획시설(근린공원, 유수지) 사업시행자 지정 및 실시계획 인가",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시고시제2026-504호"
+   ],
+   "parts": [
+    {
+     "mgt": "147342",
+     "title": "천리지구 내 도시계획시설(근린공원, 유수지) 사업시행자 지정 및 실시계획 인가",
+     "no": "용인시 고시 제2026-504호",
+     "dept": "도시정비과",
+     "date": "2026-09-07",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=147342"
   },
   {
    "src": "LH 보도자료",
@@ -1040,13 +1364,28 @@
   },
   {
    "src": "용인시 고시·공고",
+   "via": "새올",
    "date": "2026-08-24",
-   "org": "용인특례시 · 용인시보 제2026-154호",
+   "org": "용인특례시 공원조성과",
    "no": "용인시 고시 제2026-474호",
    "title": "공원조성계획 결정고시(송전3지구 근린공원)",
    "scope": "town",
    "cat": "gosi",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260824185439059#2026-474"
+   "until": "",
+   "nos": [
+    "용인시고시제2026-474호"
+   ],
+   "parts": [
+    {
+     "mgt": "146942",
+     "title": "공원조성계획 결정고시(송전3지구 근린공원)",
+     "no": "용인시 고시 제2026-474호",
+     "dept": "공원조성과",
+     "date": "2026-08-24",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=146942"
   },
   {
    "src": "토지이음 고시",
@@ -1072,6 +1411,13 @@
    "title": "수용재결신청서 열람공고(용인 첨단시스템반도체 국가산업단지) 11·12·13·14·15차 (5건)",
    "scope": "town",
    "cat": "comp",
+   "nos": [
+    "용인시공고제2026-2331호",
+    "용인시공고제2026-2331호",
+    "용인시공고제2026-2331호",
+    "용인시공고제2026-2331호",
+    "용인시공고제2026-2331호"
+   ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260807175004080#2026-2331"
   },
   {
@@ -1082,6 +1428,9 @@
    "title": "용인 첨단시스템반도체 클러스터 국가산업단지 지구외송전선로(임시)이설사업 관련 사업인정에 대한 이해관계자의 의견청취 공고",
    "scope": "town",
    "cat": "comp",
+   "nos": [
+    "용인시공고제2026-2295호"
+   ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260804190555580#2026-2295"
   },
   {
@@ -1092,6 +1441,9 @@
    "title": "주민 등의 의견 청취 재공고 [농어촌도로 남사읍 중동선(농도 314호선)]",
    "scope": "town",
    "cat": "gosi",
+   "nos": [
+    "용인시공고제2026-2294호"
+   ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260804190415237#2026-2294"
   },
   {
@@ -1112,13 +1464,28 @@
   },
   {
    "src": "용인시 고시·공고",
+   "via": "새올",
    "date": "2026-07-29",
-   "org": "용인특례시 · 용인시보 제2026-137호",
+   "org": "용인특례시 건설정책과",
    "no": "용인시 고시 제2026-430호",
-   "title": "농어촌도로의 노선 지정(변경)에 관한 공고 및 지형도면 고시[이동읍 이원선(리도 211호선) 2구간]",
+   "title": "[고시] 농어촌도로의 노선 지정(변경)에 관한 공고 및 지형도면 고시[이동읍 이원선(리도 211호선) 2구간]",
    "scope": "town",
    "cat": "gosi",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260729193149972#2026-430"
+   "until": "",
+   "nos": [
+    "용인시고시제2026-430호"
+   ],
+   "parts": [
+    {
+     "mgt": "146243",
+     "title": "[고시] 농어촌도로의 노선 지정(변경)에 관한 공고 및 지형도면 고시[이동읍 이원선(리도 211호선) 2구간]",
+     "no": "용인시 고시 제2026-430호",
+     "dept": "건설정책과",
+     "date": "2026-07-29",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=146243"
   },
   {
    "src": "토지이음 고시",
@@ -1127,6 +1494,31 @@
    "no": "경기도 용인시 고시 제2026-434호",
    "title": "[변경] 이동2구역 주거환경개선사업 정비계획(경미한 사항) 변경 및 사업시행계획(경미한 사항) 변경 고시",
    "url": "https://www.eum.go.kr/web/gs/gv/gvGosiDet.jsp?seq=640916"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-07-28",
+   "org": "용인특례시 주택정비과",
+   "no": "용인시 고시 제2026-434호",
+   "title": "이동2구역 주거환경개선사업 정비계획(경미한 사항) 변경 및 사업시행계획(경미한 사항) 변경 고시",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시고시제2026-434호"
+   ],
+   "parts": [
+    {
+     "mgt": "146287",
+     "title": "이동2구역 주거환경개선사업 정비계획(경미한 사항) 변경 및 사업시행계획(경미한 사항) 변경 고시",
+     "no": "용인시 고시 제2026-434호",
+     "dept": "주택정비과",
+     "date": "2026-07-28",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=146287"
   },
   {
    "src": "남사읍 소식",
@@ -1144,6 +1536,11 @@
    "title": "수용재결신청서 열람공고[용인 첨단시스템반도체 클러스터 국가산업단지] 8·9·10차 (3건)",
    "scope": "town",
    "cat": "comp",
+   "nos": [
+    "용인시공고제2026-2193호",
+    "용인시공고제2026-2194호",
+    "용인시공고제2026-2195호"
+   ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260720190710936#2026-2193"
   },
   {
@@ -1154,6 +1551,9 @@
    "title": "공시송달공고(용인 첨단시스템반도체 클러스터 국가산업단지)",
    "scope": "town",
    "cat": "comp",
+   "nos": [
+    "용인시공고제2026-2187호"
+   ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260720185859114#2026-2187"
   },
   {
@@ -1204,6 +1604,11 @@
    "title": "수용재결신청서 열람공고[용인 첨단시스템반도체 클러스터 국가산업단지] 5·6·7차 (3건)",
    "scope": "town",
    "cat": "comp",
+   "nos": [
+    "용인시공고제2026-1792호",
+    "용인시공고제2026-1793호",
+    "용인시공고제2026-1794호"
+   ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260607143206421#2026-1792"
   },
   {
@@ -1238,6 +1643,9 @@
    "title": "사업인정에 관한 주민 등의 의견 청취 공고 [농어촌도로 남사읍 중동선(농도 314호선)]",
    "scope": "town",
    "cat": "comp",
+   "nos": [
+    "용인시공고제2026-1481호"
+   ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260504170240746#2026-1481"
   },
   {
@@ -1248,6 +1656,9 @@
    "title": "수용재결신청서 열람공고 [용인 첨단시스템반도체 클러스터 국가산업단지(2차, 26수용0345)]",
    "scope": "town",
    "cat": "comp",
+   "nos": [
+    "용인시공고제2026-1459호"
+   ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260430184825578#2026-1459"
   },
   {
@@ -1258,6 +1669,10 @@
    "title": "수용재결신청서 열람공고[용인 첨단시스템반도체 클러스터 국가산업단지] 3·4차 (2건)",
    "scope": "town",
    "cat": "comp",
+   "nos": [
+    "용인시공고제2026-1460호",
+    "용인시공고제2026-1461호"
+   ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260430184825578#2026-1460"
   },
   {
@@ -1270,13 +1685,266 @@
   },
   {
    "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-04-28",
+   "org": "용인특례시 도시정책과",
+   "no": "용인시 고시 제2026-251호",
+   "title": "[고시] 천리지구 지구단위계획 결정(변경) 고시",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시고시제2026-251호"
+   ],
+   "parts": [
+    {
+     "mgt": "143531",
+     "title": "[고시] 천리지구 지구단위계획 결정(변경) 고시",
+     "no": "용인시 고시 제2026-251호",
+     "dept": "도시정책과",
+     "date": "2026-04-28",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=143531"
+  },
+  {
+   "src": "용인시 고시·공고",
    "date": "2026-04-24",
    "org": "용인특례시 · 용인시보 제2026-76호",
    "no": "용인시 공고 제2026-1411호",
    "title": "사업인정에 관한 주민 등의 의견 청취 공고 [농어촌도로 이동읍 이원선(리도 211호)(2구간)]",
    "scope": "town",
    "cat": "comp",
+   "nos": [
+    "용인시공고제2026-1411호"
+   ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260424181851449#2026-1411"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-04-23",
+   "org": "용인특례시 공원조성과",
+   "no": "용인시 고시 제2026-226호",
+   "title": "공원조성계획 결정(변경) 고시(천리지구 근린공원)",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시고시제2026-226호"
+   ],
+   "parts": [
+    {
+     "mgt": "143301",
+     "title": "공원조성계획 결정(변경) 고시(천리지구 근린공원)",
+     "no": "용인시 고시 제2026-226호",
+     "dept": "공원조성과",
+     "date": "2026-04-23",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=143301"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-03-13",
+   "org": "용인특례시 공동주택과",
+   "no": "용인시 고시 제2026-135호",
+   "title": "주택건설사업계획변경승인 고시[용인천리지역주택조합 외 1, 천리지구]",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "2028-10-31",
+   "nos": [
+    "용인시고시제2026-135호"
+   ],
+   "parts": [
+    {
+     "mgt": "141996",
+     "title": "주택건설사업계획변경승인 고시[용인천리지역주택조합 외 1, 천리지구]",
+     "no": "용인시 고시 제2026-135호",
+     "dept": "공동주택과",
+     "date": "2026-03-13",
+     "until": "2028-10-31"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=141996"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-03-09",
+   "org": "용인특례시 건설정책과",
+   "no": "용인시 공고 제2026-823호",
+   "title": "도로관리청이 아닌 자의 도로공사 시행허가 공고(기간연장)[국도45호선 은화삼지구 기반시설 설치공사]",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "2026-12-31",
+   "nos": [
+    "용인시공고제2026-823호"
+   ],
+   "parts": [
+    {
+     "mgt": "141801",
+     "title": "도로관리청이 아닌 자의 도로공사 시행허가 공고(기간연장)[국도45호선 은화삼지구 기반시설 설치공사]",
+     "no": "용인시 공고 제2026-823호",
+     "dept": "건설정책과",
+     "date": "2026-03-09",
+     "until": "2026-12-31"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=141801"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-01-19",
+   "org": "용인특례시 도시정비과",
+   "no": "용인시 고시 제2026-27호",
+   "title": "[고시] 용인도시계획시설(이동 소로 2-18호) 실시계획 작성(변경)",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시고시제2026-27호"
+   ],
+   "parts": [
+    {
+     "mgt": "140125",
+     "title": "[고시] 용인도시계획시설(이동 소로 2-18호) 실시계획 작성(변경)",
+     "no": "용인시 고시 제2026-27호",
+     "dept": "도시정비과",
+     "date": "2026-01-19",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=140125"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2025-12-31",
+   "org": "용인특례시 건설정책과",
+   "no": "용인시 고시 제2025-759호",
+   "title": "지형도면 고시[이동읍 반곡선(농도310호) 2구간]",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시고시제2025-759호"
+   ],
+   "parts": [
+    {
+     "mgt": "139329",
+     "title": "지형도면 고시[이동읍 반곡선(농도310호) 2구간]",
+     "no": "용인시 고시 제2025-759호",
+     "dept": "건설정책과",
+     "date": "2025-12-31",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=139329"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2025-12-31",
+   "org": "용인특례시 생태하천과",
+   "no": "용인시 고시 제2025-767호",
+   "title": "송전천 생태하천 복원사업 실시계획(변경)인가 고시",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시고시제2025-767호"
+   ],
+   "parts": [
+    {
+     "mgt": "139346",
+     "title": "송전천 생태하천 복원사업 실시계획(변경)인가 고시",
+     "no": "용인시 고시 제2025-767호",
+     "dept": "생태하천과",
+     "date": "2025-12-31",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=139346"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2025-12-29",
+   "org": "용인특례시 주택정비과",
+   "no": "용인시 고시 제2025-762호",
+   "title": "이동2구역 주거환경개선사업 사업시행계획(경미한) 변경 고시",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시고시제2025-762호"
+   ],
+   "parts": [
+    {
+     "mgt": "139339",
+     "title": "이동2구역 주거환경개선사업 사업시행계획(경미한) 변경 고시",
+     "no": "용인시 고시 제2025-762호",
+     "dept": "주택정비과",
+     "date": "2025-12-29",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=139339"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2025-12-29",
+   "org": "용인특례시 건설정책과",
+   "no": "용인시 공고 제2025-3596호",
+   "title": "농어촌도로 노선 지정 공고[이동읍 반곡선(농도310호) 2구간]",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시공고제2025-3596호"
+   ],
+   "parts": [
+    {
+     "mgt": "139197",
+     "title": "농어촌도로 노선 지정 공고[이동읍 반곡선(농도310호) 2구간]",
+     "no": "용인시 공고 제2025-3596호",
+     "dept": "건설정책과",
+     "date": "2025-12-29",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=139197"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2025-12-24",
+   "org": "용인특례시 도시정비과",
+   "no": "용인시 고시 제2025-732호",
+   "title": "[고시] 용인도시관리계획(이동 소로 2-1호, 소로 2-26호, 소로 2-3호) 결정(변경) 및 실시계획 작성(변경)",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시고시제2025-732호"
+   ],
+   "parts": [
+    {
+     "mgt": "139166",
+     "title": "[고시] 용인도시관리계획(이동 소로 2-1호, 소로 2-26호, 소로 2-3호) 결정(변경) 및 실시계획 작성(변경)",
+     "no": "용인시 고시 제2025-732호",
+     "dept": "도시정비과",
+     "date": "2025-12-24",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=139166"
   },
   {
    "src": "LH 보상공고",
@@ -1285,6 +1953,31 @@
    "no": "",
    "title": "[대토보상] 용인 첨단시스템반도체 클러스터 국가산업단지 대토보상계획 공고",
    "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=728301"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2025-11-26",
+   "org": "용인특례시 공동주택과",
+   "no": "용인시 고시 제2025-629호",
+   "title": "도로지정 공고[해솔리아컨트리클럽(주), 이동읍 천리]",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시고시제2025-629호"
+   ],
+   "parts": [
+    {
+     "mgt": "137958",
+     "title": "도로지정 공고[해솔리아컨트리클럽(주), 이동읍 천리]",
+     "no": "용인시 고시 제2025-629호",
+     "dept": "공동주택과",
+     "date": "2025-11-26",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=137958"
   },
   {
    "src": "LH 공모·공고",
@@ -1303,6 +1996,14 @@
    "url": "https://www.lh.or.kr/board.es?mid=a10601020000&bid=0034&act=view&list_no=726759"
   },
   {
+   "src": "LH 보상공고",
+   "date": "2025-09-19",
+   "org": "LH",
+   "no": "",
+   "title": "[보상협의] 국지도 84호선 중리~천리 도로개설공사 손실보상협의 공시송달 공고",
+   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=728336"
+  },
+  {
    "src": "토지이음 고시",
    "date": "2025-08-08",
    "org": "경기도 건설국 하천과",
@@ -1317,6 +2018,22 @@
    "no": "",
    "title": "[보상계획] 용인 첨단시스템반도체 클러스터 국가산업단지 보상계획 및 열람 공고",
    "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=728374"
+  },
+  {
+   "src": "LH 보상공고",
+   "date": "2025-06-02",
+   "org": "LH",
+   "no": "",
+   "title": "[보상계획] 국지도 84호선 중리~천리 도로개설공사 보상계획 및 열람 공고(용인)",
+   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=728381"
+  },
+  {
+   "src": "LH 보상공고",
+   "date": "2025-06-02",
+   "org": "LH",
+   "no": "",
+   "title": "[보상계획] 국지도 84호선 중리~천리 도로개설공사 보상계획 및 열람 공고(화성)",
+   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=728380"
   },
   {
    "src": "토지이음 고시",
@@ -1375,6 +2092,14 @@
    "url": "https://www.eum.go.kr/web/gs/gv/gvGosiDet.jsp?seq=603797"
   },
   {
+   "src": "LH 보상공고",
+   "date": "2024-11-26",
+   "org": "LH",
+   "no": "",
+   "title": "[보상계획] 국지도 84호선 중리~천리 도로개설공사 보상계획 공고 및 열람안내",
+   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=728460"
+  },
+  {
    "src": "토지이음 고시",
    "date": "2024-09-02",
    "org": "경기도 용인시 도시정책실 도시개발과",
@@ -1422,5 +2147,79 @@
    "title": "[변경] 용인도시계획시설(천리지구 지구단위계획) 결정(변경)",
    "url": "https://www.eum.go.kr/web/gs/gv/gvGosiDet.jsp?seq=569887"
   }
+ ],
+ "eminwon_skip": [
+  "104823",
+  "109227",
+  "109350",
+  "110243",
+  "110369",
+  "110757",
+  "112082",
+  "112957",
+  "113044",
+  "114424",
+  "115940",
+  "116612",
+  "119277",
+  "11944",
+  "11945",
+  "121320",
+  "122312",
+  "123985",
+  "124145",
+  "124251",
+  "124513",
+  "124700",
+  "125593",
+  "125720",
+  "126310",
+  "127226",
+  "127228",
+  "127939",
+  "128228",
+  "128229",
+  "131648",
+  "132426",
+  "132957",
+  "133105",
+  "133652",
+  "133655",
+  "134494",
+  "134574",
+  "134653",
+  "134723",
+  "134767",
+  "135120",
+  "135300",
+  "135331",
+  "135343",
+  "135676",
+  "14267",
+  "146408",
+  "148492",
+  "16312",
+  "35579",
+  "37224",
+  "37502",
+  "37544",
+  "38919",
+  "41114",
+  "47542",
+  "54825",
+  "62059",
+  "71161",
+  "74856",
+  "77602",
+  "85695",
+  "86206",
+  "86622",
+  "87285",
+  "89403",
+  "91902",
+  "92490",
+  "93893",
+  "97280",
+  "97759"
  ]
 }

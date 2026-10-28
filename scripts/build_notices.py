@@ -16,6 +16,8 @@
    네이버 검색에 함께 나오는 계약정보·기업지원·수지구청·시의회 소식지·문화재단·평생학습관은 동네 주민 소식이 아니라 넣지 않았다.
 6. 용인시보의 고시·공고 줄(2026-10-28): 수용재결신청서 열람공고·재결서 공시송달처럼 용인시가 내는 국가산단 보상 공고는
    이 줄로만 나온다. 이동·남사·국가산단 관련만 src "용인시 고시·공고", 보상 절차면 cat "comp"(화면 '보상' 탭), 아니면 cat "gosi"('공식 고시' 탭).
+7. 용인시 새올 고시공고(eminwon.yongin.go.kr, 2026-10-29): 6번의 원래 게시판. 같은 src에 via "새올", 게재기간 끝 날짜 until(열람·의견 마감).
+   시보는 새올에서 이미 사라진 지난 공고(게재기간 끝남)를 채우는 용도로 남긴다. 공고번호(nos)가 같으면 새올 쪽만.
 처인구청 서버는 오래된 TLS 설정이라 파이썬 기본값으로는 접속이 안 된다 → 보안 수준을 한 단계 낮춘 연결을 쓴다.
 """
 import base64
@@ -51,7 +53,11 @@ BOARDS = [("이동읍", 274, 1666), ("남사읍", 275, 1667)]
 LH_BOARDS = [("LH 보상공고", "board", "a10403170500", "0060"),  # 보상계획·열람, 대토보상, 분묘 개장 — 원주민에게 가장 중요
              ("LH 보도자료", "gallery", "a10502000000", "0003"), ("LH 공모·공고", "board", "a10601020000", "0034"),
              ("LH 공지", "board", "a10601010000", "0033")]
+# 국지도84호선 중리~천리(이동읍 천리 통과) 보상 공고는 제목에 '용인'이 없다(2026-10-29 조사, 10-02 수용재결 공시송달 등 3건 빠져 있었음)
+# → 보상공고 게시판은 '천리'로 한 번 더 찾고, 제목 규칙에도 넣는다
 LH_KEEP = re.compile(r"용인.{0,6}(반도체|국가산|첨단시스템)|용인이동|이동읍|남사")
+LH_KEEP_RECENT = re.compile(r"중리.{0,4}천리")  # 2016년부터 공고가 이어진 사업이라 최근 2년 것만
+LH_EXTRA_KW = {"LH 보상공고": ["%EC%B2%9C%EB%A6%AC"]}  # 천리
 
 LEGACY_TLS = ssl.create_default_context()
 LEGACY_TLS.set_ciphers("DEFAULT@SECLEVEL=1")
@@ -117,11 +123,13 @@ def boards():
 
 
 def lh():
-    out = []
+    out, lh_cut = [], (datetime.now(KST) - timedelta(days=730)).strftime("%Y-%m-%d")
     for src, act, mid, bid in LH_BOARDS:
         # 게시판은 쪽당 10건만 준다 → '용인' 검색 결과를 3쪽까지 읽는다(2025-06 국가산단 보상계획 공고가 2쪽에 있었다)
         page = "".join(get(f"https://www.lh.or.kr/{act}.es?mid={mid}&bid={bid}&act=list&nPage={n}&b_list=30"
                            f"&keyField=T&keyWord=%EC%9A%A9%EC%9D%B8") for n in (1, 2, 3))
+        page += "".join(get(f"https://www.lh.or.kr/{act}.es?mid={mid}&bid={bid}&act=list&nPage=1&b_list=30&keyField=T&keyWord={kw}")
+                        for kw in LH_EXTRA_KW.get(src, []))
         if act == "board":
             for r in rows(page):
                 m = re.search(r"goView3\('(\d+)'", r)
@@ -132,7 +140,7 @@ def lh():
                 kind = text((re.search(r'aria-label="분류">(.*?)</td>', r, re.S) or [None, ""])[1])
                 if kind and src == "LH 보상공고":
                     title = f"[{kind}] {title}"
-                if m and LH_KEEP.search(title):
+                if m and (LH_KEEP.search(title) or (LH_KEEP_RECENT.search(title) and date >= lh_cut)):
                     out.append({"src": src, "date": date, "org": f"LH {org}".strip(), "no": "", "title": title,
                                 "url": f"https://www.lh.or.kr/{act}.es?mid={mid}&bid={bid}&act=view&list_no={m.group(1)}"})
         else:
@@ -263,7 +271,12 @@ def yongin_gazette():
         prev = []
     sibo, done = [], False
     for p in range(1, 61):  # 날짜가 cutoff보다 오래되면 멈춘다(쪽당 1주일 남짓 — 처음 채울 때 200일이면 30쪽쯤)
-        page = get(f"{YONGIN}BD_selectBbsList.do?q_bbsCode=1001&q_rowPerPage=50&q_currPage={p}", ctx=LEGACY_TLS)
+        lst = f"{YONGIN}BD_selectBbsList.do?q_bbsCode=1001&q_rowPerPage=50&q_currPage={p}"
+        try:
+            page = get(lst, ctx=LEGACY_TLS)
+        except Exception:  # 목록도 해외 서버에서 가끔 느리다 → 한 번 더
+            time.sleep(5)
+            page = get(lst, ctx=LEGACY_TLS)
         for r in rows(page):
             m = re.search(r'q_bbscttSn=(\d+)[^"]*"[^>]*>(용인시보[^<]*)</a>', r)
             if not m:
@@ -275,9 +288,23 @@ def yongin_gazette():
         if done:
             break
         time.sleep(0.5)
+    # GitHub(해외) 서버에서는 시청 서버가 가끔 30초 안에 답을 못 한다(10-28 첫 실행에서 timeout) → 글마다 두 번까지 다시 묻고,
+    # 그래도 안 되면 그 시보만 지난 결과를 쓴다. 전부 안 되면 출처 실패(main이 지난 결과 전체 유지 + 실패 메일)
+    missed = []
     for sn, name in sibo:
         url = f"{YONGIN}BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn={sn}"
-        body = body_yongin(get(url, ctx=LEGACY_TLS), url)["text"]
+        for attempt in range(3):
+            try:
+                body = body_yongin(get(url, ctx=LEGACY_TLS), url)["text"]
+                break
+            except Exception as e:
+                err = e
+                time.sleep(5)
+        else:
+            missed.append(sn)
+            print(f"  용인시보 {name[:16]} 못 받음({err}) → 지난 결과", file=sys.stderr)
+            out += [x for x in prev if x.get("src") == "용인시 고시·공고" and x["url"].startswith(url + "#")]
+            continue
         groups = {}
         for line in body.split("\n"):
             g = GAZETTE_LINE.match(line.strip())
@@ -295,10 +322,118 @@ def yongin_gazette():
             out.append({"src": "용인시 고시·공고", "date": f"{sn[:4]}-{sn[4:6]}-{sn[6:8]}",
                         "org": f"용인특례시 · 용인시보 제{num.group(1)}호" if num else "용인특례시 · 용인시보", "no": no,
                         "title": title, "scope": "town", "cat": "comp" if GAZETTE_COMP.search(base) else "gosi",
-                        "url": f"{url}#{got[0][1]}"})
+                        "nos": [re.sub(r"\s", "", n) for n, _, _ in got], "url": f"{url}#{got[0][1]}"})
         time.sleep(0.3)
+    if sibo and len(missed) == len(sibo):
+        raise RuntimeError(f"시보 {len(sibo)}건 모두 못 받음: {err}")
     cut = f"{cutoff[:4]}-{cutoff[4:6]}-{cutoff[6:8]}"
-    return out + [x for x in prev if x.get("src") == "용인시 고시·공고" and x["date"] < cut]
+    return out + [x for x in prev if x.get("src") == "용인시 고시·공고" and x.get("via") != "새올" and x["date"] < cut]
+
+
+# 용인시 새올 고시공고(2026-10-29, 조사 기획/조사-빠진-공식출처-2026-10-28.md 1위): 용인시·처인구 고시·공고의 원래 게시판.
+# 시보보다 하루 빠르고, 시보에 안 실리는 공고도 있고, 목록의 '게재기간' 끝 날짜가 열람·의견 제출 마감이다 → until로 화면에 보인다.
+# 게재기간이 끝난 공고는 목록에서 사라진다 → 한 번 받은 공고(parts)는 지난 결과에서 계속 들고 간다.
+# 목록 제목은 40자쯤에서 잘리므로 제목 검색은 서버에 맡기고(EMINWON_Q), 처음 보는 공고만 상세에서 전체 제목을 받는다.
+# 시보에서 온 같은 공고(공고번호가 같은 것)는 main에서 지운다. 검색 한 번에 10초쯤 걸린다(10-29 PC 실측).
+EMINWON = "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do"
+EMINWON_Q = ["첨단시스템", "국가산업단지", "이동읍", "이동 소로", "이동(송전)", "이동2구역", "남사읍", "송전", "천리",
+             "45호선", "82호선", "84호선", "용인이동", "공공주택지구"]
+EMINWON_AREA = re.compile(r"이동읍|남사읍|이동\s?소로|이동\(송전\)|이동2구역|(?<!삼)천리|송전(?!선로|탑)|45호선|82호선|84호선|용인이동")
+EMINWON_NOISE = re.compile(r"이동제한|이동식|남사관리소|평가위원|선정결과|삼천리")
+# '송전'은 송전리·송전지구이기도 하고 전력 송전선로이기도 하다(10-29 첫 실행: 고림분기·고덕-서안성 송전선로가 걸림)
+# → 송전선로·철탑은 이동·남사·국가산단 말이 함께 있을 때만(국가산단 지구외송전선로 이설은 남는다)
+EMINWON_POWER = re.compile(r"송전선로|송전탑|철탑")
+EMINWON_DAYS = 365  # 게재기간 없는 고시는 몇 년 치가 목록에 남아 있다 → 1년 안 공고와 아직 기간이 남은 공고만
+
+
+def eminwon_keep(title):
+    if EMINWON_NOISE.search(title) or (GAZETTE_SKIP.search(title) and not re.search("이동|남사", title)):
+        return False
+    if EMINWON_POWER.search(title):
+        return bool(re.search(r"이동읍|남사|국가산업단지|국가산단|반도체", title))
+    return bool(EMINWON_AREA.search(title) or TOWN.search(title.replace("송전선로", "")))
+
+
+def eminwon_url(**kw):
+    base = {"jndinm": "OfrNotAncmtEJB", "context": "NTIS", "homepage_pbs_yn": "Y", "subCheck": "Y", "not_ancmt_se_code": "01,04"}
+    return EMINWON + "?" + urllib.parse.urlencode({**base, **kw})
+
+
+def eminwon_detail_url(mgt):
+    return eminwon_url(method="selectOfrNotAncmt", methodnm="selectOfrNotAncmtRegst", not_ancmt_mgt_no=mgt)
+
+
+def get_twice(url):
+    try:
+        return get(url)
+    except Exception:
+        time.sleep(5)
+        return get(url)
+
+
+EMINWON_SKIP = set()  # 상세를 보고 거른 공고 관리번호 — main이 notices.json 'eminwon_skip'에 적어 다음 실행에 다시 안 받는다
+
+
+def yongin_eminwon():
+    try:
+        old = json.loads(OUT.read_text(encoding="utf-8"))
+    except Exception:
+        old = {}
+    prev = old.get("items", [])
+    EMINWON_SKIP.update(old.get("eminwon_skip", []))
+    parts = {p["mgt"]: p for x in prev if x.get("via") == "새올" for p in x.get("parts", [])}
+    found, fails = {}, []
+    for q in EMINWON_Q:
+        try:
+            page = get_twice(eminwon_url(method="selectListOfrNotAncmt", methodnm="selectListOfrNotAncmtHomepage",
+                                         not_ancmt_sj=q, pageIndex=1, ofr_pageSize=50))
+        except Exception as e:
+            fails.append(f"{q}: {e}")
+            continue
+        for r in re.findall(r"<tr.*?</tr>", page, re.S):
+            m = re.search(r"searchDetail\('(\d+)'\)", r)
+            tds = [text(t) for t in re.findall(r"<td[^>]*>(.*?)</td>", r, re.S)]
+            if m and len(tds) >= 6:
+                found[m.group(1)] = {"no": tds[1], "dept": tds[3], "date": tds[4],
+                                     "until": (re.search(r"~\s*(\d{4}-\d{2}-\d{2})", tds[5]) or [None, ""])[1]}
+        time.sleep(0.3)
+    if len(fails) == len(EMINWON_Q):
+        raise RuntimeError("검색 모두 실패: " + fails[0])
+    if fails:
+        print(f"  새올 검색 {len(fails)}건 실패(다음 실행에 다시): {fails[0][:80]}", file=sys.stderr)
+    for mgt, row in found.items():
+        if mgt in parts:
+            parts[mgt]["until"] = row["until"]
+            continue
+        if mgt in EMINWON_SKIP:
+            continue
+        try:
+            page = get_twice(eminwon_detail_url(mgt))
+        except Exception as e:
+            print(f"  새올 {row['no']} 상세 못 받음({e}) → 다음 실행에", file=sys.stderr)
+            continue
+        parts[mgt] = {"mgt": mgt, "title": text((re.search(r"<h3[^>]*>(.*?)</h3>", page, re.S) or [None, ""])[1]), **row}
+        time.sleep(0.3)
+    # 거르기는 들고 있는 공고 전부에 매번 다시 한다(규칙을 고치면 지난 공고에도 바로 적용). 거른 공고는 다음부터 상세를 안 받는다
+    old_cut, today = (datetime.now(KST) - timedelta(days=EMINWON_DAYS)).strftime("%Y-%m-%d"), datetime.now(KST).strftime("%Y-%m-%d")
+    for mgt, p in list(parts.items()):
+        if not eminwon_keep(p["title"]) or (p["date"] < old_cut and p.get("until", "") < today):
+            EMINWON_SKIP.add(mgt)
+            del parts[mgt]
+    # 차수만 다른 같은 날 공고는 한 건으로(시보와 같은 규칙)
+    groups = {}
+    for p in sorted(parts.values(), key=lambda p: p["no"]):
+        base = re.sub(r"\(\s*\)|\[\s*\]", "", re.sub(r"\s*,\s*(?=[\])])", "", GAZETTE_ROUND.sub("", p["title"])))
+        groups.setdefault((p["date"], base), []).append(p)
+    out = []
+    for (date, base), got in groups.items():
+        rounds = [r for p in got for r in re.findall(r"(\d+(?:~\d+)?)\s*(?:회차|차)\b", p["title"])]
+        title = got[0]["title"] if len(got) == 1 else f"{base} {'·'.join(rounds)}차 ({len(got)}건)" if rounds else f"{base} ({len(got)}건)"
+        out.append({"src": "용인시 고시·공고", "via": "새올", "date": date, "org": f"용인특례시 {got[0]['dept']}".strip(),
+                    "no": got[0]["no"] if len(got) == 1 else f"{got[0]['no']} 외 {len(got) - 1}건", "title": title, "scope": "town",
+                    "cat": "comp" if GAZETTE_COMP.search(base) else "gosi", "until": max(p["until"] for p in got),
+                    "nos": [re.sub(r"\s", "", p["no"]) for p in got], "parts": got, "url": eminwon_detail_url(got[0]["mgt"])})
+    return out
 
 
 def cheoin_promo():
@@ -457,10 +592,24 @@ def body_eum(page, url):
             "license": "토지이음(국토교통부) 고시정보 · 고시·공고는 저작권 보호 대상이 아님(저작권법 7조)"}
 
 
+def body_eminwon(page, url):
+    """새올 고시공고 상세(2026-10-29): <dl><dt>칸 이름</dt><dd>값</dd></dl> 줄 + 본문 div.viewTxt + goDownLoad('이름','저장 이름','경로') 첨부."""
+    page = re.sub(r"<script.*?</script>|<!--.*?-->", "", page, flags=re.S)
+    info = [[text(k), text(v)] for k, v in re.findall(r"<dt>(.*?)</dt>\s*<dd[^>]*>(.*?)</dd>", page, re.S)
+            if text(k) in ("고시공고번호", "등록일", "담당부서", "담당자/연락처") and text(v)]
+    m = re.search(r'<div class="viewTxt">(.*?)</div>\s*</div>', page, re.S)
+    files = [{"name": html.unescape(n), "url": "https://eminwon.yongin.go.kr/emwp/jsp/ofr/FileDown.jsp?" + urllib.parse.urlencode(
+              {"user_file_nm": html.unescape(n), "sys_file_nm": html.unescape(s), "file_path": html.unescape(p)})}
+             for n, s, p in re.findall(r"goDownLoad\('([^']*)'\s*,\s*'([^']*)'\s*,\s*'([^']*)'\)", page)]
+    return {"text": body_text(m.group(1)) if m else "", "imgs": [], "files": files, "info": info,
+            "license": "용인특례시 고시·공고(새올) · 고시·공고는 저작권 보호 대상이 아님(저작권법 7조)"}
+
+
 # 받는 방식을 바꾸면 올린다 → 이미 받은 글도 다음 실행에 다시 받는다(2: 용인 바로보기 주소·처인구 hwpx 글자, 10-16)
 BODY_VERSION = 2
 BODY_RULES = [("www.yongin.go.kr", body_yongin, "utf-8"), ("www.cheoingu.go.kr", body_cheoingu, "utf-8"),
-              ("www.lh.or.kr", body_lh, "utf-8"), ("www.eum.go.kr", body_eum, "cp949")]
+              ("www.lh.or.kr", body_lh, "utf-8"), ("www.eum.go.kr", body_eum, "cp949"),
+              ("eminwon.yongin.go.kr", body_eminwon, "utf-8")]
 
 
 def bodies(items):
@@ -507,16 +656,24 @@ def main():
     for name, fn, srcs in (("토지이음", eum, {"토지이음 고시"}), ("처인구 게시판", boards, {"이동읍 소식", "남사읍 소식"}),
                            ("LH", lh, {s for s, *_ in LH_BOARDS}), ("LH 청약플러스", lh_apply, {"LH 청약·임대"}),
                            ("용인시 보도자료", yongin_press, {"용인시 보도자료"}), ("용인시 공지", yongin_notice, {"용인시 공지"}),
-                           ("처인 홍보관", cheoin_promo, {"처인구 소식"}), ("용인시보 고시·공고", yongin_gazette, {"용인시 고시·공고"})):
+                           ("처인 홍보관", cheoin_promo, {"처인구 소식"}),
+                           # 시보와 새올은 src가 같다('용인시 고시·공고') → 지난 결과는 via로 가른다
+                           ("용인시보 고시·공고", yongin_gazette, lambda x: x.get("src") == "용인시 고시·공고" and x.get("via") != "새올"),
+                           ("새올 고시·공고", yongin_eminwon, lambda x: x.get("via") == "새올")):
         try:
             got = fn()
             print(f"{name}: {len(got)}건")
             items += got
         except Exception as e:  # 한 곳이 막혀도 나머지는 만든다
-            kept = [x for x in prev if x.get("src") in srcs]
+            kept = [x for x in prev if (srcs(x) if callable(srcs) else x.get("src") in srcs)]
             items += kept
             errors.append(f"{name}: {e}")
             print(f"{name}: 실패 {e} → 지난 결과 {len(kept)}건 유지", file=sys.stderr)
+    # 시보에서 온 공고가 새올에도 있으면(공고번호가 모두 같으면) 새올 쪽만 남긴다 — 새올에 마감일·전체 제목·첨부가 있다
+    eminwon_nos = {n for x in items if x.get("via") == "새올" for n in x.get("nos", [])}
+    # 10-28에 받은 지난 시보 글은 nos가 없다 → no 칸의 첫 공고번호로 견준다
+    nos = lambda x: x.get("nos") or ([re.sub(r"\s|외\d+건$", "", x["no"])] if x.get("src") == "용인시 고시·공고" and x.get("no") else [])
+    items = [x for x in items if x.get("via") == "새올" or not nos(x) or not set(nos(x)) <= eminwon_nos]
     # 같은 고시를 '용인시'와 '경기도 용인시'가 각각 올린 경우가 있다 → 날짜+제목(괄호 모양 무시)이 같으면 하나만
     uniq = {}
     for x in items:
@@ -525,9 +682,12 @@ def main():
     fail = bodies(items)
     if len(fail) > 5:  # 한두 건은 다음 실행에 다시 받는다. 많이 실패하면 사이트 구조가 바뀐 것 → 실패로 알린다
         errors.append(f"본문 {len(fail)}건 실패: " + " / ".join(fail[:3]))
-    payload = {"updated_at": datetime.now(KST).isoformat(timespec="minutes"), "errors": errors, "items": items}
+    payload = {"updated_at": datetime.now(KST).isoformat(timespec="minutes"), "errors": errors, "items": items,
+               "eminwon_skip": sorted(EMINWON_SKIP)}
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
-    OUT.with_suffix(".js").write_text("window.NOTICES = " + json.dumps(payload, ensure_ascii=False) + ";\n", encoding="utf-8")
+    # 화면용 notices.js에는 다음 실행용 기록(eminwon_skip·parts)을 빼서 가볍게
+    web = {**{k: v for k, v in payload.items() if k != "eminwon_skip"}, "items": [{k: v for k, v in x.items() if k != "parts"} for x in items]}
+    OUT.with_suffix(".js").write_text("window.NOTICES = " + json.dumps(web, ensure_ascii=False) + ";\n", encoding="utf-8")
     print(f"→ {OUT} ({len(items)}건)")
     # 한 곳이라도 실패하면 파일은 쓰되(지난 결과 유지) 실패로 끝낸다 → Actions 실패 메일. 하루 한두 번만 도니 메일이 많지 않다
     return 1 if errors else 0
