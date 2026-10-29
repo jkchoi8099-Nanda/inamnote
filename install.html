@@ -17,7 +17,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="style.css?v=265c917f">
+<link rel="stylesheet" href="style.css?v=2e81d82c">
 <!-- 홈 화면 앱 설치 안내(2026-10-26, 결정 로그 2026-10-16 '앱으로 바꿀까', 공개 절차 3c). 첫 화면 '홈 화면에 이남노트 두기' 줄이 여기로 온다.
      맨 위 '지금 쓰는 브라우저' 칸은 아래 스크립트가 pwa.js의 InamApp.env로 골라 채운다. 나머지 방법은 접힌 칸에 전부 둔다(JS가 없어도 읽힌다).
      카카오톡 안 브라우저는 홈 화면 추가가 안 돼서 먼저 바깥 브라우저로 연다(kakaotalk://web/openExternal). -->
@@ -32,7 +32,8 @@
   .preview figure img { width: 64px; height: 64px; border-radius: 15px; box-shadow: 0 6px 18px rgba(14, 138, 90, .25); }
   .preview figcaption { font-size: 12.5px; font-weight: 600; color: var(--ink-2); }
   .preview p { font-size: 14.5px; color: var(--ink-2); }
-  .now { margin-top: 14px; padding: 22px 20px; border-radius: var(--r-md); background: var(--surface); }
+  .now { display: flex; flex-direction: column; gap: 4px; margin-top: 14px; padding: 22px 20px; border-radius: var(--r-md); background: var(--surface); }
+  .now p { margin-top: 4px; line-height: 1.5; }
   .now .k { font-size: 13px; font-weight: 800; color: var(--moss); }
   .now h2 { font-size: 21px; margin-top: 4px; }
   .now .cta { margin-top: 16px; }
