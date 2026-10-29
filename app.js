@@ -260,7 +260,7 @@
   var feedEl = $('feed'), cardsEl = $('news-cards');
   if (feedEl || cardsEl) {
     load('data/feed.json').then(function (f) {
-      var items = (f.items || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+      var items = (f.items || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });  // 같은 날은 feed.json 순서(위가 먼저)
       if (feedEl) drawFeed(feedEl, feedRows(items), parseInt(feedEl.getAttribute('data-limit') || '8', 10));
       if (cardsEl) {
         cardsEl.innerHTML = items.map(function (i) {
