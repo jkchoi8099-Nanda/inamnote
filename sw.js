@@ -3,7 +3,7 @@
    → "고쳐줘 → 올려" 한 내용이 앱에서도 바로 보이고, 소식·혜택·날씨가 옛 값으로 남지 않는다.
    다른 사이트(네이버 지도·버스 중계·글꼴·GoatCounter), /api/(미리보기 서버 버스 중계), 영상(mp4, 구간 요청)은 건드리지 않는다.
    저장 방식을 바꾸면 VER를 올린다(옛 저장본은 activate에서 지운다). */
-const VER = "v1";
+const VER = "v2";
 const CACHE = "inamnote-" + VER;
 // 처음 설치될 때 받아 두는 첫 화면 묶음. 대부분 방금 받은 것이라 브라우저 캐시에서 나온다
 const SHELL = [
@@ -39,8 +39,8 @@ self.addEventListener("fetch", (e) => {
     const cache = await caches.open(CACHE);
     try {
       const res = await fetch(req);
-      // 주소 뒤 ?q=·?tab= 마다 따로 쌓이지 않게 쪽(html)은 물음표 앞까지만 열쇠로 쓴다
-      if (res.ok && res.type === "basic") cache.put(req.mode === "navigate" ? url.origin + url.pathname : req, res.clone());
+      // 주소 뒤 ?q=·?tab=(쪽)·?v=(CSS·JS 버전, scripts/bump_assets.py)마다 따로 쌓이지 않게 물음표 앞까지만 열쇠로 쓴다(v2, 2026-10-29)
+      if (res.ok && res.type === "basic") cache.put(url.origin + url.pathname, res.clone());
       return res;
     } catch (err) {
       if (req.mode !== "navigate") {

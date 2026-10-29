@@ -10,14 +10,14 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="img/icon/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="이남노트">
-<script src="pwa.js" defer></script>
+<script src="pwa.js?v=ad621a16" defer></script>
 <link rel="canonical" href="https://xn--q20bn4dp0plyg.com/bus.html">
 <meta property="og:url" content="https://xn--q20bn4dp0plyg.com/bus.html">
 <meta property="og:image" content="https://xn--q20bn4dp0plyg.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=265c917f">
 <!-- 2026-10-14 시제품(사용자 "지도에 버스가 다니는 걸 실시간으로"). 노선·정류소·경로는 data/bus.js(scripts/build_bus.py),
      실시간 위치는 BUS_API가 25초마다. 위치는 GPS가 아니라 '몇 번째 정류소에 도착·출발·교차로 통과'다(경기도·TAGO 모두, 결정 로그 10-14). -->
 <style>
@@ -107,7 +107,7 @@
     .side { padding: 0; }
   }
 </style>
-<script src="count.js" async></script>
+<script src="count.js?v=d1732801" async></script>
 </head>
 <body>
 <div class="bp wrap">
@@ -129,9 +129,9 @@
 <script>window.navermap_authFailure = () => { document.getElementById("map").innerHTML = '<p style="padding:20px;color:#636C66">지도를 불러오지 못했어요(네이버 지도 인증 실패).</p>'; };</script>
 <script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=vhdkduuv0z"></script>
 <script src="data/bus.js"></script>
-<script src="arrive.js"></script>
-<script src="locate.js"></script>
-<script src="sheet.js"></script>
+<script src="arrive.js?v=b2f72573"></script>
+<script src="locate.js?v=9bd076d4"></script>
+<script src="sheet.js?v=a2b6e63b"></script>
 <script>
 (() => {
   // 실시간 위치를 묻는 곳. arrive.js가 정한다(미리보기: PC 미리보기 서버, 공개 사이트: Cloudflare 중계)

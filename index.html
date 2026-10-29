@@ -16,7 +16,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="img/icon/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="이남노트">
-<script src="pwa.js" defer></script>
+<script src="pwa.js?v=ad621a16" defer></script>
 <link rel="canonical" href="https://xn--q20bn4dp0plyg.com/">
 <meta property="og:url" content="https://xn--q20bn4dp0plyg.com/">
 <meta property="og:image" content="https://xn--q20bn4dp0plyg.com/og.png">
@@ -25,9 +25,9 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <!-- ?v=: GitHub Pages가 파일마다 10분 캐시(max-age=600)를 붙여, 고친 뒤 새 home.js + 옛 style.css가 섞여 화면이 깨졌다(2026-10-29).
-     style.css·home.js를 고치면 두 곳의 v를 같이 올린다 -->
-<link rel="stylesheet" href="style.css?v=20261029b">
-<script src="count.js" async></script>
+     v는 손으로 고치지 않는다 — scripts/bump_assets.py가 파일 내용 지문으로 붙인다(커밋 직전 훅 scripts/pre-commit) -->
+<link rel="stylesheet" href="style.css?v=265c917f">
+<script src="count.js?v=d1732801" async></script>
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
@@ -137,11 +137,11 @@
 <script src="data/notices.js"></script>
 <script src="data/benefits_recent.js"></script>
 <script src="data/programs.js"></script>
-<script src="app.js"></script>
+<script src="app.js?v=37f66537"></script>
 <!-- 장소 데이터(약 560KB)는 화면을 먼저 그린 뒤 받는다. 받으면 문 숫자와 검색 미리보기가 채워진다 -->
-<script src="places-search.js" defer></script>
+<script src="places-search.js?v=0c4792cb" defer></script>
 <script src="data/places.js" defer></script>
 <script src="data/intro.js" defer></script>
-<script src="home.js?v=20261029b" defer></script>
+<script src="home.js?v=9e114cbc" defer></script>
 </body>
 </html>

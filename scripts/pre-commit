@@ -1,0 +1,4 @@
+#!/bin/sh
+# 쪽(html)의 CSS·JS 주소 버전(?v=)을 커밋할 내용 기준으로 맞춘다 — scripts/bump_assets.py 설명 참고(2026-10-29).
+# 설치(site/에서 한 번): cp scripts/pre-commit .git/hooks/pre-commit
+exec python scripts/bump_assets.py --staged
