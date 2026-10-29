@@ -1,7 +1,34 @@
 {
- "updated_at": "2026-10-29T06:49+09:00",
+ "updated_at": "2026-10-29T09:52+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-29",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 소나무재선충병 방제 대책 회의 개최",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261029075834417"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-29",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인시육아종합지원센터, 우수보육사례 공유하는 ‘함께존중 행복키움’ 공모전 개최",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261029075815040"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-29",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시 동백·남사도서관, 11월 가족과 함께 즐기는 문화공연 마련",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261029075730515"
+  },
   {
    "src": "용인시 고시·공고",
    "via": "새올",
