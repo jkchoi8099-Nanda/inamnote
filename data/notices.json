@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-29T18:50+09:00",
+ "updated_at": "2026-10-30T01:05+09:00",
  "errors": [],
  "items": [
   {
@@ -1112,33 +1112,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260930075132909"
   },
   {
-   "src": "용인시 보도자료",
-   "date": "2026-09-29",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 처인성역사교육관서 초등생 체험교육",
-   "scope": "town",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260929075046629"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-29",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 제1기 ‘공동주택 품질점검단’ 전문가 모집",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260929075005905"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-09-29",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 제8회 북페스티벌 ‘일상의 빈칸을 채우는 독서 파티’ 개최",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260929074945878"
-  },
-  {
    "src": "남사읍 소식",
    "date": "2026-09-22",
    "org": "처인구 남사읍",
@@ -1697,14 +1670,6 @@
     "용인시공고제2026-1461호"
    ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260430184825578#2026-1460"
-  },
-  {
-   "src": "LH 청약·임대",
-   "date": "2026-04-29",
-   "org": "LH 청약플러스 · 행복주택 · 접수마감 · 마감 2026.05.15",
-   "no": "",
-   "title": "[경기남부권 용인시 및 이천시 행복주택 예비입주자 모집(2026.04.29.)",
-   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019846&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
   },
   {
    "src": "용인시 고시·공고",
