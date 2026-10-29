@@ -24,7 +24,9 @@
 <meta property="og:image:height" content="630">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="style.css">
+<!-- ?v=: GitHub Pages가 파일마다 10분 캐시(max-age=600)를 붙여, 고친 뒤 새 home.js + 옛 style.css가 섞여 화면이 깨졌다(2026-10-29).
+     style.css·home.js를 고치면 두 곳의 v를 같이 올린다 -->
+<link rel="stylesheet" href="style.css?v=20261029b">
 <script src="count.js" async></script>
 </head>
 <body>
@@ -140,6 +142,6 @@
 <script src="places-search.js" defer></script>
 <script src="data/places.js" defer></script>
 <script src="data/intro.js" defer></script>
-<script src="home.js" defer></script>
+<script src="home.js?v=20261029b" defer></script>
 </body>
 </html>
