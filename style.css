@@ -364,8 +364,9 @@ p { margin: 0; }
 /* 휴대폰: 검색칸·글자를 피해 핀(그림 가운데)이 오른쪽 위(가로 79%·세로 36%)에 오게 그림을 크게 깔고 민다 */
 @media (max-width: 899px) { .door .tile-map { width: 90%; height: 140%; top: -34%; right: -24%; bottom: auto; } }
 @media (min-width: 900px) {
-  .s-wide:first-child .tile-map { width: 72%; }
-  .s-wide:first-child .tm-pin { width: 84px; height: 84px; margin: -78px 0 0 -42px; }
+  .s-low .tile-map { width: 58%; }
+  .s-low .d { max-width: 54%; }  /* 핀(그림 가운데 = 가로 71%)을 피해 줄을 바꾼다 */
+  .s-low .tm-pin { width: 72px; height: 72px; margin: -67px 0 0 -36px; }
 }
 .door .big { font-size: 30px; font-weight: 800; letter-spacing: -0.05em; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .door .big small { font-size: 15px; font-weight: 700; margin-left: 2px; color: var(--ink-3); letter-spacing: -0.02em; }
@@ -377,11 +378,38 @@ p { margin: 0; }
 .s-bar { grid-column: span 2; min-height: 0; }
 .s-bar .d { max-width: calc(100% - 80px); }
 .s-bar .emo { width: 64px; height: 64px; top: 50%; bottom: auto; margin-top: -32px; right: 16px; }
+/* 낮은 두 칸(장소 찾기, 2026-10-29 "세로 높이를 반으로"): 휴대폰은 설명·칩을 빼고 제목과 검색칸만 */
+.s-low { grid-column: span 2; min-height: 0; }
+@media (max-width: 899px) {
+  .s-low .d, .s-low .chips { display: none; }
+  .s-low .live { padding-top: 12px; }
+  .s-low .tile-map { height: 150%; top: -40%; }
+}
+/* 소식(rows 문, 2026-10-29 "6개를 클릭 안해도 바로 보이게"): 타일은 div, 머리(.door-hd)와 줄(.dr)이 따로 링크라 타일 전체는 움직이지 않는다 */
+.s-tall { grid-column: span 2; }
+.has-rows:hover, .has-rows:active { transform: none; box-shadow: none; }
+.door-hd { display: flex; flex-direction: column; color: inherit; text-decoration: none; border-radius: 14px; margin: -4px; padding: 4px; }
+.door-hd:hover h2 { color: var(--moss-dark); }
+.has-rows .live { padding-top: 12px; }
+.has-rows .hl { max-width: none; -webkit-line-clamp: 2; padding-bottom: 0; border-bottom: 12px solid var(--bg); }  /* 아래 여백을 테두리로 — 안쪽 여백이면 셋째 줄 윗부분이 비친다 */
+.has-rows > .emo { top: 14px; bottom: auto; right: 14px; width: 60px; height: 60px; }
+.door-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+.dr { display: flex; align-items: center; gap: 8px; min-width: 0; padding: 10px; border-radius: 14px; background: var(--bg); color: inherit; text-decoration: none;
+      -webkit-tap-highlight-color: transparent; transition: background .2s ease, transform .2s cubic-bezier(.2, .8, .2, 1); }
+.dr:hover { background: var(--bg-2); }
+.dr:active { transform: scale(.96); }
+.dr-i { width: 28px; height: 28px; flex: none; }
+.dr .t { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.dr b { font-size: 14.5px; font-weight: 700; letter-spacing: -0.03em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dr small, .dr .n { display: none; }
 @media (min-width: 900px) {
   .door { min-height: 210px; padding: 26px; }
   .door h2 { font-size: 27px; }
-  .s-wide:first-child { grid-row: span 2; }
-  .s-wide:first-child .emo { width: 150px; height: 150px; right: 18px; bottom: 16px; }
+  .s-tall { grid-column: 3 / span 2; grid-row: 1 / span 2; }  /* 장소 찾기(낮은 두 칸)·버스·커뮤니티의 오른쪽 */
+  .dr { padding: 11px 12px; gap: 10px; }
+  .dr-i { width: 32px; height: 32px; }
+  .dr small { display: block; margin-top: 1px; font-size: 12.5px; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .dr .n { display: block; flex: none; font-size: 12.5px; font-weight: 700; color: var(--ink-3); }
   .s-wide .emo { width: 96px; height: 96px; }
   .s-bar { grid-column: span 4; flex-direction: row; align-items: center; gap: 0 18px; padding: 22px 26px; }
   .s-bar .live { margin: 0 96px 0 auto; padding: 0; }

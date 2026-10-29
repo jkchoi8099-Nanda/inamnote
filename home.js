@@ -35,11 +35,13 @@
   // 지난 방문 뒤 새 글 수(app.js가 이 스크립트보다 먼저 sessionStorage inam_new에 적는다, 2026-10-18)
   const newN = (() => { try { return JSON.parse(sessionStorage.getItem("inam_new") || "[]").length; } catch (e) { return 0; } })();
 
-  // 큰 문. size: wide(두 칸)·half(한 칸)·bar(긴 띠) / theme: green·white·warm·dark / tile(): 타일 안에 보일 실제 내용
+  // 큰 문. size: wide(두 칸)·low(두 칸, 낮게)·tall(두 칸, 넓은 화면에서 두 줄 높이)·half(한 칸)·bar(긴 띠) / theme: green·white·warm·dark
+  // tile(): 타일 안에 보일 실제 내용 / rows: 가지(kids)를 타일 안에 바로 보인다
   const DOORS = [
     // 장소 찾기 + 내 주변(2026-10-20 사용자 "장소 찾기와 내주변은 거의 비슷한 역할 아닐까? 합쳐도 될거 같아") → 내 주변은 이 문 안 첫 줄.
     // 위치 권한은 그 줄을 눌렀을 때만 묻는다. 예전 주소 #near는 이 문을 열고 그 줄을 펼친다(route)
-    { id: "place", pre: "이남", label: "장소 찾기", desc: "식당·약국·학교·빨래방, 내 주변 500m 정류소·가게까지", emoji: "pin", size: "wide", theme: "green", search: true, map: true,
+    // 높이는 한 칸(2026-10-29 사용자 "장소찾기 세로 높이를 반으로 … 그 아래 버스현황과 커뮤니티를 나란히", style.css s-low)
+    { id: "place", pre: "이남", label: "장소 찾기", desc: "식당·약국·학교·빨래방, 내 주변 500m 정류소·가게까지", emoji: "pin", size: "low", theme: "green", search: true, map: true,
       tile: () => `<span class="fake-q">${emo("search", "fq-i")}가게 이름, 약국, 미용실…</span>` +
         (places.length ? `<span class="chips"><span>가게·시설 ${fmt(places.length)}곳</span><span>식당 ${places.filter(p => p.door === "food").length}</span><span>약국 ${places.filter(found("약국")).length}</span></span>` : ""),
       kids: [
@@ -56,23 +58,6 @@
         { ...go("마트 전단 가격 비교", "mart.html", "으뜸·엔마트·정동 전단, 같은 물건끼리(시범)"), emoji: "money" },
         { label: "학교", emoji: "school", desc: "초·중·고", kids: ["초등학교", "중학교", "고등학교"].map(s => sub(s, "school", s, p => p.door === "school" && p.type === s)) },
         { ...go("지도 전체 보기", "map.html", "내 위치 근처부터"), emoji: "map" },
-      ] },
-    { id: "news", pre: "이남", label: "소식", desc: "보상·공식 고시·청약·혜택, 공사 어디까지 왔나", emoji: "paper", size: "wide", theme: "white",
-      badge: () => newN,
-      // 10-16부터 공식 소식은 이남노트 안 읽기 창에서 본문까지 본다(옛 문구 "제목과 원문 링크만"은 10-18 고침)
-      note: "공식 소식은 여기서 본문까지 읽을 수 있어요. 신청·기한은 원문에서 한 번 더 확인하세요.",
-      tile: () => latest ? `<span class="hl"><span class="hl-tag">${esc(latest.src)} · ${esc(latest.date.slice(5).replace("-", "."))}</span>${esc(latest.title)}</span>` : "",
-      kids: [
-        { label: "보상·이주", emoji: "money", desc: "LH 보상 공고, 자주 묻는 질문", kids: [t("보상 공고(LH·용인시)", "comp"), go("보상·이주 궁금한 점", "news.html#faq-comp"), go("땅·집 거래 허가", "news.html#faq-land")] },
-        { label: "공식 발표", emoji: "loud", desc: "토지이음 고시·LH·읍 소식·용인시", kids: [t("공식 고시", "gosi"), t("LH 소식", "lh"), t("읍 소식", "eup"), t("용인시 소식", "city"), go("공식 소식 전체", "notices.html")] },
-        { ...t("청약·임대", "home", "LH 공고"), emoji: "house" },
-        // 혜택 목록(data/benefits.js, 약 280KB)은 첫 화면에서 안 불러온다 → 숫자 없이 둔다
-        { label: "혜택·생활 제도", emoji: "gift", desc: "용인·경기 지원금, 사장님 지원사업, 생활 제도", kids: [
-          go("용인시 혜택", "benefits.html?area=yongin"), go("경기도 혜택", "benefits.html?area=gg"),
-          go("전국 · 많이 찾는", "benefits.html?area=nation"), go("사장님·창업 지원사업", "benefits.html#biz-sec"),
-          go("생활 제도", "benefits.html#tips-sec")] },
-        { label: "공사 어디까지", emoji: "crane", desc: "확정된 것과 아직 계획인 것", kids: [go("공사 시계", "news.html#clock"), go("바뀐 일정 기록", "news.html#changes"), go("전체 일정", "news.html#timeline")] },
-        { ...go("최근 소식", "news.html#news", "원문을 확인한 기사·발표"), emoji: "sparkles" },
       ] },
     { id: "bus", pre: "이남", label: "버스 현황", desc: "지금 어디쯤 오나", emoji: "bus", size: "half", theme: "warm",
       note: "위치는 정류소 단위로 25초마다 새로 받아요.",
@@ -94,6 +79,25 @@
         { ...go("정정 기록", "news.html#corrections", "고친 내용과 날짜"), emoji: "pencil" },
         { ...go("이남 카트", "kart.html", "이동·남사 실제 길로 달리는 미니 게임"), emoji: "kart-car" },
         { ...go("이동저수지 낚시", "fishing.html", "실제 좌대 자리에서 오늘의 입질 운 시험"), emoji: "fish-rod" },
+      ] },
+    // 소식은 가지 6개가 타일 안에 바로 보인다(2026-10-29 사용자 "이남 소식 안에 있는 6개를 클릭 안해도 바로 보이게", rows).
+    // 가지가 있는 줄을 누르면 문을 열고 그 줄을 펼친다(#news/2), 바로 가는 줄은 그 페이지로. 넓은 화면에서는 오른쪽 두 칸 높이(style.css s-tall)
+    { id: "news", pre: "이남", label: "소식", desc: "보상·공식 고시·청약·혜택, 공사 어디까지 왔나", emoji: "paper", size: "tall", theme: "white", rows: true,
+      badge: () => newN,
+      // 10-16부터 공식 소식은 이남노트 안 읽기 창에서 본문까지 본다(옛 문구 "제목과 원문 링크만"은 10-18 고침)
+      note: "공식 소식은 여기서 본문까지 읽을 수 있어요. 신청·기한은 원문에서 한 번 더 확인하세요.",
+      tile: () => latest ? `<span class="hl"><span class="hl-tag">${esc(latest.src)} · ${esc(latest.date.slice(5).replace("-", "."))}</span>${esc(latest.title)}</span>` : "",
+      kids: [
+        { label: "보상·이주", emoji: "money", desc: "LH 보상 공고, 자주 묻는 질문", kids: [t("보상 공고(LH·용인시)", "comp"), go("보상·이주 궁금한 점", "news.html#faq-comp"), go("땅·집 거래 허가", "news.html#faq-land")] },
+        { label: "공식 발표", emoji: "loud", desc: "토지이음 고시·LH·읍 소식·용인시", kids: [t("공식 고시", "gosi"), t("LH 소식", "lh"), t("읍 소식", "eup"), t("용인시 소식", "city"), go("공식 소식 전체", "notices.html")] },
+        { ...t("청약·임대", "home", "LH 공고"), emoji: "house" },
+        // 혜택 목록(data/benefits.js, 약 280KB)은 첫 화면에서 안 불러온다 → 숫자 없이 둔다
+        { label: "혜택·생활 제도", emoji: "gift", desc: "용인·경기 지원금, 사장님 지원사업, 생활 제도", kids: [
+          go("용인시 혜택", "benefits.html?area=yongin"), go("경기도 혜택", "benefits.html?area=gg"),
+          go("전국 · 많이 찾는", "benefits.html?area=nation"), go("사장님·창업 지원사업", "benefits.html#biz-sec"),
+          go("생활 제도", "benefits.html#tips-sec")] },
+        { label: "공사 어디까지", emoji: "crane", desc: "확정된 것과 아직 계획인 것", kids: [go("공사 시계", "news.html#clock"), go("바뀐 일정 기록", "news.html#changes"), go("전체 일정", "news.html#timeline")] },
+        { ...go("최근 소식", "news.html#news", "원문을 확인한 기사·발표"), emoji: "sparkles" },
       ] },
     { id: "about", pre: "이남노트", label: "소개", desc: "이동 + 남사 + 노트. 동네 주민이 출처를 확인해 정리합니다", emoji: "book", size: "bar", theme: "dark",
       tile: () => `<span class="play">▶ 소개 영상</span>`,
@@ -219,10 +223,17 @@
   // 장소 찾기 타일 배경 지도(2026-10-29 사용자 "핀만 덩그러니 … 배경에 지도, 우리 가게 위치에 핀"): 실제 버스 길·가게 자리로 그린 그림
   // (scripts/build_tilemap.py, 가게가 그림 한가운데) 위에 핀을 가운데 꽂는다. 가게 이름은 넣지 않는다
   const tileMap = () => `<span class="tile-map" aria-hidden="true"><img class="tm-bg" src="img/tile-map.svg" alt="" decoding="async"><i class="tm-ping"></i>${emo("pin", "tm-pin")}</span>`;
-  doorsEl.innerHTML = DOORS.map((d, i) =>
-    `<a class="door s-${d.size || "half"} th-${d.theme || "white"}" href="#${d.id}" data-door="${d.id}" style="--i:${i}">
-      ${d.badge && d.badge() ? `<span class="new-n">새 글 ${d.badge()}</span>` : ""}<span class="k">${esc(d.pre)}</span><h2>${esc(d.label)}</h2><span class="d">${esc(d.desc)}</span>
-      <span class="live">${d.tile ? d.tile() : ""}</span>${d.map ? tileMap() : emo(d.emoji)}</a>`).join("");
+  const doorHead = d => `${d.badge && d.badge() ? `<span class="new-n">새 글 ${d.badge()}</span>` : ""}<span class="k">${esc(d.pre)}</span><h2>${esc(d.label)}</h2><span class="d">${esc(d.desc)}</span>`;
+  // rows 문: 타일은 div, 머리는 문 여는 링크, 줄마다 따로 링크(가지 있는 줄은 #문id/줄번호 → 문 안에서 그 줄이 펼쳐진 채로)
+  const doorRows = d => `<div class="door-rows">${d.kids.filter(alive).map(it => { const k = d.kids.indexOf(it);
+    return `<a class="dr" href="${it.kids ? `#${d.id}/${k}` : esc(it.href)}"${it.kids ? ` data-door="${d.id}" data-row="${k}"` : ""}>${it.emoji ? emo(it.emoji, "dr-i") : ""}` +
+      `<span class="t"><b>${esc(it.label)}</b>${it.desc ? `<small>${esc(it.desc)}</small>` : ""}</span>${countHtml(it)}</a>`; }).join("")}</div>`;
+  doorsEl.innerHTML = DOORS.map((d, i) => d.rows
+    ? `<div class="door s-${d.size || "half"} th-${d.theme || "white"} has-rows" data-door="${d.id}" style="--i:${i}">
+      <a class="door-hd" href="#${d.id}" data-door="${d.id}">${doorHead(d)}</a>
+      <span class="live">${d.tile ? d.tile() : ""}</span>${doorRows(d)}${emo(d.emoji)}</div>`
+    : `<a class="door s-${d.size || "half"} th-${d.theme || "white"}" href="#${d.id}" data-door="${d.id}" style="--i:${i}">
+      ${doorHead(d)}<span class="live">${d.tile ? d.tile() : ""}</span>${d.map ? tileMap() : emo(d.emoji)}</a>`).join("");
 
   // 문 ↔ 문 안 전환: 누른 타일과 문 안 머리에 같은 이름을 줘서 브라우저가 이어 붙여 움직이게 한다
   let cur = null, pushed = false;
@@ -239,10 +250,10 @@
     tr.finished.finally(() => document.querySelectorAll(".door, .room-head").forEach(e => { e.style.viewTransitionName = ""; }));
   }
   doorsEl.addEventListener("click", e => {
-    const a = e.target.closest(".door"); if (!a) return;
+    const a = e.target.closest("a[data-door]"); if (!a) return;  // rows 문의 바로 가는 줄은 그냥 링크
     e.preventDefault();
-    history.pushState(null, "", "#" + a.dataset.door); pushed = true;
-    swap(route, a, ".room-head");
+    history.pushState(null, "", "#" + a.dataset.door + (a.dataset.row ? "/" + a.dataset.row : "")); pushed = true;
+    swap(route, a.closest(".door"), ".room-head");
   });
   window.addEventListener("popstate", () => {
     const from = cur;
@@ -300,10 +311,13 @@
   });
 
   function route() {
-    const h = location.hash.slice(1), d = DOORS.find(x => x.id === (h === "near" ? "place" : h));  // #near(10-18~10-20 내 주변 문) → 장소 찾기 안 내 주변
+    // #near(10-18~10-20 내 주변 문) → 장소 찾기 안 내 주변 / #news/2 → 소식 문 안 셋째 줄을 펼친 채로(타일 안 줄을 눌렀을 때)
+    const [h, row] = location.hash.slice(1).split("/"), d = DOORS.find(x => x.id === (h === "near" ? "place" : h));
     if (d) {
       cur = d.id; openDoor(d);
       if (h === "near") { const nb = [...room.querySelectorAll(".rows button[data-path]")].find(b => find(b.dataset.path).near); if (nb) nb.click(); }
+      const rb = row && room.querySelector(`.rows button[data-path="${DOORS.indexOf(d)}-${+row}"]`);
+      if (rb) rb.click();
       return;
     }
     cur = null; room.hidden = true; room.innerHTML = ""; hall.hidden = false;
