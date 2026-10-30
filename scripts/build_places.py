@@ -287,6 +287,32 @@ def drop_store_dups(places):
     return keep, dropped
 
 
+def drop_license_dups(places):
+    """인허가 줄끼리 같은 가게인 것을 하나로 합친다(2026-10-30). drop_store_dups는 상가정보 줄만 봐서 남았다 —
+    1·2층에 일반·휴게음식점을 따로 낸 카페(카노푸스), 음식점·동물미용·동물판매를 한 자리에서 하는 애견카페(아로하스토리),
+    번지만 다른 같은 날 허가(알라딘 1086·1086-1). 같은 가게 = 이름이 같고 DUP_M 안. 앞 줄을 남기고, 뺀 줄의 업종은
+    also에, 남는 줄에 비어 있는 칸(전화·세부 업종)은 뺀 줄 값으로 채운다. 뺀 줄 목록을 돌려준다."""
+    keep, dropped = [], []
+    for p in places:
+        if p["id"].startswith(("MA", "manual-")) or "lat" not in p:
+            keep.append(p)
+            continue
+        a = _norm(p["name"])
+        hit = next((o for o in keep if not o["id"].startswith(("MA", "manual-")) and "lat" in o
+                    and _norm(o["name"]) == a and len(a) >= 2 and _dist(o, p) <= DUP_M), None)
+        if not hit:
+            keep.append(p)
+            continue
+        t = p.get("kind") or ""
+        if t and t not in (hit.get("type"), hit.get("kind"), hit.get("menu_kind")) and t not in hit.get("also", []):
+            hit.setdefault("also", []).append(t)
+        for k in ("tel", "menu_kind"):
+            if not hit.get(k) and p.get(k):
+                hit[k] = p[k]
+        dropped.append((p, hit))
+    return keep, dropped
+
+
 GEO_CACHE = ROOT / "data" / "raw" / "geocode_cache.json"  # 주소 → 좌표(git 밖). 다시 돌릴 때 Geocoding을 또 부르지 않는다
 
 
@@ -523,6 +549,8 @@ def main():
         places.append({"id": f"manual-{i}", "tel": "", "since": "", "type": p.get("kind", ""), **p})
     sources["직접 확인"] = len(manual)
 
+    places, ldups = drop_license_dups(places)
+    print(f"같은 가게라 합친 인허가 줄: {len(ldups)}")
     places, dups = drop_store_dups(places)
     print(f"같은 가게라 뺀 상가정보 줄: {len(dups)}")
 
