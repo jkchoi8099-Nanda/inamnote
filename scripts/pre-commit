@@ -1,4 +1,7 @@
 #!/bin/sh
-# 쪽(html)의 CSS·JS 주소 버전(?v=)을 커밋할 내용 기준으로 맞춘다 — scripts/bump_assets.py 설명 참고(2026-10-29).
-# 설치(site/에서 한 번): cp scripts/pre-commit .git/hooks/pre-commit
+# 커밋 직전 훅. 원본은 이 파일(git에 올라간다), .git/hooks/는 git에 안 올라가므로
+# 설치·갱신(site/에서): python scripts/install_hooks.py — 이 파일을 고치면 다시 돌린다.
+# 1) 자료 검사 — scripts/verify_site.py(2026-10-30). 중복 장소·잘린 노선·사본 불일치·빈 값 낱말이 있으면 커밋을 막는다
+python scripts/verify_site.py || exit 1
+# 2) 쪽(html)의 CSS·JS 주소 버전(?v=)을 커밋할 내용 기준으로 맞춘다 — scripts/bump_assets.py 설명 참고(2026-10-29)
 exec python scripts/bump_assets.py --staged
