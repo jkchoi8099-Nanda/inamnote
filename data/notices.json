@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-30T09:52+09:00",
+ "updated_at": "2026-10-30T18:49+09:00",
  "errors": [],
  "items": [
   {
@@ -19,6 +19,15 @@
    "title": "용인특례시 처인구, 이륜자동차 불법행위 합동점검",
    "scope": "town",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261030080146492"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-30",
+   "org": "용인특례시 통합돌봄과",
+   "no": "",
+   "title": "일상돌봄서비스 제공기관 안내(2026.10.30.기준)",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261030153348817"
   },
   {
    "src": "용인시 공지",
@@ -1092,15 +1101,6 @@
    "title": "【공무원 사칭 주의】 환경관리설비 설치관련 선입금 요구 등 공무원사칭 피해예방 안내",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261002182318164"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-02",
-   "org": "용인특례시 건강증진과",
-   "no": "",
-   "title": "[보건소] (선착순!)임산부의 날 기념, 직장인 임산부를 위한 탁상용 배려 표지판 신청 안내",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261002170828558&q_category=main"
   },
   {
    "src": "용인시 보도자료",
