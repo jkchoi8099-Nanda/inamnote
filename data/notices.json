@@ -1,7 +1,34 @@
 {
- "updated_at": "2026-10-30T07:19+09:00",
+ "updated_at": "2026-10-30T09:52+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-30",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시 처인·기흥구, 화재 대비 재난 대응훈련",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261030080249675"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-10-30",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시 처인구, 이륜자동차 불법행위 합동점검",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261030080146492"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-10-30",
+   "org": "용인특례시 안전정책관",
+   "no": "",
+   "title": "27년 상비예비군 정기모집 및 선발공고 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261030094550072"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-10-29",
