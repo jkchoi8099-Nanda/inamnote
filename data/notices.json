@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-31T18:49+09:00",
+ "updated_at": "2026-11-01T00:19+09:00",
  "errors": [],
  "items": [
   {
@@ -1103,24 +1103,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261002182318164"
   },
   {
-   "src": "용인시 보도자료",
-   "date": "2026-10-01",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 성복도서관 개관 5주년 맞아 10월 문화 행사 한가득",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261001075546114"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-01",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 기술과 관광 결합한 청사진 담은 ‘용인관광 스마트페스티벌’ 개최",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261001075508216"
-  },
-  {
    "src": "남사읍 소식",
    "date": "2026-09-22",
    "org": "처인구 남사읍",
@@ -1450,14 +1432,6 @@
     "용인시공고제2026-2294호"
    ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260804190415237#2026-2294"
-  },
-  {
-   "src": "LH 보상공고",
-   "date": "2026-07-30",
-   "org": "LH",
-   "no": "",
-   "title": "[보상계획] 용인 반도체 국가산단 분묘 개장 공고(1차)",
-   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=733270"
   },
   {
    "src": "토지이음 고시",
