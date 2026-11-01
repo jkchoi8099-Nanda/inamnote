@@ -117,7 +117,7 @@
   const D = window.NOTICES;
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   // 용인시·처인구 소식(2026-10-16): scope "city"는 시 전체 글이라 '전체'에 섞지 않고 '용인시 소식' 탭에만 둔다
-  const CITY = new Set(["용인시 보도자료", "용인시 공지", "처인구 소식"]);
+  const CITY = new Set(["용인시 보도자료", "용인시 공지", "처인구 소식", "용인시 카카오채널"]);
   // 용인시보 고시·공고(2026-10-28): 수용재결·공시송달 등 보상 절차는 cat "comp"로 '보상' 탭, 나머지는 '공식 고시' 탭
   const TABS = [["all", "전체", x => x.scope !== "city"], ["comp", "보상", x => x.src === "LH 보상공고" || x.cat === "comp"],
                 ["gosi", "공식 고시", x => x.src === "토지이음 고시" || x.cat === "gosi"],
@@ -190,6 +190,11 @@
       h += `<div class="rd-imgs">${b.imgs.map(u => `<img src="${esc(u)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">`).join("")}</div>`;
     if (b && b.text) h += `<div class="rd-body">${paras(b.text)}</div>`;
     else h += `<p class="rd-empty">${files.length ? "자세한 내용은 아래 첨부 문서에 있어요." : "이 글은 원문 사이트에서 볼 수 있어요."}</p>`;
+    // 글 안 링크(카카오 채널 글의 신청 페이지·블로그 등, 2026-11-01) — 본문 글자에서 빼서 누를 수 있는 줄로
+    const links = (b && b.links) || [];
+    if (links.length)
+      h += `<h3 class="rd-files-h">관련 링크 ${links.length}개</h3><ul class="rd-files">${links.map(u =>
+        `<li><a href="${esc(u)}"><span class="ext">링크</span><span class="fn">${esc(u.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</span></a></li>`).join("")}</ul>`;
     if (files.length)
       // 첨부(10-16 사용자 "hwp는 안 열리는데"): 휴대폰엔 한글 뷰어가 없다 → ① 관공서 바로보기(view, 용인시·LH)로 열고
       // ② 바로보기가 없는 hwpx(처인구청)는 뽑아 둔 글자(text)를 이 창에서 펼친다 ③ 둘 다 없으면 내려받기·원문
@@ -250,7 +255,7 @@
   // 탭을 고른 채로 들어오면(첫 화면 '용인시 소식' 등) 그 칩이 화면 밖에 있을 수 있다 → 보이게 옆으로 민다
   addEventListener("load", () => document.querySelector(`[data-tab="${tab}"]`)?.scrollIntoView({ block: "nearest", inline: "center" }));
   document.getElementById("note").textContent =
-    `출처: 토지이음(국토교통부) 고시정보, LH 보상공고·보도자료·공모·공지·청약플러스, 처인구청 이동읍·남사읍 소식 게시판·처인 홍보관, 용인시청 보도자료(최근 30일)·시정소식, 용인시 고시·공고(새올 게시판·용인시보, 이동·남사·국가산단 관련 — '~날짜까지'는 게재기간 끝) · ${D.updated_at.slice(0, 10)} 받음. 글을 누르면 본문을 바로 볼 수 있어요(용인시·처인구·토지이음은 본문, LH는 첨부 문서). 신청·기한은 꼭 원문에서 확인하세요.`;
+    `출처: 토지이음(국토교통부) 고시정보, LH 보상공고·보도자료·공모·공지·청약플러스, 처인구청 이동읍·남사읍 소식 게시판·처인 홍보관, 용인시청 보도자료(최근 30일)·시정소식, 용인시 카카오톡 채널(매주 금요일 받음), 용인시 고시·공고(새올 게시판·용인시보, 이동·남사·국가산단 관련 — '~날짜까지'는 게재기간 끝) · ${D.updated_at.slice(0, 10)} 받음. 글을 누르면 본문을 바로 볼 수 있어요(용인시·처인구·토지이음은 본문, LH는 첨부 문서). 신청·기한은 꼭 원문에서 확인하세요.`;
   render();
   route();  // #r=키로 바로 들어온 경우(공유한 주소)
 })();

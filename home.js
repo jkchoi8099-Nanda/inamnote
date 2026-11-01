@@ -24,7 +24,7 @@
   const SRC = {
     comp: x => x.src === "LH 보상공고" || x.cat === "comp", gosi: x => x.src === "토지이음 고시" || x.cat === "gosi", home: x => x.src === "LH 청약·임대",
     lh: x => x.src.startsWith("LH") && !["LH 보상공고", "LH 청약·임대"].includes(x.src), eup: x => x.src.endsWith("읍 소식"),
-    city: x => ["용인시 보도자료", "용인시 공지", "처인구 소식"].includes(x.src),
+    city: x => ["용인시 보도자료", "용인시 공지", "처인구 소식", "용인시 카카오채널"].includes(x.src),
   };
   const m = (label, door, desc) => ({ label, desc, href: `map.html?door=${door}`, n: cnt(p => p.door === door) });
   const q = (label, word, desc) => ({ label, desc, href: `map.html?q=${encodeURIComponent(word)}`, n: cnt(found(word)) });

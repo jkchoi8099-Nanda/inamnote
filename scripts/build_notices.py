@@ -18,6 +18,8 @@
    이 줄로만 나온다. 이동·남사·국가산단 관련만 src "용인시 고시·공고", 보상 절차면 cat "comp"(화면 '보상' 탭), 아니면 cat "gosi"('공식 고시' 탭).
 7. 용인시 새올 고시공고(eminwon.yongin.go.kr, 2026-10-29): 6번의 원래 게시판. 같은 src에 via "새올", 게재기간 끝 날짜 until(열람·의견 마감).
    시보는 새올에서 이미 사라진 지난 공고(게재기간 끝남)를 채우는 용도로 남긴다. 공고번호(nos)가 같으면 새올 쪽만.
+8. 용인시 카카오톡 채널(pf.kakao.com/_SxkxoYxl, 2026-11-01): 와이페이·청년기본소득처럼 채널에만 오는 생활 정보. 홍보성 글만 빼고
+   본문·카드 그림·링크까지 읽기 창에. 금요일에만 받는다(yongin_kakao 위 설명). 시청 게시판에 같은 글이 있으면 게시판 쪽만.
 처인구청 서버는 오래된 TLS 설정이라 파이썬 기본값으로는 접속이 안 된다 → 보안 수준을 한 단계 낮춘 연결을 쓴다.
 """
 import base64
@@ -449,7 +451,85 @@ def cheoin_promo():
     return out
 
 
-CITY_SRCS = {"용인시 보도자료", "용인시 공지", "처인구 소식"}
+# 용인시 카카오톡 채널(2026-11-01 사용자 "도움 되는 정보는 다 넣자", "이미지도 넣어"): 와이페이 인센티브·청년기본소득 신청처럼
+# 시청 홈페이지 게시판에는 없고 채널에만 오는 글이 있다(10-30 대조: 20건 중 4건). 공개 글 목록을 로그인 없이 JSON으로 준다.
+# 홍보성 글(조아용 사진·기념일·메달·배경화면)과 다른 구 글만 빼고 나머지는 다 넣는다. 시청 게시판에 같은 글이 있으면 그쪽만 남긴다(main).
+# 카카오 채널 운영정책은 자동 접속 프로그램을 금지한다(제14조②5, 채널 운영자 대상) → 요청을 줄인다:
+# 사용자 "금요일에 한번 온다고 생각하면 될거 같아" → 금요일(KST)에만, 6시간에 한 번까지 받고 나머지 날은 지난 결과를 그대로 쓴다.
+# 7일 넘게 못 받았으면 요일과 상관없이 받는다(금요일 실행이 실패한 주). 목록 한 번에 최근 20건 = 보통 2~3주 치.
+KAKAO = "https://pf.kakao.com/rocket-web/web/profiles/_SxkxoYxl/posts"
+KAKAO_PROMO = re.compile(r"배경화면|인생샷|메달|선수")
+KAKAO_HOLIDAY = re.compile(r"의 날|한글날|광복절|삼일절|현충일|개천절|제헌절|성탄|새해|명절|추석|설날")
+EMOJI = re.compile("[\\U0001F000-\\U0001FAFF\\u2600-\\u27BF\\u2B00-\\u2BFF\\uFE0F\\u200D\\u20E3]")
+KAKAO_AT = {}  # 마지막으로 받은 시각 — main이 notices.json 'kakao_at'에 적는다
+
+
+def kakao_scope(title, body):
+    if TOWN.search(title):
+        return "town"
+    s = city_scope(title, press=False)  # 공시·기부·수상·다른 구 글은 같은 규칙으로 뺀다
+    if not s or FLUFF.search(title) or KAKAO_PROMO.search(title) or "배경화면" in body:
+        return None
+    if "조아용" in title and not re.search(r"EVENT|이벤트", title, re.I):  # 마스코트 사진 글(이벤트는 선물이 있어 남긴다)
+        return None
+    if KAKAO_HOLIDAY.search(title) and not LIFE.search(title):  # 기념일 인사(‘추석 연휴 쓰레기 배출 안내’는 남는다)
+        return None
+    return s
+
+
+def yongin_kakao():
+    try:
+        old = json.loads(OUT.read_text(encoding="utf-8"))
+    except Exception:
+        old = {}
+    now = datetime.now(KST)
+    last = datetime.fromisoformat(old["kakao_at"]) if old.get("kakao_at") else None
+    KAKAO_AT["at"] = old.get("kakao_at")
+    due = last is None or now - last > timedelta(days=7) or (now.weekday() == 4 and now - last > timedelta(hours=6))
+    if not due:
+        return [x for x in old.get("items", []) if x.get("src") == "용인시 카카오채널"]
+    data = json.loads(get(KAKAO))
+    out = []
+    for it in data.get("items", []):
+        if it.get("status") != "published" or it.get("is_private") or it.get("adult_only"):
+            continue
+        # 링크 조각도 제자리에 둔다 — 빼면 '신청 방법 ( )'처럼 빈 괄호가 남는다(11-01 화면에서 발견). 누를 수 있는 줄은 links로 따로
+        parts = [c.get("v", "") for c in it.get("contents", []) if c.get("t") in ("text", "link")]
+        lines = "\n".join(parts).strip().split("\n")
+        title = (it.get("title") or "").strip()
+        if not title:  # 제목 칸이 빈 글이 많다 → 본문 첫 줄이 제목
+            title, lines = lines[0], lines[1:]
+        title = re.sub(r"^[【\[]\s*(.*?)\s*[】\]]$", r"\1", re.sub(r"\s+", " ", EMOJI.sub("", title)).strip())
+        body = "\n".join(l.rstrip() for l in lines).strip()
+        scope = kakao_scope(title, body)
+        if not scope or not title:
+            continue
+        url = it["permalink"].replace("http://", "https://")
+        date = datetime.fromtimestamp(it["published_at"] / 1000, KST).strftime("%Y-%m-%d")
+        out.append({"src": "용인시 카카오채널", "date": date, "org": "용인특례시 카카오톡 채널", "no": "", "title": title,
+                    "scope": scope, "url": url})
+        # 본문은 목록 JSON에 이미 있다 → bodies()가 원문을 따로 받지 않게 여기서 만들어 둔다. 그림은 카카오 그림 서버 주소 그대로(큰 크기)
+        KAKAO_BODIES[url] = {"text": body, "imgs": [m.get("large_url") or m["url"] for m in it.get("media") or [] if m.get("type") == "image"],
+                             "files": [], "links": [c["v"] for c in it.get("contents", []) if c.get("t") == "link" and c.get("v")],
+                             "license": "용인특례시 카카오톡 채널"}
+    KAKAO_AT["at"] = now.isoformat(timespec="minutes")
+    return out
+
+
+KAKAO_BODIES = {}
+
+
+def same_title(a, b):
+    """시청 게시판 글과 카카오 글이 같은 소식인지: 글자 두 개씩 묶음이 절반 넘게 겹치면 같다고 본다(10-30 글로 맞춤)."""
+    norm = lambda s: re.sub(r"[^가-힣a-zA-Z0-9]|공고|안내|알림|개최|용인특례시|용인시|\d{4}년", "", s)
+    a, b = norm(a), norm(b)
+    if len(a) < 6 or len(b) < 6:
+        return False
+    ga, gb = {a[i:i + 2] for i in range(len(a) - 1)}, {b[i:i + 2] for i in range(len(b) - 1)}
+    return len(ga & gb) / min(len(ga), len(gb)) >= 0.6
+
+
+CITY_SRCS = {"용인시 보도자료", "용인시 공지", "처인구 소식", "용인시 카카오채널"}
 
 # ── 본문(2026-10-16 사용자 "링크로 연결되면 뒤로가기가 아니고 다시 페이지로 돌아와야 돼서 불편해 … 바로 볼수있게") ──
 # 글을 누르면 이남노트 안 읽기 창에서 본문을 보여 준다 → data/notice_bodies.json(url → 본문). 이미 받은 글은 다시 받지 않는다.
@@ -621,6 +701,9 @@ def bodies(items):
     out, got, fail = {}, 0, []
     for x in items:
         u = x["url"]
+        if u in KAKAO_BODIES:  # 카카오 글은 목록과 함께 받은 본문(받은 날은 처음 받은 날 그대로)
+            out[u] = {**KAKAO_BODIES[u], "at": old.get(u, {}).get("at") or datetime.now(KST).strftime("%Y-%m-%d"), "v": BODY_VERSION}
+            continue
         if u in old and old[u].get("v", 1) >= BODY_VERSION:
             out[u] = old[u]
             continue
@@ -656,7 +739,7 @@ def main():
     for name, fn, srcs in (("토지이음", eum, {"토지이음 고시"}), ("처인구 게시판", boards, {"이동읍 소식", "남사읍 소식"}),
                            ("LH", lh, {s for s, *_ in LH_BOARDS}), ("LH 청약플러스", lh_apply, {"LH 청약·임대"}),
                            ("용인시 보도자료", yongin_press, {"용인시 보도자료"}), ("용인시 공지", yongin_notice, {"용인시 공지"}),
-                           ("처인 홍보관", cheoin_promo, {"처인구 소식"}),
+                           ("처인 홍보관", cheoin_promo, {"처인구 소식"}), ("용인시 카카오채널", yongin_kakao, {"용인시 카카오채널"}),
                            # 시보와 새올은 src가 같다('용인시 고시·공고') → 지난 결과는 via로 가른다
                            ("용인시보 고시·공고", yongin_gazette, lambda x: x.get("src") == "용인시 고시·공고" and x.get("via") != "새올"),
                            ("새올 고시·공고", yongin_eminwon, lambda x: x.get("via") == "새올")):
@@ -678,15 +761,21 @@ def main():
     uniq = {}
     for x in items:
         uniq.setdefault((x["date"], re.sub(r"[\[\]()（）\s]", "", x["title"])), x)
-    items = sorted(uniq.values(), key=lambda x: x["date"], reverse=True)
+    items = list(uniq.values())
+    # 카카오 글이 시청 게시판(보도자료·공지)에도 있으면 게시판 쪽만 — 첨부·바로보기가 있다. 날짜는 앞뒤 3주 안에서 견준다
+    board = [x for x in items if x["src"] in ("용인시 보도자료", "용인시 공지")]
+    near = lambda a, b: abs((datetime.fromisoformat(a) - datetime.fromisoformat(b)).days) <= 21
+    items = [x for x in items if x["src"] != "용인시 카카오채널"
+             or not any(near(x["date"], y["date"]) and same_title(x["title"], y["title"]) for y in board)]
+    items.sort(key=lambda x: x["date"], reverse=True)
     fail = bodies(items)
     if len(fail) > 5:  # 한두 건은 다음 실행에 다시 받는다. 많이 실패하면 사이트 구조가 바뀐 것 → 실패로 알린다
         errors.append(f"본문 {len(fail)}건 실패: " + " / ".join(fail[:3]))
     payload = {"updated_at": datetime.now(KST).isoformat(timespec="minutes"), "errors": errors, "items": items,
-               "eminwon_skip": sorted(EMINWON_SKIP)}
+               "eminwon_skip": sorted(EMINWON_SKIP), "kakao_at": KAKAO_AT.get("at")}
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
-    # 화면용 notices.js에는 다음 실행용 기록(eminwon_skip·parts)을 빼서 가볍게
-    web = {**{k: v for k, v in payload.items() if k != "eminwon_skip"}, "items": [{k: v for k, v in x.items() if k != "parts"} for x in items]}
+    # 화면용 notices.js에는 다음 실행용 기록(eminwon_skip·kakao_at·parts)을 빼서 가볍게
+    web = {**{k: v for k, v in payload.items() if k not in ("eminwon_skip", "kakao_at")}, "items": [{k: v for k, v in x.items() if k != "parts"} for x in items]}
     OUT.with_suffix(".js").write_text("window.NOTICES = " + json.dumps(web, ensure_ascii=False) + ";\n", encoding="utf-8")
     print(f"→ {OUT} ({len(items)}건)")
     # 한 곳이라도 실패하면 파일은 쓰되(지난 결과 유지) 실패로 끝낸다 → Actions 실패 메일. 하루 한두 번만 도니 메일이 많지 않다
