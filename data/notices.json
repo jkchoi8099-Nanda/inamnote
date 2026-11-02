@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-02T09:39+09:00",
+ "updated_at": "2026-11-02T18:50+09:00",
  "errors": [],
  "items": [
   {
@@ -46,6 +46,24 @@
    "title": "용인특례시, 첨단시스템반도체 국가산단 부지 조성 착공 따른 종합대책 마련 나서",
    "scope": "town",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261102080624453"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-02",
+   "org": "용인특례시 자원순환과",
+   "no": "",
+   "title": "용인시 음식물류 폐기물 처리수수료 2026년 11월 고지금액 알림(실사용 기간 : 2026.10. 1. ~ 10. 31.)",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261102105852102"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-02",
+   "org": "용인특례시 건강증진과",
+   "no": "",
+   "title": "[보건소] 「혈관을 지키는 건강퀴즈 챌린지 2탄」 운영 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=2&q_bbscttSn=20261102103845972&q_category=main"
   },
   {
    "src": "용인시 공지",
@@ -327,7 +345,7 @@
    "date": "2026-10-26",
    "org": "용인특례시 보건행정과",
    "no": "",
-   "title": "[보건소] ★(법정의무교육대상) 교육 종료 안내★",
+   "title": "[보건소] ★응급처치교육(심폐소생술) (법정의무교육대상) 교육 종료 안내★",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=3&q_bbscttSn=20261026140337704&q_category=main"
   },
@@ -1042,15 +1060,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1018&q_clCode=2&q_bbscttSn=20261007135212663"
   },
   {
-   "src": "용인시 공지",
-   "date": "2026-10-07",
-   "org": "용인특례시 관광과",
-   "no": "",
-   "title": "「2026 해피 가면 축제」 개최 안내",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261007094707060"
-  },
-  {
    "src": "용인시 보도자료",
    "date": "2026-10-06",
    "org": "용인특례시",
@@ -1121,15 +1130,6 @@
    "title": "2026년 하반기 광견병 예방접종 실시",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261006155653752"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-06",
-   "org": "용인특례시 농촌테마과",
-   "no": "",
-   "title": "[농촌테마파크] 10월9일 (금)\"한글날\" 농촌테마파크 개장 및 체험 운영안내 입니다.",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261006140617616"
   },
   {
    "src": "용인시 보도자료",
