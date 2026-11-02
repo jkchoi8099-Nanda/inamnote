@@ -1,7 +1,61 @@
 {
- "updated_at": "2026-11-02T06:49+09:00",
+ "updated_at": "2026-11-02T09:39+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-02",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시 처인구보건소, 생물테러 대비 소규모 모의훈련",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261102081301937"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-02",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 11월 2일부터 ‘청년기본소득’ 4분기 신청 접수",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261102080734587"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-02",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 지역화폐 결제 시 5% 캐시백",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261102080713530"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-02",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 용인반도체클러스터 거점 주차장 16만㎡→66만㎡ 확대",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261102080647125"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-02",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 첨단시스템반도체 국가산단 부지 조성 착공 따른 종합대책 마련 나서",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261102080624453"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-02",
+   "org": "용인특례시 건강증진과",
+   "no": "",
+   "title": "[보건소] 세계 당뇨병의 날 행사 알림",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=3&q_bbscttSn=20261102093428004&q_category=main"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-10-30",
@@ -91,15 +145,6 @@
    "title": "11월 용인와이페이 인센티브 및 캐시백 안내",
    "scope": "city",
    "url": "https://pf.kakao.com/_SxkxoYxl/115045484"
-  },
-  {
-   "src": "용인시 카카오채널",
-   "date": "2026-10-29",
-   "org": "용인특례시 카카오톡 채널",
-   "no": "",
-   "title": "2026년 4분기 청년기본소득 신청안내",
-   "scope": "city",
-   "url": "https://pf.kakao.com/_SxkxoYxl/115045212"
   },
   {
    "src": "용인시 고시·공고",
@@ -898,15 +943,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261013154132536"
   },
   {
-   "src": "처인구 소식",
-   "date": "2026-10-13",
-   "org": "처인구 이동읍",
-   "no": "",
-   "title": "이동읍 소식! 이동읍민 모두가 함께한 즐거운 축제",
-   "scope": "town",
-   "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=84915&brd_mgrno=366&menu_no=1683"
-  },
-  {
    "src": "용인시 보도자료",
    "date": "2026-10-12",
    "org": "용인특례시",
@@ -1137,15 +1173,6 @@
    "no": "",
    "title": "[보상계획] 국지도 84호선 중리~천리 도로개설공사 수용재결 공시송달 공고",
    "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=734313"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-02",
-   "org": "용인특례시 환경정책과",
-   "no": "",
-   "title": "【공무원 사칭 주의】 환경관리설비 설치관련 선입금 요구 등 공무원사칭 피해예방 안내",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261002182318164"
   },
   {
    "src": "남사읍 소식",
