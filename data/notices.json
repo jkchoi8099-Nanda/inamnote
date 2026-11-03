@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-03T11:56+09:00",
+ "updated_at": "2026-11-03T18:49+09:00",
  "errors": [],
  "items": [
   {
@@ -19,6 +19,15 @@
    "title": "용인특례시, 처인구 김량장역 주변 도로 4차선 확장",
    "scope": "town",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261103074315704"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-03",
+   "org": "용인특례시 건강증진과",
+   "no": "",
+   "title": "[보건소] 도전! 내 혈관 건강 Level UP 챌린지",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261103133551746&q_category=main"
   },
   {
    "src": "용인시 공지",
@@ -1139,15 +1148,6 @@
    "title": "용인특례시, 시 승격 30주년 기념 ‘조아용 페스티벌’ 개최",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261006075145727"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-06",
-   "org": "용인특례시 기후대기과",
-   "no": "",
-   "title": "「대기환경보전법」에 따른 비산배출시설 설치·운영 신고 안내 홍보",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261006161310905"
   },
   {
    "src": "용인시 보도자료",
