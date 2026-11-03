@@ -1,7 +1,43 @@
 {
- "updated_at": "2026-11-03T06:50+09:00",
+ "updated_at": "2026-11-03T11:56+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-03",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 내년 청년정책 수립에 참여할 100명 모집",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261103074409990"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-03",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 처인구 김량장역 주변 도로 4차선 확장",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261103074315704"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-03",
+   "org": "용인특례시 보건정책과",
+   "no": "",
+   "title": "[보건소] [버블하트캠페인] 올바른 손씻기 챌린지 '버블하트 캠페인' 11월 신청 시작합니다!",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261103100508177&q_category=main"
+  },
+  {
+   "src": "처인구 소식",
+   "date": "2026-11-03",
+   "org": "처인구 이동읍",
+   "no": "",
+   "title": "이동읍 소식! 생활개선용인시연합회 재능활용 지역돌봄사업",
+   "scope": "town",
+   "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=85057&brd_mgrno=366&menu_no=1683"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-11-02",
@@ -695,15 +731,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261019100027441"
   },
   {
-   "src": "처인구 소식",
-   "date": "2026-10-19",
-   "org": "처인구 도시미관과",
-   "no": "",
-   "title": "처인구 소식! 구석구석 개운하게 물청소 완료!",
-   "scope": "town",
-   "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=84973&brd_mgrno=366&menu_no=1683"
-  },
-  {
    "src": "용인시 카카오채널",
    "date": "2026-10-19",
    "org": "용인특례시 카카오톡 채널",
@@ -1121,15 +1148,6 @@
    "title": "「대기환경보전법」에 따른 비산배출시설 설치·운영 신고 안내 홍보",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261006161310905"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-06",
-   "org": "용인특례시 축산과",
-   "no": "",
-   "title": "2026년 하반기 광견병 예방접종 실시",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261006155653752"
   },
   {
    "src": "용인시 보도자료",
