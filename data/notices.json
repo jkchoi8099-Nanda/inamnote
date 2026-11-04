@@ -1,7 +1,23 @@
 {
- "updated_at": "2026-11-04T10:19+09:00",
+ "updated_at": "2026-11-04T19:36+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "이동읍 소식",
+   "date": "2026-11-04",
+   "org": "처인구 이동읍",
+   "no": "",
+   "title": "2027년도 「스포츠강좌이용권 사업」신청 안내",
+   "url": "https://www.cheoingu.go.kr/home/boardView.do?brd_mgrno=274&menu_no=1666&brd_no=85086"
+  },
+  {
+   "src": "이동읍 소식",
+   "date": "2026-11-04",
+   "org": "처인구 이동읍",
+   "no": "",
+   "title": "한부모가정 무료법률구조사업 안내",
+   "url": "https://www.cheoingu.go.kr/home/boardView.do?brd_mgrno=274&menu_no=1666&brd_no=85085"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-11-03",
@@ -747,14 +763,6 @@
    "title": "10월 4주차 위클리 뉴스용",
    "scope": "city",
    "url": "https://pf.kakao.com/_SxkxoYxl/114933946"
-  },
-  {
-   "src": "이동읍 소식",
-   "date": "2026-10-16",
-   "org": "처인구 이동읍",
-   "no": "",
-   "title": "한부모가정 의료보험 안내",
-   "url": "https://www.cheoingu.go.kr/home/boardView.do?brd_mgrno=274&menu_no=1666&brd_no=84967"
   },
   {
    "src": "용인시 보도자료",
