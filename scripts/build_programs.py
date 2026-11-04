@@ -59,6 +59,8 @@ def main() -> int:
             "url": x["url"],
         })
     payload = {"updated_at": d["updated_at"], "built_at": datetime.now(KST).isoformat(timespec="minutes"), "items": items}
+    if d.get("failing"):  # collect_programs.py가 지난 목록으로 메운 출처와 실패 시작 시각 — 다음 실행이 이어서 센다
+        payload["failing"] = d["failing"]
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("window.PROGRAMS = " + json.dumps(payload, ensure_ascii=False) + ";\n", encoding="utf-8")
     print(f"레이더 {len(d['items'])}건 중 용인 {len(items)}건 → {OUT}")

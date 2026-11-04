@@ -110,8 +110,10 @@ def check_places(P):
 
 # ── [2] 개수·사본 일치 ──
 def web_notices(d):
-    """build_notices.py가 화면용 notices.js에서 빼는 칸(다음 실행용 eminwon_skip·글마다 parts)을 똑같이 뺀다"""
-    return {**{k: v for k, v in d.items() if k != "eminwon_skip"}, "items": [{k: v for k, v in x.items() if k != "parts"} for x in d["items"]]}
+    """build_notices.py가 화면용 notices.js에서 빼는 칸(다음 실행용 eminwon_skip·kakao_at·글마다 parts)을 똑같이 뺀다.
+    2026-11-04: 11-01 카카오 채널 추가 때 build_notices.py만 kakao_at을 빼게 바뀌어 이 검사가 멀쩡한 자료로 커밋을 막았다 — 빼는 칸을 바꾸면 양쪽 다"""
+    return {**{k: v for k, v in d.items() if k not in ("eminwon_skip", "kakao_at")},
+            "items": [{k: v for k, v in x.items() if k != "parts"} for x in d["items"]]}
 
 
 def check_twins():
