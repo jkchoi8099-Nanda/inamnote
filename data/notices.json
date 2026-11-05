@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-11-05T10:30+09:00",
+ "updated_at": "2026-11-05T18:50+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "LH 청약·임대",
+   "date": "2026-11-05",
+   "org": "LH 청약플러스 · 분양주택 · 공고중 · 마감 2026.11.24",
+   "no": "",
+   "title": "경기남부권(수원·용인 광교) 공가세대 일반매각 공고(무순위, 유주택자 가능)",
+   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021009&ccrCnntSysDsCd=03&uppAisTpCd=05&aisTpCd=05&mi=1027"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-05",
+   "org": "용인특례시 장애인복지과",
+   "no": "",
+   "title": "2027년 장애인일자리사업(전일제, 시간제) 참여자 모집 공고문",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261105172655515"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-05",
+   "org": "용인특례시 농촌테마과",
+   "no": "",
+   "title": "[농촌테마파크] -농촌테마파크 11월 1째주 주말상시체험진행 : 11/7(토)~11/8(일)",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261105162540395"
+  },
   {
    "src": "이동읍 소식",
    "date": "2026-11-04",
@@ -988,15 +1014,6 @@
   },
   {
    "src": "용인시 공지",
-   "date": "2026-10-14",
-   "org": "용인특례시 농촌테마과",
-   "no": "",
-   "title": "[농촌테마파크] -농촌테마파크 10월 3째주 주말상시체험진행 : 10/17(토)~10/18(일)",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261014142212989"
-  },
-  {
-   "src": "용인시 공지",
    "date": "2026-10-13",
    "org": "용인특례시 민원여권과",
    "no": "",
@@ -1030,15 +1047,6 @@
    "title": "2026년 시장놀이광장 팝업스토어 행사 개최 알림",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261012180907059"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-12",
-   "org": "용인특례시 문화예술과",
-   "no": "",
-   "title": "용인어린이상상의숲 참여 예술가 모집 공고",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261012151628185"
   },
   {
    "src": "용인시 카카오채널",
@@ -1093,15 +1101,6 @@
    "title": "용인특례시, 평생학습관 제3차 단기교육 수강생 모집",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261007074718673"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-07",
-   "org": "용인특례시 농촌테마과",
-   "no": "",
-   "title": "[농업기술] 2026년 용인농촌테마파크 가을축제「반려식물 도시농업 체험농업」",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1018&q_clCode=2&q_bbscttSn=20261007135212663"
   },
   {
    "src": "용인시 보도자료",
