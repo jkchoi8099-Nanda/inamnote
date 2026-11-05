@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-05T18:50+09:00",
+ "updated_at": "2026-11-06T02:23+09:00",
  "errors": [],
  "items": [
   {
@@ -45,6 +45,15 @@
    "url": "https://www.cheoingu.go.kr/home/boardView.do?brd_mgrno=274&menu_no=1666&brd_no=85085"
   },
   {
+   "src": "용인시 카카오채널",
+   "date": "2026-11-04",
+   "org": "용인특례시 카카오톡 채널",
+   "no": "",
+   "title": "2026 용인 공정무역 포트나잇",
+   "scope": "city",
+   "url": "https://pf.kakao.com/_SxkxoYxl/115126586"
+  },
+  {
    "src": "용인시 보도자료",
    "date": "2026-11-03",
    "org": "용인특례시",
@@ -88,6 +97,15 @@
    "title": "이동읍 소식! 생활개선용인시연합회 재능활용 지역돌봄사업",
    "scope": "town",
    "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=85057&brd_mgrno=366&menu_no=1683"
+  },
+  {
+   "src": "용인시 카카오채널",
+   "date": "2026-11-03",
+   "org": "용인특례시 카카오톡 채널",
+   "no": "",
+   "title": "2026 용인시민대중예술인 특집 <가을별빛광장>",
+   "scope": "city",
+   "url": "https://pf.kakao.com/_SxkxoYxl/115110702"
   },
   {
    "src": "용인시 보도자료",
@@ -160,6 +178,15 @@
    "title": "[보건소] 세계 당뇨병의 날 행사 알림",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=3&q_bbscttSn=20261102093428004&q_category=main"
+  },
+  {
+   "src": "용인시 카카오채널",
+   "date": "2026-11-02",
+   "org": "용인특례시 카카오톡 채널",
+   "no": "",
+   "title": "11월 1주차 위클리 뉴스용",
+   "scope": "city",
+   "url": "https://pf.kakao.com/_SxkxoYxl/115068535"
   },
   {
    "src": "용인시 보도자료",
@@ -1049,24 +1076,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261012180907059"
   },
   {
-   "src": "용인시 카카오채널",
-   "date": "2026-10-12",
-   "org": "용인특례시 카카오톡 채널",
-   "no": "",
-   "title": "2026년 용인특례시 협치 포럼 안내",
-   "scope": "city",
-   "url": "https://pf.kakao.com/_SxkxoYxl/114855650"
-  },
-  {
-   "src": "용인시 카카오채널",
-   "date": "2026-10-12",
-   "org": "용인특례시 카카오톡 채널",
-   "no": "",
-   "title": "10월 3주차 위클리 뉴스용",
-   "scope": "city",
-   "url": "https://pf.kakao.com/_SxkxoYxl/114836420"
-  },
-  {
    "src": "용인시 보도자료",
    "date": "2026-10-08",
    "org": "용인특례시",
@@ -1101,60 +1110,6 @@
    "title": "용인특례시, 평생학습관 제3차 단기교육 수강생 모집",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261007074718673"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-06",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 반려견 광견병 예방접종",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261006083602915"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-06",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 2026 조아용 페스티벌서 ‘제6회 청년페스티벌’ 개최",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261006082339247"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-06",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 2026 조아용 페스티벌서 ‘제7회 평생학습박람회’ 개최",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261006082315623"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-06",
-   "org": "용인특례시",
-   "no": "",
-   "title": "“용인 농산물 가공품 한 자리에”…용인특례시, ‘2026 조아용푸드 페스타’ 개최",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261006082251918"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-06",
-   "org": "용인특례시",
-   "no": "",
-   "title": "이상일 용인특례시장, ‘제4회 이동읍민의 날’ 참석해 주민들과 소통",
-   "scope": "town",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261006075501575"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-06",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 시 승격 30주년 기념 ‘조아용 페스티벌’ 개최",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261006075145727"
   },
   {
    "src": "남사읍 소식",
@@ -1667,22 +1622,6 @@
    "no": "",
    "title": "용인김량장2단지 50년 공공임대 예비입주자 모집",
    "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019920&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=08&mi=1026"
-  },
-  {
-   "src": "LH 청약·임대",
-   "date": "2026-05-06",
-   "org": "LH 청약플러스 · 국민임대 · 접수마감 · 마감 2026.05.28",
-   "no": "",
-   "title": "용인마평 국민임대주택 예비입주자 모집(2026.05,06)",
-   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019859&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026"
-  },
-  {
-   "src": "LH 청약·임대",
-   "date": "2026-05-06",
-   "org": "LH 청약플러스 · 행복주택 · 접수마감 · 마감 2026.05.15",
-   "no": "",
-   "title": "[정정공고][경기남부권 용인시 및 이천시 행복주택 예비입주자 모집(2026.04.29.)",
-   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019901&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
   },
   {
    "src": "용인시 고시·공고",
@@ -2263,5 +2202,5 @@
   "97280",
   "97759"
  ],
- "kakao_at": "2026-11-01T18:47+09:00"
+ "kakao_at": "2026-11-06T02:20+09:00"
 }
