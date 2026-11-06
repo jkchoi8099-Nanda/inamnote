@@ -1,7 +1,52 @@
 {
- "updated_at": "2026-11-06T06:50+09:00",
+ "updated_at": "2026-11-06T10:33+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-06",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 2027년 1단계 희망드림일자리 참여자 320명 모집",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261106074940155"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-06",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, ‘공정무역 포트나잇(Fairtrade Fortnight)’ 캠페인 개최",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261106074919955"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-06",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 12월까지 어린이 인플루엔자 집중 접종",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261106074834281"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-06",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 올해 교육 분야에 ‘845억 원’ 통 큰 투자",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261106074810730"
+  },
+  {
+   "src": "용인시 카카오채널",
+   "date": "2026-11-06",
+   "org": "용인특례시 카카오톡 채널",
+   "no": "",
+   "title": "11월을 삭제하시겠습니까?",
+   "scope": "city",
+   "url": "https://pf.kakao.com/_SxkxoYxl/115007237"
+  },
   {
    "src": "LH 청약·임대",
    "date": "2026-11-05",
@@ -223,15 +268,6 @@
    "title": "27년 상비예비군 정기모집 및 선발공고 안내",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261030094550072"
-  },
-  {
-   "src": "용인시 카카오채널",
-   "date": "2026-10-30",
-   "org": "용인특례시 카카오톡 채널",
-   "no": "",
-   "title": "「2027년 1단계 희망드림일자리사업」 참여자 모집",
-   "scope": "city",
-   "url": "https://pf.kakao.com/_SxkxoYxl/115061855"
   },
   {
    "src": "용인시 보도자료",
@@ -807,15 +843,6 @@
    "title": "경희 찾아가는 테크포럼 개최 안내",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261019100027441"
-  },
-  {
-   "src": "용인시 카카오채널",
-   "date": "2026-10-19",
-   "org": "용인특례시 카카오톡 채널",
-   "no": "",
-   "title": "10월 4주차 위클리 뉴스용",
-   "scope": "city",
-   "url": "https://pf.kakao.com/_SxkxoYxl/114933946"
   },
   {
    "src": "용인시 보도자료",
@@ -2202,5 +2229,5 @@
   "97280",
   "97759"
  ],
- "kakao_at": "2026-11-06T02:20+09:00"
+ "kakao_at": "2026-11-06T10:30+09:00"
 }
