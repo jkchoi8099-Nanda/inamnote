@@ -1,7 +1,15 @@
 {
- "updated_at": "2026-11-06T10:33+09:00",
+ "updated_at": "2026-11-06T18:50+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "이동읍 소식",
+   "date": "2026-11-06",
+   "org": "처인구 이동읍",
+   "no": "",
+   "title": "2027년도 「장애인스포츠강좌이용권 사업」신청 안내",
+   "url": "https://www.cheoingu.go.kr/home/boardView.do?brd_mgrno=274&menu_no=1666&brd_no=85096"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-11-06",
@@ -43,9 +51,43 @@
    "date": "2026-11-06",
    "org": "용인특례시 카카오톡 채널",
    "no": "",
+   "title": "한파대비 이렇게 행동하세요!",
+   "scope": "city",
+   "url": "https://pf.kakao.com/_SxkxoYxl/115148799"
+  },
+  {
+   "src": "용인시 카카오채널",
+   "date": "2026-11-06",
+   "org": "용인특례시 카카오톡 채널",
+   "no": "",
    "title": "11월을 삭제하시겠습니까?",
    "scope": "city",
    "url": "https://pf.kakao.com/_SxkxoYxl/115007237"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-11-06",
+   "org": "용인특례시 주택정비과",
+   "no": "용인시 고시 제2026-632호",
+   "title": "이동2구역 주거환경개선사업 정비계획(경미한 사항) 변경 및 사업시행계획(경미한 사항) 변경 고시",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시고시제2026-632호"
+   ],
+   "parts": [
+    {
+     "mgt": "149055",
+     "title": "이동2구역 주거환경개선사업 정비계획(경미한 사항) 변경 및 사업시행계획(경미한 사항) 변경 고시",
+     "no": "용인시 고시 제2026-632호",
+     "dept": "주택정비과",
+     "date": "2026-11-06",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=149055"
   },
   {
    "src": "LH 청약·임대",
@@ -753,15 +795,6 @@
    "title": "[보건소] 2026년 11월 미취학 어린이 식단표",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261020143135140&q_category=main"
-  },
-  {
-   "src": "용인시 카카오채널",
-   "date": "2026-10-20",
-   "org": "용인특례시 카카오톡 채널",
-   "no": "",
-   "title": "알록달록 가을! 용인 진풍경 가을산 6경",
-   "scope": "city",
-   "url": "https://pf.kakao.com/_SxkxoYxl/114933994"
   },
   {
    "src": "용인시 보도자료",
@@ -2229,5 +2262,5 @@
   "97280",
   "97759"
  ],
- "kakao_at": "2026-11-06T10:30+09:00"
+ "kakao_at": "2026-11-06T18:47+09:00"
 }
