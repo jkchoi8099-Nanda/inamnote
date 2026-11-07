@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-07T09:15+09:00",
+ "generated_at": "2026-11-07T09:16+09:00",
  "example": false,
  "sources": {
   "weather": {
    "ok": true,
-   "at": "2026-11-07T09:15+09:00",
+   "at": "2026-11-07T09:16+09:00",
    "data": {
     "temp": "-2",
     "sky": "맑음",
