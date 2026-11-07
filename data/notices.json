@@ -1,6 +1,8 @@
 {
- "updated_at": "2026-11-07T06:50+09:00",
- "errors": [],
+ "updated_at": "2026-11-07T09:55+09:00",
+ "errors": [
+  "LH 청약플러스: The read operation timed out"
+ ],
  "items": [
   {
    "src": "이동읍 소식",
