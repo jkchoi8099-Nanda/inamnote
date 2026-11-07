@@ -1,8 +1,6 @@
 {
- "updated_at": "2026-11-07T09:55+09:00",
- "errors": [
-  "LH 청약플러스: The read operation timed out"
- ],
+ "updated_at": "2026-11-07T18:50+09:00",
+ "errors": [],
  "items": [
   {
    "src": "이동읍 소식",
@@ -1040,6 +1038,14 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261015093848940"
   },
   {
+   "src": "LH 보상공고",
+   "date": "2026-10-14",
+   "org": "LH",
+   "no": "",
+   "title": "[보상계획] 용인반도체국가산단 원주민 임시거주용 임대주택 공급 공고",
+   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=734471"
+  },
+  {
    "src": "용인시 보도자료",
    "date": "2026-10-14",
    "org": "용인특례시",
@@ -1165,12 +1171,28 @@
    "url": "https://www.cheoingu.go.kr/home/boardView.do?brd_mgrno=275&menu_no=1667&brd_no=84860"
   },
   {
+   "src": "LH 보상공고",
+   "date": "2026-10-02",
+   "org": "LH",
+   "no": "",
+   "title": "[보상계획] 국지도 84호선 중리~천리 도로개설공사 수용재결 공시송달 공고",
+   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=734313"
+  },
+  {
    "src": "남사읍 소식",
    "date": "2026-09-22",
    "org": "처인구 남사읍",
    "no": "",
    "title": "미혼·한부모가족 자립지원 민관협력 사업 홍보",
    "url": "https://www.cheoingu.go.kr/home/boardView.do?brd_mgrno=275&menu_no=1667&brd_no=84812"
+  },
+  {
+   "src": "LH 보도자료",
+   "date": "2026-09-22",
+   "org": "LH",
+   "no": "",
+   "title": "한국토지주택공사(LH), 용인반도체산단 조성공사 심사방안 확정·공개",
+   "url": "https://www.lh.or.kr/gallery.es?mid=a10502000000&bid=0003&act=view&list_no=12128"
   },
   {
    "src": "용인시 고시·공고",
@@ -1196,6 +1218,14 @@
     }
    ],
    "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=147758"
+  },
+  {
+   "src": "LH 보상공고",
+   "date": "2026-09-21",
+   "org": "LH",
+   "no": "",
+   "title": "[보상계획] 용인반도체국가산단 분묘 개장 공고",
+   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=734079"
   },
   {
    "src": "용인시 고시·공고",
@@ -1388,6 +1418,14 @@
    "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=147342"
   },
   {
+   "src": "LH 보도자료",
+   "date": "2026-09-01",
+   "org": "LH",
+   "no": "",
+   "title": "용인 반도체 국가산단 조성시계 빨라진다 한국토지주택공사(LH), 오는 10월 부지 조성 착공",
+   "url": "https://www.lh.or.kr/gallery.es?mid=a10502000000&bid=0003&act=view&list_no=12107"
+  },
+  {
    "src": "용인시 고시·공고",
    "via": "새올",
    "date": "2026-08-24",
@@ -1572,6 +1610,22 @@
     "용인시공고제2026-2187호"
    ],
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20260720185859114#2026-2187"
+  },
+  {
+   "src": "LH 보도자료",
+   "date": "2026-07-16",
+   "org": "LH",
+   "no": "",
+   "title": "한국토지주택공사(LH), 용인반도체 국가산단 조성공사 발주로 사업속도 박차",
+   "url": "https://www.lh.or.kr/gallery.es?mid=a10502000000&bid=0003&act=view&list_no=12079"
+  },
+  {
+   "src": "LH 보도자료",
+   "date": "2026-07-09",
+   "org": "LH",
+   "no": "",
+   "title": "이성훈 한국토지주택공사(LH) 사장, 용인국가산단 방문…“속도전 위해 LH 역량 집중” 당부",
+   "url": "https://www.lh.or.kr/gallery.es?mid=a10502000000&bid=0003&act=view&list_no=12066"
   },
   {
    "src": "LH 청약·임대",
@@ -1924,6 +1978,14 @@
    "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=139166"
   },
   {
+   "src": "LH 보상공고",
+   "date": "2025-12-03",
+   "org": "LH",
+   "no": "",
+   "title": "[대토보상] 용인 첨단시스템반도체 클러스터 국가산업단지 대토보상계획 공고",
+   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=728301"
+  },
+  {
    "src": "용인시 고시·공고",
    "via": "새올",
    "date": "2025-11-26",
@@ -1949,12 +2011,60 @@
    "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=137958"
   },
   {
+   "src": "LH 공모·공고",
+   "date": "2025-10-21",
+   "org": "LH 본사",
+   "no": "",
+   "title": "용인 첨단시스템 반도체 클러스터 국가산업단지의 보상등기 업무 법무사등 선정결과 공..",
+   "url": "https://www.lh.or.kr/board.es?mid=a10601020000&bid=0034&act=view&list_no=727136"
+  },
+  {
+   "src": "LH 공모·공고",
+   "date": "2025-09-26",
+   "org": "LH 본사",
+   "no": "",
+   "title": "용인반도체산단 보상등기업무 법무사등 선정계획 공고",
+   "url": "https://www.lh.or.kr/board.es?mid=a10601020000&bid=0034&act=view&list_no=726759"
+  },
+  {
+   "src": "LH 보상공고",
+   "date": "2025-09-19",
+   "org": "LH",
+   "no": "",
+   "title": "[보상협의] 국지도 84호선 중리~천리 도로개설공사 손실보상협의 공시송달 공고",
+   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=728336"
+  },
+  {
    "src": "토지이음 고시",
    "date": "2025-08-08",
    "org": "경기도 건설국 하천과",
    "no": "경기도 고시 제2025-5069호",
    "title": "[변경] 송전천 하천구역 및 폐천부지 관리계획 변경 결정 고시",
    "url": "https://www.eum.go.kr/web/gs/gv/gvGosiDet.jsp?seq=615574"
+  },
+  {
+   "src": "LH 보상공고",
+   "date": "2025-06-09",
+   "org": "LH",
+   "no": "",
+   "title": "[보상계획] 용인 첨단시스템반도체 클러스터 국가산업단지 보상계획 및 열람 공고",
+   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=728374"
+  },
+  {
+   "src": "LH 보상공고",
+   "date": "2025-06-02",
+   "org": "LH",
+   "no": "",
+   "title": "[보상계획] 국지도 84호선 중리~천리 도로개설공사 보상계획 및 열람 공고(용인)",
+   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=728381"
+  },
+  {
+   "src": "LH 보상공고",
+   "date": "2025-06-02",
+   "org": "LH",
+   "no": "",
+   "title": "[보상계획] 국지도 84호선 중리~천리 도로개설공사 보상계획 및 열람 공고(화성)",
+   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=728380"
   },
   {
    "src": "토지이음 고시",
@@ -1981,6 +2091,22 @@
    "url": "https://www.eum.go.kr/web/gs/gv/gvGosiDet.jsp?seq=607223"
   },
   {
+   "src": "LH 공모·공고",
+   "date": "2025-03-17",
+   "org": "LH 본사",
+   "no": "",
+   "title": "(정정공고) 용인이동 공공주택지구 도시건축통합계획 설계공모",
+   "url": "https://www.lh.or.kr/board.es?mid=a10601020000&bid=0034&act=view&list_no=723794"
+  },
+  {
+   "src": "LH 공모·공고",
+   "date": "2025-03-17",
+   "org": "LH 본사",
+   "no": "",
+   "title": "용인이동 공공주택지구 도시건축통합계획 설계공모",
+   "url": "https://www.lh.or.kr/board.es?mid=a10601020000&bid=0034&act=view&list_no=723681"
+  },
+  {
    "src": "토지이음 고시",
    "date": "2025-02-21",
    "org": "경기도",
@@ -1997,6 +2123,14 @@
    "url": "https://www.eum.go.kr/web/gs/gv/gvGosiDet.jsp?seq=603797"
   },
   {
+   "src": "LH 보상공고",
+   "date": "2024-11-26",
+   "org": "LH",
+   "no": "",
+   "title": "[보상계획] 국지도 84호선 중리~천리 도로개설공사 보상계획 공고 및 열람안내",
+   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=728460"
+  },
+  {
    "src": "토지이음 고시",
    "date": "2024-09-02",
    "org": "경기도 용인시 도시정책실 도시개발과",
@@ -2011,6 +2145,14 @@
    "no": "경기도 용인시 고시 제2024-426호",
    "title": "[변경] 도로구역 결정(변경) 및 지형도면고시 [국도45호 지하화(복개구조물) 및 반방음터널 설치공사]",
    "url": "https://www.eum.go.kr/web/gs/gv/gvGosiDet.jsp?seq=592809"
+  },
+  {
+   "src": "LH 보도자료",
+   "date": "2024-02-07",
+   "org": "LH",
+   "no": "",
+   "title": "이한준 LH사장, 용인첨단반도체 국가산업단지 사업 점검",
+   "url": "https://www.lh.or.kr/gallery.es?mid=a10502000000&bid=0003&act=view&list_no=11350"
   },
   {
    "src": "토지이음 고시",
