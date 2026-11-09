@@ -1,7 +1,43 @@
 {
- "updated_at": "2026-11-09T06:50+09:00",
+ "updated_at": "2026-11-09T09:49+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-09",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시 처인구, 주요 도로 가로수 돌출뿌리 정비",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261109081031364"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-09",
+   "org": "용인특례시",
+   "no": "",
+   "title": "이상일 용인특례시장, 동천동·남사읍·중앙동 주민 화합 행사 참석해 시민들과 소통",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261109080926653"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-09",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 용천초 어울림센터 9일부터 시범 운영",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261109080615173"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-09",
+   "org": "용인특례시 일자리정책과",
+   "no": "",
+   "title": "2027년 1단계 희망드림일자리 참여자 모집",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261109084623745"
+  },
   {
    "src": "이동읍 소식",
    "date": "2026-11-06",
@@ -1125,15 +1161,6 @@
    "title": "용인시육아종합지원센터, 우수보육사례 공모전 ‘함께존중 행복키움’ 행사 개최",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261012083145884"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-12",
-   "org": "용인특례시 도시정비과",
-   "no": "",
-   "title": "2026년 시장놀이광장 팝업스토어 행사 개최 알림",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261012180907059"
   },
   {
    "src": "남사읍 소식",
