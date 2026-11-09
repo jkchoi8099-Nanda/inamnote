@@ -1,7 +1,134 @@
 {
- "updated_at": "2026-11-09T18:49+09:00",
+ "updated_at": "2026-11-10T04:49+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-11-10",
+   "org": "용인특례시 도시정비과",
+   "no": "용인시 공고 제2026-3104호",
+   "title": "[공고]도시계획시설(이동 소로 2-1호) 실시계획 작성(변경) 열람·공고",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "2026-11-25",
+   "nos": [
+    "용인시공고제2026-3104호"
+   ],
+   "parts": [
+    {
+     "mgt": "149071",
+     "title": "[공고]도시계획시설(이동 소로 2-1호) 실시계획 작성(변경) 열람·공고",
+     "no": "용인시 공고 제2026-3104호",
+     "dept": "도시정비과",
+     "date": "2026-11-10",
+     "until": "2026-11-25"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=149071"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-11-10",
+   "org": "용인특례시 도시정비과",
+   "no": "용인시 공고 제2026-3105호",
+   "title": "[공고] 도시계획시설(이동 소로 2-5호) 실시계획 작성(변경) 열람·공고",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "2026-11-25",
+   "nos": [
+    "용인시공고제2026-3105호"
+   ],
+   "parts": [
+    {
+     "mgt": "149072",
+     "title": "[공고] 도시계획시설(이동 소로 2-5호) 실시계획 작성(변경) 열람·공고",
+     "no": "용인시 공고 제2026-3105호",
+     "dept": "도시정비과",
+     "date": "2026-11-10",
+     "until": "2026-11-25"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=149072"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-11-10",
+   "org": "용인특례시 반도체국가산단과",
+   "no": "용인시 공고 제2026-3107호",
+   "title": "공시송달 공고[용인 첨단시스템반도체 클러스터 국가산업단지 수용재결]",
+   "scope": "town",
+   "cat": "comp",
+   "until": "2026-11-25",
+   "nos": [
+    "용인시공고제2026-3107호"
+   ],
+   "parts": [
+    {
+     "mgt": "149082",
+     "title": "공시송달 공고[용인 첨단시스템반도체 클러스터 국가산업단지 수용재결]",
+     "no": "용인시 공고 제2026-3107호",
+     "dept": "반도체국가산단과",
+     "date": "2026-11-10",
+     "until": "2026-11-25"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=149082"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-11-10",
+   "org": "용인특례시 반도체국가산단과",
+   "no": "용인시 공고 제2026-3108호 외 3건",
+   "title": "재결서 정본 공시송달 공고(, 용인 첨단시스템반도체 클러스터 국가산업단지) 11·13·14·15차 (4건)",
+   "scope": "town",
+   "cat": "comp",
+   "until": "2026-11-25",
+   "nos": [
+    "용인시공고제2026-3108호",
+    "용인시공고제2026-3110호",
+    "용인시공고제2026-3111호",
+    "용인시공고제2026-3112호"
+   ],
+   "parts": [
+    {
+     "mgt": "149083",
+     "title": "재결서 정본 공시송달 공고(26수용0673, 용인 첨단시스템반도체 클러스터 국가산업단지, 11차)",
+     "no": "용인시 공고 제2026-3108호",
+     "dept": "반도체국가산단과",
+     "date": "2026-11-10",
+     "until": "2026-11-25"
+    },
+    {
+     "mgt": "149085",
+     "title": "재결서 정본 공시송달 공고(26수용0675, 용인 첨단시스템반도체 클러스터 국가산업단지, 13차)",
+     "no": "용인시 공고 제2026-3110호",
+     "dept": "반도체국가산단과",
+     "date": "2026-11-10",
+     "until": "2026-11-25"
+    },
+    {
+     "mgt": "149087",
+     "title": "재결서 정본 공시송달 공고(26수용0676, 용인 첨단시스템반도체 클러스터 국가산업단지, 14차)",
+     "no": "용인시 공고 제2026-3111호",
+     "dept": "반도체국가산단과",
+     "date": "2026-11-10",
+     "until": "2026-11-25"
+    },
+    {
+     "mgt": "149088",
+     "title": "재결서 정본 공시송달 공고(26수용0677, 용인 첨단시스템반도체 클러스터 국가산업단지, 15차)",
+     "no": "용인시 공고 제2026-3112호",
+     "dept": "반도체국가산단과",
+     "date": "2026-11-10",
+     "until": "2026-11-25"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=149083"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-11-09",
