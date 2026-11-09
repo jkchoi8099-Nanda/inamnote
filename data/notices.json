@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T09:49+09:00",
+ "updated_at": "2026-11-09T18:49+09:00",
  "errors": [],
  "items": [
   {
@@ -28,6 +28,24 @@
    "title": "용인특례시, 용천초 어울림센터 9일부터 시범 운영",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261109080615173"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-09",
+   "org": "용인특례시 도시철도과",
+   "no": "",
+   "title": "제5차 국가철도망 구축계획 대국민 설문조사 실시",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261109153955790"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-09",
+   "org": "용인특례시 민생경제과",
+   "no": "",
+   "title": "제8회 대한민국 사회연대경제박람회 및 국제컨퍼런스 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261109132148407"
   },
   {
    "src": "용인시 공지",
@@ -1134,15 +1152,6 @@
    "title": "경기도 홈페이지 클라우드 전환에 따른 경기도 아동급식카드(지드림카드) 이용 제한 안내",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261014152146383"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-13",
-   "org": "용인특례시 민원여권과",
-   "no": "",
-   "title": "주민등록 등초본 세대주와의 관계 표기개선 안내(10월 29일부터 시행)",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261013154132536"
   },
   {
    "src": "용인시 보도자료",
