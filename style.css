@@ -111,9 +111,6 @@ p { margin: 0; }
 .sec-head h2 { font-size: 28px; margin-top: 8px; }
 .sec-head p { margin-top: 10px; color: var(--ink-2); font-size: 15.5px; }
 @media (min-width: 900px) { .sec-head h2 { font-size: 36px; } }
-.two { display: grid; gap: 44px; }
-@media (min-width: 900px) { .two { grid-template-columns: 1.35fr 1fr; gap: 56px; } }
-.two > * { min-width: 0; }
 
 /* 피드 */
 .feed { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
@@ -130,14 +127,9 @@ p { margin: 0; }
 .feed .s { font-size: 13px; color: var(--ink-3); display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
 .feed .s a { color: var(--clay-ink); }
 .feed-more { margin-top: 14px; width: 100%; }
-/* 첫 화면 '언제든 신청할 수 있는 혜택'(2026-10-25): '지금 접수 중' 아래 따로 한 칸, 지역 칩 */
-#always-sec { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
-.chips-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 6px; }
-.chips-row .chip { font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
-.chips-row .chip .n { font-weight: 500; opacity: .75; margin-left: 4px; }
-.chips-row .chip[aria-pressed="true"] { background: var(--moss-dark); border-color: var(--moss-dark); color: #fff; }
 .more-links { margin-top: 16px; font-size: 14px; font-weight: 600; display: flex; flex-wrap: wrap; gap: 6px 18px; }
 .more-links a { color: var(--moss-dark); }
+.more-links .stamp { font-weight: 400; color: var(--ink-3); }
 
 /* 커뮤니티 방 셋(첫 화면 오른쪽, 10-20 약국 목록 자리) */
 .rooms3 { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
@@ -179,10 +171,6 @@ p { margin: 0; }
 /* 패널·브리핑 */
 .panel { border-radius: var(--r-lg); background: linear-gradient(160deg, var(--bg-2), #F7F8FA 60%); border: 1px solid var(--line); padding: 28px 22px; }
 @media (min-width: 900px) { .panel { padding: 52px; } }
-.brief { display: grid; gap: 20px; align-items: center; }
-@media (min-width: 900px) { .brief { grid-template-columns: 1fr auto; } }
-.brief h2 { font-size: 26px; } @media (min-width: 900px) { .brief h2 { font-size: 36px; } }
-.brief p { margin-top: 10px; color: var(--ink-2); }
 
 /* 페이지 머리 */
 .page-head { padding: 40px 0 8px; }
@@ -276,9 +264,38 @@ p { margin: 0; }
 
 /* ───────── 첫 화면(2026-10-14, 같은 날 "올드틱" 피드백으로 다시): 큰 문 = 벤토 타일, 문 안 = 펼친 카드 + 목록 + 퍼지는 칩, 소개 영상 = 어두운 지도 + 큰 글자 ─────────
    참고: 토스(큰 글자·여백·누르면 살짝 줄어드는 반응), 당근(회색 바탕 위 흰 카드·입체 아이콘), 벤토 그리드. 테두리·이중선·클립아트를 쓰지 않는다. */
-.home { padding: 22px 0 36px; }
+.home { padding: 22px 0 12px; }
 .home .wrap { max-width: 1080px; }
-@media (min-width: 900px) { .home { padding: 56px 0 64px; } }
+@media (min-width: 900px) { .home { padding: 56px 0 16px; } }
+
+/* 첫 화면 아래(2026-11-11 정리): 벤토와 같은 폭(1080)·같은 간격·같은 흰 카드. 제목 크기는 문(.door h2)과 같다.
+   참고: 당근 동네생활·토스피드 — 흰 카드 안 짧은 목록, 한글 제목 한 가지 크기, 영어 머리말 없음 */
+.below { padding: 0 0 48px; }
+.below .wrap { max-width: 1080px; display: grid; gap: 12px; }
+.below-two { display: grid; gap: 12px; }
+.below .wrap > *, .below-two > * { min-width: 0; }
+.hcard { display: flex; flex-direction: column; padding: 22px 20px 20px; border-radius: 26px; background: var(--surface); }
+.hcard-hd h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.045em; line-height: 1.25; }
+.hcard-hd p { margin-top: 4px; font-size: 14px; line-height: 1.45; color: var(--ink-3); }
+.hcard .feed, .hcard .mini { border-top: 0; margin-top: 6px; }
+.hcard .feed li { padding: 14px 0; }
+.hcard .feed li:last-child, .hcard .mini li:last-child { border-bottom: 0; }
+.hcard .feed b { font-size: 16px; }
+.hcard .feed-more { margin-top: 2px; min-height: 44px; }
+.hcard .more-links { margin-top: auto; padding-top: 14px; }  /* 두 카드 높이가 달라도 링크 줄은 바닥에 */
+.brief-card { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 14px 24px; }
+.brief-card > div { flex: 1 1 260px; min-width: 0; }
+.brief-card h2 { margin-top: 2px; font-size: 20px; font-weight: 800; letter-spacing: -0.04em; }
+.brief-card p { margin-top: 4px; font-size: 14px; color: var(--ink-2); }
+@media (min-width: 900px) {
+  .below { padding-bottom: 72px; }
+  .below .wrap, .below-two { gap: 16px; }
+  .below-two { grid-template-columns: 1.35fr 1fr; }
+  .hcard { padding: 28px 26px 24px; }
+  .hcard-hd h2 { font-size: 27px; }
+  #clock-sec .mini { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 32px; }
+  #clock-sec .mini li { border-bottom: 0; align-content: start; }
+}
 .hello-k { font-size: 14px; font-weight: 700; color: var(--moss); letter-spacing: -0.01em; }
 .hello h1 { margin-top: 6px; font-size: 30px; line-height: 1.24; letter-spacing: -0.055em; font-weight: 800; }
 @media (min-width: 900px) { .hello h1 { font-size: 52px; line-height: 1.15; } }
@@ -296,23 +313,16 @@ p { margin: 0; }
 .today-line .row { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 14px; }
 .today-line .row b { font-weight: 800; }
 .today-line .row a { text-decoration: none; }
-/* 날씨 전광판(10-16): 오른쪽에서 들어와 왼쪽으로 흐른다. 누르면 날씨 화면. 손가락·마우스를 올리면 멈춘다 */
-.today-line .ticker { flex: 1 1 180px; min-width: 0; overflow: hidden; display: block; border-radius: 999px; padding: 4px 0;
-  background: var(--moss-tint); color: var(--moss-dark); font-weight: 700;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 18px, #000 calc(100% - 18px), transparent);
-          mask-image: linear-gradient(90deg, transparent, #000 18px, #000 calc(100% - 18px), transparent); }
-.today-line .tk-track { display: inline-flex; white-space: nowrap; will-change: transform; animation: tk-run 20s linear infinite; }
-.today-line .tk-seg { padding-left: 18px; padding-right: 30px; }
-.today-line .tk-dot { font-style: normal; margin: 0 9px; opacity: .45; }
-.today-line .ticker:hover .tk-track, .today-line .ticker:focus-visible .tk-track { animation-play-state: paused; }
-@keyframes tk-run { to { transform: translateX(-50%); } }
-@media (prefers-reduced-motion: reduce) { .today-line .tk-track { animation: none; } .today-line .tk-seg + .tk-seg { display: none; } }
-.today-line .new { display: flex; gap: 8px; margin-top: 8px; padding-top: 10px; border-top: 1px solid var(--line); text-decoration: none; color: var(--ink); }
-.today-line .new span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
-.today-line .new .k { flex: none; font-size: 12px; font-weight: 800; color: var(--moss); background: var(--moss-tint); border-radius: 999px; padding: 1px 8px; align-self: center; }
-/* 지난 방문 뒤 새 소식이 있으면 주황 알약(10-18) */
-.today-line .new.fresh .k { color: #fff; background: var(--clay); }
-.today-line .new .since { font-size: 12.5px; font-weight: 700; color: var(--clay-ink); }
+/* 날씨 한 줄(2026-11-11, 흐르는 전광판을 멈춤): 줄 전체가 날씨 화면 링크. 좁은 화면은 날짜 · '10일 예보 ›' 한 줄 아래에 날씨 조각,
+   넓은 화면은 날짜 · 날씨 조각 · '10일 예보 ›'가 한 줄. 조각은 꺾지 않고 자리가 모자라면 줄째로 내린다(잘리는 글자 없음) */
+.today-line .wx { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 14px; color: var(--ink-2); }
+.today-line .wx-d { color: var(--ink); font-weight: 800; }
+.today-line .wx-items { order: 3; flex: 1 1 100%; display: flex; flex-wrap: wrap; gap: 0 14px; font-weight: 600; }
+.today-line .wx-items > span { white-space: nowrap; }
+.today-line .wx-items b { color: var(--ink); }
+.today-line .wx-go { margin-left: auto; color: var(--moss-dark); font-weight: 700; white-space: nowrap; }
+.today-line .wx:hover .wx-go { text-decoration: underline; }
+@media (min-width: 900px) { .today-line .wx-items { order: 0; flex: 0 1 auto; } }
 .today-line .src { display: block; margin-top: 6px; font-size: 11.5px; font-weight: 600; color: var(--ink-3); }
 .today-line .src.stale { color: var(--warn); }
 .today-line .alert { margin: 0 0 8px; }
@@ -362,6 +372,8 @@ p { margin: 0; }
 .s-half { grid-column: span 1; min-height: 196px; }
 .s-half .d { max-width: none; }
 .s-half .emo { width: 72px; height: 72px; right: -2px; bottom: -2px; }
+/* 휴대폰 반칸: '49개 노선'의 단위가 오른쪽 아래 그림에 겹쳤다(2026-11-11) → 단위를 숫자 아래로 */
+@media (max-width: 899px) { .s-half .big small { display: block; margin: 3px 0 0; } }
 .s-bar { grid-column: span 2; min-height: 0; }
 .s-bar .d { max-width: calc(100% - 80px); }
 .s-bar .emo { width: 64px; height: 64px; top: 50%; bottom: auto; margin-top: -32px; right: 16px; }

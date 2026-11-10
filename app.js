@@ -50,6 +50,12 @@
         el.innerHTML = '<a href="' + esc(c.kakao_channel_url) + '" rel="noopener" target="_blank">카카오톡 채널 ' + esc(c.kakao_search_id || '이남노트') + '</a> 1:1 채팅';
       }
     });
+    // 일요 브리핑 상자(첫 화면 #brief)는 채널 주소가 있을 때만 보인다(2026-11-11: 채널이 없을 때 누르면 "준비 중"만 나왔다)
+    if (c.kakao_channel_url && $('brief')) {
+      $('brief-go').href = c.kakao_channel_url;
+      $('brief-go').target = '_blank';
+      $('brief').hidden = false;
+    }
   }).catch(function () {});
 
   /* 오늘 한 줄(첫 화면). today.json은 자동 수집(scripts/update_today.py) 결과다 */
@@ -77,16 +83,8 @@
     } catch (e) { return []; }
   })();
 
-  /* '오늘' 상자 아래 소식 한 줄: 새 글이 있으면 "새 소식 N건 · 지난번 뒤", 없으면 가장 최근 글 */
-  function newestNotice() {
-    if (!TOWN.length) return '';
-    var isNew = {}; NEW.forEach(function (u) { isNew[u] = 1; });
-    var pool = NEW.length ? TOWN.filter(function (x) { return isNew[x.url]; }) : TOWN;
-    var x = pool.slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; })[0];
-    return '<a class="new' + (NEW.length ? ' fresh' : '') + '" href="notices.html"><span class="k">' + (NEW.length ? '새 소식 ' + NEW.length + '건' : '최근 소식') + '</span><span>' +
-      (NEW.length ? '<span class="since">지난번 뒤</span> ' : '<span class="num">' + esc(dotDate(x.date.slice(5))) + '</span> ') +
-      esc(x.title.replace(/^\[(신규|변경|폐지)\]\s*/, '')) + '</span></a>';
-  }
+  // '오늘' 상자 아래 소식 한 줄(newestNotice)은 2026-11-11에 뺐다: 같은 글이 오늘 상자·소식 문·새 소식 목록에 세 번 나왔다.
+  // 오늘 상자는 날씨만, 새 글 수와 머리 소식은 소식 문(home.js news 타일)이 맡는다. 예전 코드는 커밋 3d05a94의 app.js
 
   // 첫 화면 약국 목록은 2026-10-20에 뺐다(사용자 "약국 정보가 나와 있는데 이건 필요 없어. 대신 여기에 커뮤니티").
   // '지금 여는 곳·가장 먼저 여는 곳' 계산(openNow·nextOpen)은 커밋 6e75fd4의 app.js에 있다. 약국은 장소 찾기 검색으로 찾는다.
@@ -100,8 +98,8 @@
       var w = S.weather && S.weather.data, a = S.air && S.air.data;
 
       if (row) {
-        // 날씨 전광판(10-16 사용자 "온도부터 미세먼지까지 움직이게 — 클릭이 되나? 하고 눌러보게"). 누르면 weather.html.
-        // 같은 내용을 두 번 이어 붙여 -50%까지 흘리면 끊김 없이 돈다. 움직임 줄이기 설정이면 멈춘다(style.css .ticker).
+        // 날씨 한 줄. 10-16에 흐르는 전광판으로 만들었다가 2026-11-11에 멈췄다(첫 화면 정리: 흐르는 글자는 읽다 놓치고 좁은 화면에서 잘렸다).
+        // 조각을 나란히 놓고 자리가 모자라면 줄을 바꾼다(잘리는 글자 없음). 줄 전체가 weather.html 링크, 끝의 '10일 예보 ›'가 누를 수 있다는 표시.
         // 약국 칸은 이 줄에서 뺐다(사용자 10-16 "지금 연 약국 없음 지우고")
         var tk = [];
         if (w) {
@@ -114,14 +112,10 @@
           var g = a.pm10_grade ? ['미세먼지', a.pm10_grade] : a.pm25_grade ? ['초미세먼지', a.pm25_grade] : null;
           if (g) tk.push('<span class="' + (/나쁨/.test(g[1]) ? 'tone-bad' : 'tone-ok') + '">' + g[0] + ' ' + esc(g[1]) + '</span>');
         }
-        tk.push('10일 예보 보기 ›');
-        var seg = tk.join('<i class="tk-dot">·</i>');
-        row.innerHTML = '<b>' + stampText + '</b><a class="ticker" href="weather.html" aria-label="날씨 자세히 보기">' +
-          '<span class="tk-track"><span class="tk-seg">' + seg + '</span><span class="tk-seg" aria-hidden="true">' + seg + '</span></span></a>';
-        var s1 = row.querySelector('.tk-seg');
-        if (s1) row.querySelector('.tk-track').style.animationDuration = Math.max(8, s1.offsetWidth / 45) + 's';  // 초당 약 45px
+        row.innerHTML = '<a class="wx" href="weather.html"><b class="wx-d">' + stampText + '</b><span class="wx-items">' +
+          tk.map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</span><span class="wx-go">10일 예보 ›</span></a>';
         var box = $('today-line');
-        box.insertAdjacentHTML('beforeend', newestNotice() + srcLine(t, S));
+        box.insertAdjacentHTML('beforeend', srcLine(t, S));
         var al = S.alerts && S.alerts.data && S.alerts.data.items;
         // 10-18부터 항목에 특보 이름이 들어 있다("강풍 예비특보 · 시각 · 용인 구역"). 옛 형식이면 머리말을 붙인다
         if (al && al.length && $('alert')) {
@@ -131,7 +125,6 @@
       }
     }).catch(function () {
       row.innerHTML = '<b>' + stampText + '</b><span>오늘 정보를 불러오지 못했어요. 잠시 뒤 다시 열어 주세요.</span>';
-      $('today-line').insertAdjacentHTML('beforeend', newestNotice());
     });
   }
 
@@ -218,44 +211,17 @@
       more.textContent = '더 보기 (' + (openRows.length - n) + '건 더)';
       more.onclick = function () { drawOpen(n + 6); };
     };
-    drawOpen(parseInt(openEl.getAttribute('data-limit') || '6', 10));
+    // 넓은 화면에서는 옆 '새로 나온 소식' 카드(5줄)와 나란히 서므로 같은 5줄 — 3줄이면 카드 아래가 비었다(2026-11-11)
+    var openLimit = parseInt(openEl.getAttribute('data-limit') || '6', 10);
+    if (window.matchMedia && window.matchMedia('(min-width: 900px)').matches) openLimit = Math.max(openLimit, 5);
+    drawOpen(openLimit);
     if (B && B.updated_at && $('open-src')) $('open-src').textContent = '정부24 원본 ' + dotDate(B.updated_at.slice(5, 10)) + ' 받음';
   }
 
-  /* 언제든 신청할 수 있는 혜택(첫 화면 #always-ben, 2026-10-25). benefits_recent.js의 always = 마감일 없는 '상시신청'(많이 찾는 순).
-     지역 칩으로 나눠 보여 주고, 처음엔 용인시. '전체에서 찾기'는 고른 지역으로 혜택 화면 '상시 신청' 거르기를 켠 채 연다. */
-  var alwaysEl = $('always-ben');
-  if (alwaysEl) {
-    var AL = (window.BENEFITS_RECENT && window.BENEFITS_RECENT.always) || [];
-    var AREAS = [['yongin', '용인시'], ['gg', '경기도'], ['nation', '전국']].filter(function (a) {
-      return AL.some(function (x) { return x.area === a[0]; });
-    });
-    var alArea = AREAS.length ? AREAS[0][0] : 'yongin';
-    var drawAlways = function (n) {
-      var rows = AL.filter(function (x) { return x.area === alArea; });
-      $('always-areas').innerHTML = AREAS.map(function (a) {
-        return '<button class="chip" type="button" data-area="' + a[0] + '" aria-pressed="' + (a[0] === alArea) + '">' + a[1] +
-          '<span class="n">' + AL.filter(function (x) { return x.area === a[0]; }).length + '</span></button>';
-      }).join('');
-      alwaysEl.innerHTML = rows.slice(0, n).map(function (x) {
-        return '<li><span class="fh"><span class="t t-ben">' + esc(AREA_TAG[x.area] || '혜택') + '</span></span>' +
-          '<b><a class="ft" href="' + esc(benHref(x)) + '">' + esc(x.name) + '</a></b>' +
-          '<span class="s"><span class="badge b-ok">상시 신청</span>' + esc(x.kind || '') + '</span></li>';
-      }).join('') || '<li><span class="fh"><span class="t t-ben">혜택</span></span><b>' +
-        (window.BENEFITS_RECENT ? '상시 신청 혜택이 없어요.' : '혜택 목록을 불러오지 못했어요.') + '</b></li>';
-      var more = $('always-more');
-      more.hidden = rows.length <= n;
-      more.textContent = '더 보기 (' + (rows.length - n) + '건 더)';
-      more.onclick = function () { drawAlways(n + 5); };
-      $('always-all').href = 'benefits.html?area=' + alArea + '&always=1#list-sec';
-    };
-    var alLimit = parseInt(alwaysEl.getAttribute('data-limit') || '5', 10);
-    $('always-areas').addEventListener('click', function (e) {
-      var b = e.target.closest('[data-area]');
-      if (b) { alArea = b.getAttribute('data-area'); drawAlways(alLimit); }
-    });
-    drawAlways(alLimit);
-  }
+  // 언제든 신청할 수 있는 혜택(상시 신청, 10-25) 목록은 2026-11-11 첫 화면에서 빼고 혜택 화면 링크(benefits.html?always=1) 한 줄로 줄였다.
+  // 지역 칩으로 나눠 그리던 코드는 커밋 3d05a94의 app.js. benefits_recent.js의 always(상시 신청 목록)는 여기서 건수만 쓴다
+  var alwaysN = $('always-n'), AL = (window.BENEFITS_RECENT && window.BENEFITS_RECENT.always) || [];
+  if (alwaysN && AL.length) alwaysN.textContent = ' ' + AL.length + '건';
 
   var feedEl = $('feed'), cardsEl = $('news-cards');
   if (feedEl || cardsEl) {

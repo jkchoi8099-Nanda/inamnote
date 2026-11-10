@@ -26,7 +26,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <!-- ?v=: GitHub Pages가 파일마다 10분 캐시(max-age=600)를 붙여, 고친 뒤 새 home.js + 옛 style.css가 섞여 화면이 깨졌다(2026-10-29).
      v는 손으로 고치지 않는다 — scripts/bump_assets.py가 파일 내용 지문으로 붙인다(커밋 직전 훅 scripts/pre-commit) -->
-<link rel="stylesheet" href="style.css?v=2e81d82c">
+<link rel="stylesheet" href="style.css?v=ff01a675">
 <script src="count.js?v=d1732801" async></script>
 </head>
 <body>
@@ -76,39 +76,29 @@
   </div>
 </section>
 
-<section class="sec" id="feed-sec" style="padding-top:36px">
-  <div class="wrap two">
-    <div>
-      <div class="sec-head"><span class="eyebrow">Latest</span><h2>새로 나온 소식</h2><p>보상·고시·청약·혜택·용인시 소식까지 가장 최근 순. 공식 소식과 혜택은 자동으로 모으고, 기사는 원문을 확인한 것만 올립니다.</p></div>
-      <!-- app.js feedRows: 공식 소식·혜택(benefits_recent.js)·사장님 지원사업(programs.js)·기사(feed.json)를 날짜순으로, 줄마다 꼬리표 -->
-      <ul class="feed" id="feed" data-limit="8"><li><span class="fh"><span class="t t-news">안내</span></span><b>불러오는 중…</b></li></ul>
-      <button class="btn btn-light feed-more" id="feed-more" type="button" hidden>더 보기</button>
-      <p class="more-links"><a href="notices.html">공식 소식 전체 →</a><a href="benefits.html">혜택 전체 →</a><a href="news.html#news">기사 →</a></p>
-    </div>
-    <!-- 지금 접수 중인 혜택(2026-10-23 사용자: 이남 커뮤니티 자리에 지원금·혜택 찾기 중 카테고리 상관없이 접수 중인 목록).
-         app.js가 benefits_recent.js에서 용인·경기·전국 모두 오늘 접수 중인 것만 마감 가까운 순으로. 커뮤니티 방 셋은 '커뮤니티' 문 안에 그대로 있다 -->
-    <div id="open-sec">
-      <div class="sec-head"><span class="eyebrow">Open now</span><h2 style="font-size:26px">지금 접수 중인 혜택</h2><p>용인시·경기도·전국 지원금·혜택 중 오늘 신청할 수 있는 것만, 마감 가까운 순. 금액과 자격은 원문에서 확인하세요.</p></div>
-      <ul class="feed" id="open-ben" data-limit="6"><li><span class="fh"><span class="t t-ben">혜택</span></span><b>불러오는 중…</b></li></ul>
-      <button class="btn btn-light feed-more" id="open-more" type="button" hidden>더 보기</button>
-      <p class="more-links"><a href="benefits.html?open=1#list-sec">혜택 전체에서 찾기 →</a><span id="open-src" style="font-weight:400;color:var(--ink-3)"></span></p>
-      <!-- 언제든 신청할 수 있는 혜택(2026-10-25 사용자 "마감일 없는 상시신청은 따로 칸"). 위 '지금 접수 중'에 섞으면 마감 순서가 흐려져
-           따로 둔다. app.js가 benefits_recent.js의 always(많이 찾는 순)를 지역 칩(용인·경기·전국)으로 나눠 보여 준다 -->
-      <div id="always-sec">
-        <div class="sec-head"><span class="eyebrow">Anytime</span><h2 style="font-size:22px">언제든 신청할 수 있는 혜택</h2><p>마감일 없이 ‘상시 신청’인 것만, 많이 찾는 순.</p></div>
-        <nav class="chips-row" id="always-areas" aria-label="어디 혜택"></nav>
-        <ul class="feed" id="always-ben" data-limit="5"><li><span class="fh"><span class="t t-ben">혜택</span></span><b>불러오는 중…</b></li></ul>
-        <button class="btn btn-light feed-more" id="always-more" type="button" hidden>더 보기</button>
-        <p class="more-links"><a id="always-all" href="benefits.html?always=1#list-sec">혜택 전체에서 상시 신청 찾기 →</a></p>
+<!-- 첫 화면 아래(2026-11-11 정리 "뭔가 어수선해"): 위 벤토와 같은 폭·같은 흰 카드(.hcard), 제목은 한 가지 크기, 영어 머리말 없음.
+     길이 줄이기: 새 소식 8→5줄, 접수 중 혜택 6→3줄, 상시 신청 혜택 목록(10-25)은 혜택 화면으로 가는 링크 한 줄로. 나머지는 '더 보기'와 전체 링크 -->
+<section class="below" id="feed-sec">
+  <div class="wrap">
+    <div class="below-two">
+      <div class="hcard">
+        <div class="hcard-hd"><h2>새로 나온 소식</h2><p>보상·고시·청약·혜택·기사를 가장 최근 순으로.</p></div>
+        <!-- app.js feedRows: 공식 소식·혜택(benefits_recent.js)·사장님 지원사업(programs.js)·기사(feed.json)를 날짜순으로, 줄마다 꼬리표 -->
+        <ul class="feed" id="feed" data-limit="5"><li><span class="fh"><span class="t t-news">안내</span></span><b>불러오는 중…</b></li></ul>
+        <button class="btn btn-light feed-more" id="feed-more" type="button" hidden>더 보기</button>
+        <p class="more-links"><a href="notices.html">공식 소식 전체 →</a><a href="benefits.html">혜택 전체 →</a><a href="news.html#news">기사 →</a></p>
+      </div>
+      <!-- 지금 접수 중인 혜택(2026-10-23 사용자: 지원금·혜택 찾기 중 카테고리 상관없이 접수 중인 목록).
+           app.js가 benefits_recent.js에서 용인·경기·전국 모두 오늘 접수 중인 것만 마감 가까운 순으로 -->
+      <div class="hcard" id="open-sec">
+        <div class="hcard-hd"><h2>지금 접수 중인 혜택</h2><p>오늘 신청할 수 있는 것만, 마감 가까운 순. 금액·자격은 원문에서 확인하세요.</p></div>
+        <ul class="feed" id="open-ben" data-limit="3"><li><span class="fh"><span class="t t-ben">혜택</span></span><b>불러오는 중…</b></li></ul>
+        <button class="btn btn-light feed-more" id="open-more" type="button" hidden>더 보기</button>
+        <p class="more-links"><a href="benefits.html?open=1#list-sec">접수 중 전체 →</a><a href="benefits.html?always=1#list-sec">언제든 신청할 수 있는 혜택<span id="always-n"></span> →</a><span class="stamp" id="open-src"></span></p>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="sec sec-white">
-  <div class="wrap two">
-    <div>
-      <div class="sec-head"><span class="eyebrow">Construction clock</span><h2>산단·신도시·도로,<br>어디까지 왔나</h2></div>
+    <div class="hcard" id="clock-sec">
+      <div class="hcard-hd"><h2>산단·신도시·도로, 어디까지 왔나</h2></div>
       <ul class="mini">
         <li><b>반도체 국가산단</b><span class="stage" data-step="3"><span class="bar"><i></i><i></i><i></i><i></i></span>공사 중</span><p>10월 28일 1공구 부지 본공사 시작(2공구는 발주 전). 팹 1호기 가동 목표 2029년 10월.</p></li>
         <li><b>이동 신도시</b><span class="stage" data-step="2"><span class="bar"><i></i><i></i><i></i><i></i></span>확정·준비</span><p>2025년 1월 지구 지정. 6월 보도로는 약 2만 호, 첫 입주 2033년 말 목표(지구계획 승인 전).</p></li>
@@ -116,11 +106,11 @@
       </ul>
       <p class="more-links"><a href="news.html#clock">공사 시계 전체 보기 →</a></p>
     </div>
-    <div>
-      <div class="panel brief">
-        <div><span class="kicker">일요일 저녁 7시</span><h2 style="margin-top:8px">한 주 치를 일요일 저녁에</h2><p>산단 시계, 공식 발표, 새로 확인한 것, 고친 것. 카카오톡 채널 ‘이남노트’ 소식으로 올립니다.</p></div>
-        <div class="cta"><a class="btn btn-dark" href="about.html#contact">카카오톡 채널 보기</a></div>
-      </div>
+    <!-- 일요 브리핑(카카오톡 채널): 채널이 아직 없어 눌러도 "준비 중"만 나왔다(2026-11-11) → 숨겨 두고,
+         data/site.json의 contact.kakao_channel_url을 채우면 app.js가 버튼 주소를 채널로 바꿔 보여 준다 -->
+    <div class="hcard brief-card" id="brief" hidden>
+      <div><span class="kicker">일요일 저녁 7시</span><h2>한 주 치를 일요일 저녁에</h2><p>산단 시계, 공식 발표, 새로 확인한 것, 고친 것. 카카오톡 채널 ‘이남노트’ 소식으로 올립니다.</p></div>
+      <a class="btn btn-dark" id="brief-go" href="about.html#contact" rel="noopener">카카오톡 채널 보기</a>
     </div>
   </div>
 </section>
@@ -137,7 +127,7 @@
 <script src="data/notices.js"></script>
 <script src="data/benefits_recent.js"></script>
 <script src="data/programs.js"></script>
-<script src="app.js?v=75561bfd"></script>
+<script src="app.js?v=9552044a"></script>
 <!-- 장소 데이터(약 560KB)는 화면을 먼저 그린 뒤 받는다. 받으면 문 숫자와 검색 미리보기가 채워진다 -->
 <script src="places-search.js?v=0c4792cb" defer></script>
 <script src="data/places.js" defer></script>

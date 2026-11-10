@@ -265,6 +265,15 @@ GAZETTE_SKIP = re.compile(r"일반산업단지|일반산단|원삼|통삼|백암
 GAZETTE_ROUND = re.compile(r"\s*,?\s*(\d+(?:~\d+)?)\s*(?:회차|차)|\s*,?\s*\d{2}(?:수용|경정|이의)\d{4}")
 
 
+def round_base(title):
+    """차수·사건번호를 뗀 제목(같은 공고 묶음의 이름). 떼고 남는 쉼표·빈 괄호도 지운다.
+    "공고(26수용0673, 용인 …, 11차)" → "공고(용인 …)". 여는 괄호 바로 뒤 쉼표가 남아 "공고(, 용인 …"이 됐었다(2026-11-11)."""
+    s = GAZETTE_ROUND.sub("", title)
+    s = re.sub(r"(?<=[(\[])\s*,\s*", "", s)   # 여는 괄호 뒤 쉼표
+    s = re.sub(r"\s*,\s*(?=[\])])", "", s)    # 닫는 괄호 앞 쉼표
+    return re.sub(r"\(\s*\)|\[\s*\]", "", s)  # 빈 괄호
+
+
 def yongin_gazette():
     out, cutoff = [], (datetime.now(KST) - timedelta(days=GAZETTE_DAYS)).strftime("%Y%m%d")
     try:
@@ -313,7 +322,7 @@ def yongin_gazette():
             if not g or not TOWN.search(g.group(3)) or (GAZETTE_SKIP.search(g.group(3)) and not re.search("이동|남사", g.group(3))):
                 continue
             title = g.group(3)
-            base = re.sub(r"\(\s*\)|\[\s*\]", "", re.sub(r"\s*,\s*(?=[\])])", "", GAZETTE_ROUND.sub("", title)))  # 차수를 떼고 남는 빈 괄호도 지운다
+            base = round_base(title)
             groups.setdefault(base, []).append((g.group(1), g.group(2), title))
         num = re.search(r"제(\d{4}-\d+)호", name)
         for base, got in groups.items():
@@ -425,7 +434,7 @@ def yongin_eminwon():
     # 차수만 다른 같은 날 공고는 한 건으로(시보와 같은 규칙)
     groups = {}
     for p in sorted(parts.values(), key=lambda p: p["no"]):
-        base = re.sub(r"\(\s*\)|\[\s*\]", "", re.sub(r"\s*,\s*(?=[\])])", "", GAZETTE_ROUND.sub("", p["title"])))
+        base = round_base(p["title"])
         groups.setdefault((p["date"], base), []).append(p)
     out = []
     for (date, base), got in groups.items():
