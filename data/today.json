@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-12T10:45+09:00",
+ "generated_at": "2026-11-12T11:30+09:00",
  "example": false,
  "sources": {
   "weather": {
-   "ok": true,
+   "ok": false,
    "at": "2026-11-12T10:45+09:00",
    "data": {
     "temp": "7.3",
@@ -1040,10 +1040,11 @@
       }
      }
     ]
-   }
+   },
+   "error": "<urlopen error timed out>"
   },
   "mid": {
-   "ok": true,
+   "ok": false,
    "at": "2026-11-12T10:46+09:00",
    "data": {
     "tmfc": "202611120600",
@@ -1140,17 +1141,19 @@
       }
      }
     ]
-   }
+   },
+   "error": "<urlopen error timed out>"
   },
   "alerts": {
-   "ok": true,
+   "ok": false,
    "at": "2026-11-12T10:46+09:00",
    "data": {
     "items": []
-   }
+   },
+   "error": "<urlopen error timed out>"
   },
   "air": {
-   "ok": true,
+   "ok": false,
    "at": "2026-11-12T10:46+09:00",
    "data": {
     "station": "이동읍",
@@ -1163,19 +1166,21 @@
     "o3_grade": "",
     "khai": "-",
     "khai_grade": ""
-   }
+   },
+   "error": "<urlopen error timed out>"
   },
   "holiday": {
-   "ok": true,
+   "ok": false,
    "at": "2026-11-12T10:46+09:00",
    "data": {
     "today": false,
     "tomorrow": false,
     "days": []
-   }
+   },
+   "error": "<urlopen error timed out>"
   },
   "pharmacies": {
-   "ok": true,
+   "ok": false,
    "at": "2026-11-12T10:46+09:00",
    "data": {
     "items": [
@@ -1424,7 +1429,8 @@
       }
      }
     ]
-   }
+   },
+   "error": "<urlopen error timed out>"
   }
  }
 }
