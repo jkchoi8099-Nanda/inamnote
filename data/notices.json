@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T18:50+09:00",
+ "updated_at": "2026-11-16T01:19+09:00",
  "errors": [
   "처인구 게시판: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1011)>",
   "처인 홍보관: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1011)>"
@@ -1323,33 +1323,6 @@
    "title": "용인특례시, 지방세 환급금 편리하게 돌려받는 ‘환급계좌 사전등록’ 안내",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261019080554912"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-16",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시 중독관리통합지원센터, 중독 예방·회복 지원 활동",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261016074543338"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-16",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 평생학습관 특별강좌 ‘한 번 더 배움’ 수강생 모집",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261016074352221"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-16",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 여성농업인 대상 찾아가는 건강검진",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261016074329625"
   },
   {
    "src": "용인시 고시·공고",
