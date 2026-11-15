@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T13:11+09:00",
+ "updated_at": "2026-11-15T18:50+09:00",
  "errors": [
   "처인구 게시판: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1011)>",
   "처인 홍보관: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1011)>"
@@ -414,6 +414,31 @@
     }
    ],
    "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=149168"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-11-10",
+   "org": "용인특례시 도로과",
+   "no": "용인시 처인구 공고 제2026-1279호",
+   "title": "재결서 정본 공시송달[국지도 84호선 중리-천리 도로개설공사,6차(26수용0237)]",
+   "scope": "town",
+   "cat": "comp",
+   "until": "2026-11-25",
+   "nos": [
+    "용인시처인구공고제2026-1279호"
+   ],
+   "parts": [
+    {
+     "mgt": "149160",
+     "title": "재결서 정본 공시송달[국지도 84호선 중리-천리 도로개설공사,6차(26수용0237)]",
+     "no": "용인시 처인구 공고 제2026-1279호",
+     "dept": "도로과",
+     "date": "2026-11-10",
+     "until": "2026-11-25"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=149160"
   },
   {
    "src": "용인시 보도자료",
