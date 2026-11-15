@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T01:19+09:00",
+ "updated_at": "2026-11-16T06:51+09:00",
  "errors": [
   "처인구 게시판: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1011)>",
   "처인 홍보관: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1011)>"
