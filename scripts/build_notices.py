@@ -713,7 +713,9 @@ def bodies(items):
         if u in KAKAO_BODIES:  # 카카오 글은 목록과 함께 받은 본문(받은 날은 처음 받은 날 그대로)
             out[u] = {**KAKAO_BODIES[u], "at": old.get(u, {}).get("at") or datetime.now(KST).strftime("%Y-%m-%d"), "v": BODY_VERSION}
             continue
-        if u in old and old[u].get("v", 1) >= BODY_VERSION:
+        # 그림 파일이 없는 글은 다시 받는다(2026-11-15: 그림이 커밋에서 빠져 사이트에서 404였던 글 복구)
+        if u in old and old[u].get("v", 1) >= BODY_VERSION and all(
+                (IMG_DIR / Path(i).name).exists() for i in old[u].get("imgs", []) if i.startswith("data/notice_img/")):
             out[u] = old[u]
             continue
         rule = next((r for r in BODY_RULES if urllib.parse.urlsplit(u).netloc == r[0]), None)

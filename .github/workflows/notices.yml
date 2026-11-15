@@ -53,6 +53,8 @@ jobs:
           git config user.name "inamnote-bot"
           git config user.email "inamnote-bot@users.noreply.github.com"
           git add data/notices.json data/notices.js data/notice_bodies.json data/benefits.json data/benefits.js data/benefits_recent.js data/benefit_bodies.json data/programs.js
+          git add -A -- data/notice_img   # 소식 본문 그림(새로 생긴 것·지워진 것). 빠지면 아래 pull이 "unstaged changes"로 막힌다(2026-11-10~15 실패 원인)
           git commit -m "notices: $(date -u +%Y-%m-%dT%H:%MZ)"
-          git pull --rebase --quiet
+          git status --short   # 커밋 뒤에도 남은 변경이 있으면 로그에 보이게
+          git pull --rebase --autostash --quiet
           git push
