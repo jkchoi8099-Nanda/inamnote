@@ -1,10 +1,34 @@
 {
- "updated_at": "2026-11-16T06:51+09:00",
- "errors": [
-  "처인구 게시판: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1011)>",
-  "처인 홍보관: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1011)>"
- ],
+ "updated_at": "2026-11-16T18:50+09:00",
+ "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-16",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 청소년 축제 ‘마음축제! 어울림포유’ 개최",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261116081026040"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-16",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시 기후변화체험교육센터, 초등학생 대상 ‘기후위기 적응 특별교육’ 참여 학교 모집",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261116080958551"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-16",
+   "org": "용인특례시 수도행정과",
+   "no": "",
+   "title": "[상하수도] 2027년 대학수학능력시험일 업무 시작 시간 변경 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1015&q_clCode=1&q_bbscttSn=20261116155539743"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-11-14",
@@ -64,7 +88,7 @@
    "date": "2026-11-12",
    "org": "LH",
    "no": "",
-   "title": "한국토지주택공사(LH), 광명시흥·용인반도체에 총 2조원 추가 투입...‘사업 속도전’ 돌입",
+   "title": "새글 한국토지주택공사(LH), 광명시흥·용인반도체에 총 2조원 추가 투입...‘사업 속도전’ 돌입",
    "url": "https://www.lh.or.kr/gallery.es?mid=a10502000000&bid=0003&act=view&list_no=12193"
   },
   {
@@ -122,6 +146,15 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261112095904751"
   },
   {
+   "src": "처인구 소식",
+   "date": "2026-11-12",
+   "org": "처인구 가정복지과",
+   "no": "",
+   "title": "처인구 소식! 처인구에 전해진 아이들의 따뜻한 나눔",
+   "scope": "town",
+   "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=85181&brd_mgrno=366&menu_no=1683"
+  },
+  {
    "src": "용인시 고시·공고",
    "via": "새올",
    "date": "2026-11-12",
@@ -163,6 +196,15 @@
    "title": "[농촌테마파크] -농촌테마파크 11월 2째주 주말상시체험진행 : 11/14(토)~11/15(일)",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261111152509256"
+  },
+  {
+   "src": "처인구 소식",
+   "date": "2026-11-11",
+   "org": "처인구 남사읍",
+   "no": "",
+   "title": "남사읍 소식! 제4회 남사읍민의 날 성황리 개최!",
+   "scope": "town",
+   "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=85151&brd_mgrno=366&menu_no=1683"
   },
   {
    "src": "용인시 카카오채널",
@@ -616,14 +658,6 @@
    "url": "https://www.cheoingu.go.kr/home/boardView.do?brd_mgrno=274&menu_no=1666&brd_no=85086"
   },
   {
-   "src": "이동읍 소식",
-   "date": "2026-11-04",
-   "org": "처인구 이동읍",
-   "no": "",
-   "title": "한부모가정 무료법률구조사업 안내",
-   "url": "https://www.cheoingu.go.kr/home/boardView.do?brd_mgrno=274&menu_no=1666&brd_no=85085"
-  },
-  {
    "src": "용인시 카카오채널",
    "date": "2026-11-04",
    "org": "용인특례시 카카오톡 채널",
@@ -655,7 +689,7 @@
    "date": "2026-11-03",
    "org": "용인특례시 건강증진과",
    "no": "",
-   "title": "[보건소] 도전! 내 혈관 건강 Level UP 챌린지",
+   "title": "[보건소] 도전! 내 혈관 건강 Level UP 챌린지(조기종료)",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261103133551746&q_category=main"
   },
@@ -829,15 +863,6 @@
    "title": "용인특례시 동백·남사도서관, 11월 가족과 함께 즐기는 문화공연 마련",
    "scope": "town",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261029075730515"
-  },
-  {
-   "src": "처인구 소식",
-   "date": "2026-10-29",
-   "org": "처인구 자치행정과",
-   "no": "",
-   "title": "처인구 소식! 꿈에월드어린이집, 처인구에 따뜻한 온정 전달",
-   "scope": "town",
-   "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=85029&brd_mgrno=366&menu_no=1683"
   },
   {
    "src": "용인시 카카오채널",
@@ -1251,15 +1276,6 @@
    "title": "용인특례시, ‘제74주년 재향군인의 날’ 기념식 개최",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261020074916903"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-20",
-   "org": "용인특례시 교육청소년과",
-   "no": "",
-   "title": "2026년 용인시 여성청소년 생리용품 보편지원사업 하반기 신청 안내",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261020155145312"
   },
   {
    "src": "용인시 보도자료",
