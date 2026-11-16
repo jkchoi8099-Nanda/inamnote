@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T18:50+09:00",
+ "updated_at": "2026-11-17T04:37+09:00",
  "errors": [],
  "items": [
   {
@@ -28,6 +28,31 @@
    "title": "[상하수도] 2027년 대학수학능력시험일 업무 시작 시간 변경 안내",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1015&q_clCode=1&q_bbscttSn=20261116155539743"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-11-16",
+   "org": "용인특례시 건설정책과",
+   "no": "용인시 공고 제2026-3173호",
+   "title": "[공고] 사업인정에 관한 주민 등의 의견 청취 공고[농어촌도로 이동읍 한덕선(리도 202호)]",
+   "scope": "town",
+   "cat": "comp",
+   "until": "2026-12-01",
+   "nos": [
+    "용인시공고제2026-3173호"
+   ],
+   "parts": [
+    {
+     "mgt": "149314",
+     "title": "[공고] 사업인정에 관한 주민 등의 의견 청취 공고[농어촌도로 이동읍 한덕선(리도 202호)]",
+     "no": "용인시 공고 제2026-3173호",
+     "dept": "건설정책과",
+     "date": "2026-11-16",
+     "until": "2026-12-01"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=149314"
   },
   {
    "src": "용인시 보도자료",
