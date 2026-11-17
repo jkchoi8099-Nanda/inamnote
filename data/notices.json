@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T12:46+09:00",
+ "updated_at": "2026-11-17T18:50+09:00",
  "errors": [],
  "items": [
   {
@@ -37,6 +37,15 @@
    "title": "용인특례시, 2027학년도 수능 대비 종합대책 시행",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261117074752015"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-17",
+   "org": "용인특례시 농촌테마과",
+   "no": "",
+   "title": "[농촌테마파크] -농촌테마파크 11월 3째주 주말상시체험진행 : 11/21(토)~11/22(일)",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261117133245949"
   },
   {
    "src": "용인시 공지",
@@ -266,15 +275,6 @@
    "title": "2026년 경기도 초등학생 치과주치의사업 안내",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261111161017004"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-11-11",
-   "org": "용인특례시 농촌테마과",
-   "no": "",
-   "title": "[농촌테마파크] -농촌테마파크 11월 2째주 주말상시체험진행 : 11/14(토)~11/15(일)",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261111152509256"
   },
   {
    "src": "처인구 소식",
@@ -1285,15 +1285,6 @@
    "title": "[보건소] 무료 혈압·혈당·콜레스테롤 검사받고 뇌졸중 예방해요! (10. 29.)",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=3&q_bbscttSn=20261021155745396&q_category=main"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-21",
-   "org": "용인특례시 기술지원과",
-   "no": "",
-   "title": "[농업기술] 스마트농업 전문교육(스마트농업 심화 및 현장적용) 과정 교육생 모집",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1018&q_clCode=2&q_bbscttSn=20261021090846917"
   },
   {
    "src": "용인시 고시·공고",
