@@ -1,7 +1,61 @@
 {
- "updated_at": "2026-11-17T06:50+09:00",
+ "updated_at": "2026-11-17T12:46+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-17",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 하반기 드림스타트 가족 '별빛소통캠프' 운영",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261117074849380"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-17",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 처인구 함박초등학교 주변 보행로 정비",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261117074827842"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-17",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, ‘기후변화체험교육센터’ 전국 청소년 찾는 기후·환경교육 명소로 주목",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261117074811492"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-17",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 2027학년도 수능 대비 종합대책 시행",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261117074752015"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-17",
+   "org": "용인특례시 수도시설과",
+   "no": "",
+   "title": "동절기 급수공사 중지 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261117091206670"
+  },
+  {
+   "src": "처인구 소식",
+   "date": "2026-11-17",
+   "org": "처인구 이동읍",
+   "no": "",
+   "title": "이동읍 소식! 정성으로 담근 김치에 담아 전하는 온정",
+   "scope": "town",
+   "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=85206&brd_mgrno=366&menu_no=1683"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-11-16",
@@ -728,15 +782,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261103100508177&q_category=main"
   },
   {
-   "src": "처인구 소식",
-   "date": "2026-11-03",
-   "org": "처인구 이동읍",
-   "no": "",
-   "title": "이동읍 소식! 생활개선용인시연합회 재능활용 지역돌봄사업",
-   "scope": "town",
-   "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=85057&brd_mgrno=366&menu_no=1683"
-  },
-  {
    "src": "용인시 카카오채널",
    "date": "2026-11-03",
    "org": "용인특례시 카카오톡 채널",
@@ -1249,24 +1294,6 @@
    "title": "[농업기술] 스마트농업 전문교육(스마트농업 심화 및 현장적용) 과정 교육생 모집",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1018&q_clCode=2&q_bbscttSn=20261021090846917"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-21",
-   "org": "용인특례시 농촌테마과",
-   "no": "",
-   "title": "[농촌테마파크] -농촌테마파크 10월4째주 주말 상시체험 \"쉼\" 안내 입니다.",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261021081324227"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-21",
-   "org": "용인특례시 농촌테마과",
-   "no": "",
-   "title": "[농촌테마파크] 용인농촌테마파크 가을 축제 (10/24~25일)",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261021080516136"
   },
   {
    "src": "용인시 고시·공고",
