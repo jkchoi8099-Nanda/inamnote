@@ -1,7 +1,16 @@
 {
- "updated_at": "2026-11-18T06:50+09:00",
+ "updated_at": "2026-11-18T11:54+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-18",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시 처인구, 공동주택 관리감사 사례집 제작",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261118080613601"
+  },
   {
    "src": "용인시 고시·공고",
    "via": "새올",
@@ -1378,15 +1387,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261021074941141"
   },
   {
-   "src": "용인시 공지",
-   "date": "2026-10-21",
-   "org": "용인특례시 건강증진과",
-   "no": "",
-   "title": "[보건소] 무료 혈압·혈당·콜레스테롤 검사받고 뇌졸중 예방해요! (10. 29.)",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=3&q_bbscttSn=20261021155745396&q_category=main"
-  },
-  {
    "src": "용인시 고시·공고",
    "via": "새올",
    "date": "2026-10-21",
@@ -1464,24 +1464,6 @@
    "title": "용인특례시, 처인구 남사읍 화훼유통복합센터 야외공간 조성에 시민 의견 접수",
    "scope": "town",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261019080636888"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-19",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시 처인구, 하반기 어린이집 집단급식소 시설 대상 식중독 예방 점검",
-   "scope": "town",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261019080614138"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-19",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 지방세 환급금 편리하게 돌려받는 ‘환급계좌 사전등록’ 안내",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261019080554912"
   },
   {
    "src": "용인시 고시·공고",
