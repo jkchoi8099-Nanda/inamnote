@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T11:54+09:00",
+ "updated_at": "2026-11-18T18:50+09:00",
  "errors": [],
  "items": [
   {
@@ -958,7 +958,7 @@
    "date": "2026-11-02",
    "org": "용인특례시 건강증진과",
    "no": "",
-   "title": "[보건소] 「혈관을 지키는 건강퀴즈 챌린지 2탄」 운영 안내",
+   "title": "[보건소] [마감]「혈관을 지키는 건강퀴즈 챌린지 2탄」 운영 안내",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=2&q_bbscttSn=20261102103845972&q_category=main"
   },
@@ -1607,6 +1607,14 @@
    "no": "",
    "title": "[보상계획] 용인반도체국가산단 분묘 개장 공고",
    "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=734079"
+  },
+  {
+   "src": "토지이음 고시",
+   "date": "2026-09-18",
+   "org": "경기도 용인시",
+   "no": "경기도 용인시 고시 제2026-526호",
+   "title": "[변경] [고시] 농어촌도로의 노선 지정(변경)에 관한 공고 및 고시 [남사읍 삼인선(리도 205호) 개설공사]",
+   "url": "https://www.eum.go.kr/web/gs/gv/gvGosiDet.jsp?seq=645223"
   },
   {
    "src": "토지이음 고시",
