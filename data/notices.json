@@ -1,7 +1,25 @@
 {
- "updated_at": "2026-11-19T06:50+09:00",
+ "updated_at": "2026-11-19T11:34+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-19",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 버스정류장 26곳에 인근 화장실 안내도 부착",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261119075605126"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-19",
+   "org": "용인특례시 민원여권과",
+   "no": "",
+   "title": "※ 등기사항증명서 등 수수료 인상 안내 ※",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261119093804246"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-11-18",
