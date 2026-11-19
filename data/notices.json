@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T18:50+09:00",
+ "updated_at": "2026-11-20T03:13+09:00",
  "errors": [],
  "items": [
   {
@@ -236,6 +236,24 @@
    "title": "[상하수도] 2027년 대학수학능력시험일 업무 시작 시간 변경 안내",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1015&q_clCode=1&q_bbscttSn=20261116155539743"
+  },
+  {
+   "src": "용인시 카카오채널",
+   "date": "2026-11-16",
+   "org": "용인특례시 카카오톡 채널",
+   "no": "",
+   "title": "2027학년도 용인특례시 정시대비 맞춤형 진학컨설팅",
+   "scope": "city",
+   "url": "https://pf.kakao.com/_SxkxoYxl/115256655"
+  },
+  {
+   "src": "용인시 카카오채널",
+   "date": "2026-11-16",
+   "org": "용인특례시 카카오톡 채널",
+   "no": "",
+   "title": "11월 3주차 위클리 뉴스용",
+   "scope": "city",
+   "url": "https://pf.kakao.com/_SxkxoYxl/115230614"
   },
   {
    "src": "용인시 고시·공고",
@@ -1080,15 +1098,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261029075730515"
   },
   {
-   "src": "용인시 카카오채널",
-   "date": "2026-10-29",
-   "org": "용인특례시 카카오톡 채널",
-   "no": "",
-   "title": "11월 용인와이페이 인센티브 및 캐시백 안내",
-   "scope": "city",
-   "url": "https://pf.kakao.com/_SxkxoYxl/115045484"
-  },
-  {
    "src": "용인시 고시·공고",
    "via": "새올",
    "date": "2026-10-29",
@@ -1148,15 +1157,6 @@
    "title": "제7기 용인청년정책네트워크 위원 모집 공고",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261028173817413"
-  },
-  {
-   "src": "용인시 카카오채널",
-   "date": "2026-10-28",
-   "org": "용인특례시 카카오톡 채널",
-   "no": "",
-   "title": "택배 받을 때, 이제 더 편리하고 안심하게!",
-   "scope": "city",
-   "url": "https://pf.kakao.com/_SxkxoYxl/115025854"
   },
   {
    "src": "용인시 고시·공고",
@@ -1272,15 +1272,6 @@
    "title": "[보건소] ★응급처치교육(심폐소생술) (법정의무교육대상) 교육 종료 안내★",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=3&q_bbscttSn=20261026140337704&q_category=main"
-  },
-  {
-   "src": "용인시 카카오채널",
-   "date": "2026-10-26",
-   "org": "용인특례시 카카오톡 채널",
-   "no": "",
-   "title": "10월 5주차 위클리 뉴스용",
-   "scope": "city",
-   "url": "https://pf.kakao.com/_SxkxoYxl/114984985"
   },
   {
    "src": "용인시 고시·공고",
@@ -1437,15 +1428,6 @@
     }
    ],
    "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=148488"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-20",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, ‘제74주년 재향군인의 날’ 기념식 개최",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261020074916903"
   },
   {
    "src": "용인시 고시·공고",
@@ -2648,5 +2630,5 @@
   "97280",
   "97759"
  ],
- "kakao_at": "2026-11-15T13:06+09:00"
+ "kakao_at": "2026-11-20T03:11+09:00"
 }
