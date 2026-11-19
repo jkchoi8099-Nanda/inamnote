@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-20T03:14+09:00",
- "total": 10887,
+ "updated_at": "2026-11-20T06:50+09:00",
+ "total": 10891,
  "who": [
   [
    "kid",
@@ -51,7 +51,7 @@
     "dis",
     "low"
    ],
-   "views": 1841,
+   "views": 1844,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000002&bnefType=all&svcId=405000000628"
   },
   {
@@ -71,7 +71,7 @@
    "tags": [
     "low"
    ],
-   "views": 1403,
+   "views": 1405,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000077&bnefType=all&svcId=405000000629"
   },
   {
@@ -93,7 +93,7 @@
     "young",
     "low"
    ],
-   "views": 7295,
+   "views": 7327,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001611&bnefType=all&svcId=405000000631"
   },
   {
@@ -113,7 +113,7 @@
    "tags": [
     "kid"
    ],
-   "views": 1571,
+   "views": 1574,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001612&bnefType=all&svcId=405000000632"
   },
   {
@@ -131,7 +131,7 @@
    "tel": "용인시 장학재단/031-6193-4823",
    "kind": "현금(장학금)",
    "tags": [],
-   "views": 1494,
+   "views": 1497,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001613&bnefType=all&svcId=405000000633"
   },
   {
@@ -151,7 +151,7 @@
    "tags": [
     "dis"
    ],
-   "views": 1404,
+   "views": 1406,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001614&bnefType=all&svcId=405000000634"
   },
   {
@@ -172,7 +172,7 @@
     "dis",
     "low"
    ],
-   "views": 1548,
+   "views": 1551,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001615&bnefType=all&svcId=405000000635"
   },
   {
@@ -192,7 +192,7 @@
    "tags": [
     "low"
    ],
-   "views": 3228,
+   "views": 3233,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001616&bnefType=all&svcId=405000000636"
   },
   {
@@ -212,7 +212,7 @@
    "tags": [
     "old"
    ],
-   "views": 2463,
+   "views": 2466,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001619&bnefType=all&svcId=405000000639"
   },
   {
@@ -230,7 +230,7 @@
    "tel": "복지정책과/031-6193-3133",
    "kind": "현금",
    "tags": [],
-   "views": 1945,
+   "views": 1949,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003537&bnefType=all&svcId=405000000640"
   },
   {
@@ -251,7 +251,7 @@
     "kid",
     "dis"
    ],
-   "views": 1407,
+   "views": 1410,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003836&bnefType=all&svcId=405000000641"
   },
   {
@@ -272,7 +272,7 @@
     "kid",
     "low"
    ],
-   "views": 1402,
+   "views": 1405,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003972&bnefType=all&svcId=405000000644"
   },
   {
@@ -292,7 +292,7 @@
    "tags": [
     "kid"
    ],
-   "views": 2488,
+   "views": 2493,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004059&bnefType=all&svcId=405000000645"
   },
   {
@@ -312,7 +312,7 @@
    "tags": [
     "kid"
    ],
-   "views": 1384,
+   "views": 1387,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004312&bnefType=all&svcId=405000000647"
   },
   {
@@ -333,7 +333,7 @@
     "dis",
     "low"
    ],
-   "views": 6189,
+   "views": 6192,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004786&bnefType=all&svcId=405000000649"
   },
   {
@@ -354,7 +354,7 @@
     "kid",
     "biz"
    ],
-   "views": 2027,
+   "views": 2031,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005523&bnefType=all&svcId=405000000651"
   },
   {
@@ -374,7 +374,7 @@
    "tags": [
     "kid"
    ],
-   "views": 1389,
+   "views": 1392,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005656&bnefType=all&svcId=405000000652"
   },
   {
@@ -392,7 +392,7 @@
    "tel": "자치분권과/031-6193-2638",
    "kind": "현금",
    "tags": [],
-   "views": 1442,
+   "views": 1444,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005863&bnefType=all&svcId=405000000654"
   },
   {
@@ -412,7 +412,7 @@
    "tags": [
     "kid"
    ],
-   "views": 18685,
+   "views": 18721,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005864&bnefType=all&svcId=405000000655"
   },
   {
@@ -432,7 +432,7 @@
    "tags": [
     "kid"
    ],
-   "views": 1394,
+   "views": 1396,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005870&bnefType=all&svcId=405000000656"
   },
   {
@@ -452,7 +452,7 @@
    "tags": [
     "dis"
    ],
-   "views": 1403,
+   "views": 1405,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005874&bnefType=all&svcId=405000000657"
   },
   {
@@ -472,7 +472,7 @@
    "tags": [
     "kid"
    ],
-   "views": 1257,
+   "views": 1261,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006077&bnefType=all&svcId=405000000658"
   },
   {
@@ -492,7 +492,7 @@
    "tags": [
     "kid"
    ],
-   "views": 1327,
+   "views": 1330,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006138&bnefType=all&svcId=405000000659"
   },
   {
@@ -512,7 +512,7 @@
    "tags": [
     "kid"
    ],
-   "views": 1580,
+   "views": 1584,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006282&bnefType=all&svcId=405000000660"
   },
   {
@@ -532,7 +532,7 @@
    "tags": [
     "young"
    ],
-   "views": 1769,
+   "views": 1774,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006501&bnefType=all&svcId=405000000661"
   },
   {
@@ -552,7 +552,7 @@
    "tags": [
     "dis"
    ],
-   "views": 1591,
+   "views": 1593,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=809767&bnefType=all&svcId=405000000665"
   },
   {
@@ -572,7 +572,7 @@
    "tags": [
     "kid"
    ],
-   "views": 1882,
+   "views": 1889,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2108801&bnefType=all&svcId=405000000671"
   },
   {
@@ -593,7 +593,7 @@
     "kid",
     "dis"
    ],
-   "views": 1283,
+   "views": 1286,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2110202&bnefType=all&svcId=405000000672"
   },
   {
@@ -611,7 +611,7 @@
    "tel": "처인구보건소/031-6193-0171||처인구보건소/031-6193-0175",
    "kind": "현금",
    "tags": [],
-   "views": 3659,
+   "views": 3662,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2113206&bnefType=all&svcId=405000000675"
   },
   {
@@ -631,7 +631,7 @@
    "tags": [
     "kid"
    ],
-   "views": 141720,
+   "views": 141734,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2115604&bnefType=all&svcId=405000000678"
   },
   {
@@ -649,7 +649,7 @@
    "tel": "처인구보건소/031-6193-0171||처인구보건소/031-6193-0175",
    "kind": "현금",
    "tags": [],
-   "views": 1952,
+   "views": 1955,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2121109&bnefType=all&svcId=405000000685"
   },
   {
@@ -669,7 +669,7 @@
    "tags": [
     "kid"
    ],
-   "views": 9142,
+   "views": 9154,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2126401&bnefType=all&svcId=405000000689"
   },
   {
@@ -687,7 +687,7 @@
    "tel": "기타/1522-3556",
    "kind": "현금(보험)",
    "tags": [],
-   "views": 3969,
+   "views": 3976,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2128707&bnefType=all&svcId=405000000690"
   },
   {
@@ -707,7 +707,7 @@
    "tags": [
     "dis"
    ],
-   "views": 4025,
+   "views": 4032,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2109508&bnefType=all&svcId=O00009400001"
   },
   {
@@ -727,7 +727,7 @@
    "tags": [
     "kid"
    ],
-   "views": 19480,
+   "views": 19502,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000205&bnefType=all&svcId=641000000111"
   },
   {
@@ -745,7 +745,7 @@
    "tel": "택시교통과/031-8030-3612",
    "kind": "현금",
    "tags": [],
-   "views": 1856,
+   "views": 1864,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000464&bnefType=all&svcId=641000000113"
   },
   {
@@ -766,7 +766,7 @@
     "old",
     "low"
    ],
-   "views": 2343,
+   "views": 2348,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000484&bnefType=all&svcId=641000000114"
   },
   {
@@ -787,7 +787,7 @@
     "dis",
     "low"
    ],
-   "views": 5781,
+   "views": 5785,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000764&bnefType=all&svcId=641000000115"
   },
   {
@@ -810,7 +810,7 @@
     "dis",
     "low"
    ],
-   "views": 3003,
+   "views": 3006,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000792&bnefType=all&svcId=641000000116"
   },
   {
@@ -828,7 +828,7 @@
    "tel": "수원시/031-5191-3313||고양시/031-8075-4604||용인시/031-6193-3465||성남…",
    "kind": "기타",
    "tags": [],
-   "views": 4232,
+   "views": 4236,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000940&bnefType=all&svcId=641000000117"
   },
   {
@@ -848,7 +848,7 @@
    "tags": [
     "farm"
    ],
-   "views": 4595,
+   "views": 4620,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001102&bnefType=all&svcId=641000000120"
   },
   {
@@ -866,7 +866,7 @@
    "tel": "택시교통과/031-8030-3612",
    "kind": "현금",
    "tags": [],
-   "views": 3159,
+   "views": 3167,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001220&bnefType=all&svcId=641000000121"
   },
   {
@@ -886,7 +886,7 @@
    "tags": [
     "kid"
    ],
-   "views": 2721,
+   "views": 2723,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001231&bnefType=all&svcId=641000000122"
   },
   {
@@ -907,7 +907,7 @@
     "young",
     "low"
    ],
-   "views": 3790,
+   "views": 3792,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002017&bnefType=all&svcId=641000000124"
   },
   {
@@ -930,7 +930,7 @@
     "dis",
     "low"
    ],
-   "views": 3329,
+   "views": 3333,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002029&bnefType=all&svcId=641000000125"
   },
   {
@@ -948,7 +948,7 @@
    "tel": "청소년과/031-8008-2575",
    "kind": "현금",
    "tags": [],
-   "views": 2445,
+   "views": 2453,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002031&bnefType=all&svcId=641000000127"
   },
   {
@@ -968,7 +968,7 @@
    "tags": [
     "low"
    ],
-   "views": 1605,
+   "views": 1607,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002032&bnefType=all&svcId=641000000128"
   },
   {
@@ -988,7 +988,7 @@
    "tags": [
     "kid"
    ],
-   "views": 11921,
+   "views": 11926,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002033&bnefType=all&svcId=641000000129"
   },
   {
@@ -1008,7 +1008,7 @@
    "tags": [
     "farm"
    ],
-   "views": 1355,
+   "views": 1359,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002054&bnefType=all&svcId=641000000130"
   },
   {
@@ -1028,7 +1028,7 @@
    "tags": [
     "farm"
    ],
-   "views": 1486,
+   "views": 1488,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002056&bnefType=all&svcId=641000000131"
   },
   {
@@ -1048,7 +1048,7 @@
    "tags": [
     "farm"
    ],
-   "views": 1544,
+   "views": 1546,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002194&bnefType=all&svcId=641000000133"
   },
   {
@@ -1068,7 +1068,7 @@
    "tags": [
     "farm"
    ],
-   "views": 1467,
+   "views": 1469,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002195&bnefType=all&svcId=641000000134"
   },
   {
@@ -1086,7 +1086,7 @@
    "tel": "가평군정신건강복지센터/031-581-8881||고양시정신건강복지센터/031-968-2333||과천시정신건강…",
    "kind": "현금",
    "tags": [],
-   "views": 6901,
+   "views": 6903,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002197&bnefType=all&svcId=641000000136"
   },
   {
@@ -1106,7 +1106,7 @@
    "tags": [
     "kid"
    ],
-   "views": 50637,
+   "views": 50739,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002198&bnefType=all&svcId=641000000137"
   },
   {
@@ -1126,7 +1126,7 @@
    "tags": [
     "young"
    ],
-   "views": 112493,
+   "views": 112513,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002199&bnefType=all&svcId=641000000138"
   },
   {
@@ -1146,7 +1146,7 @@
    "tags": [
     "kid"
    ],
-   "views": 440130,
+   "views": 440644,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002200&bnefType=all&svcId=641000000139"
   },
   {
@@ -1164,7 +1164,7 @@
    "tel": "경기도 고용평등과/031-8030-3232||경기도일자리재단 북부사업본부/031-270-9880||경기도일…",
    "kind": "서비스(일자리)",
    "tags": [],
-   "views": 20062,
+   "views": 20069,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002222&bnefType=all&svcId=641000000140"
   },
   {
@@ -1185,7 +1185,7 @@
     "old",
     "low"
    ],
-   "views": 4090,
+   "views": 4101,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002223&bnefType=all&svcId=641000000141"
   },
   {
@@ -1205,7 +1205,7 @@
    "tags": [
     "farm"
    ],
-   "views": 2067,
+   "views": 2070,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002224&bnefType=all&svcId=641000000142"
   },
   {
@@ -1225,7 +1225,7 @@
    "tags": [
     "dis"
    ],
-   "views": 2114,
+   "views": 2117,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002225&bnefType=all&svcId=641000000143"
   },
   {
@@ -1245,7 +1245,7 @@
    "tags": [
     "kid"
    ],
-   "views": 5309,
+   "views": 5318,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002226&bnefType=all&svcId=641000000144"
   },
   {
@@ -1263,7 +1263,7 @@
    "tel": "자치행정과/031-8008-4090",
    "kind": "현금",
    "tags": [],
-   "views": 3643,
+   "views": 3650,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002227&bnefType=all&svcId=641000000145"
   },
   {
@@ -1284,7 +1284,7 @@
     "dis",
     "low"
    ],
-   "views": 7109,
+   "views": 7112,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002247&bnefType=all&svcId=641000000146"
   },
   {
@@ -1305,7 +1305,7 @@
     "dis",
     "low"
    ],
-   "views": 7074,
+   "views": 7076,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002248&bnefType=all&svcId=641000000147"
   },
   {
@@ -1327,7 +1327,7 @@
     "dis",
     "low"
    ],
-   "views": 1479,
+   "views": 1481,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002250&bnefType=all&svcId=641000000149"
   },
   {
@@ -1347,7 +1347,7 @@
    "tags": [
     "farm"
    ],
-   "views": 4599,
+   "views": 4623,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002251&bnefType=all&svcId=641000000150"
   },
   {
@@ -1365,7 +1365,7 @@
    "tel": "경기도 노동정책과/031-8030-2595||경기관광공사/031-259-4750",
    "kind": "이용권",
    "tags": [],
-   "views": 10917,
+   "views": 10930,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002252&bnefType=all&svcId=641000000151"
   },
   {
@@ -1385,7 +1385,7 @@
    "tags": [
     "farm"
    ],
-   "views": 1793,
+   "views": 1795,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002253&bnefType=all&svcId=641000000152"
   },
   {
@@ -1405,7 +1405,7 @@
    "tags": [
     "farm"
    ],
-   "views": 1643,
+   "views": 1645,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003869&bnefType=all&svcId=641000000154"
   },
   {
@@ -1425,7 +1425,7 @@
    "tags": [
     "low"
    ],
-   "views": 7018,
+   "views": 7020,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003887&bnefType=all&svcId=641000000155"
   },
   {
@@ -1443,7 +1443,7 @@
    "tel": "가평군 자살예방센터/031-581-8881||고양시 자살예방센터/031-927-9275||과천시 자살예방센…",
    "kind": "서비스(의료)",
    "tags": [],
-   "views": 2822,
+   "views": 2824,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004034&bnefType=all&svcId=641000000156"
   },
   {
@@ -1463,7 +1463,7 @@
    "tags": [
     "biz"
    ],
-   "views": 8754,
+   "views": 8843,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004112&bnefType=all&svcId=641000000157"
   },
   {
@@ -1484,7 +1484,7 @@
     "kid",
     "young"
    ],
-   "views": 2691,
+   "views": 2698,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004391&bnefType=all&svcId=641000000159"
   },
   {
@@ -1504,7 +1504,7 @@
    "tags": [
     "farm"
    ],
-   "views": 1488,
+   "views": 1492,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004597&bnefType=all&svcId=641000000161"
   },
   {
@@ -1524,7 +1524,7 @@
    "tags": [
     "low"
    ],
-   "views": 31983,
+   "views": 32016,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004941&bnefType=all&svcId=641000000164"
   },
   {
@@ -1544,7 +1544,7 @@
    "tags": [
     "farm"
    ],
-   "views": 1939,
+   "views": 1941,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005141&bnefType=all&svcId=641000000166"
   },
   {
@@ -1584,7 +1584,7 @@
    "tags": [
     "farm"
    ],
-   "views": 1443,
+   "views": 1448,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005429&bnefType=all&svcId=641000000169"
   },
   {
@@ -1604,7 +1604,7 @@
    "tags": [
     "farm"
    ],
-   "views": 6041,
+   "views": 6045,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005583&bnefType=all&svcId=641000000170"
   },
   {
@@ -1625,7 +1625,7 @@
     "kid",
     "low"
    ],
-   "views": 4650,
+   "views": 4653,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005609&bnefType=all&svcId=641000000171"
   },
   {
@@ -1645,7 +1645,7 @@
    "tags": [
     "farm"
    ],
-   "views": 1901,
+   "views": 1903,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005676&bnefType=all&svcId=641000000172"
   },
   {
@@ -1666,7 +1666,7 @@
     "dis",
     "low"
    ],
-   "views": 3784,
+   "views": 3787,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005757&bnefType=all&svcId=641000000173"
   },
   {
@@ -1687,7 +1687,7 @@
     "old",
     "low"
    ],
-   "views": 1987,
+   "views": 1990,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005872&bnefType=all&svcId=641000000174"
   },
   {
@@ -1707,7 +1707,7 @@
    "tags": [
     "kid"
    ],
-   "views": 4806,
+   "views": 4813,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006171&bnefType=all&svcId=641000000175"
   },
   {
@@ -1725,7 +1725,7 @@
    "tel": "복지정책과/031-8008-5664",
    "kind": "현금",
    "tags": [],
-   "views": 1686,
+   "views": 1690,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006363&bnefType=all&svcId=641000000177"
   },
   {
@@ -1743,7 +1743,7 @@
    "tel": "택시교통과/031-8030-3613",
    "kind": "현금(감면)",
    "tags": [],
-   "views": 1574,
+   "views": 1579,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006500&bnefType=all&svcId=641000000178"
   },
   {
@@ -1761,7 +1761,7 @@
    "tel": "경기도 청소년과/031-8008-2558",
    "kind": "이용권",
    "tags": [],
-   "views": 14380,
+   "views": 14387,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006567&bnefType=all&svcId=641000000180"
   },
   {
@@ -1779,7 +1779,7 @@
    "tel": "경기도 복지정책과/031-8008-4303||경기도 복지정책과/031-8008-3363||경기도 복지정책과…",
    "kind": "현금",
    "tags": [],
-   "views": 9833,
+   "views": 9835,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006636&bnefType=all&svcId=641000000181"
   },
   {
@@ -1799,7 +1799,7 @@
    "tags": [
     "farm"
    ],
-   "views": 1527,
+   "views": 1529,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006669&bnefType=all&svcId=641000000182"
   },
   {
@@ -1820,7 +1820,7 @@
     "old",
     "biz"
    ],
-   "views": 2043,
+   "views": 2045,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=804387&bnefType=all&svcId=641000000183"
   },
   {
@@ -1840,7 +1840,7 @@
    "tags": [
     "biz"
    ],
-   "views": 3595,
+   "views": 3600,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=808910&bnefType=all&svcId=641000000184"
   },
   {
@@ -1860,7 +1860,7 @@
    "tags": [
     "biz"
    ],
-   "views": 9813,
+   "views": 9865,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=808911&bnefType=all&svcId=641000000185"
   },
   {
@@ -1882,7 +1882,7 @@
     "dis",
     "low"
    ],
-   "views": 5210,
+   "views": 5213,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=809804&bnefType=all&svcId=641000000189"
   },
   {
@@ -1902,7 +1902,7 @@
    "tags": [
     "young"
    ],
-   "views": 61704,
+   "views": 61763,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=810317&bnefType=all&svcId=641000000192"
   },
   {
@@ -1922,7 +1922,7 @@
    "tags": [
     "young"
    ],
-   "views": 46528,
+   "views": 46590,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=810356&bnefType=all&svcId=641000000193"
   },
   {
@@ -1942,7 +1942,7 @@
    "tags": [
     "kid"
    ],
-   "views": 2389,
+   "views": 2394,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105305&bnefType=all&svcId=641000000196"
   },
   {
@@ -1963,7 +1963,7 @@
     "old",
     "low"
    ],
-   "views": 2931,
+   "views": 2937,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2114318&bnefType=all&svcId=641000000663"
   },
   {
@@ -1983,7 +1983,7 @@
    "tags": [
     "kid"
    ],
-   "views": 10547,
+   "views": 10555,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2115301&bnefType=all&svcId=641000000664"
   },
   {
@@ -2003,7 +2003,7 @@
    "tags": [
     "young"
    ],
-   "views": 2918,
+   "views": 2931,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2128820&bnefType=all&svcId=641000000669"
   },
   {
@@ -2023,7 +2023,7 @@
    "tags": [
     "kid"
    ],
-   "views": 13496,
+   "views": 13531,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2132623&bnefType=all&svcId=641000000671"
   },
   {
@@ -2043,7 +2043,7 @@
    "tags": [
     "low"
    ],
-   "views": 773,
+   "views": 777,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2143621&bnefType=all&svcId=641000000672"
   },
   {
@@ -2061,7 +2061,7 @@
    "tel": "신용회복위원회/1600-5500||경기복지재단/031-267-9354",
    "kind": "현금(융자)",
    "tags": [],
-   "views": 1043,
+   "views": 1046,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2143622&bnefType=all&svcId=641000000673"
   },
   {
@@ -2081,7 +2081,7 @@
    "tags": [
     "old"
    ],
-   "views": 725,
+   "views": 732,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2144416&bnefType=all&svcId=641000000679"
   },
   {
@@ -2101,7 +2101,7 @@
    "tags": [
     "biz"
    ],
-   "views": 666,
+   "views": 668,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2146417&bnefType=all&svcId=641000000690"
   },
   {
@@ -2121,7 +2121,7 @@
    "tags": [
     "low"
    ],
-   "views": 551,
+   "views": 553,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2147921&bnefType=all&svcId=641000000692"
   },
   {
@@ -2141,7 +2141,7 @@
    "tags": [
     "kid"
    ],
-   "views": 5301,
+   "views": 5310,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2148316&bnefType=all&svcId=641000000693"
   },
   {
@@ -2161,7 +2161,7 @@
    "tags": [
     "dis"
    ],
-   "views": 1054,
+   "views": 1058,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2150017&bnefType=all&svcId=641000000695"
   },
   {
@@ -2179,7 +2179,7 @@
    "tel": "경기남부청소년자립지원관(이용형)/031-360-1824||경기북부청소년자립지원관(이용형)/031-928-1…",
    "kind": "현금",
    "tags": [],
-   "views": 503,
+   "views": 509,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2153417&bnefType=all&svcId=641000000697"
   },
   {
@@ -2200,7 +2200,7 @@
     "old",
     "low"
    ],
-   "views": 466,
+   "views": 471,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2154328&bnefType=all&svcId=641000000698"
   },
   {
@@ -2221,7 +2221,7 @@
     "young",
     "biz"
    ],
-   "views": 602,
+   "views": 606,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156429&bnefType=all&svcId=641000000699"
   },
   {
@@ -2241,7 +2241,7 @@
    "tags": [
     "biz"
    ],
-   "views": 553,
+   "views": 556,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156430&bnefType=all&svcId=641000000700"
   },
   {
@@ -2259,7 +2259,7 @@
    "tel": "경기도 체육진흥과/031-8008-4535",
    "kind": "현금",
    "tags": [],
-   "views": 1228,
+   "views": 1234,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156161&bnefType=all&svcId=641000000704"
   },
   {
@@ -2279,7 +2279,7 @@
    "tags": [
     "kid"
    ],
-   "views": 668,
+   "views": 673,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156163&bnefType=all&svcId=641000000706"
   },
   {
@@ -2299,7 +2299,7 @@
    "tags": [
     "kid"
    ],
-   "views": 546,
+   "views": 553,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2158316&bnefType=all&svcId=641000000725"
   },
   {
@@ -2317,7 +2317,7 @@
    "tel": "경기도 콜센터/031-120||수원시 돌봄정책과/1899-3300||용인시 복지정책과/1577-1122||…",
    "kind": "서비스(돌봄)",
    "tags": [],
-   "views": 865,
+   "views": 869,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2158817&bnefType=all&svcId=641000000730"
   },
   {
@@ -2338,7 +2338,7 @@
     "young",
     "biz"
    ],
-   "views": 2516,
+   "views": 2546,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159416&bnefType=all&svcId=641000000737"
   },
   {
@@ -2356,7 +2356,7 @@
    "tel": "화성시 청년청소년정책과/031-5189-3146||평택시 반도체AI과/031-8024-3472||파주시 일…",
    "kind": "기타(교육)",
    "tags": [],
-   "views": 650,
+   "views": 652,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159417&bnefType=all&svcId=641000000739"
   },
   {
@@ -2374,7 +2374,7 @@
    "tel": "경기도 일자리재단/031-270-6655",
    "kind": "기타(교육)",
    "tags": [],
-   "views": 429,
+   "views": 432,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159420&bnefType=all&svcId=641000000742"
   },
   {
@@ -2392,7 +2392,7 @@
    "tel": "경기도일자리재단/031-270-6636",
    "kind": "기타(교육)",
    "tags": [],
-   "views": 425,
+   "views": 429,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159421&bnefType=all&svcId=641000000743"
   },
   {
@@ -2454,7 +2454,7 @@
     "dis",
     "low"
    ],
-   "views": 370,
+   "views": 372,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159774&bnefType=all&svcId=641000000802"
   },
   {
@@ -2474,7 +2474,7 @@
    "tags": [
     "biz"
    ],
-   "views": 882,
+   "views": 884,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159780&bnefType=all&svcId=641000000806"
   },
   {
@@ -2494,7 +2494,7 @@
    "tags": [
     "biz"
    ],
-   "views": 811,
+   "views": 814,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159581&bnefType=all&svcId=641000000808"
   },
   {
@@ -2514,7 +2514,7 @@
    "tags": [
     "biz"
    ],
-   "views": 563,
+   "views": 565,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159583&bnefType=all&svcId=641000000812"
   },
   {
@@ -2534,7 +2534,7 @@
    "tags": [
     "biz"
    ],
-   "views": 621,
+   "views": 623,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159799&bnefType=all&svcId=641000000817"
   },
   {
@@ -2554,7 +2554,7 @@
    "tags": [
     "biz"
    ],
-   "views": 552,
+   "views": 554,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159838&bnefType=all&svcId=641000000824"
   },
   {
@@ -2574,7 +2574,7 @@
    "tags": [
     "biz"
    ],
-   "views": 536,
+   "views": 538,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159843&bnefType=all&svcId=641000000825"
   },
   {
@@ -2594,7 +2594,7 @@
    "tags": [
     "biz"
    ],
-   "views": 624,
+   "views": 626,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159918&bnefType=all&svcId=641000000826"
   },
   {
@@ -2614,7 +2614,7 @@
    "tags": [
     "biz"
    ],
-   "views": 878,
+   "views": 880,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2160021&bnefType=all&svcId=641000000837"
   },
   {
@@ -2634,7 +2634,7 @@
    "tags": [
     "biz"
    ],
-   "views": 698,
+   "views": 700,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2160026&bnefType=all&svcId=641000000846"
   },
   {
@@ -2654,7 +2654,7 @@
    "tags": [
     "biz"
    ],
-   "views": 665,
+   "views": 667,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2160027&bnefType=all&svcId=641000000847"
   },
   {
@@ -2674,7 +2674,7 @@
    "tags": [
     "biz"
    ],
-   "views": 800,
+   "views": 802,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2161617&bnefType=all&svcId=641000000851"
   },
   {
@@ -2694,7 +2694,7 @@
    "tags": [
     "low"
    ],
-   "views": 399,
+   "views": 402,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2160074&bnefType=all&svcId=641000000852"
   },
   {
@@ -2735,7 +2735,7 @@
     "old",
     "low"
    ],
-   "views": 562,
+   "views": 564,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2170427&bnefType=all&svcId=641000000855"
   },
   {
@@ -2755,7 +2755,7 @@
    "tags": [
     "low"
    ],
-   "views": 387,
+   "views": 390,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2174116&bnefType=all&svcId=641000000856"
   },
   {
@@ -2775,7 +2775,7 @@
    "tags": [
     "young"
    ],
-   "views": 2130,
+   "views": 2146,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2185016&bnefType=all&svcId=641000000858"
   },
   {
@@ -2796,7 +2796,7 @@
     "kid",
     "old"
    ],
-   "views": 264,
+   "views": 268,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2185216&bnefType=all&svcId=641000000859"
   },
   {
@@ -2834,7 +2834,7 @@
    "tel": "경기도 청소년과/031-8008-2591",
    "kind": "서비스(돌봄)·서비스(의료)·서비스(일자리)·현금",
    "tags": [],
-   "views": 82,
+   "views": 84,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2189139&bnefType=all&svcId=641000000878"
   },
   {
@@ -2854,7 +2854,7 @@
    "tags": [
     "low"
    ],
-   "views": 9123,
+   "views": 9124,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001673&bnefType=all&svcId=O00003000001"
   },
   {
@@ -2874,7 +2874,7 @@
    "tags": [
     "dis"
    ],
-   "views": 15602,
+   "views": 15608,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2138326&bnefType=all&svcId=O00043900003"
   },
   {
@@ -2898,7 +2898,7 @@
     "dis",
     "low"
    ],
-   "views": 10574,
+   "views": 10576,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001456&bnefType=all&svcId=O00044100001"
   },
   {
@@ -2938,7 +2938,7 @@
    "tags": [
     "biz"
    ],
-   "views": 6286,
+   "views": 6287,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001324&bnefType=all&svcId=O00045200001"
   },
   {
@@ -2958,7 +2958,7 @@
    "tags": [
     "biz"
    ],
-   "views": 799,
+   "views": 801,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159576&bnefType=all&svcId=O00045200002"
   },
   {
@@ -2998,7 +2998,7 @@
    "tags": [
     "biz"
    ],
-   "views": 1606,
+   "views": 1620,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156177&bnefType=all&svcId=O00045700002"
   },
   {
@@ -3038,7 +3038,7 @@
    "tags": [
     "biz"
    ],
-   "views": 1153,
+   "views": 1154,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156182&bnefType=all&svcId=O00045700007"
   },
   {
@@ -3058,7 +3058,7 @@
    "tags": [
     "biz"
    ],
-   "views": 644,
+   "views": 645,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156183&bnefType=all&svcId=O00045700008"
   },
   {
@@ -3079,7 +3079,7 @@
     "young",
     "biz"
    ],
-   "views": 322,
+   "views": 324,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156184&bnefType=all&svcId=O00045700009"
   },
   {
@@ -3099,7 +3099,7 @@
    "tags": [
     "biz"
    ],
-   "views": 420,
+   "views": 421,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156185&bnefType=all&svcId=O00045700010"
   },
   {
@@ -3140,7 +3140,7 @@
     "young",
     "biz"
    ],
-   "views": 275,
+   "views": 276,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156187&bnefType=all&svcId=O00045700012"
   },
   {
@@ -3200,7 +3200,7 @@
    "tags": [
     "biz"
    ],
-   "views": 430,
+   "views": 431,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156195&bnefType=all&svcId=O00045700019"
   },
   {
@@ -3220,7 +3220,7 @@
    "tags": [
     "biz"
    ],
-   "views": 424,
+   "views": 426,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156196&bnefType=all&svcId=O00045700020"
   },
   {
@@ -3260,7 +3260,7 @@
    "tags": [
     "biz"
    ],
-   "views": 443,
+   "views": 444,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2159018&bnefType=all&svcId=O00045700025"
   },
   {
@@ -3321,7 +3321,7 @@
     "kid",
     "biz"
    ],
-   "views": 5187189,
+   "views": 5188871,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=754680&bnefType=all&svcId=149200000026"
   },
   {
@@ -3341,7 +3341,7 @@
    "tags": [
     "kid"
    ],
-   "views": 2442937,
+   "views": 2443371,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=556551&bnefType=all&svcId=105100000001"
   },
   {
@@ -3361,7 +3361,7 @@
    "tags": [
     "young"
    ],
-   "views": 1318492,
+   "views": 1319773,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=797786&bnefType=all&svcId=149200005007"
   },
   {
@@ -3381,7 +3381,7 @@
    "tags": [
     "kid"
    ],
-   "views": 1083049,
+   "views": 1083234,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999071&bnefType=all&svcId=B55140800003"
   },
   {
@@ -3402,7 +3402,7 @@
     "biz",
     "low"
    ],
-   "views": 818579,
+   "views": 819613,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=516503&bnefType=all&svcId=SD0000015536"
   },
   {
@@ -3422,7 +3422,7 @@
    "tags": [
     "young"
    ],
-   "views": 732179,
+   "views": 732674,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2126303&bnefType=all&svcId=161300000103"
   },
   {
@@ -3442,7 +3442,7 @@
    "tags": [
     "low"
    ],
-   "views": 692012,
+   "views": 692270,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900010&bnefType=all&svcId=135200005003"
   },
   {
@@ -3460,7 +3460,7 @@
    "tel": "서울주택도시공사/1600-3456",
    "kind": "기타",
    "tags": [],
-   "views": 674458,
+   "views": 674525,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999075&bnefType=all&svcId=999000000024"
   },
   {
@@ -3480,7 +3480,7 @@
    "tags": [
     "kid"
    ],
-   "views": 639944,
+   "views": 640085,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739245&bnefType=all&svcId=161300000076"
   },
   {
@@ -3500,7 +3500,7 @@
    "tags": [
     "young"
    ],
-   "views": 612390,
+   "views": 612487,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805494&bnefType=all&svcId=135200005013"
   },
   {
@@ -3518,7 +3518,7 @@
    "tel": "고용노동부 고객상담센터/1350",
    "kind": "현금",
    "tags": [],
-   "views": 577047,
+   "views": 577538,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999029&bnefType=all&svcId=999000000008"
   },
   {
@@ -3539,7 +3539,7 @@
     "young",
     "low"
    ],
-   "views": 575153,
+   "views": 575387,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999078&bnefType=all&svcId=161300000088"
   },
   {
@@ -3559,7 +3559,7 @@
    "tags": [
     "young"
    ],
-   "views": 554868,
+   "views": 554937,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=758402&bnefType=all&svcId=SD0000011848"
   },
   {
@@ -3580,7 +3580,7 @@
     "kid",
     "old"
    ],
-   "views": 552310,
+   "views": 552709,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=749131&bnefType=all&svcId=135200000115"
   },
   {
@@ -3598,7 +3598,7 @@
    "tel": "국민연금공단(중앙노후준비지원센터)/1355",
    "kind": "기타(교육)",
    "tags": [],
-   "views": 551500,
+   "views": 551530,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999132&bnefType=all&svcId=WII000000310"
   },
   {
@@ -3618,7 +3618,7 @@
    "tags": [
     "low"
    ],
-   "views": 491704,
+   "views": 491791,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=575760&bnefType=all&svcId=WII000001410"
   },
   {
@@ -3638,7 +3638,7 @@
    "tags": [
     "low"
    ],
-   "views": 429935,
+   "views": 429966,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=663171&bnefType=all&svcId=424000000006"
   },
   {
@@ -3656,7 +3656,7 @@
    "tel": "국토교통부/1599-0001||주택도시보증공사/1566-9009||우리은행/1599-0800||국민은행/1…",
    "kind": "현금(융자)",
    "tags": [],
-   "views": 427792,
+   "views": 427801,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739256&bnefType=all&svcId=161300000001"
   },
   {
@@ -3677,7 +3677,7 @@
     "old",
     "low"
    ],
-   "views": 420918,
+   "views": 420941,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=748477&bnefType=all&svcId=171000000005"
   },
   {
@@ -3697,7 +3697,7 @@
    "tags": [
     "low"
    ],
-   "views": 369919,
+   "views": 370034,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999076&bnefType=all&svcId=336000000096"
   },
   {
@@ -3717,7 +3717,7 @@
    "tags": [
     "low"
    ],
-   "views": 329541,
+   "views": 329564,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999077&bnefType=all&svcId=999000000025"
   },
   {
@@ -3738,7 +3738,7 @@
     "kid",
     "dis"
    ],
-   "views": 304307,
+   "views": 304364,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=75100&bnefType=all&svcId=SD0000016138"
   },
   {
@@ -3756,7 +3756,7 @@
    "tel": "상생페이백 콜센터/1533-2800",
    "kind": "기타",
    "tags": [],
-   "views": 281202,
+   "views": 281213,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2152556&bnefType=all&svcId=142100000062"
   },
   {
@@ -3776,7 +3776,7 @@
    "tags": [
     "low"
    ],
-   "views": 258092,
+   "views": 258118,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999145&bnefType=all&svcId=B55201500004"
   },
   {
@@ -3798,7 +3798,7 @@
     "dis",
     "low"
    ],
-   "views": 243068,
+   "views": 243095,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=753134&bnefType=all&svcId=140000000176"
   },
   {
@@ -3821,7 +3821,7 @@
     "dis",
     "low"
    ],
-   "views": 232780,
+   "views": 232951,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999178&bnefType=all&svcId=B55353000001"
   },
   {
@@ -3839,7 +3839,7 @@
    "tel": "도로교통공단/1577-1120",
    "kind": "현금(감면)",
    "tags": [],
-   "views": 225733,
+   "views": 225775,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=761842&bnefType=all&svcId=132000000006"
   },
   {
@@ -3859,7 +3859,7 @@
    "tags": [
     "kid"
    ],
-   "views": 222245,
+   "views": 222382,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=758582&bnefType=all&svcId=WII000001460"
   },
   {
@@ -3881,7 +3881,7 @@
     "biz",
     "low"
    ],
-   "views": 219622,
+   "views": 219721,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=105992&bnefType=all&svcId=149200000009"
   },
   {
@@ -3901,7 +3901,7 @@
    "tags": [
     "low"
    ],
-   "views": 217150,
+   "views": 217202,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=762701&bnefType=all&svcId=134200000045"
   },
   {
@@ -3919,7 +3919,7 @@
    "tel": "고용노동부 고객상담센터/1350",
    "kind": "상담/법률지원·서비스(일자리)",
    "tags": [],
-   "views": 209822,
+   "views": 209825,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=517149&bnefType=all&svcId=149200000092"
   },
   {
@@ -3939,7 +3939,7 @@
    "tags": [
     "kid"
    ],
-   "views": 198392,
+   "views": 198402,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=83660&bnefType=all&svcId=SD0000004508"
   },
   {
@@ -3959,7 +3959,7 @@
    "tags": [
     "young"
    ],
-   "views": 197262,
+   "views": 197491,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805687&bnefType=all&svcId=161300000099"
   },
   {
@@ -3979,7 +3979,7 @@
    "tags": [
     "old"
    ],
-   "views": 189952,
+   "views": 190173,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=72548&bnefType=all&svcId=SSE000000170"
   },
   {
@@ -4000,7 +4000,7 @@
     "dis",
     "low"
    ],
-   "views": 186493,
+   "views": 186504,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=573411&bnefType=all&svcId=999000000023"
   },
   {
@@ -4020,7 +4020,7 @@
    "tags": [
     "low"
    ],
-   "views": 185279,
+   "views": 185343,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900011&bnefType=all&svcId=135200005004"
   },
   {
@@ -4040,7 +4040,7 @@
    "tags": [
     "kid"
    ],
-   "views": 182713,
+   "views": 182750,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999073&bnefType=all&svcId=WII000001470"
   },
   {
@@ -4060,7 +4060,7 @@
    "tags": [
     "low"
    ],
-   "views": 171974,
+   "views": 171991,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=760851&bnefType=all&svcId=WII000000300"
   },
   {
@@ -4083,7 +4083,7 @@
     "dis",
     "low"
    ],
-   "views": 168281,
+   "views": 168646,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000928&bnefType=all&svcId=B41000200003"
   },
   {
@@ -4103,7 +4103,7 @@
    "tags": [
     "kid"
    ],
-   "views": 160965,
+   "views": 161104,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=593069&bnefType=all&svcId=174000000029"
   },
   {
@@ -4123,7 +4123,7 @@
    "tags": [
     "kid"
    ],
-   "views": 159323,
+   "views": 159445,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=700023&bnefType=all&svcId=135200000120"
   },
   {
@@ -4143,7 +4143,7 @@
    "tags": [
     "dis"
    ],
-   "views": 157929,
+   "views": 157937,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=728849&bnefType=all&svcId=GMO000000010"
   },
   {
@@ -4161,7 +4161,7 @@
    "tel": "중장년내일센터/02-6021-1100",
    "kind": "서비스(일자리)",
    "tags": [],
-   "views": 149736,
+   "views": 149915,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=518133&bnefType=all&svcId=149200000041"
   },
   {
@@ -4182,7 +4182,7 @@
     "kid",
     "young"
    ],
-   "views": 148865,
+   "views": 148893,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999161&bnefType=all&svcId=999000000044"
   },
   {
@@ -4198,9 +4198,9 @@
    "how": "기타 온라인신청·방문신청",
    "org": "기후에너지환경부 · 기후적응과",
    "tel": "한국환경공단 탄소중립실천지원부/032-590-3434",
-   "kind": "기타·현금",
+   "kind": "현금",
    "tags": [],
-   "views": 143487,
+   "views": 143506,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999225&bnefType=all&svcId=B55258400009"
   },
   {
@@ -4220,7 +4220,7 @@
    "tags": [
     "kid"
    ],
-   "views": 137785,
+   "views": 137791,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=588799&bnefType=all&svcId=326000000053"
   },
   {
@@ -4241,7 +4241,7 @@
     "old",
     "dis"
    ],
-   "views": 137646,
+   "views": 137648,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=172402&bnefType=all&svcId=135200000017"
   },
   {
@@ -4261,7 +4261,7 @@
    "tags": [
     "low"
    ],
-   "views": 128344,
+   "views": 128351,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=108010&bnefType=all&svcId=GKE000000070"
   },
   {
@@ -4282,7 +4282,7 @@
     "kid",
     "low"
    ],
-   "views": 123514,
+   "views": 123627,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999124&bnefType=all&svcId=SD0000007672"
   },
   {
@@ -4302,7 +4302,7 @@
    "tags": [
     "old"
    ],
-   "views": 118069,
+   "views": 118134,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=701075&bnefType=all&svcId=135200000125"
   },
   {
@@ -4324,7 +4324,7 @@
     "young",
     "low"
    ],
-   "views": 108567,
+   "views": 108596,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=87903&bnefType=all&svcId=SSI000000020"
   },
   {
@@ -4344,7 +4344,7 @@
    "tags": [
     "low"
    ],
-   "views": 106446,
+   "views": 106500,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999152&bnefType=all&svcId=999000000043"
   },
   {
@@ -4369,7 +4369,7 @@
     "dis",
     "low"
    ],
-   "views": 105021,
+   "views": 105024,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999070&bnefType=all&svcId=999000000022"
   },
   {
@@ -4389,7 +4389,7 @@
    "tags": [
     "kid"
    ],
-   "views": 102638,
+   "views": 102702,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=753142&bnefType=all&svcId=SME000000100"
   },
   {
@@ -4409,7 +4409,7 @@
    "tags": [
     "kid"
    ],
-   "views": 102082,
+   "views": 102154,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999002&bnefType=all&svcId=131200000008"
   },
   {
@@ -4429,7 +4429,7 @@
    "tags": [
     "kid"
    ],
-   "views": 101590,
+   "views": 101680,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999019&bnefType=all&svcId=999000000004"
   },
   {
@@ -4449,7 +4449,7 @@
    "tags": [
     "old"
    ],
-   "views": 101425,
+   "views": 101450,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=790133&bnefType=all&svcId=137100000033"
   },
   {
@@ -4467,7 +4467,7 @@
    "tel": "주택도시보증공사/1566-9009",
    "kind": "현금(융자)",
    "tags": [],
-   "views": 100656,
+   "views": 100679,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999074&bnefType=all&svcId=PTR000051706"
   },
   {
@@ -4487,7 +4487,7 @@
    "tags": [
     "low"
    ],
-   "views": 96959,
+   "views": 96964,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=508718&bnefType=all&svcId=138300000017"
   },
   {
@@ -4510,7 +4510,7 @@
     "dis",
     "low"
    ],
-   "views": 96506,
+   "views": 96554,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999259&bnefType=all&svcId=999000000092"
   },
   {
@@ -4530,7 +4530,7 @@
    "tags": [
     "low"
    ],
-   "views": 95097,
+   "views": 95113,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900008&bnefType=all&svcId=135200005001"
   },
   {
@@ -4551,7 +4551,7 @@
     "kid",
     "low"
    ],
-   "views": 89538,
+   "views": 89540,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999023&bnefType=all&svcId=149200000020"
   },
   {
@@ -4571,29 +4571,8 @@
    "tags": [
     "young"
    ],
-   "views": 88622,
+   "views": 88709,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2182516&bnefType=all&svcId=B55370100044"
-  },
-  {
-   "id": "GFO000000030",
-   "area": "nation",
-   "name": "산림서비스도우미(산림복지일자리)",
-   "sum": "지침 기준에 충족하는 대상자에게 산림복지일자리 임금 등을 제공",
-   "who": "신청일 기준으로 만 18세 이상인 자로서 사업별 지침에서 정한 사람(직접일자리사업 종합지침) · 1) 공통 신청자격 · 신청일 현재 만 18세 이상인 자로서 산림서비스도우미 사업…",
-   "what": "[인부임금] · 산림복지일자리 : 82,560원/일(숲생태관리인, 숲길등산지도사, 수목원코디네이터, 도시녹지관리원, 학교숲코디네이터, 산림휴양서비스매니저) · [지급방식] · 일…",
-   "when": "수행기관 공고일에 따름",
-   "start": null,
-   "end": null,
-   "how": "방문신청",
-   "org": "산림청 · 도시숲경관과",
-   "tel": "산림청 도시숲경관과/042-481-1214||산림청 산림휴양치유과/042-481-4212||산림청 숲길등산…",
-   "kind": "서비스(일자리)",
-   "tags": [
-    "kid",
-    "biz"
-   ],
-   "views": 88563,
-   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=579594&bnefType=all&svcId=GFO000000030"
   },
   {
    "id": "172100000012",
@@ -4615,8 +4594,29 @@
     "dis",
     "low"
    ],
-   "views": 88421,
+   "views": 88566,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2110213&bnefType=all&svcId=172100000012"
+  },
+  {
+   "id": "GFO000000030",
+   "area": "nation",
+   "name": "산림서비스도우미(산림복지일자리)",
+   "sum": "지침 기준에 충족하는 대상자에게 산림복지일자리 임금 등을 제공",
+   "who": "신청일 기준으로 만 18세 이상인 자로서 사업별 지침에서 정한 사람(직접일자리사업 종합지침) · 1) 공통 신청자격 · 신청일 현재 만 18세 이상인 자로서 산림서비스도우미 사업…",
+   "what": "[인부임금] · 산림복지일자리 : 82,560원/일(숲생태관리인, 숲길등산지도사, 수목원코디네이터, 도시녹지관리원, 학교숲코디네이터, 산림휴양서비스매니저) · [지급방식] · 일…",
+   "when": "수행기관 공고일에 따름",
+   "start": null,
+   "end": null,
+   "how": "방문신청",
+   "org": "산림청 · 도시숲경관과",
+   "tel": "산림청 도시숲경관과/042-481-1214||산림청 산림휴양치유과/042-481-4212||산림청 숲길등산…",
+   "kind": "서비스(일자리)",
+   "tags": [
+    "kid",
+    "biz"
+   ],
+   "views": 88566,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=579594&bnefType=all&svcId=GFO000000030"
   },
   {
    "id": "SD0000008743",
@@ -4633,7 +4633,7 @@
    "tel": "국민건강보험공단 고객센터/1577-1000",
    "kind": "서비스(의료)·의료지원",
    "tags": [],
-   "views": 88367,
+   "views": 88404,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=729189&bnefType=all&svcId=SD0000008743"
   },
   {
@@ -4653,7 +4653,7 @@
    "tags": [
     "low"
    ],
-   "views": 87753,
+   "views": 87758,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=747031&bnefType=all&svcId=171000000009"
   },
   {
@@ -4676,7 +4676,7 @@
     "old",
     "low"
    ],
-   "views": 85663,
+   "views": 85699,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999079&bnefType=all&svcId=999000000026"
   },
   {
@@ -4696,7 +4696,7 @@
    "tags": [
     "low"
    ],
-   "views": 85011,
+   "views": 85015,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999015&bnefType=all&svcId=149200005002"
   },
   {
@@ -4716,7 +4716,7 @@
    "tags": [
     "low"
    ],
-   "views": 82439,
+   "views": 82454,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999153&bnefType=all&svcId=337000000013"
   },
   {
@@ -4737,7 +4737,7 @@
     "old",
     "low"
    ],
-   "views": 82157,
+   "views": 82193,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=167950&bnefType=all&svcId=SBA000000100"
   },
   {
@@ -4757,7 +4757,7 @@
    "tags": [
     "kid"
    ],
-   "views": 81230,
+   "views": 81290,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999257&bnefType=all&svcId=999000000090"
   },
   {
@@ -4778,7 +4778,7 @@
     "kid",
     "low"
    ],
-   "views": 81036,
+   "views": 81119,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=726481&bnefType=all&svcId=134200000003"
   },
   {
@@ -4798,7 +4798,7 @@
    "tags": [
     "kid"
    ],
-   "views": 79374,
+   "views": 79401,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900001&bnefType=all&svcId=134200005002"
   },
   {
@@ -4818,7 +4818,7 @@
    "tags": [
     "biz"
    ],
-   "views": 73744,
+   "views": 73754,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=39748&bnefType=all&svcId=SD0000007429"
   },
   {
@@ -4836,7 +4836,7 @@
    "tel": "기후에너지환경부 교통환경과/044-201-6930||한국자동차환경협회 콜센터/1544-0907||한국자동차…",
    "kind": "현금",
    "tags": [],
-   "views": 73460,
+   "views": 73469,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=558379&bnefType=all&svcId=148000000007"
   },
   {
@@ -4858,7 +4858,7 @@
     "dis",
     "low"
    ],
-   "views": 71662,
+   "views": 71829,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2110157&bnefType=all&svcId=B55121000003"
   },
   {
@@ -4879,7 +4879,7 @@
     "old",
     "low"
    ],
-   "views": 70349,
+   "views": 70388,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=701248&bnefType=all&svcId=135200000015"
   },
   {
@@ -4899,7 +4899,7 @@
    "tags": [
     "kid"
    ],
-   "views": 69575,
+   "views": 69730,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805790&bnefType=all&svcId=135200005015"
   },
   {
@@ -4921,7 +4921,7 @@
     "biz",
     "low"
    ],
-   "views": 69115,
+   "views": 69133,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999033&bnefType=all&svcId=149200000063"
   },
   {
@@ -4943,7 +4943,7 @@
     "dis",
     "low"
    ],
-   "views": 67617,
+   "views": 67711,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746602&bnefType=all&svcId=423000000362"
   },
   {
@@ -4965,7 +4965,7 @@
     "biz",
     "low"
    ],
-   "views": 67425,
+   "views": 67430,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999080&bnefType=all&svcId=999000000027"
   },
   {
@@ -4983,7 +4983,7 @@
    "tel": "고용노동부 고객상담센터/1350",
    "kind": "현금",
    "tags": [],
-   "views": 66684,
+   "views": 66776,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999028&bnefType=all&svcId=999000000007"
   },
   {
@@ -5004,7 +5004,7 @@
     "old",
     "low"
    ],
-   "views": 66200,
+   "views": 66368,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=577852&bnefType=all&svcId=SSE000000100"
   },
   {
@@ -5024,7 +5024,7 @@
    "tags": [
     "low"
    ],
-   "views": 65853,
+   "views": 65860,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999155&bnefType=all&svcId=408000000419"
   },
   {
@@ -5044,7 +5044,7 @@
    "tags": [
     "low"
    ],
-   "views": 65183,
+   "views": 65196,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999034&bnefType=all&svcId=149200005001"
   },
   {
@@ -5064,7 +5064,7 @@
    "tags": [
     "low"
    ],
-   "views": 65173,
+   "views": 65195,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=753387&bnefType=all&svcId=137100000236"
   },
   {
@@ -5085,7 +5085,7 @@
     "old",
     "low"
    ],
-   "views": 64486,
+   "views": 64580,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=757126&bnefType=all&svcId=SSE000000050"
   },
   {
@@ -5109,7 +5109,7 @@
     "dis",
     "low"
    ],
-   "views": 63188,
+   "views": 63215,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2103502&bnefType=all&svcId=161300000101"
   },
   {
@@ -5130,7 +5130,7 @@
     "dis",
     "low"
    ],
-   "views": 63022,
+   "views": 63084,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999118&bnefType=all&svcId=137100000006"
   },
   {
@@ -5150,7 +5150,7 @@
    "tags": [
     "low"
    ],
-   "views": 62894,
+   "views": 62948,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900012&bnefType=all&svcId=135200005005"
   },
   {
@@ -5170,7 +5170,7 @@
    "tags": [
     "low"
    ],
-   "views": 61211,
+   "views": 61212,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002174&bnefType=all&svcId=B55211100001"
   },
   {
@@ -5188,7 +5188,7 @@
    "tel": "중소벤처기업부 인력정책과/044-204-7746",
    "kind": "기타",
    "tags": [],
-   "views": 59778,
+   "views": 59794,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999197&bnefType=all&svcId=142000000014"
   },
   {
@@ -5206,7 +5206,7 @@
    "tel": "국민행복기금관리처/051-794-3724",
    "kind": "현금(융자)",
    "tags": [],
-   "views": 58999,
+   "views": 59082,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000537&bnefType=all&svcId=B01000300002"
   },
   {
@@ -5227,8 +5227,26 @@
     "kid",
     "low"
    ],
-   "views": 58316,
+   "views": 58337,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=173701&bnefType=all&svcId=WLU000000020"
+  },
+  {
+   "id": "B55201500202",
+   "area": "nation",
+   "name": "4대사회보험 가입자 가입내역 확인서",
+   "sum": "4대사회보험 가입 현황을 편리하게 확인하실 수 있습니다. · (사업장 및 자격취득일)",
+   "who": "전국민(4대사회보험 가입자)",
+   "what": "개인 4대사회보험 가입 현황 파악 · 사업장 및 자격취득일 정보 등",
+   "when": "상시신청",
+   "start": null,
+   "end": null,
+   "how": "기타 온라인신청",
+   "org": "국민연금공단 · 4대사회보험정보연계센터",
+   "tel": "국민연금공단/063-711-7800",
+   "kind": "기타",
+   "tags": [],
+   "views": 57928,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100952&bnefType=all&svcId=B55201500202"
   },
   {
    "id": "B27000100005",
@@ -5245,7 +5263,7 @@
    "tel": "(국번없이)132 법률상담 콜센타/132",
    "kind": "기타(상담)",
    "tags": [],
-   "views": 57777,
+   "views": 57819,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000940&bnefType=all&svcId=B27000100005"
   },
   {
@@ -5267,26 +5285,8 @@
     "dis",
     "low"
    ],
-   "views": 57624,
+   "views": 57632,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=719747&bnefType=all&svcId=VOU000000020"
-  },
-  {
-   "id": "B55201500202",
-   "area": "nation",
-   "name": "4대사회보험 가입자 가입내역 확인서",
-   "sum": "4대사회보험 가입 현황을 편리하게 확인하실 수 있습니다. · (사업장 및 자격취득일)",
-   "who": "전국민(4대사회보험 가입자)",
-   "what": "개인 4대사회보험 가입 현황 파악 · 사업장 및 자격취득일 정보 등",
-   "when": "상시신청",
-   "start": null,
-   "end": null,
-   "how": "기타 온라인신청",
-   "org": "국민연금공단 · 4대사회보험정보연계센터",
-   "tel": "국민연금공단/063-711-7800",
-   "kind": "기타",
-   "tags": [],
-   "views": 57593,
-   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100952&bnefType=all&svcId=B55201500202"
   },
   {
    "id": "B46001400003",
@@ -5305,7 +5305,7 @@
    "tags": [
     "low"
    ],
-   "views": 57514,
+   "views": 57522,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002071&bnefType=all&svcId=B46001400003"
   },
   {
@@ -5325,7 +5325,7 @@
    "tags": [
     "kid"
    ],
-   "views": 57187,
+   "views": 57301,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=94779&bnefType=all&svcId=B55145700016"
   },
   {
@@ -5345,7 +5345,7 @@
    "tags": [
     "kid"
    ],
-   "views": 56221,
+   "views": 56268,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999156&bnefType=all&svcId=135200000005"
   },
   {
@@ -5366,7 +5366,7 @@
     "dis",
     "low"
    ],
-   "views": 55755,
+   "views": 55759,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=725443&bnefType=all&svcId=WII000001340"
   },
   {
@@ -5386,7 +5386,7 @@
    "tags": [
     "dis"
    ],
-   "views": 54976,
+   "views": 54981,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=749143&bnefType=all&svcId=SPE000000060"
   },
   {
@@ -5407,7 +5407,7 @@
     "kid",
     "dis"
    ],
-   "views": 54525,
+   "views": 54530,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=573410&bnefType=all&svcId=SD0000005037"
   },
   {
@@ -5425,7 +5425,7 @@
    "tel": "고용노동부 고객상담센터/1350",
    "kind": "서비스(일자리)",
    "tags": [],
-   "views": 53238,
+   "views": 53240,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999016&bnefType=all&svcId=149200000147"
   },
   {
@@ -5443,7 +5443,7 @@
    "tel": "국가보훈부 보훈상담센터/1577-0606||주소지 관할 보훈지(방)청/1577-0606",
    "kind": "서비스(일자리)·의료지원",
    "tags": [],
-   "views": 53001,
+   "views": 53015,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=730957&bnefType=all&svcId=WII000001320"
   },
   {
@@ -5463,7 +5463,7 @@
    "tags": [
     "low"
    ],
-   "views": 52519,
+   "views": 52544,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805488&bnefType=all&svcId=135200005010"
   },
   {
@@ -5484,7 +5484,7 @@
     "kid",
     "dis"
    ],
-   "views": 52449,
+   "views": 52480,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=594728&bnefType=all&svcId=135200000114"
   },
   {
@@ -5505,7 +5505,7 @@
     "kid",
     "low"
    ],
-   "views": 52028,
+   "views": 52030,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=753167&bnefType=all&svcId=SHE000000020"
   },
   {
@@ -5526,7 +5526,7 @@
     "old",
     "biz"
    ],
-   "views": 49668,
+   "views": 49685,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001384&bnefType=all&svcId=B55271100008"
   },
   {
@@ -5548,7 +5548,7 @@
     "dis",
     "low"
    ],
-   "views": 48882,
+   "views": 48889,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=7537&bnefType=all&svcId=SCY000000080"
   },
   {
@@ -5566,7 +5566,7 @@
    "tel": "고객센터/1551-1212",
    "kind": "현금",
    "tags": [],
-   "views": 48812,
+   "views": 48834,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2123525&bnefType=all&svcId=B41000200041"
   },
   {
@@ -5586,7 +5586,7 @@
    "tags": [
     "dis"
    ],
-   "views": 48771,
+   "views": 48786,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=756537&bnefType=all&svcId=SD0000016119"
   },
   {
@@ -5606,7 +5606,7 @@
    "tags": [
     "farm"
    ],
-   "views": 48202,
+   "views": 48217,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=510258&bnefType=all&svcId=507000000642"
   },
   {
@@ -5627,7 +5627,7 @@
     "biz",
     "low"
    ],
-   "views": 47236,
+   "views": 47248,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=754678&bnefType=all&svcId=149200000037"
   },
   {
@@ -5647,7 +5647,7 @@
    "tags": [
     "kid"
    ],
-   "views": 46668,
+   "views": 46695,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746900&bnefType=all&svcId=149200000153"
   },
   {
@@ -5670,7 +5670,7 @@
     "dis",
     "low"
    ],
-   "views": 45872,
+   "views": 45913,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000943&bnefType=all&svcId=B55037300001"
   },
   {
@@ -5691,7 +5691,7 @@
     "kid",
     "low"
    ],
-   "views": 45210,
+   "views": 45222,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=754881&bnefType=all&svcId=116010000001"
   },
   {
@@ -5711,7 +5711,7 @@
    "tags": [
     "low"
    ],
-   "views": 45012,
+   "views": 45018,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805492&bnefType=all&svcId=135200005012"
   },
   {
@@ -5731,7 +5731,7 @@
    "tags": [
     "dis"
    ],
-   "views": 43360,
+   "views": 43381,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999003&bnefType=all&svcId=131200000004"
   },
   {
@@ -5751,7 +5751,7 @@
    "tags": [
     "dis"
    ],
-   "views": 42716,
+   "views": 42831,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999119&bnefType=all&svcId=999000000036"
   },
   {
@@ -5771,7 +5771,7 @@
    "tags": [
     "kid"
    ],
-   "views": 42639,
+   "views": 42661,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999050&bnefType=all&svcId=999000000013"
   },
   {
@@ -5791,7 +5791,7 @@
    "tags": [
     "farm"
    ],
-   "views": 42346,
+   "views": 42347,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=686949&bnefType=all&svcId=SD0000001579"
   },
   {
@@ -5809,7 +5809,7 @@
    "tel": "한국장학재단 상담센터/1599-2000",
    "kind": "현금(융자)",
    "tags": [],
-   "views": 41984,
+   "views": 41990,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999061&bnefType=all&svcId=GES000000110"
   },
   {
@@ -5829,7 +5829,7 @@
    "tags": [
     "biz"
    ],
-   "views": 41773,
+   "views": 41837,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=606474&bnefType=all&svcId=SD0000018904"
   },
   {
@@ -5849,7 +5849,7 @@
    "tags": [
     "biz"
    ],
-   "views": 41215,
+   "views": 41256,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2111602&bnefType=all&svcId=B41000200038"
   },
   {
@@ -5869,7 +5869,7 @@
    "tags": [
     "low"
    ],
-   "views": 40422,
+   "views": 40430,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2149520&bnefType=all&svcId=B55370100033"
   },
   {
@@ -5890,7 +5890,7 @@
     "young",
     "biz"
    ],
-   "views": 40176,
+   "views": 40215,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=514311&bnefType=all&svcId=142000000099"
   },
   {
@@ -5910,7 +5910,7 @@
    "tags": [
     "kid"
    ],
-   "views": 40152,
+   "views": 40171,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=726472&bnefType=all&svcId=GES000000120"
   },
   {
@@ -5931,7 +5931,7 @@
     "dis",
     "low"
    ],
-   "views": 39260,
+   "views": 39265,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=731761&bnefType=all&svcId=429000000646"
   },
   {
@@ -5952,7 +5952,7 @@
     "biz",
     "dis"
    ],
-   "views": 38863,
+   "views": 38891,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=585576&bnefType=all&svcId=SD0000003857"
   },
   {
@@ -5972,8 +5972,28 @@
    "tags": [
     "dis"
    ],
-   "views": 38672,
+   "views": 38694,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=729489&bnefType=all&svcId=135200000090"
+  },
+  {
+   "id": "SD0000016141",
+   "area": "nation",
+   "name": "65세 이상 폐렴구균 국가예방접종사업",
+   "sum": "65세 이상 연령층에게 폐렴구균 23가 다당 백신(PPSV23), 1회 접종 지원",
+   "who": "65세 이상 연령에서 폐렴구균 23가 다당 백신(PPSV23)을 접종하지 않은 성인 (1961.12.31. 이전 출생자, 2026년 기준) · 65세 이상 연령에서 PPSV23…",
+   "what": "(지원내용) 폐렴구균 23가 다당 백신(PPSV23), 1회 접종비용 지원 · (접종기관) 전국 65세 이상 폐렴구균 국가예방접종사업 위탁의료기관 및 보건소 · 보건소는 지자체…",
+   "when": "상시신청",
+   "start": null,
+   "end": null,
+   "how": "방문신청",
+   "org": "질병관리청 · 예방접종관리과",
+   "tel": "질병관리청 콜센터/1339",
+   "kind": "서비스(의료)·의료지원",
+   "tags": [
+    "old"
+   ],
+   "views": 38031,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746536&bnefType=all&svcId=SD0000016141"
   },
   {
    "id": "WII000000500",
@@ -5994,28 +6014,8 @@
     "dis",
     "low"
    ],
-   "views": 38003,
+   "views": 38031,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=165908&bnefType=all&svcId=WII000000500"
-  },
-  {
-   "id": "SD0000016141",
-   "area": "nation",
-   "name": "65세 이상 폐렴구균 국가예방접종사업",
-   "sum": "65세 이상 연령층에게 폐렴구균 23가 다당 백신(PPSV23), 1회 접종 지원",
-   "who": "65세 이상 연령에서 폐렴구균 23가 다당 백신(PPSV23)을 접종하지 않은 성인 (1961.12.31. 이전 출생자, 2026년 기준) · 65세 이상 연령에서 PPSV23…",
-   "what": "(지원내용) 폐렴구균 23가 다당 백신(PPSV23), 1회 접종비용 지원 · (접종기관) 전국 65세 이상 폐렴구균 국가예방접종사업 위탁의료기관 및 보건소 · 보건소는 지자체…",
-   "when": "상시신청",
-   "start": null,
-   "end": null,
-   "how": "방문신청",
-   "org": "질병관리청 · 예방접종관리과",
-   "tel": "질병관리청 콜센터/1339",
-   "kind": "서비스(의료)·의료지원",
-   "tags": [
-    "old"
-   ],
-   "views": 37894,
-   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746536&bnefType=all&svcId=SD0000016141"
   },
   {
    "id": "SHE000000090",
@@ -6034,7 +6034,7 @@
    "tags": [
     "low"
    ],
-   "views": 37183,
+   "views": 37186,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=753155&bnefType=all&svcId=SHE000000090"
   },
   {
@@ -6054,7 +6054,7 @@
    "tags": [
     "low"
    ],
-   "views": 37087,
+   "views": 37152,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100960&bnefType=all&svcId=B55190400005"
   },
   {
@@ -6077,7 +6077,7 @@
     "farm",
     "low"
    ],
-   "views": 37049,
+   "views": 37060,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002090&bnefType=all&svcId=B55284500010"
   },
   {
@@ -6098,7 +6098,7 @@
     "old",
     "low"
    ],
-   "views": 36957,
+   "views": 37019,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746547&bnefType=all&svcId=135200000002"
   },
   {
@@ -6119,7 +6119,7 @@
     "dis",
     "low"
    ],
-   "views": 36684,
+   "views": 36706,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999123&bnefType=all&svcId=127000000002"
   },
   {
@@ -6140,7 +6140,7 @@
     "old",
     "dis"
    ],
-   "views": 36131,
+   "views": 36133,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=790129&bnefType=all&svcId=SD0000007626"
   },
   {
@@ -6160,26 +6160,8 @@
    "tags": [
     "biz"
    ],
-   "views": 35671,
+   "views": 35676,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000978&bnefType=all&svcId=B55271100006"
-  },
-  {
-   "id": "B49000100208",
-   "area": "nation",
-   "name": "근로자 휴양콘도 지원",
-   "sum": "근로자에게 휴양콘도를 저렴한 비용으로 제공(무기명 법인회원가)",
-   "who": "모든 근로자(노무제공자 포함)",
-   "what": "근로자 등의 여가 생활지원 및 건강한 노동력 재생산을 위하여 근로자 휴양콘도 운영 · 근로자 및 그 가족들의 여가 욕구 충족을 위해 휴양시설(콘도)을 저렴한 비용(무기명 법인회원…",
-   "when": "상시신청",
-   "start": null,
-   "end": null,
-   "how": "기타 온라인신청",
-   "org": "근로복지공단 · 복지계획부",
-   "tel": "복지계획부/052-704-7336",
-   "kind": "시설이용",
-   "tags": [],
-   "views": 34949,
-   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001618&bnefType=all&svcId=B49000100208"
   },
   {
    "id": "PTR000050390",
@@ -6200,8 +6182,26 @@
     "dis",
     "low"
    ],
-   "views": 34908,
+   "views": 35064,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=741282&bnefType=all&svcId=PTR000050390"
+  },
+  {
+   "id": "B49000100208",
+   "area": "nation",
+   "name": "근로자 휴양콘도 지원",
+   "sum": "근로자에게 휴양콘도를 저렴한 비용으로 제공(무기명 법인회원가)",
+   "who": "모든 근로자(노무제공자 포함)",
+   "what": "근로자 등의 여가 생활지원 및 건강한 노동력 재생산을 위하여 근로자 휴양콘도 운영 · 근로자 및 그 가족들의 여가 욕구 충족을 위해 휴양시설(콘도)을 저렴한 비용(무기명 법인회원…",
+   "when": "상시신청",
+   "start": null,
+   "end": null,
+   "how": "기타 온라인신청",
+   "org": "근로복지공단 · 복지계획부",
+   "tel": "복지계획부/052-704-7336",
+   "kind": "시설이용",
+   "tags": [],
+   "views": 35011,
+   "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001618&bnefType=all&svcId=B49000100208"
   },
   {
    "id": "SD0000016094",
@@ -6220,7 +6220,7 @@
    "tags": [
     "kid"
    ],
-   "views": 34660,
+   "views": 34671,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=585138&bnefType=all&svcId=SD0000016094"
   },
   {
@@ -6242,7 +6242,7 @@
     "old",
     "dis"
    ],
-   "views": 34389,
+   "views": 34390,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=510041&bnefType=all&svcId=155000000017"
   },
   {
@@ -6262,7 +6262,7 @@
    "tags": [
     "biz"
    ],
-   "views": 34256,
+   "views": 34265,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105847&bnefType=all&svcId=B01000300013"
   },
   {
@@ -6282,7 +6282,7 @@
    "tags": [
     "kid"
    ],
-   "views": 34059,
+   "views": 34061,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=62025&bnefType=all&svcId=WII000000040"
   },
   {
@@ -6302,7 +6302,7 @@
    "tags": [
     "biz"
    ],
-   "views": 33568,
+   "views": 33590,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=78964&bnefType=all&svcId=SD0000001491"
   },
   {
@@ -6322,7 +6322,7 @@
    "tags": [
     "kid"
    ],
-   "views": 33562,
+   "views": 33563,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=106347&bnefType=all&svcId=PTR000051390"
   },
   {
@@ -6344,7 +6344,7 @@
     "dis",
     "low"
    ],
-   "views": 32910,
+   "views": 32928,
    "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=681344&bnefType=all&svcId=SPE000000010"
   }
  ]
