@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T11:34+09:00",
+ "updated_at": "2026-11-19T18:50+09:00",
  "errors": [],
  "items": [
   {
@@ -10,6 +10,24 @@
    "title": "용인특례시, 버스정류장 26곳에 인근 화장실 안내도 부착",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261119075605126"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-19",
+   "org": "용인특례시 민생경제과",
+   "no": "",
+   "title": "「2026년 경기도 공정무역 포트나잇」행사 개최 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261119152350889"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-19",
+   "org": "용인특례시 문화예술과",
+   "no": "",
+   "title": "(재)용인문화재단 선임직 임원(비상임 감사) 모집 공고",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261119125010160"
   },
   {
    "src": "용인시 공지",
@@ -303,7 +321,7 @@
    "date": "2026-11-12",
    "org": "LH",
    "no": "",
-   "title": "새글 한국토지주택공사(LH), 광명시흥·용인반도체에 총 2조원 추가 투입...‘사업 속도전’ 돌입",
+   "title": "한국토지주택공사(LH), 광명시흥·용인반도체에 총 2조원 추가 투입...‘사업 속도전’ 돌입",
    "url": "https://www.lh.or.kr/gallery.es?mid=a10502000000&bid=0003&act=view&list_no=12193"
   },
   {
@@ -1297,15 +1315,6 @@
    "title": "용인특례시, 처인성역사교육관 하반기 강좌 수강생 모집",
    "scope": "town",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261023075758113"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-23",
-   "org": "용인특례시 자원순환과",
-   "no": "",
-   "title": "폐건전지 종이팩 분리배출 집중수거기간 운영 알림",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261023174728065"
   },
   {
    "src": "용인시 보도자료",
