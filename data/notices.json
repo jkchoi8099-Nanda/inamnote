@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T18:49+09:00",
+ "updated_at": "2026-11-21T02:47+09:00",
  "errors": [],
  "items": [
   {
@@ -46,6 +46,31 @@
    "title": "[보건소] 2026년 12월 미취학 어린이 식단표",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261120131205822&q_category=main"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-11-20",
+   "org": "용인특례시 이동읍",
+   "no": "용인시 처인구 이동읍 공고 제2026-71호",
+   "title": "이동읍 주민자치위원 공모·추천 공고",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "2026-12-08",
+   "nos": [
+    "용인시처인구이동읍공고제2026-71호"
+   ],
+   "parts": [
+    {
+     "mgt": "149489",
+     "title": "이동읍 주민자치위원 공모·추천 공고",
+     "no": "용인시 처인구 이동읍 공고 제2026-71호",
+     "dept": "이동읍",
+     "date": "2026-11-20",
+     "until": "2026-12-08"
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=149489"
   },
   {
    "src": "용인시 보도자료",
@@ -1403,15 +1428,6 @@
     }
    ],
    "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=148502"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-21",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, ‘별빛마당 야시장·김량장 페스티벌’에 17만 명 발길",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261021074941141"
   },
   {
    "src": "용인시 고시·공고",
