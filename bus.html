@@ -193,7 +193,7 @@
   N.Event.addListener(map, "idle", syncNames);
   N.Event.addListener(map, "zoom_changed", () => { if (map.getZoom() < NAME_ZOOM) syncNames(); });
 
-  let lines = [], stopMarks = [], busMarks = new Map(), timer = null, left = 0, last = null, openPlate = null;
+  let lines = [], stopMarks = [], busMarks = new Map(), timer = null, left = 0, last = null, openBusId = null;
 
   function renderChips() {
     const ttak = routes.filter(isTtak), box = document.getElementById("groups");
@@ -248,7 +248,7 @@
   });
 
   function drawRoute(fit) {
-    info.close(); openPlate = null; stopOpen = null; last = null;
+    info.close(); openBusId = null; stopOpen = null; last = null;
     lines.forEach(l => l.setMap(null)); stopMarks.forEach(m => m.setMap(null)); busMarks.forEach(o => o.m.setMap(null));
     lines = []; stopMarks = []; busMarks = new Map();
     const color = isTtak(cur) ? "#D9480F" : "#0E8A5A";
@@ -289,13 +289,13 @@
     renderSide();
   }
   const popHtml = inner => `<div class="pop"><button class="x" type="button" aria-label="닫기">×</button>${inner}</div>`;
-  function bindX() { setTimeout(() => document.querySelector(".pop .x")?.addEventListener("click", e => { e.stopPropagation(); info.close(); openPlate = null; stopOpen = null; }), 0); }
+  function bindX() { setTimeout(() => document.querySelector(".pop .x")?.addEventListener("click", e => { e.stopPropagation(); info.close(); openBusId = null; stopOpen = null; }), 0); }
 
   // 정류소 창(2026-10-18): 지금 노선 버스가 이 정류소까지 몇 정거장 전인지 — 이미 받은 위치로 세서 추가 조회가 없다(arrive.js first).
   // 갈 때·올 때 다 서는 정류소는 방면마다 한 줄. '이 정류소 모든 버스'는 지나는 노선마다 위치를 물어 옆 목록 맨 위에 보인다
   let stopOpen = null, stopAll = null;
   function openStop(sid, m, way) {
-    const s = ST[sid]; stopOpen = { sid, m, way }; openPlate = null;
+    const s = ST[sid]; stopOpen = { sid, m, way }; openBusId = null;
     const seqs = cur.stops.map((x, j) => x === sid ? j + 1 : 0).filter(Boolean);
     const rows = isTtak(cur) ? ["부르면 오는 버스라 위치가 없어요(똑타 앱)"] : seqs.map(q => {
       const f = last && !last.error ? Arrive.first(last.buses, q) : null;
@@ -393,6 +393,7 @@
       m.setPosition(LL(p[0], p[1])); if (k < 1) requestAnimationFrame(step); };
     requestAnimationFrame(step);
   }
+  // b.v는 차량번호가 아니라 중계가 주는 하루짜리 구별값이다(11-21부터, 같은 버스를 이어 그리는 데만 씀). 화면에 쓰지 않는다
   function drawBuses() {
     const keep = new Set();
     for (const b of (last && last.buses) || []) {
@@ -412,14 +413,14 @@
         if (Math.abs(now.lat() - p[0]) > 1e-6 || Math.abs(now.lng() - p[1]) > 1e-6) animate(o, s);
         o.b = b;
       }
-      if (openPlate === b.v) openBus(o);
+      if (openBusId === b.v) openBus(o);
     }
     for (const [v, o] of busMarks) if (!keep.has(v)) { o.m.setMap(null); busMarks.delete(v); }
   }
   function openBus(o) {
     const t = busText(o.b);
-    info.setContent(popHtml(`<b>${esc(cur.no)}번 · ${esc(o.b.v)}</b>${esc(dest(o.b.seq))} 방면<br>${esc(t.where)}${t.extra ? `<br><span>${esc(t.extra)}</span>` : ""}`));
-    info.open(map, o.m); openPlate = o.b.v; stopOpen = null; bindX();
+    info.setContent(popHtml(`<b>${esc(cur.no)}번</b>${esc(dest(o.b.seq))} 방면<br>${esc(t.where)}${t.extra ? `<br><span>${esc(t.extra)}</span>` : ""}`));
+    info.open(map, o.m); openBusId = o.b.v; stopOpen = null; bindX();
   }
 
   function renderSide() {
@@ -439,7 +440,7 @@
     else if (last) {
       html += `<p class="meta" style="margin:6px 2px">지금 운행 중 ${inTown.length}대${out ? ` · 더 먼 곳 ${out}대` : ""}${last.stale ? ' · <span class="warn">조금 전 정보</span>' : ""}</p>`;
       html += `<ul class="buses">${inTown.map(b => { const t = busText(b);
-        return `<li data-v="${esc(b.v)}"><b>${esc(t.where)}</b><span>${esc(short(dest(b.seq)))} 방면 · ${esc(b.v)}${t.extra ? " · " + esc(t.extra) : ""}</span></li>`; }).join("")}
+        return `<li data-v="${esc(b.v)}"><b>${esc(t.where)}</b><span>${esc(short(dest(b.seq)))} 방면${t.extra ? " · " + esc(t.extra) : ""}</span></li>`; }).join("")}
         ${!bs.length && isTtak(r) ? `<li class="out">똑버스는 실시간 위치가 공개 데이터에 나오지 않아요(10-14 확인: 노선은 있으나 위치 0대). 똑타 앱에서 부르면 앱에 위치가 나와요.</li>`
           : !inTown.length ? `<li class="out">지금 지도 안을 달리는 ${esc(r.no)}번이 없어요.${out ? " 더 먼 곳에서 오는 중이에요." : ""}</li>` : ""}</ul>`;
     } else html += `<p class="meta">버스 위치를 불러오는 중…</p>`;
