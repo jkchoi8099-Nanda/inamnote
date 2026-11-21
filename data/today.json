@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-21T12:45+09:00",
+ "generated_at": "2026-11-21T13:13+09:00",
  "example": false,
  "sources": {
   "weather": {
-   "ok": true,
+   "ok": false,
    "at": "2026-11-21T12:45+09:00",
    "data": {
     "temp": "2.5",
@@ -1009,13 +1009,14 @@
       }
      }
     ]
-   }
+   },
+   "error": "HTTP Error 500: Internal Server Error"
   },
   "mid": {
    "ok": true,
-   "at": "2026-11-21T12:46+09:00",
+   "at": "2026-11-21T13:13+09:00",
    "data": {
-    "tmfc": "202611210600",
+    "tmfc": "202611201800",
     "days": [
      {
       "date": "20261125",
@@ -1094,32 +1095,19 @@
        "wf": "맑음",
        "pop": 10
       }
-     },
-     {
-      "date": "20261201",
-      "tmn": 8,
-      "tmx": 14,
-      "am": {
-       "wf": "맑음",
-       "pop": 10
-      },
-      "pm": {
-       "wf": "맑음",
-       "pop": 10
-      }
      }
     ]
    }
   },
   "alerts": {
    "ok": true,
-   "at": "2026-11-21T12:46+09:00",
+   "at": "2026-11-21T13:14+09:00",
    "data": {
     "items": []
    }
   },
   "air": {
-   "ok": true,
+   "ok": false,
    "at": "2026-11-21T12:46+09:00",
    "data": {
     "station": "이동읍",
@@ -1132,11 +1120,12 @@
     "o3_grade": "좋음",
     "khai": "48",
     "khai_grade": "좋음"
-   }
+   },
+   "error": "HTTP Error 500: Internal Server Error"
   },
   "holiday": {
    "ok": true,
-   "at": "2026-11-21T12:46+09:00",
+   "at": "2026-11-21T13:14+09:00",
    "data": {
     "today": false,
     "tomorrow": false,
@@ -1144,7 +1133,7 @@
    }
   },
   "pharmacies": {
-   "ok": true,
+   "ok": false,
    "at": "2026-11-21T12:46+09:00",
    "data": {
     "items": [
@@ -1393,7 +1382,8 @@
       }
      }
     ]
-   }
+   },
+   "error": "HTTP Error 500: Internal Server Error"
   }
  }
 }
