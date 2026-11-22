@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T18:49+09:00",
+ "updated_at": "2026-11-23T06:52+09:00",
  "errors": [],
  "items": [
   {
@@ -1331,15 +1331,6 @@
     }
    ],
    "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=148573"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-23",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 처인성역사교육관 하반기 강좌 수강생 모집",
-   "scope": "town",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261023075758113"
   },
   {
    "src": "용인시 고시·공고",
