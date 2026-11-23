@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T10:39+09:00",
+ "updated_at": "2026-11-23T18:50+09:00",
  "errors": [],
  "items": [
   {
@@ -37,6 +37,15 @@
    "title": "[농업기술] 12월 정보화교육 안내",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1018&q_clCode=2&q_bbscttSn=20261123093907922"
+  },
+  {
+   "src": "처인구 소식",
+   "date": "2026-11-23",
+   "org": "처인구 도시미관과",
+   "no": "",
+   "title": "처인구 소식! 소나무재선충병 예방 나무주사 실시",
+   "scope": "town",
+   "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=85243&brd_mgrno=366&menu_no=1683"
   },
   {
    "src": "용인시 보도자료",
@@ -885,14 +894,6 @@
    "url": "https://pf.kakao.com/_SxkxoYxl/115156595"
   },
   {
-   "src": "이동읍 소식",
-   "date": "2026-11-06",
-   "org": "처인구 이동읍",
-   "no": "",
-   "title": "2027년도 「장애인스포츠강좌이용권 사업」신청 안내",
-   "url": "https://www.cheoingu.go.kr/home/boardView.do?brd_mgrno=274&menu_no=1666&brd_no=85096"
-  },
-  {
    "src": "용인시 보도자료",
    "date": "2026-11-06",
    "org": "용인특례시",
@@ -987,14 +988,6 @@
    "title": "2027년 장애인일자리사업(전일제, 시간제) 참여자 모집 공고문",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261105172655515"
-  },
-  {
-   "src": "이동읍 소식",
-   "date": "2026-11-04",
-   "org": "처인구 이동읍",
-   "no": "",
-   "title": "2027년도 「스포츠강좌이용권 사업」신청 안내",
-   "url": "https://www.cheoingu.go.kr/home/boardView.do?brd_mgrno=274&menu_no=1666&brd_no=85086"
   },
   {
    "src": "용인시 카카오채널",
@@ -1247,15 +1240,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1015&q_clCode=1&q_bbscttSn=20261028180840374"
   },
   {
-   "src": "용인시 공지",
-   "date": "2026-10-28",
-   "org": "용인특례시 청년정책과",
-   "no": "",
-   "title": "제7기 용인청년정책네트워크 위원 모집 공고",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261028173817413"
-  },
-  {
    "src": "용인시 고시·공고",
    "via": "새올",
    "date": "2026-10-28",
@@ -1306,15 +1290,6 @@
    "title": "용인특례시, 수능 마친 수험생 위한 특별 프로그램 운영",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261027074709935"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-27",
-   "org": "용인특례시 농촌테마과",
-   "no": "",
-   "title": "[농촌테마파크] -농촌테마파크 10월 5째주~11월1째주 주말상시체험진행 : 10/31(토)~11/1(일)",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261027162007303"
   },
   {
    "src": "용인시 보도자료",
