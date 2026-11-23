@@ -1,7 +1,43 @@
 {
- "updated_at": "2026-11-23T06:52+09:00",
+ "updated_at": "2026-11-23T10:39+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-23",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, '늘품은 향유센터' 기공식 개최",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261123081653226"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-23",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시 처인구, 하반기 청소년 유해환경 민?관 합동점검",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261123081607879"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-23",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 수능 마친 고3 수험생 위한 문화예술 체험 프로그램 운영",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261123081531285"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-23",
+   "org": "용인특례시 기술지원과",
+   "no": "",
+   "title": "[농업기술] 12월 정보화교육 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1018&q_clCode=2&q_bbscttSn=20261123093907922"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-11-20",
@@ -938,7 +974,7 @@
   {
    "src": "LH 청약·임대",
    "date": "2026-11-05",
-   "org": "LH 청약플러스 · 분양주택 · 공고중 · 마감 2026.11.24",
+   "org": "LH 청약플러스 · 분양주택 · 접수중 · 마감 2026.11.24",
    "no": "",
    "title": "경기남부권(수원·용인 광교) 공가세대 일반매각 공고(무순위, 유주택자 가능)",
    "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021009&ccrCnntSysDsCd=03&uppAisTpCd=05&aisTpCd=05&mi=1027"
@@ -1279,15 +1315,6 @@
    "title": "[농촌테마파크] -농촌테마파크 10월 5째주~11월1째주 주말상시체험진행 : 10/31(토)~11/1(일)",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261027162007303"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-27",
-   "org": "용인특례시 기후대기과",
-   "no": "",
-   "title": "2026 용인특례시 탄소중립 녹색성장 포럼 개최 안내",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261027155128093"
   },
   {
    "src": "용인시 보도자료",
