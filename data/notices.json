@@ -1,7 +1,61 @@
 {
- "updated_at": "2026-11-24T06:17+09:00",
+ "updated_at": "2026-11-24T18:50+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-24",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 2026년 민 · 관 사례관리담당자 힐링 공동연수 개최",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261124075215411"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-24",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 11월 30일부터 12월 4일까지 '2027년 노인일자리' 5984명 모집",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261124075200522"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-24",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시 처인구, 소나무재선충병 확산 방지 위해 예방 약제 주사",
+   "scope": "town",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261124075143558"
+  },
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-24",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, ‘2026년 공동주택관리 안내서’ 제작·배포",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261124075127760"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-24",
+   "org": "용인특례시 보건정책과",
+   "no": "",
+   "title": "[보건소] 매년 “12월 1일은 세계 에이즈의 날”, 예방과 실천은 제대로, 감염과 전파는 제로로",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261124142445793&q_category=main"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-24",
+   "org": "용인특례시 농촌테마과",
+   "no": "",
+   "title": "[농업기술] [치유농업] 2026년 치유농업교육(사계-겨울) 참여자 모집",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1018&q_clCode=2&q_bbscttSn=20261124112211288"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-11-23",
@@ -975,7 +1029,7 @@
   {
    "src": "LH 청약·임대",
    "date": "2026-11-05",
-   "org": "LH 청약플러스 · 분양주택 · 접수중 · 마감 2026.11.24",
+   "org": "LH 청약플러스 · 분양주택 · 접수마감 · 마감 2026.11.24",
    "no": "",
    "title": "경기남부권(수원·용인 광교) 공가세대 일반매각 공고(무순위, 유주택자 가능)",
    "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021009&ccrCnntSysDsCd=03&uppAisTpCd=05&aisTpCd=05&mi=1027"
@@ -1229,15 +1283,6 @@
    "title": "용인특례시, 전기자동차 900대분 구매 보조금 지원",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261028075004059"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-28",
-   "org": "용인특례시 수도행정과",
-   "no": "",
-   "title": "[상하수도] 상하수도 요금인상 안내문",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1015&q_clCode=1&q_bbscttSn=20261028180840374"
   },
   {
    "src": "용인시 고시·공고",
