@@ -382,6 +382,10 @@ def get_twice(url):
         return get(url)
 
 
+# 새올 검색은 밤(대개 20~24시)에 30초씩 답이 없을 때가 있다(2026-11-24 실측: 첫 화면 0.2초, 검색 45초 무응답). 검색어 14개를 모두
+# 두 번씩 기다리면 15분이라 PC 미리보기(제한 10분)가 다른 출처 결과까지 통째로 버렸다(10-29~11-24 매일 밤, 170번).
+# → 이만큼 연속으로 실패하면 남은 요청을 접는다. 이미 받은 공고(parts)는 그대로 들고 가고, 못 찾은 새 공고는 다음 실행에 받는다.
+EMINWON_GIVE_UP = 2
 EMINWON_SKIP = set()  # 상세를 보고 거른 공고 관리번호 — main이 notices.json 'eminwon_skip'에 적어 다음 실행에 다시 안 받는다
 
 
@@ -393,14 +397,19 @@ def yongin_eminwon():
     prev = old.get("items", [])
     EMINWON_SKIP.update(old.get("eminwon_skip", []))
     parts = {p["mgt"]: p for x in prev if x.get("via") == "새올" for p in x.get("parts", [])}
-    found, fails = {}, []
-    for q in EMINWON_Q:
+    found, fails, row_fails = {}, [], 0
+    for i, q in enumerate(EMINWON_Q):
         try:
             page = get_twice(eminwon_url(method="selectListOfrNotAncmt", methodnm="selectListOfrNotAncmtHomepage",
                                          not_ancmt_sj=q, pageIndex=1, ofr_pageSize=50))
         except Exception as e:
             fails.append(f"{q}: {e}")
+            row_fails += 1
+            if row_fails >= EMINWON_GIVE_UP:
+                fails += [f"{x}: 연속 실패로 건너뜀" for x in EMINWON_Q[i + 1:]]
+                break
             continue
+        row_fails = 0
         for r in re.findall(r"<tr.*?</tr>", page, re.S):
             m = re.search(r"searchDetail\('(\d+)'\)", r)
             tds = [text(t) for t in re.findall(r"<td[^>]*>(.*?)</td>", r, re.S)]
@@ -412,17 +421,20 @@ def yongin_eminwon():
         raise RuntimeError("검색 모두 실패: " + fails[0])
     if fails:
         print(f"  새올 검색 {len(fails)}건 실패(다음 실행에 다시): {fails[0][:80]}", file=sys.stderr)
+    row_fails = 0
     for mgt, row in found.items():
         if mgt in parts:
             parts[mgt]["until"] = row["until"]
             continue
-        if mgt in EMINWON_SKIP:
+        if mgt in EMINWON_SKIP or row_fails >= EMINWON_GIVE_UP:
             continue
         try:
             page = get_twice(eminwon_detail_url(mgt))
         except Exception as e:
             print(f"  새올 {row['no']} 상세 못 받음({e}) → 다음 실행에", file=sys.stderr)
+            row_fails += 1
             continue
+        row_fails = 0
         parts[mgt] = {"mgt": mgt, "title": text((re.search(r"<h3[^>]*>(.*?)</h3>", page, re.S) or [None, ""])[1]), **row}
         time.sleep(0.3)
     # 거르기는 들고 있는 공고 전부에 매번 다시 한다(규칙을 고치면 지난 공고에도 바로 적용). 거른 공고는 다음부터 상세를 안 받는다
