@@ -1,7 +1,25 @@
 {
- "updated_at": "2026-11-25T06:49+09:00",
+ "updated_at": "2026-11-25T13:08+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-25",
+   "org": "용인특례시 보건행정과",
+   "no": "",
+   "title": "[보건소] (재개) 65세 이상 용인시민 대상포진 예방접종 무료 지원",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=2&q_bbscttSn=20261125103644218&q_category=main"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-25",
+   "org": "용인특례시 건강증진과",
+   "no": "",
+   "title": "[보건소] 마음건강상담실 이용 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=3&q_bbscttSn=20261125102905255&q_category=main"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-11-24",
@@ -564,15 +582,6 @@
    "title": "제2회 보정중심 문화축제",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261112095904751"
-  },
-  {
-   "src": "처인구 소식",
-   "date": "2026-11-12",
-   "org": "처인구 가정복지과",
-   "no": "",
-   "title": "처인구 소식! 처인구에 전해진 아이들의 따뜻한 나눔",
-   "scope": "town",
-   "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=85181&brd_mgrno=366&menu_no=1683"
   },
   {
    "src": "용인시 고시·공고",
@@ -1195,24 +1204,6 @@
    "title": "용인특례시 처인구, 이륜자동차 불법행위 합동점검",
    "scope": "town",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261030080146492"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-30",
-   "org": "용인특례시 통합돌봄과",
-   "no": "",
-   "title": "일상돌봄서비스 제공기관 안내(2026.10.30.기준)",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261030153348817"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-10-30",
-   "org": "용인특례시 안전정책관",
-   "no": "",
-   "title": "27년 상비예비군 정기모집 및 선발공고 안내",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261030094550072"
   },
   {
    "src": "용인시 보도자료",
