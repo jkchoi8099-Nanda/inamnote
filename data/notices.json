@@ -1,6 +1,8 @@
 {
- "updated_at": "2026-11-25T18:49+09:00",
- "errors": [],
+ "updated_at": "2026-11-26T04:12+09:00",
+ "errors": [
+  "새올 고시·공고: 검색 모두 실패: 첨단시스템: The read operation timed out"
+ ],
  "items": [
   {
    "src": "용인시 공지",
@@ -1342,24 +1344,6 @@
    "title": "용인특례시, 수능 마친 수험생 위한 특별 프로그램 운영",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261027074709935"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-26",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 플랫폼시티 컨벤션센터 성공 위한 정책포럼 개최",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261026075952428"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-26",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시 처인구, 냉난방 시설 갖춘 버스승강장 10곳 새 단장",
-   "scope": "town",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261026075407095"
   },
   {
    "src": "용인시 고시·공고",
