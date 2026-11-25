@@ -1,7 +1,34 @@
 {
- "updated_at": "2026-11-25T13:08+09:00",
+ "updated_at": "2026-11-25T18:49+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-25",
+   "org": "용인특례시 농촌테마과",
+   "no": "",
+   "title": "[농촌테마파크] -농촌테마파크 11월 4째주 주말상시체험진행 : 11/28(토)~11/29(일)",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261125164317437"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-25",
+   "org": "용인특례시 보건행정과",
+   "no": "",
+   "title": "[보건소] (2026.12.07.~) 65세 이상 용인시민 대상포진 예방접종 무료 지원 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=3&q_bbscttSn=20261125160333943&q_category=main"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-25",
+   "org": "용인특례시 보건정책과",
+   "no": "",
+   "title": "[보건소] (12월 7일부터 재개)65세 이상 용인시민 대상포진 예방접종 무료 지원 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261125152910058&q_category=main"
+  },
   {
    "src": "용인시 공지",
    "date": "2026-11-25",
@@ -19,6 +46,31 @@
    "title": "[보건소] 마음건강상담실 이용 안내",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=3&q_bbscttSn=20261125102905255&q_category=main"
+  },
+  {
+   "src": "용인시 고시·공고",
+   "via": "새올",
+   "date": "2026-11-25",
+   "org": "용인특례시 도시건축2과",
+   "no": "용인시 처인구 공고 제2026-1326호",
+   "title": "도로지정 공고[천리 70-5]",
+   "scope": "town",
+   "cat": "gosi",
+   "until": "",
+   "nos": [
+    "용인시처인구공고제2026-1326호"
+   ],
+   "parts": [
+    {
+     "mgt": "149665",
+     "title": "도로지정 공고[천리 70-5]",
+     "no": "용인시 처인구 공고 제2026-1326호",
+     "dept": "도시건축2과",
+     "date": "2026-11-25",
+     "until": ""
+    }
+   ],
+   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=149665"
   },
   {
    "src": "용인시 보도자료",
@@ -369,15 +421,6 @@
    "title": "용인특례시, 2027학년도 수능 대비 종합대책 시행",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261117074752015"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-11-17",
-   "org": "용인특례시 농촌테마과",
-   "no": "",
-   "title": "[농촌테마파크] -농촌테마파크 11월 3째주 주말상시체험진행 : 11/21(토)~11/22(일)",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261117133245949"
   },
   {
    "src": "용인시 공지",
@@ -1150,33 +1193,6 @@
    "title": "용인특례시, 첨단시스템반도체 국가산단 부지 조성 착공 따른 종합대책 마련 나서",
    "scope": "town",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261102080624453"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-11-02",
-   "org": "용인특례시 자원순환과",
-   "no": "",
-   "title": "용인시 음식물류 폐기물 처리수수료 2026년 11월 고지금액 알림(실사용 기간 : 2026.10. 1. ~ 10. 31.)",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261102105852102"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-11-02",
-   "org": "용인특례시 건강증진과",
-   "no": "",
-   "title": "[보건소] [마감]「혈관을 지키는 건강퀴즈 챌린지 2탄」 운영 안내",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=2&q_bbscttSn=20261102103845972&q_category=main"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-11-02",
-   "org": "용인특례시 건강증진과",
-   "no": "",
-   "title": "[보건소] 세계 당뇨병의 날 행사 알림",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=3&q_bbscttSn=20261102093428004&q_category=main"
   },
   {
    "src": "용인시 카카오채널",
