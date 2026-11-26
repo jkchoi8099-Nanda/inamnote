@@ -1,6 +1,8 @@
 {
- "updated_at": "2026-11-26T18:49+09:00",
- "errors": [],
+ "updated_at": "2026-11-27T04:00+09:00",
+ "errors": [
+  "새올 고시·공고: 검색 모두 실패: 첨단시스템: The read operation timed out"
+ ],
  "items": [
   {
    "src": "용인시 보도자료",
@@ -19,6 +21,15 @@
    "title": "용인특례시, QR코드로 간편하게! 반려동물등록 AI 플랫폼 서비스 안내",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261126110835735"
+  },
+  {
+   "src": "용인시 카카오채널",
+   "date": "2026-11-26",
+   "org": "용인특례시 카카오톡 채널",
+   "no": "",
+   "title": "아이들의 행복한 내일을 위한 특별한 도시, 용인특례시!",
+   "scope": "city",
+   "url": "https://pf.kakao.com/_SxkxoYxl/115371897"
   },
   {
    "src": "용인시 공지",
@@ -188,6 +199,15 @@
    "title": "처인구 소식! 소나무재선충병 예방 나무주사 실시",
    "scope": "town",
    "url": "https://www.cheoingu.go.kr/home/promotionView.do?brd_no=85243&brd_mgrno=366&menu_no=1683"
+  },
+  {
+   "src": "용인시 카카오채널",
+   "date": "2026-11-23",
+   "org": "용인특례시 카카오톡 채널",
+   "no": "",
+   "title": "11월 4주차 위클리 뉴스용",
+   "scope": "city",
+   "url": "https://pf.kakao.com/_SxkxoYxl/115310144"
   },
   {
    "src": "용인시 보도자료",
@@ -1159,15 +1179,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261103100508177&q_category=main"
   },
   {
-   "src": "용인시 카카오채널",
-   "date": "2026-11-03",
-   "org": "용인특례시 카카오톡 채널",
-   "no": "",
-   "title": "2026 용인시민대중예술인 특집 <가을별빛광장>",
-   "scope": "city",
-   "url": "https://pf.kakao.com/_SxkxoYxl/115110702"
-  },
-  {
    "src": "용인시 보도자료",
    "date": "2026-11-02",
    "org": "용인특례시",
@@ -1211,15 +1222,6 @@
    "title": "용인특례시, 첨단시스템반도체 국가산단 부지 조성 착공 따른 종합대책 마련 나서",
    "scope": "town",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261102080624453"
-  },
-  {
-   "src": "용인시 카카오채널",
-   "date": "2026-11-02",
-   "org": "용인특례시 카카오톡 채널",
-   "no": "",
-   "title": "11월 1주차 위클리 뉴스용",
-   "scope": "city",
-   "url": "https://pf.kakao.com/_SxkxoYxl/115068535"
   },
   {
    "src": "용인시 보도자료",
@@ -1333,33 +1335,6 @@
     }
    ],
    "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=148713"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-27",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 반도체산업 인재 양성 속도…청소년부터 임원까지 전주기 교육",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261027074817842"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-27",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 2027년 상반기 ‘불법현수막 시민수거단’ 39명 모집",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261027074741910"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-27",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 수능 마친 수험생 위한 특별 프로그램 운영",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261027074709935"
   },
   {
    "src": "용인시 고시·공고",
@@ -2534,14 +2509,6 @@
    "url": "https://www.eum.go.kr/web/gs/gv/gvGosiDet.jsp?seq=603797"
   },
   {
-   "src": "LH 보상공고",
-   "date": "2024-11-26",
-   "org": "LH",
-   "no": "",
-   "title": "[보상계획] 국지도 84호선 중리~천리 도로개설공사 보상계획 공고 및 열람안내",
-   "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=728460"
-  },
-  {
    "src": "토지이음 고시",
    "date": "2024-09-02",
    "org": "경기도 용인시 도시정책실 도시개발과",
@@ -2664,5 +2631,5 @@
   "97280",
   "97759"
  ],
- "kakao_at": "2026-11-20T18:47+09:00"
+ "kakao_at": "2026-11-27T03:58+09:00"
 }
