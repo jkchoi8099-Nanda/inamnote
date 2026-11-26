@@ -1,8 +1,6 @@
 {
- "updated_at": "2026-11-27T04:00+09:00",
- "errors": [
-  "새올 고시·공고: 검색 모두 실패: 첨단시스템: The read operation timed out"
- ],
+ "updated_at": "2026-11-27T06:49+09:00",
+ "errors": [],
  "items": [
   {
    "src": "용인시 보도자료",
@@ -2372,31 +2370,6 @@
    "url": "https://www.lh.or.kr/board.es?mid=a10403170500&bid=0060&act=view&list_no=728301"
   },
   {
-   "src": "용인시 고시·공고",
-   "via": "새올",
-   "date": "2025-11-26",
-   "org": "용인특례시 공동주택과",
-   "no": "용인시 고시 제2025-629호",
-   "title": "도로지정 공고[해솔리아컨트리클럽(주), 이동읍 천리]",
-   "scope": "town",
-   "cat": "gosi",
-   "until": "",
-   "nos": [
-    "용인시고시제2025-629호"
-   ],
-   "parts": [
-    {
-     "mgt": "137958",
-     "title": "도로지정 공고[해솔리아컨트리클럽(주), 이동읍 천리]",
-     "no": "용인시 고시 제2025-629호",
-     "dept": "공동주택과",
-     "date": "2025-11-26",
-     "until": ""
-    }
-   ],
-   "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=137958"
-  },
-  {
    "src": "LH 공모·공고",
    "date": "2025-10-21",
    "org": "LH 본사",
@@ -2604,6 +2577,7 @@
   "135331",
   "135343",
   "135676",
+  "137958",
   "14267",
   "146408",
   "148492",
