@@ -1,7 +1,25 @@
 {
- "updated_at": "2026-11-26T06:49+09:00",
+ "updated_at": "2026-11-26T12:32+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 보도자료",
+   "date": "2026-11-26",
+   "org": "용인특례시",
+   "no": "",
+   "title": "용인특례시, 청년도전지원사업 98% 수료…자신감 충전",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261126074515542"
+  },
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-26",
+   "org": "용인특례시 4차산업융합과",
+   "no": "",
+   "title": "용인특례시, QR코드로 간편하게! 반려동물등록 AI 플랫폼 서비스 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261126110835735"
+  },
   {
    "src": "용인시 공지",
    "date": "2026-11-25",
