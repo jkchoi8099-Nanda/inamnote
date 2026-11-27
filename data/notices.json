@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-27T18:49+09:00",
+ "updated_at": "2026-11-28T03:55+09:00",
  "errors": [],
  "items": [
   {
@@ -1272,24 +1272,6 @@
     }
    ],
    "url": "https://eminwon.yongin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&homepage_pbs_yn=Y&subCheck=Y&not_ancmt_se_code=01%2C04&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&not_ancmt_mgt_no=148638"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-28",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시 신봉도서관, 청소년자료실 함께 만들어갈 청소년 홍보단 1기 모집",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261028075023769"
-  },
-  {
-   "src": "용인시 보도자료",
-   "date": "2026-10-28",
-   "org": "용인특례시",
-   "no": "",
-   "title": "용인특례시, 전기자동차 900대분 구매 보조금 지원",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261028075004059"
   },
   {
    "src": "용인시 고시·공고",
