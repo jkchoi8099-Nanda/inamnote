@@ -1,7 +1,25 @@
 {
- "updated_at": "2026-11-27T12:39+09:00",
+ "updated_at": "2026-11-27T18:49+09:00",
  "errors": [],
  "items": [
+  {
+   "src": "용인시 공지",
+   "date": "2026-11-27",
+   "org": "용인특례시 정책기획과",
+   "no": "",
+   "title": "적극행정 시민추천제 운영 안내",
+   "scope": "city",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261127175919256"
+  },
+  {
+   "src": "용인시 카카오채널",
+   "date": "2026-11-27",
+   "org": "용인특례시 카카오톡 채널",
+   "no": "",
+   "title": "「(가칭) 동부지역 여성복지회관」 명칭 시민 선호도 조사",
+   "scope": "city",
+   "url": "https://pf.kakao.com/_SxkxoYxl/115386220"
+  },
   {
    "src": "용인시 보도자료",
    "date": "2026-11-26",
@@ -1072,24 +1090,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20261106074810730"
   },
   {
-   "src": "용인시 카카오채널",
-   "date": "2026-11-06",
-   "org": "용인특례시 카카오톡 채널",
-   "no": "",
-   "title": "한파대비 이렇게 행동하세요!",
-   "scope": "city",
-   "url": "https://pf.kakao.com/_SxkxoYxl/115148799"
-  },
-  {
-   "src": "용인시 카카오채널",
-   "date": "2026-11-06",
-   "org": "용인특례시 카카오톡 채널",
-   "no": "",
-   "title": "11월을 삭제하시겠습니까?",
-   "scope": "city",
-   "url": "https://pf.kakao.com/_SxkxoYxl/115007237"
-  },
-  {
    "src": "용인시 고시·공고",
    "via": "새올",
    "date": "2026-11-06",
@@ -1132,15 +1132,6 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261105172655515"
   },
   {
-   "src": "용인시 카카오채널",
-   "date": "2026-11-04",
-   "org": "용인특례시 카카오톡 채널",
-   "no": "",
-   "title": "2026 용인 공정무역 포트나잇",
-   "scope": "city",
-   "url": "https://pf.kakao.com/_SxkxoYxl/115126586"
-  },
-  {
    "src": "용인시 보도자료",
    "date": "2026-11-03",
    "org": "용인특례시",
@@ -1166,15 +1157,6 @@
    "title": "[보건소] 도전! 내 혈관 건강 Level UP 챌린지(조기종료)",
    "scope": "city",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261103133551746&q_category=main"
-  },
-  {
-   "src": "용인시 공지",
-   "date": "2026-11-03",
-   "org": "용인특례시 보건정책과",
-   "no": "",
-   "title": "[보건소] [버블하트캠페인] 올바른 손씻기 챌린지 '버블하트 캠페인' 11월 신청 시작합니다!",
-   "scope": "city",
-   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20261103100508177&q_category=main"
   },
   {
    "src": "용인시 보도자료",
@@ -2605,5 +2587,5 @@
   "97280",
   "97759"
  ],
- "kakao_at": "2026-11-27T12:36+09:00"
+ "kakao_at": "2026-11-27T18:47+09:00"
 }
